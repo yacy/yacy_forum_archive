@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="mitmachen-re-yacyproxyplus-mit-einer-agenten-intelligenz-bestücken">Mitmachen • Re: YaCyProxyPlus mit einer Agenten-Intelligenz bestücken</h1>
+
+<p>Date: 2014-10-27 12:29:47</p>
+
+<p>Hallo,<br />
+</p>
+
+<blockquote>
+<div>
+
+flegno hat geschrieben:\
+YaCyProxyPlus mit einer Agenten-Intelligenz bestücken\
+
+</div>
+</blockquote>
+
+<p>Ich hab mir jetzt Deinen Artikel und alle Links durchgelesen und muss
+ehrlich schreiben das ich nicht so ganz genau weiß worum es Dir geht.<br />
+<br />
+Eine \&ldquo;themenspezifische\&rdquo; Suche auf einen bestimmten Peer laufen
+zulassen lohnt sich nicht wirklich da bei jeder Suche immer
+[die]{style=&ldquo;font-style: italic&rdquo;} anderen Peers gefragt werden deren
+Peer-Hash mit dem Hash-Wert eines der Suchbegriffe am besten korreliert
+(siehe DHT-Konzept), aber welcher Peer da am besten passt hängt davon ab
+wie dieser Algorithmus in YaCy implementiert ist (vielleicht kann
+Orbiter unser arg beschränktes Wissen zu diesem Thema ein wenig
+erhellen).<br />
+<br />
+Eine \&ldquo;Site-spezifische\&rdquo; Suche ist was völlig anderes, hier lohnt es
+sich tatsächlich primär die Peers zu befragen die die betreffende
+Web-Site (damit meine ich Domain) auch selber crawlen. Diese Peers
+verteilen ihren selbst gewonnenen Index zwar dem DHT-Konzept
+entsprechend über andere Peers aber behalten ihn auch selber auf der
+Festplatte (so das die lokale Suche schon recht gute Treffer bringt).<br />
+<br />
+Wenn ein Crawl abgeschlossen ist werden die gefundenen Worte,
+entsprechend dem DHT-Konzept, auf die am besten zum konkreten Wort
+passenden Peers verteilt. Welcher Peer das ist lässt sich aber nur
+begrenzt vorhersagen, da ja auch immer mal neue Peers mit neuen
+Peer-Hashs dazukommen oder auch manchmal Peers wegfallen. Deswegen
+versucht der DHT-Mechanismus in YaCy den Index auch über \&ldquo;benachbarte\&rdquo;
+Peers (also jene Peers deren Peer-Hash mathematisch ähnlich zum
+ideal-Hash für das konkrete Wort ist) zu verteilen. Nebst dessen das ein
+Thema ja nicht nur aus einem Wort besteht sondern aus vielen
+verschiedenen Worten und diese verschiedenen Worte sind aufgrund der
+verschiedenen Hash-Werte auf die Indexe verschiedener Peers verteilt.<br />
+<br />
+So hab ich jedenfalls die Erklärungen auf yacy.net verstanden, falls ich
+hier völligen Unsinn schreibe Bitte ich um Richtigstellung.<br />
+</p>
+
+<blockquote>
+<div>
+
+flegno hat geschrieben:\
+ich würde gern
+[[nur]{style="font-style: italic"}]{style="font-weight: bold"} die
+YaCy-Peers abfragen, die in den Peer-Indexen mit hoher
+Wahrscheinlichkeit Informationen zu einem bestimmten Thema haben\
+
+</div>
+</blockquote>
+
+<p>Dazu müssten die Peers aber in der Lage sein das Thema eines Textes
+wirklich zu erkennen. Ich nehme mal an das ist der Grund für das Wort
+\&ldquo;Intelligenz\&rdquo; im Titel. Zum tatsächlichen Erkennen des Themas eines
+bestimmten Textes ist ein gutes Maß an \&ldquo;Intelligenz\&rdquo; erforderlich und
+ich fürchte so weit ist die KI-Forschung noch nicht ganz oder nur mit
+wirklich leistungsfähigen Super-Computern (auf jeden Fall deutlich
+größere Maschinen als die auf denen durchschnittliche YaCy-Peers
+laufen).<br />
+<br />
+Dem Text auf yacyagent.sprechrun.de entnehme ich aber das es eventuell
+auch um bestimmte Such-Parameter geht die dem unbedarften Anwender
+womöglich nicht so leicht fallen, weil er sich eventuell das tiefere
+Verständnis für die Wirkungsweise der Parameter noch nicht erworben hat,
+und deswegen mit \&ldquo;vorgefertigten Suchen\&rdquo; unterstützt werden sollen.
+Nach dem nächsten UpDate meines Tools auf dem Server wird der Forwarder
+in der Lage sein auch weitere URL-Query-Parameter an einen bestimmten
+oder zufälligen Peer weiter zu reichen so das man dann für Suchen mit
+bestimmten Parametern (und sei es nur eine andere Anzahl an Treffern pro
+Ergebnis-Seite) mit passenden Links vorbereiten kann. Näheres dazu
+beabsichtige ich im geplanten Wiki-Artikel unterzubringen, aber erstmal
+will ich das alles fertig programmieren damit das dann auch wirklich
+nutzbar ist.<br />
+<br />
+Ganz unabhängig von Deinem aktuellem Vorschlag möchte ich aber klar
+schreiben das wenn es eine [gute]{style=&ldquo;font-style: italic&rdquo;} Idee gibt
+an deren Umsetzung mein Tool (wie auch immer es heißen wird) einen
+Beitrag leisten kann/soll dann bin ich gerne bereit das, entsprechend
+meiner Möglichkeiten, zu unterstützen.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Mo Okt 27, 2014 12:29 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

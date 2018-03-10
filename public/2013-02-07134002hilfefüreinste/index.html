@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-crawl-auf-startseiten-beschränken">Hilfe für Einsteiger und Anwender • Re: Crawl auf Startseiten beschränken</h1>
+
+<p>Date: 2013-02-07 13:40:02</p>
+
+<p>Wenn man über solr alle erfolgreich indizierten Webpages durchsuchen
+will, muss man die Abfrage mittels /solr/select?q=httpstatus_i:200
+einschränken. Dann passt alles.<br />
+<br />
+Nun stellt sich für mich noch eine andere Frage. Ich möchte exakt jene
+URLs indizieren, die ich im File angegeben habe. Das funktioniert auch
+gut. In weiterer Folge möchte ich diese Seiten nun nur alle 7 Tage auf
+Änderungen überprüfen. Dazu habe ich im Bereich \&ldquo;Document
+Double-Check\&rdquo; die Checkbox \&ldquo;Re-load\&rdquo; mit 7 Tage markiert. Das Problem
+ist allerdings, dass diese Regel nicht für die Start-URLs angewendet
+wird. D.h. in meinem Falle werden trotz dieser Einstellung alle URLs
+jedes Mal frisch indiziert. Gibt es eine Möglichkeit, diese Einstellung
+irgendwo zu ändern?<br />
+<br />
+Abgesehen davon, was passiert, wenn eine erfolgreich aufgenommene Seite
+im Zuge des nächsten Durchlaufes nicht mehr vorhanden ist und zb einen
+410er zurückliefert. Werden die ursprünglich indizierten Inhalte dann
+gelöscht? Gibt es evtl. die Möglichkeit, dass der ursprünglich
+indizierte Inhalt bestehen bleibt und die Seite erst dann aus dem Index
+fällt, wenn diese zB 3 Mal hintereinander eine Fehlerseite
+zurückliefert?<br />
+<br />
+PS: Ein kleiner Punkt ist mir nebenbei aufgefallen. Wenn man \&ldquo;Use
+filter\&rdquo; auswählt, dann deaktivieren sich die Checkboxen \&ldquo;Delete
+sub-path\&rdquo; und \&ldquo;Delete only old\&ldquo;. Erst wenn man mit der Maus ins Feld
+\&ldquo;Use filter\&rdquo; klickt, werden die Checkboxen wieder aktiv.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8871">hotel24</a>
+&mdash; Do Feb 07, 2013 1:40 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

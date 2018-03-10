@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-yacy-api-opensearch-xml-nicht-valide">Fragen und Antworten • YaCy API: OpenSearch XML nicht valide?</h1>
+
+<p>Date: 2014-02-14 21:56:36</p>
+
+<p>Hallo zusammen<br />
+<br />
+Ich bin momentan dabei, mit Hilfe eines Perl-Skripts Suchergebnisse von
+YaCy auszuwerten bzw. weiter zu verarbeiten. Um auf das OpenSearch API
+von YaCy zuzugreifen, verwende ich das Perl-Modul
+<a href="http://search.cpan.org/dist/WWW-OpenSearch/lib/WWW/OpenSearch.pm">WWW:OpenSearch</a>{.postlink}<br />
+<br />
+Bei einem ersten Test bekam ich folgenden Perl-Fehler:<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>Error while parsing Description XML: Node should be OpenSearchDescription: rss at /usr/share/perl5/WWW/OpenSearch.pm line 139 at /usr/share/perl5/WWW/OpenSearch.pm line 139</code></dd>
+</dl>
+
+<p><br />
+<br />
+Nach kurzer Recherche habe ich festgestellt, das das in OpenSearch
+definierte Element
+<a href="http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_5#The_.22OpenSearchDescription.22_element">OpenSearchDescription</a>{.postlink}
+in dem von YaCy zurückgelieferten XML nicht vorhanden ist.<br />
+Als API habe ich [yacysearch.rss]{style=&ldquo;font-style: italic&rdquo;} (
+<a href="http://localhost/yacysearch.rss">http://localhost/yacysearch.rss</a>) verwendet, welches laut
+<a href="http://www.yacy-websearch.net/wiki/index.php/Dev:API#Search_Interface">WIKI</a>{.postlink}
+OpenSearch kompatibel ist:<br />
+</p>
+
+<blockquote>
+<div>
+
+\
+/yacysearch.rss and /yacysearch.json YaCy search page returning xml
+(opensearch) or json results\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Gibt es noch ein anderes API direkt für OpenSearch oder gibt es einen
+Parameter, den man dem API mitgeben kann, um valides OpenSearch-XML zu
+bekommen?<br />
+<br />
+Danke für eure Hilfe.
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /><br />
+<br />
+Meine eingesetzte YaCy Version ist derzeit 1.<sup>67</sup>&frasl;<sub>9709</sub></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9007">freak</a>
+&mdash; Fr Feb 14, 2014 9:56 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

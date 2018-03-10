@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="suchmaschinen-neue-p2p-suchmaschine-spot-on-kooperationsprojekt">Suchmaschinen • Neue p2p Suchmaschine: Spot-on / Kooperationsprojekt</h1>
+
+<p>Date: 2014-11-01 16:57:29</p>
+
+<p>Hallo<br />
+<br />
+bald ist es soweit und es gibt das Release einer neuen p2p Suchmaschine
+neben YaCy, Faroo, Arado und anderen.<br />
+Es soll hier schon mal gepostet werden, damit ggf. Kooperationen
+überlegt und Ideen ausgetauscht werden können und auch Entwickler oder
+Tester bei Interesse und Lernbereitschaft mitmachen. Die Suchmaschine
+heisst <a href="http://spot-on.sf.net">http://spot-on.sf.net</a><br />
+<br />
+Das Release der V 0.16 erfolgt bald.<br />
+Wer es kompilieren mag, braucht das SVN und Qt.<br />
+<a href="http://sourceforge.net/p/spot-on/code/HEAD/tree/">http://sourceforge.net/p/spot-on/code/HEAD/tree/</a><br />
+<a href="http://www.qt.io/">http://www.qt.io/</a><br />
+<br />
+Differenzqualität zu YaCy ist, dass derzeit nicht in anderen Peers
+gesucht wird, sondern nur in der eingenen lokalen Datenbank. Es ist also
+eine Suchmaschine, die Queryhits in anderen Peers zunächst vermeidet.<br />
+<br />
+Die URLs werden in einer SQLite oder wahlweise PostgreSQL Datenbank
+gespeichert.<br />
+Die Datenbanken sind komplett verschlüsselt wie auch ein zukünftiger
+Transfer der URLs: Der Austausch der URLs von Node zu Node erfolgt über
+ein verschlüsseltes Protokoll mit einem URL-Key, basierend auf RSA, NTRU
+oder ElGamal, das ist implementiert, der URL Transfer soll folgen.<br />
+Der Import von URLs erfolgt derzeit z.B. über den Web Browser
+<a href="http://dooble.sf.net">http://dooble.sf.net</a> der auch YaCy schon als Suchmaschine seit einigen
+Versionen integriert hat.<br />
+Unten wird beschrieben, wie man eine URL vom Browser in Spot-on
+integriert und dann dort auch sucht und findet.<br />
+.<br />
+Eine mögliche Kooperation mit YaCy könnte sein, dass man einen SOLR
+Import Parser in cpp in Spot-on integriert, oder dass Spot-on auch bei
+einer Suche die YaCy Api eines zu definierenden YaCy Nodes abfragt und
+die ersten 10 URLs zum jeweiligen Suchwort auch in seine Datenbank
+speichert.<br />
+Ob YaCy auch das verschlüsselte Protokoll abbilden will, ist ggf. ein zu
+grosser Aufwand in Java. Hinweise und Ideen sind willkommen.<br />
+<br />
+Wenn jemand mit-testen will, wie folgt:<br />
+- SVN mit Qt compilieren und App lernen (Komplexität ist ggf
+herausfordernd) oder auf Release 0.16 warten.<br />
+- Dooble Web Browser installieren dooble.sf.net<br />
+- In Dooble unter Fenster/Einstellungen/Startseite den Pfad zur
+Shared.db definieren, die im ./Spot-on Unterpfad von Spot-on liegen
+sollte.<br />
+- In Dooble ein Passwort definieren unter Fenster/Einstellungen/Tresor<br />
+- In Dooble surfen und dann die History in der seitlichen Ansicht
+aufmachen (Menü: Verlauf/Anzeigen)<br />
+- Mit rechter Maustaste eine URL klicken und \&ldquo;Spot-On-Bestätigung
+durchführen\&rdquo; -&gt; Die Url ist in shared.db<br />
+- Im Spot-On URL Tab im Settings-Knopf die Schritte 1-7 durchführen und
+die Datenbank aufsetzen (zunächst in SQlite und das Dooble Passwort nach
+Reolad-Betätigung eingeben)<br />
+- \&ldquo;Import\&rdquo; importiert die Dooble URLs von shared.db nach Spot-on und
+diese können dann in der Suche gefunden werden.<br />
+<br />
+Bislang erste Beta und auch komplexer Prozess, aber ggf. interessant für
+Lernwillige und Datenbank-interessierte.<br />
+Anmerkungen sind willkommen. URLs nur lokal in der eigenen Datenbank zu
+suchen und die URLs komplett von peer zu peer zu synchronisieren über
+ein verschlüsseltes Protokoll ist ggf. das neue YaCy in der Nach-Snowden
+Ära? Die Frage ist, wie man beide Tools miteinander verbinden kann auf
+dem Weg in die weitere Entwicklung und wer mitmachen will, sich da
+einzufinden oder sogar beizutragen für eine nicht-zentrale URL Suche.<br />
+<br />
+Grüsse, Syndicator<br />
+<br />
+<br />
+<img src="http://s3.postimg.org/f5db4wdur/spot_discover_set.png" alt="Bild" /><br />
+<img src="http://s30.postimg.org/osrxmkytd/spot_discover.png" alt="Bild" /></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9499">syndicator</a>
+&mdash; Sa Nov 01, 2014 4:57 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

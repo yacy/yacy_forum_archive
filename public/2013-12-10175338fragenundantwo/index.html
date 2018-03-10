@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-yacy-ssl">Fragen und Antworten • Re: YaCy + SSL</h1>
+
+<p>Date: 2013-12-10 17:53:38</p>
+
+<p>Wenn ich weiß wie es geht auf jeden Fall.<br />
+Um dahin zu kommen muss ich aber erst noch einen schweren Bug
+beseitigen.<br />
+YaCy lässt sich bei mir auf einmal nicht mehr starten.<br />
+Lief 3,4 Tage ohne Probleme und plötzlich war der Prozess weg.<br />
+Als ich es neu starten wollte bekam ich fast den gleichen Fehler wie
+hier:<br />
+<a href="http://mantis.tokeek.de/view.php?id=251">http://mantis.tokeek.de/view.php?id=251</a><br />
+Mit der Ausnahme bei mir war pkcs12ImportFile leer aber nicht
+pkcs12ImportPwd.<br />
+<br />
+Aus meinem Log:</p>
+
+<blockquote>
+<div>
+
+\
+yacy\@server:\~/yacy\$ tail -n 100 DATA/LOG/yacy00.log\
+I 2013/12/10 17:15:40 SERVER Import certificates from import file
+\'DATA/SETTINGS/keystore.pkcs12\'.\
+E 2013/12/10 17:15:40 SERVER Unable to import certificate from import
+file \'DATA/SETTINGS/keystore.pkcs12\'.\
+java.io.IOException: Keystore was tampered with, or password was
+incorrect\
+at
+sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:788)\
+at
+sun.security.provider.JavaKeyStore\$JKS.engineLoad(JavaKeyStore.java:55)\
+at java.security.KeyStore.load(KeyStore.java:1201)\
+at net.yacy.utils.PKCS12Tool.importToJKS(PKCS12Tool.java:89)\
+at net.yacy.server.serverCore.initSSLFactory(serverCore.java:1037)\
+at net.yacy.server.serverCore.\<init\>(serverCore.java:198)\
+at net.yacy.yacy.startup(yacy.java:349)\
+at net.yacy.yacy.main(yacy.java:671)\
+Caused by: java.security.UnrecoverableKeyException: Password
+verification failed\
+at
+sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:786)\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Was habe ich bisher probiert:<br />
+- Ich habe den RAM des Servers jetzt von 1 GB auf 4 GB angehoben.<br />
+(YaCy selbst läuft bei mir normalerweise mit 600 MB)<br />
+- Server Reboot und dann YaCy starten bringt nichts<br />
+- Ich habe die yacy.conf kontrolliert dass pkcs12ImportFile und
+pkcs12ImportPwd drinsteht<br />
+- Ich habe die keystore.pkcs12 mit dem alten Passwort neu erstellt<br />
+- Ich habe die Einträge für pkcs12ImportFile und pkcs12ImportPwd und die
+keystore.pkcs12 entfernt mit der Hoffnung YaCy so wenigstens ohne
+TLS/SSL starten zu können aber scheinbar reicht das nicht aus den Modus
+zu ändern.<br />
+- Ich habe keystore.pkcs12 neu erstellt und die Einträge für
+pkcs12ImportFile und pkcs12ImportPwd in der yacy.conf wieder gesetzt.
+Dabei darauf geachtet dass das verwendete Passwort identisch ist.<br />
+- Ich habe über ./reconfigureYACY.sh den Memory auf 1600 MB hochgesetzt<br />
+<br />
+Klappt alles nicht.<br />
+Wenn ich YaCy starte dauert es nicht lange und der Prozess von YaCy wird
+beendet.<br />
+Einzige Lösung bei der ich im Moment Aussicht auf Erfolg hätte: YaCy neu
+installieren.<br />
+Dann würde der gleiche Fehler wohl aber wieder auftreten.<br />
+<br />
+Jemand eine Idee wie man den Fehler beseitigen kann?</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9077">Yududi</a>
+&mdash; Di Dez 10, 2013 5:53 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

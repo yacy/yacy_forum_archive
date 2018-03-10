@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-crawler-api-media-parser">Fragen und Antworten • Re: Crawler API / Media / Parser</h1>
+
+<p>Date: 2013-11-04 18:13:55</p>
+
+<p>Hi Orbiter<br />
+<br />
+Danke für deine ausführlichen Erklärungen.<br />
+<br />
+Zum Thema Mime-Type von Dokumenten hätte ich eine Idee:<br />
+<br />
+Das HTTP Protokoll bringt die Methode HEAD mit, das Ergebniss entspricht
+einem GET aber liefert nur die Header Informationen eines Dokuments
+zurück:<br />
+</p>
+
+<blockquote>
+<div>
+
+\
+The HEAD method is identical to GET except that the server MUST NOT
+return a message-body in the response. The metainformation contained
+in the HTTP headers in response to a HEAD request SHOULD be identical
+to the information sent in response to a GET request. This method can
+be used for obtaining metainformation about the entity implied by the
+request without transferring the entity-body itself. This method is
+often used for testing hypertext links for validity, accessibility,
+and recent modification.\
+
+</div>
+</blockquote>
+
+<p><br />
+Quelle: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.4">http://www.w3.org/Protocols/rfc2616/rfc ...
+tml#sec9.4</a>{.postlink}<br />
+<br />
+Wenn man jetzt HEAD nutzen würde, um die Header Informationen eines
+Dokumentes zu bekommen, könnte man aufgrund des zurückgelieferten
+mime-types entscheiden, das Dokument dann doch noch mit einem GET
+komplett zu holen oder nicht, je nachdem ob der dazugehörige Parser
+aktiviert ist.<br />
+<br />
+Der oben zitierte Text liefert eigentlich gleich noch 2 Pro\&rsquo;s für einen
+Einsatz der Methode HEAD: letzte Änderung des Dokuments, was vom Crawler
+sicherlich genutzt wird, oder auch Links auf Existenz prüfen (Stichwort
+Linkanalyse (SEO)).<br />
+<br />
+[Vorteile die ich sehe:]{style=&ldquo;text-decoration: underline&rdquo;}</p>
+
+<ul>
+<li>man bekommt Header Infos ohne das gesamte Dokument holen zu müssen</li>
+<li>daraus ergibt sich möglicherweise geringerer Traffic für
+Crawler-Admin und Seiten-Admin (gerade beim Crawlen von Video- oder
+Audiodateien, wäre das meiner Meinung nach ein nicht zu
+unterschätzender Vorteil)</li>
+</ul>
+
+<p>[Nachteile die ich sehe:]{style=&ldquo;text-decoration: underline&rdquo;}</p>
+
+<ul>
+<li>Programmieraufwand(?)</li>
+<li>50% langsameres crawling, da für jedes Dokument im Zweifel 2
+requests abgesetzt werden müssten</li>
+</ul>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9007">freak</a>
+&mdash; Mo Nov 04, 2013 6:13 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

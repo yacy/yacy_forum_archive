@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-lässt-sich-in-ubuntu-16-04-nicht-installieren">Hilfe für Einsteiger und Anwender • Lässt sich in Ubuntu 16.04 nicht installieren.</h1>
+
+<p>Date: 2016-10-07 08:38:00</p>
+
+<p>Hallo,<br />
+ich würde Yacy gerne auf meinem Ubuntu 16.04 System installieren, jedoch
+schlägt jeder Installationsversuch fehl. Zuerst habe ich versucht Yacy
+als Debian-Paket zu installieren, bekam jedoch folgende
+Fehlermeldung(en):</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>gerrit@gerrit-macbook:~$ echo 'deb http://debian.yacy.net ./' | sudo tee /etc/apt/sources.list.d/yacy.list[sudo] Passwort für gerrit: deb http://debian.yacy.net ./gerrit@gerrit-macbook:~$ sudo apt-key advanced --keyserver pgp.net.nz --recv-keys 03D886E7Executing: /tmp/tmp.olFdggwnac/gpg.1.sh --keyserverpgp.net.nz--recv-keys03D886E7gpg: Schlüssel 03D886E7 von hkp-Server pgp.net.nz anforderngpg: Schlüssel 03D886E7: Öffentlicher Schlüssel &quot;Michael Peter Christen &lt;mc@yacy.net&gt;&quot; importiertgpg: Anzahl insgesamt bearbeiteter Schlüssel: 1gpg:               importiert: 1  (RSA: 1)gerrit@gerrit-macbook:~$ sudo apt updateOK:1 http://... precise InReleaseOK:2 http://... xenial InRelease                                                Ign:3 http://... stable InRelease                                                           OK:4 http://de.archive.ubuntu.com/ubuntu xenial InRelease                                                              OK:5 http://ppa.launchpad.net/obsproject/obs-studio/ubuntu xenial InRelease                                            OK:6 http://repository.spotify.com stable InRelease                                                                    OK:7 http://security.ubuntu.com/ubuntu xenial-security InRelease                                                       OK:8 http://... stable Release                                                              Holen:9 http://ppa.launchpad.net/oibaf/graphics-drivers/ubuntu xenial InRelease [17,6 kB]                              Ign:10 http://debian.yacy.net ./ InRelease                                                                             Holen:11 http://de.archive.ubuntu.com/ubuntu xenial-updates InRelease [95,7 kB]                                        Ign:12 http://... xenial InRelease                                                 Holen:13 http://debian.yacy.net ./ Release [1.202 B]                                                                   OK:14 http://ppa.launchpad.net/ondrej/php/ubuntu xenial InRelease                                                      Holen:15 http://debian.yacy.net ./ Release.gpg [473 B]                                                         OK:16 http://... xenial Release                                                    OK:17 http://de.archive.ubuntu.com/ubuntu xenial-backports InRelease                                 OK:18 http://... xenial InReleaseOK:19 http://... xenial InReleaseHolen:21 http://debian.yacy.net ./ Packages [602 B]   Holen:22 http://de.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [396 kB]Holen:24 http://de.archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [391 kB]Holen:25 http://de.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [335 kB]Holen:26 http://de.archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages [331 kB]OK:27 https://packagecloud.io/slacktechnologies/slack/debian jessie InReleaseEs wurden 1.567 kB in 2 s geholt (623 kB/s).Paketlisten werden gelesen... FertigAbhängigkeitsbaum wird aufgebaut.       Statusinformationen werden eingelesen.... FertigAktualisierung für 36 Pakete verfügbar. Führen Sie »apt list --upgradable« aus, um sie anzuzeigen.W: http://debian.yacy.net/./Release.gpg: Signature by key 8BD752501CB62448A30EA3EA1F968B3903D886E7 uses weak digest algorithm (SHA1)W: http://.../ubuntu/dists/xenial/Release.gpg: Signature by key ... uses weak digest algorithm (SHA1)gerrit@gerrit-macbook:~$ sudo apt install yacyPaketlisten werden gelesen... FertigAbhängigkeitsbaum wird aufgebaut.       Statusinformationen werden eingelesen.... FertigDie folgenden NEUEN Pakete werden installiert:  yacy0 aktualisiert, 1 neu installiert, 0 zu entfernen und 10 nicht aktualisiert.Es müssen noch 0 B von 49,6 MB an Archiven heruntergeladen werden.Nach dieser Operation werden 66,1 MB Plattenplatz zusätzlich benutzt.Vorkonfiguration der Pakete ...Vormals nicht ausgewähltes Paket yacy wird gewählt.(Lese Datenbank ... 360879 Dateien und Verzeichnisse sind derzeit installiert.)Vorbereitung zum Entpacken von .../yacy_1.90.9000_all.deb ...Entpacken von yacy (1.90.9000) ...Trigger für systemd (229-4ubuntu10) werden verarbeitet ...Trigger für ureadahead (0.100.0-19) werden verarbeitet ...yacy (1.90.9000) wird eingerichtet ...Job for yacy.service failed because the control process exited with error code. See &quot;systemctl status yacy.service&quot; and &quot;journalctl -xe&quot; for details.invoke-rc.d: initscript yacy, action &quot;start&quot; failed.dpkg: Fehler beim Bearbeiten des Paketes yacy (--configure): Unterprozess installiertes post-installation-Skript gab den Fehlerwert 1 zurückTrigger für systemd (229-4ubuntu10) werden verarbeitet ...Trigger für ureadahead (0.100.0-19) werden verarbeitet ...Fehler traten auf beim Bearbeiten von: yacyE: Sub-process /usr/bin/dpkg returned an error code (1)gerrit@gerrit-macbook:~$ systemctl status yacy.service● yacy.service - LSB: Distributed web search engine   Loaded: loaded (/etc/init.d/yacy; bad; vendor preset: enabled)   Active: failed (Result: exit-code) since Fr 2016-10-07 08:15:37 CEST; 9s ago     Docs: man:systemd-sysv-generator(8)Okt 07 08:15:36 gerrit-macbook systemd[1]: Starting LSB: Distributed web search engine...Okt 07 08:15:37 gerrit-macbook yacy[4674]: Starting YaCy P2P Web Search: failed.Okt 07 08:15:37 gerrit-macbook systemd[1]: yacy.service: Control process exited, code=exited status=1Okt 07 08:15:37 gerrit-macbook systemd[1]: Failed to start LSB: Distributed web search engine.Okt 07 08:15:37 gerrit-macbook systemd[1]: yacy.service: Unit entered failed state.Okt 07 08:15:37 gerrit-macbook systemd[1]: yacy.service: Failed with result 'exit-code'.gerrit@gerrit-macbook:~$</code></dd>
+</dl>
+
+<p><br />
+<br />
+Nachdem das fehlgeschlagen ist habe ich das yacy-Archiv
+(yacy_v1.90_20160704_9000.tar.gz) heruntergeladen und versucht zu
+starten:</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>gerrit@gerrit-macbook:~/Programme/yacy$ java -versionopenjdk version &quot;9-internal&quot;OpenJDK Runtime Environment (build 9-internal+0-2016-04-14-195246.buildd.src)OpenJDK 64-Bit Server VM (build 9-internal+0-2016-04-14-195246.buildd.src, mixed mode)gerrit@gerrit-macbook:~/Programme/yacy$ ./startYACY.sh -d****************** YaCy Web Crawler/Indexer &amp; Search Engine *********************** (C) by Michael Peter Christen, usage granted under the GPL Version 2  ********   USE AT YOUR OWN RISK! Project home and releases: http://yacy.net/   ******  LOG of       YaCy: DATA/LOG/yacy00.log (and yacy&lt;xx&gt;.log)                ****  STOP         YaCy: execute stopYACY.sh and wait some seconds             ****  GET HELP for YaCy: see http://wiki.yacy.net and http://forum.yacy.de     ********************************************************************************* &gt;&gt; YaCy started as daemon process. Administration at http://localhost:8090 &lt;&lt; Fehler: Konfigurationsdatei wurde nicht gefunden: /usr/lib/jvm/java-9-openjdk-amd64/conf/management/management.propertiesgerrit@gerrit-macbook:~/Programme/yacy$ curl http://localhost:8090 curl: (7) Failed to connect to localhost port 8090: Verbindungsaufbau abgelehntgerrit@gerrit-macbook:~/Programme/yacy$ uname -aLinux gerrit-macbook 4.4.0-38-generic #57-Ubuntu SMP Tue Sep 6 15:42:33 UTC 2016 x86_64 x86_64 x86_64 GNU/Linuxgerrit@gerrit-macbook:~/Programme/yacy$</code></dd>
+</dl>
+
+<p><br />
+<br />
+Start über \&ldquo;strace\&rdquo;: <a href="http://pastebin.com/w30nzZEj">http://pastebin.com/w30nzZEj</a><br />
+<br />
+Habe ich etwas falsch gemacht? Kann hier jemand helfen? Vielen Dank.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9705">addiks</a>
+&mdash; Fr Okt 07, 2016 7:38 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

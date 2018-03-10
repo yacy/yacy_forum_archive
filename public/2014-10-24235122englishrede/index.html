@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-re-demo-portal-has-got-too-many-connections">English • Re: Demo portal has got too many connections</h1>
+
+<p>Date: 2014-10-24 23:51:22</p>
+
+<blockquote>
+<div>
+
+Erik\_S hat geschrieben:\
+Hello,\
+\
+
+> <div>
+>
+> smokingwheels hat geschrieben:You might have to assume port 8443 or
+> 443 and manually make a list, which I could do for you.\
+>
+> </div>
+
+<p>Why? Sorry, but i do not understand the intention of this task. I do
+not know how many YaCy-Peers have SSL enabled (but i can implement a
+Statistic-Value for this Information in my Tool if you wish), so i can
+not say how useful is a List of this Peers. And guessing the
+Information about the used Port is not a meaningful way, in my
+opinion.</p>
+
+<p></div></p>
+</blockquote>
+
+<p><br />
+<br />
+More people might try Yacy out if there is a demo SSL sort of URL
+connection.<br />
+I did a test to my Twitter feed yesterday and found I had a log file of
+66 k pretty quickly and today some 12 hours later its now 244k. Note \&ldquo;I
+does not contain any IP\&rsquo;s\&rdquo;<br />
+If you go to /Network.html?page=1&amp;maxCount=1000 you should see a little
+black lock next to SSL enabled peers. However I have noticed when I look
+at my other peer from each peer there not showing up as SSL Enabled.<br />
+</p>
+
+<blockquote>
+<div>
+
+Erik\_S hat geschrieben:\
+
+> <div>
+>
+> smokingwheels hat geschrieben:I think the certificate is self signed
+> and that\'s why Firefox says its untrusted.\
+>
+> </div>
+
+<p>No, the Problem is: there exist multiple Ways to access a YaCy-Peer
+(one or multiple IP-Addresses and a not limited Number of Domain-Names
+that resolve to one or more of the IP-Addresses) and for fulfilling
+the SSL-Paradigm YaCy need an extra Certificate for
+[each]{style=&ldquo;text-decoration: underline&rdquo;} Way (and Browser that
+support this: <a href="http://en.wikipedia.org/wiki/Server_Name_Indication">http://en.wikipedia.org/wiki/Server_Name_Indication</a>,
+most Browsers do <a href="https://sni.velox.ch/">https://sni.velox.ch/</a>).</p>
+
+<p></div></p>
+</blockquote>
+
+<p><br />
+Interesting looks like someone should add it to the DEV Wishlist, beyond
+me.<br />
+</p>
+
+<blockquote>
+<div>
+
+Erik\_S hat geschrieben:\
+
+> <div>
+>
+> smokingwheels hat geschrieben:Do you know a free way to fix that?\
+>
+> </div>
+
+<p>I think RFC6698 can be a Solution. The primary intention of my Tool is
+to be a DNS-Server for the both YaCy-Top-Level-Domains .yacy and
+.yacyh, so there exist soon a possible Way to solve this Problem.<br />
+<br />
+Greetings<br />
+Erik</p>
+
+<p></div></p>
+</blockquote>
+
+<p><br />
+Hope you get your tool to work.<br />
+Cheers</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8994">smokingwheels</a>
+&mdash; Fr Okt 24, 2014 10:51 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

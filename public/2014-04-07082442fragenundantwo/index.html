@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-passive-peers-reaktivieren">Fragen und Antworten • Re: Passive Peers \&ldquo;reaktivieren\&ldquo;?</h1>
+
+<p>Date: 2014-04-07 08:24:42</p>
+
+<p>Hallo,<br />
+<br />
+danke erst einmal für die schnelle Antwort.<br />
+Ich habe am Wochenende noch ein wenig experimentieren dürfen. Die
+Uhzeiten noch einmal genau abzugleichen scheint nur ein Teil der Lösung
+zu sein.<br />
+Da das Netz an YaCy-Peers im Moment recht statisch ist; also sämtliche
+Peers derzeit auf Servern laufen (keine auf Userrechnern, die Dynamik
+ins Netz bringen) habe ich wohl ersteinmal eine Deadlock-Situation: 2
+Teilnetze sehen sich gegenseitig als Passiv, kein Teilnetz versucht den
+Verbindungsaufbau zum jeweils anderen, da jeweils alle Peers im Teilnetz
+betroffen sind.<br />
+Das erklärt auch, dass sich die Situation auch nicht durch neustarten
+einzelner Peers auflöst.<br />
+<br />
+Meine vorübergehende Lösung ist folgende: Ich lösche in einem
+Restart-Zyklus stumpf die seed.old.heap auf einem Peer. Das beseitigt
+einerseits die Passiv-Einträge und scheint ein neues Bootstrapping zu
+bewirken... (nicht schön aber geht...) Der Peer fügt das Netz dann
+wieder zusammen.<br />
+(Ich überlege gerade, ob so eine Situation auch im Internet entstehen
+kann. Das könnte einige Peers kosten.)<br />
+<br />
+Bei dem Netzwerk handelt es sich übrigens um das IP-Netz der
+Funkamateure (\&ldquo;HAMNET\&ldquo;). Das Netz befindet sich in DL gerade im
+Aufbau; bislang gibt es nur sehr wenige Services. (vornehmlich
+Backbone-Netzwerk)<br />
+Das Netzwerk existiert Weltumspannend im IP-Netz 44.* ; es besteht
+jedoch keine (direkte) Verbindung zum Internet.<br />
+Eine kurze übersicht findest du hier:
+<a href="http://de.wikipedia.org/wiki/Hamnet">http://de.wikipedia.org/wiki/Hamnet</a>,<br />
+eine Übersicht über die Ausdehnung des Netzwerkes hier:
+<a href="http://hamnetdb.net/">http://hamnetdb.net/</a>, (klick auf \&ldquo;Map\&ldquo;)</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9388">redlexan</a>
+&mdash; Mo Apr 07, 2014 7:24 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

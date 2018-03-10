@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-re-yacy-on-an-olinuxino-board">English • Re: Yacy on an Olinuxino board</h1>
+
+<p>Date: 2014-11-06 13:43:53</p>
+
+<p>As promised, here is the relevant part of the email I had from Olimex (I
+got it yesterday (5th November) in the morning):</p>
+
+<blockquote>
+<div>
+
+\
+Unfortunately, I don't see how Olimex can be of any help with the
+issue you are facing. If the creators of the Yacy server are unable to
+give instructions for installation under Debian 3.4.90+ then I would
+suggest that the default images provided by Olimex are compiled as
+armhf and Yacy seems to only work under armel distributions
+(especially since you probably used armel distribution for the RPi
+that ran Yacy successfully). Something more, since Yacy is written in
+java the platform also needs to be suitable for hard-float -- there
+are separate java distributions for soft-float and hard-float.\
+\
+Make sure you are using the proper java and the settings of yacy are
+set properly. If there is no java installed nothing would happen.\
+\
+To be more specific why RPi uses armel and OLinuXino armhf
+distributions -- there are hardware reasons for that -- the older
+ARMv6 processors had no support for hard float point; while the
+OLinuXino is ARMv7 and there is such support. The CPU in the Raspberry
+Pi implements the ARMv6 ISA (with VFP2) and is thus incompatible with
+the Debian armhf port baseline of ARMv7+VFP3 and ARM
+hardware-floating-point ports for other distributions, which all have
+the same baseline.\
+\
+The only ways out would be:\
+\
+1. Find a similar program that works under Debian 3.4.90+ and armhf
+(hardware-floating) -- quite unlikely to find stable alternative to
+Yacy\
+\
+2. Ask around the Yacy community to provide better armhf support\
+\
+3. Compile an OLinuXino image with soft-float\
+\
+The 3.15 kernel support you saw is incomplete and it is created by an
+user. It is not an official release. The information might be found at
+this blog post: [http://olimex.wordpress.com/2014/06/30/ \...
+rnel-3-15/](http://olimex.wordpress.com/2014/06/30/a10-olinuxino-lime-open-source-hardware-linux-computer-now-in-kernel-3-15/){.postlink}
+We are updating the kernel in the official releases when it reaches a
+stable state. The progress for each kernel version might be found
+here: <http://linux-sunxi.org/Linux_Kernel>\
+\
+Best regards,\
+Lub/OLIMEX\
+\
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--\
+From: Bertrand HER\
+Sent: Saturday, November 01, 2014 4:56 PM\
+To: <support@olimex.com>\
+Subject: Support Question\
+\
+Hello,\
+\
+I write to you today about some issues I have with your boards. I
+have, at the moment, three of your boards: iMX233-MINI, A13 and
+A20-Lime2. I use the A13 as a server perfectly, and tried to use the
+iMX233 as a Yacy server. I could not achieve it, since the server kept
+on crashing before it even started. But this software run on a
+raspberryPi, which has better hardware spec than iMX233. Hence I tried
+to run Yacy on my A13, but it also failed. I then ordered a A20-Lime2
+to get rid f the hardware specs uncertainty, but Yacy just crash the
+same as on less powerful boards.\
+\
+I noticed that I could run Yacy on my laptop. Since my laptop has a
+kernel 3.14 and the raspbian distribution has a 3.12 kernel (whiile
+iMX233 is only 3.11) I wondered if it could be the cause.\
+\
+I opened a thread on the Yacy forums; it can be useful if you want
+some more details.\
+\
+Do you think it possible to deliver a Debian image based on kernel
+3.12 or higher for the Lime2? I saw that you did a 3.15 kernel based
+image for A10-Lime, so I guess it would be possible (and easier, I am
+not used to compile kernels) for you to deliver it.\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+As I said before, I will not have much time to spend on this topic for a
+few days at least, so for now I leave it the way it is. What I am
+planning to do next:<br />
+* try to install the softwares from jessie repositories if possible: I
+noticed that Yacy would not run on a fresh install of Debian Wheezy on
+anthoer laptop, but would once getting upgrades from jessie repos. It
+did not throw the same error, but make a try will not hurt.<br />
+* find or compile an Olinuxino image with armel instead of armhf.<br />
+<br />
+Once again, if I come to any relevant results, I shall let you know.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9498">layst</a>
+&mdash; Do Nov 06, 2014 1:43 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

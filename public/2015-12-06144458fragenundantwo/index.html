@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-yacy-hört-nicht-auf-port-8090">Fragen und Antworten • YaCy hört nicht auf Port 8090</h1>
+
+<p>Date: 2015-12-06 14:44:58</p>
+
+<p>Hallo zusammen.<br />
+<br />
+Ich versuche, YaCy auf einem Raspi zu installieren und zum Laufen zu
+bringen. Als Basis habbich die neueste Version von Raspbian vom November
+installiert.<br />
+<br />
+YaCy kann ich starten und es \&ldquo;macht\&rdquo; dann auch was. Zumindest zeigt
+mir top an, dass ein Java-Prozess nach einem startYaCy.sh den Prozessor
+beschäftigt. Das Problem, was ich habe ist, dass das WebGUI auf Port
+8090 nicht erreichbar ist. Weder von localhost, noch von aussen.<br />
+<br />
+Hier mal ein Mitschnitt von der Konsole:<br />
+<br />
+venty\@hotdog:~/yacy \$ ./startYACY.sh<br />
+****************** YaCy Web Crawler/Indexer &amp; Search
+Engine *******************<br />
+**** &copy; by Michael Peter Christen, usage granted under the GPL
+Version 2 ****<br />
+**** USE AT YOUR OWN RISK! Project home and releases:
+<a href="http://yacy.net/">http://yacy.net/</a> ****<br />
+** LOG of YaCy: DATA/LOG/yacy00.log (and yacy&lt;xx&gt;.log) **<br />
+** STOP YaCy: execute stopYACY.sh and wait some seconds **<br />
+** GET HELP for YaCy: see <a href="http://wiki.yacy.net">http://wiki.yacy.net</a> and
+<a href="http://forum.yacy.de">http://forum.yacy.de</a> **<br />
+*******************************************************************************<br />
+&gt;&gt; YaCy started as daemon process. Administration at
+<a href="http://localhost:8090">http://localhost:8090</a> &lt;&lt;<br />
+<br />
+venty\@hotdog:~/yacy \$ tail -f DATA/LOG/yacy00.log<br />
+I 2015/12/06 13:29:36 Domain Init local host address: 0:0:0:0:0:0:0:1
+(local)<br />
+I 2015/12/06 13:29:36 Domain Init local host address: 127.0.0.1 (local)<br />
+I 2015/12/06 13:29:36 Domain Init local host address:
+fe80:0:0:0:24b:5bfc:8a9e:b148 (local)<br />
+I 2015/12/06 13:29:36 Domain Init local host address:
+fe80::24b:5bfc:8a9e:b148 (local)<br />
+I 2015/12/06 13:29:36 Domain Init local host address:
+2001:1620:f00:8250:ba27:ebff:fe69:a351 (public)<br />
+I 2015/12/06 13:29:36 Domain Init local host address: 127.0.1.1 (local)<br />
+I 2015/12/06 13:29:36 Domain Init local host address: 192.168.200.94
+(local)<br />
+I 2015/12/06 13:29:41 Domain Init local host address: 169.254.185.103
+(local)<br />
+I 2015/12/06 13:29:41 Domain Init local host address:
+fe80:0:0:0:ba27:ebff:fe69:a351 (local)<br />
+I 2015/12/06 13:29:41 Domain Init local host address:
+fe80::ba27:ebff:fe69:a351 (local)<br />
+I 2015/12/06 13:29:45 UPNP no device found<br />
+I 2015/12/06 13:29:52 Word hashCache.size = 20000<br />
+I 2015/12/06 13:29:52 SWITCHBOARD Initializing Segment
+\&lsquo;/home/venty/yacy/DATA/INDEX/freeworld/SEGMENTS.<br />
+I 2015/12/06 13:30:00 org.apache.solr.core.ConfigSolr Loading container
+configuration from /home/venty/yacy/defaults/solr/solr.xml<br />
+I 2015/12/06 13:30:13 org.apache.solr.update.UpdateShardHandler Creating
+UpdateShardHandler HTTP client with params:
+socketTimeout=0&amp;connTimeout=0&amp;retry=false<br />
+I 2015/12/06 13:30:13 org.apache.solr.logging.LogWatcher SLF4J impl is
+org.slf4j.impl.JDK14LoggerFactory<br />
+I 2015/12/06 13:30:13 org.apache.solr.logging.LogWatcher Registering Log
+Listener [JUL (org.slf4j.impl.JDK14LoggerFactory)]<br />
+I 2015/12/06 13:30:22 org.apache.solr.update.SolrIndexConfig IndexWriter
+infoStream solr logging is enabled<br />
+I 2015/12/06 13:30:22 org.apache.solr.update.SolrIndexConfig IndexWriter
+infoStream solr logging is enabled<br />
+<br />
+<br />
+So wie ich die Logeinträge verstehe, sollte der doch auf allen möglichen
+IPs (v4 und v6) hören.<br />
+Jedoch bekomm ich da samt und sonders nur ein \&ldquo;Connection Refused\&ldquo;.
+Firewall ist AFAIK keine am Laufen. Mindestens zeigt iptables -L nix
+an.<br />
+<br />
+Was kann ich tun, damit YaCy sich ein bisschen für die Aussenwelt
+öffnet?</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9634">Venty</a>
+&mdash; So Dez 06, 2015 2:44 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

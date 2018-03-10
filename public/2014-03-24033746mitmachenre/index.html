@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="mitmachen-re-raspberry-pi">Mitmachen • Re: Raspberry Pi</h1>
+
+<p>Date: 2014-03-24 03:37:46</p>
+
+<blockquote>
+<div>
+
+Orbiter hat geschrieben:\
+\@q5sys whats the current status? YaCyPi got fundet and I believe you
+are working on the deployment.\
+Do you want to show here your latest image for testing?\
+Here are some hints about the current status:\
+\
+- the password and account problem was fixed, should work
+hopefully\...\
+- I added some rules to prevent execution of high-peformance tasks
+like postprocessing if memory is less or below 600MB, therefore that
+should never start on a RPi\
+- there had been another settings to controll execution of specific
+tasks like index distribution when local load is too high. You may
+want to change these default settings (see all fields in yacy.init
+with \'loadprereq\')\
+- I worked hard to reduce memory usage and to fix memory leaks\
+- I made some performance enhancements.\
+\
+When you deploy the RPi you should add a \'reset\' script which an be
+used to remove the current YaCy instalation and replace it either with
+the YaCy version that you deployed or the latest version that you
+provide for updates, if you want to. I would think that this is like a
+good support to peope wo get a delivery and it would extend the
+livespan of such YaCyPi devices.\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Im waiting on the physical hardware to be delivered from the various
+sources so I can start putting together the shipping packages.<br />
+I was waiting on wrapping up the final image until the Login issue was
+fixed. I couldn\&rsquo;t very well shipa product that people wouldn\&rsquo;t be able
+to log into.<br />
+Since I\&rsquo;m going ahead and including a USB drive with every order,
+memory isnt as much of an issue, since I can load 2Gb of swap space into
+a swap partition on the USB device, so if on board memory gets lower it
+can utilize that.<br />
+<br />
+I was thinking of bundling a shell script for users to upgrade their
+YaCy install, but wasnt sure the best way to do this and still retain
+any of their logs, data, etc. Do I just save the /DATA dir and import
+that into the new folder once the tar.gz is expanded?<br />
+I havent done any testing with trying to update yet.<br />
+I was planning on just providing image updates as needed, which also
+allows me to update the kernel, packages, libs, etc. But maybe a way to
+update just YaCy is a good idea.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9339">q5sys</a>
+&mdash; Mo Mär 24, 2014 3:37 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

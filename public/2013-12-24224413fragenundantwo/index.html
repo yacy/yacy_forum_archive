@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-was-liest-man-aus-dem-log-wenn-peer-nicht-reagiert">Fragen und Antworten • Re: Was liest man aus dem Log, wenn Peer nicht reagiert?</h1>
+
+<p>Date: 2013-12-24 22:44:13</p>
+
+<p>Mhm. Habs nun über den Heiligen Nachmitag und Abend laufen lassen ohne
+anzufassen.<br />
+<br />
+Jetzt eben den Laptop wieder aufgeklappt und mal sehen, was angezeigt
+wird, wenn die Browserseite sich aktualisiert:<br />
+<br />
+Jetzt zeigt\&rsquo;s an, dass der Indexer beschäftigt ist (Admin-Statusseite)
+und bei Local Crawl ist das grüne Dreieck (bei stehendem Crawl) wieder
+dem roten Quadrat gewichen. Aber die Seite wird nicht wirklich
+vollständig geladen. YACY reagiert nicht mehr vollständig auf
+Webanfragen. Das Diagramm und das Loggingfenster bekommen keine Daten
+mehr.<br />
+<br />
+Nun Klick auf Monitoring-&gt;Computation: .&hellip; YACY sendet nicht wirklich
+noch eine Antwort an den Browser. Und im Log stehen für mich wieder
+nicht erklärbare Einträge:<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>W 2013/12/24 22:14:36 BusyThread Thread 'net.yacy.search.Switchboard.dhtTransferJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:15:36 BusyThread Thread 'net.yacy.peers.Network.peerPing' runs short memory cycle. Free mem: 1024 KB, needed: 2048 KBW 2013/12/24 22:15:38 BusyThread Thread 'net.yacy.search.Switchboard.surrogateProcess' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBD 2013/12/24 22:17:30 SWITCHBOARD Cleaning Incoming News, 11 entries on stackI 2013/12/24 22:17:30 YACY rulebasedUpdateInfo: not an automatic update selectedW 2013/12/24 22:18:31 BusyThread Thread 'net.yacy.crawler.data.CrawlQueues.remoteTriggeredCrawlJob' runs short memory cycle. Free mem: 1024 KB, needed: $W 2013/12/24 22:18:37 BusyThread Thread 'net.yacy.crawler.data.CrawlQueues.coreCrawlJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:18:47 BusyThread Thread 'net.yacy.search.Switchboard.dhtTransferJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:19:49 BusyThread Thread 'net.yacy.peers.Network.peerPing' runs short memory cycle. Free mem: 1024 KB, needed: 2048 KBW 2013/12/24 22:19:50 BusyThread Thread 'net.yacy.search.Switchboard.surrogateProcess' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBD 2013/12/24 22:22:30 SWITCHBOARD Cleaning Incoming News, 11 entries on stackI 2013/12/24 22:22:30 YACY rulebasedUpdateInfo: not an automatic update selectedW 2013/12/24 22:22:43 BusyThread Thread 'net.yacy.crawler.data.CrawlQueues.remoteTriggeredCrawlJob' runs short memory cycle. Free mem: 1024 KB, needed: $W 2013/12/24 22:22:49 BusyThread Thread 'net.yacy.crawler.data.CrawlQueues.coreCrawlJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:22:59 BusyThread Thread 'net.yacy.search.Switchboard.dhtTransferJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:24:03 BusyThread Thread 'net.yacy.search.Switchboard.surrogateProcess' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:24:03 BusyThread Thread 'net.yacy.peers.Network.peerPing' runs short memory cycle. Free mem: 1024 KB, needed: 2048 KBW 2013/12/24 22:26:56 BusyThread Thread 'net.yacy.crawler.data.CrawlQueues.remoteTriggeredCrawlJob' runs short memory cycle. Free mem: 1024 KB, needed: $W 2013/12/24 22:27:02 BusyThread Thread 'net.yacy.crawler.data.CrawlQueues.coreCrawlJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:27:12 BusyThread Thread 'net.yacy.search.Switchboard.dhtTransferJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBD 2013/12/24 22:27:30 SWITCHBOARD Cleaning Incoming News, 11 entries on stackI 2013/12/24 22:27:30 YACY rulebasedUpdateInfo: not an automatic update selectedW 2013/12/24 22:28:17 BusyThread Thread 'net.yacy.search.Switchboard.surrogateProcess' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:28:18 BusyThread Thread 'net.yacy.peers.Network.peerPing' runs short memory cycle. Free mem: 1024 KB, needed: 2048 KBW 2013/12/24 22:31:10 BusyThread Thread 'net.yacy.crawler.data.CrawlQueues.remoteTriggeredCrawlJob' runs short memory cycle. Free mem: 1024 KB, needed: $W 2013/12/24 22:31:16 BusyThread Thread 'net.yacy.crawler.data.CrawlQueues.coreCrawlJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KBW 2013/12/24 22:31:26 BusyThread Thread 'net.yacy.search.Switchboard.dhtTransferJob' runs short memory cycle. Free mem: 1024 KB, needed: 12288 KB</code></dd>
+</dl>
+
+<p><br />
+<br />
+Mir sagt das Log nur so viel, dass offenbar mehr Speicher für die
+Threads benötigt wird, als da ist.<br />
+Der Browser wartet weiter auf eine Antwort von YACY. Aber es kommt
+nichts mehr.
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_sad.gif" alt=":(" title="Sad" /><br />
+<br />
+Mit einem anderen YACY gerade mal nachgesehen: Antwortet auch nicht mehr
+auf andere Peers, denn dort taucht es nicht mehr unter \&ldquo;Active Peers\&rdquo;
+auf.<br />
+<br />
+Sieht also so aus, dass nur nach einem Neustart eine ganze Weile alles
+nach Plan läuft und sich YACY irgendwann verschluckt.<br />
+<br />
+Allerdings scheint es auch nach einem Neustart für das Netzwerk nicht
+mehr zur Verfügung zu stehen. Habe heute Mittag mal versucht (als es
+noch schön brav auf Browseranfragen geantwortet hat) von einem anderen
+Peer Begriff-Kombinationen zu suchen, die insbesondere in den
+vorangegangenen Tagen von diesem Peer gecrawlt worden. Ich nehme an,
+dass man auf der Statusseite des Peers sehen müsste, wenn eine
+Suchanfrage eines anderen Peers bearbeitet wird. Aber nichts
+dergleichen. Zig mal versucht. Nur hin und wieder wird angezeigt, dass
+ein Peer ins Netzwerk gekommen ist oder jemand ein Ping gesendet hat.
+Aber auch schon deutlich seltener als sonst üblich. - Also scheint der
+Peer auch ohne crawl in diesem Zustand nutzlos.
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_sad.gif" alt=":(" title="Sad" /></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9031">fherb</a>
+&mdash; Di Dez 24, 2013 10:44 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

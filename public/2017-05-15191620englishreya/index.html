@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-re-yacy-won-t-re-start">English • Re: Yacy won\&rsquo;t re-start</h1>
+
+<p>Date: 2017-05-15 19:16:20</p>
+
+<p>Thanks for sharing your experience. It looks like there is really
+something to dig regarding this problem with file descriptors... I will
+try to reproduce your scenario when having some time.<br />
+</p>
+
+<blockquote>
+<div>
+
+\
+I guess it\'s normal for Java to use large amounts of memory when
+it\'s available, I just wanted to let you know my experience.\
+
+</div>
+</blockquote>
+
+<p><br />
+For sure Java lets more easily fill the available memory when using some
+structures without limitations. But in the end to my mind this really
+depends on how the application code is organized an is not so much
+related to Java. In YaCy there are many places where controls are
+performed on the available memory, so it is not a surprise to me that it
+uses much when much is available... which doesn\&rsquo;t mean that YaCy
+necessarily needs so large amounts of memory to run fine.<br />
+</p>
+
+<blockquote>
+<div>
+
+\
+I installed Yacy on my laptop too, and I tried submitting the same
+query on the server and on the laptop. The results are different\
+
+</div>
+</blockquote>
+
+<p><br />
+Yes, in peer-to-peer mode this may sound a bit surprising but it is the
+expected behavior, at least with the current YaCy architecture. When
+performing a search in p2p mode, some peers among the network are
+selected to be requested and to aggregate results from, and the
+selection rules even include some Randomness. Thus we can not obtain a
+deterministic behavior (like in Solr Cloud) in this p2p mode because
+each node has its own index and its own blacklisting and crawling rules,
+and is not supposed to obey to some master(s) node rules. The index
+distribution over the nodes accepting to receive remote index parts
+(DHT-in) is made to homogenize a bit the whole distributed index, but in
+the end the behavior is not deterministic... but after a long running
+time of your two YaCy peers I guess you should obtain more similar
+results.<br />
+I hope this answer a bit to your question.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9609">luc</a>
+&mdash; Mo Mai 15, 2017 6:16 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

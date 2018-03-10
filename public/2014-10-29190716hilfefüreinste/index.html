@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-yacydns-in-aktion">Hilfe für Einsteiger und Anwender • Re: yacyDNS in Aktion</h1>
+
+<p>Date: 2014-10-29 19:07:16</p>
+
+<p>Hallo,</p>
+
+<blockquote>
+<div>
+
+Erik\_S hat geschrieben:\
+
+> <div>
+>
+> flegno hat geschrieben:dass mit 130.255.73.69 eine
+> quasi-dynDNS-Funktionalität realisiert ist.\
+>
+> </div>
+
+<p>Das ist aber nur ein Aspekt, von mehreren, meines Tools. Okay,
+eigentlich ist das der Kern meines Tools, alles andere wie die
+Statistiken und die Weiterleitungsmechanismen sind aus meiner
+persönlichen Sicht eher Beiwerk, aber deswegen nicht weniger wichtig.</p>
+
+<p></div></p>
+</blockquote>
+
+<p>Sobald das yacyDNS-Tool stabil läuft, lohnt es sich m.E. ernsthaft
+nachzudenken, die 503-Fehlermeldung hier</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>YaCy\htroot\proxymsg\error.html</code></dd>
+</dl>
+
+<p>im Demo-Portal und auf den Peers so abzufangen und zu gestalten, dass
+dem YaCy-Betreiber eine Konfigurationsmöglichkeit geboten wird:</p>
+
+<ol>
+<li>automatisch den Besucher zu einem zufälligen oder bestimmten Peer
+weiterzuleiten</li>
+<li>oder ein Frame mit der 503-Meldung \&ldquo;YaCy-Peer \&ldquo;XYZ\&rdquo; has too many
+connections, use <a href="http://130.255.73.69:5353/">yacyDNS</a>{.postlink}
+for trying an other YaCy-Peer. See
+<a href="http://yacy.net">yacy.net</a>{.postlink} to get yours.\&rdquo; einzublenden</li>
+</ol>
+
+<p>s. dazu auch <a href="http://www.giga.de/extra/internet/tipps/internet-http-fehler-503-ursache-und-problemloesung/">Internet: HTTP-Fehler 503 &ndash; Ursache und
+Problemlösung</a>{.postlink}.<br />
+<br />
+<a href="http://forum.yacy-websuche.de/viewtopic.php?p=30432#p30432">Die Position von
+Orbiter</a>{.postlink}
+in dieser Sache, das ist m.E. eine Art Erziehungsversuch mit der
+Peitsche. Mein Vorschlag oben ist ein Versuch die potenzielle
+YaCy-Nutzer mit dem Zucker, also mit einer Wohlfühl-Atmosphäre in der
+YaCy-Community für YaCy zu gewinnen
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_razz.gif" alt=":P" title="Razz" />.
+Es wäre doch unvernünftig auf diesen verfügbaren
+Verfügbarkeits-/Zuverlässigkeits-Vorteil, der auf dem
+peer-to-peer-Charakter des YaCy-Netzes basiert, zu verzichten.<br />
+<br />
+Gruss, flegno</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9475">flegno</a>
+&mdash; Mi Okt 29, 2014 7:07 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

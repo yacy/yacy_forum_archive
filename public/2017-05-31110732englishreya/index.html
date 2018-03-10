@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-re-yacy-won-t-re-start">English • Re: Yacy won\&rsquo;t re-start</h1>
+
+<p>Date: 2017-05-31 11:07:32</p>
+
+<p>I\&rsquo;m still having problems when the crawl gets too large, here\&rsquo;s what I
+did:<br />
+<br />
+- last Friday I did a fresh install of yacy, removing all configuration
+files and indexes<br />
+<br />
+- I started 5 separate crawls (4 of them had a starting list of 3.000
+URLs, the last one had 10.000 URLs)<br />
+<br />
+- after about 20 hours the web interface became unresponsive, I
+restarted Yacy and the crawls resumed correctly<br />
+<br />
+- I restarted Yacy every 10-15 hours because I noticed that the crawls
+had a tendency to slow down after a while<br />
+<br />
+- last night (Tuesday) the crawl was \&ldquo;flatlining\&rdquo; (i.e. the index
+wasn\&rsquo;t growing anymore, indexer consistently reported 0 pages per
+minute) so I tried restarting Yacy again<br />
+<br />
+- restarting didn\&rsquo;t work, I briefly got this error page on the web
+interface during the restart attempt (afterwards the web interface did
+not respond at all):<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>javax.servlet.ServletException: /usr/share/yacy/htroot/index.html   at net.yacy.http.servlets.YaCyDefaultServlet.handleTemplate(YaCyDefaultServlet.java:909)   at net.yacy.http.servlets.YaCyDefaultServlet.doGet(YaCyDefaultServlet.java:314)   at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)   at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)   at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)   at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)   at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:595)   at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)   at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)   at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)   at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)   at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)   at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:191)   at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:72)   at net.yacy.http.servlets.YaCyDefaultServlet.doGet(YaCyDefaultServlet.java:351)   at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)   at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)   at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)   at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)   at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:553)   at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)   at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)   at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)   at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)   at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)   at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)   at net.yacy.http.CrashProtectionHandler.handle(CrashProtectionHandler.java:33)   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)   at org.eclipse.jetty.server.Server.handle(Server.java:499)   at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)   at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)   at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)   at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)   at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)   at java.lang.Thread.run(Thread.java:748)</code></dd>
+</dl>
+
+<p><br />
+<br />
+On the server side I got a bunch of errors:<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>E 2017/05/31 01:37:13 org.apache.solr.handler.RequestHandlerBase org.apache.solr.common.SolrException: Exception during facet.field: coordinate_p   at org.apache.solr.request.SimpleFacets$3.call(SimpleFacets.java:721)   at org.apache.solr.request.SimpleFacets$3.call(SimpleFacets.java:706)   at java.util.concurrent.FutureTask.run(FutureTask.java:266)   at org.apache.solr.request.SimpleFacets$2.execute(SimpleFacets.java:660)   at org.apache.solr.request.SimpleFacets.getFacetFieldCounts(SimpleFacets.java:731)   at org.apache.solr.handler.component.FacetComponent.getFacetCounts(FacetComponent.java:294)   at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:256)   at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:272)   at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:155)   at net.yacy.cora.federate.solr.connector.EmbeddedSolrConnector.query(EmbeddedSolrConnector.java:219)   at net.yacy.http.servlets.SolrSelectServlet.service(SolrSelectServlet.java:251)   at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)   at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)   at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:553)   at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)   at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)   at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)   at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)   at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)   at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)   at net.yacy.http.CrashProtectionHandler.handle(CrashProtectionHandler.java:33)   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)   at org.eclipse.jetty.server.Server.handle(Server.java:499)   at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)   at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)   at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)   at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)   at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)   at java.lang.Thread.run(Thread.java:748)Caused by: java.lang.IllegalStateException: unexpected docvalues type NONE for field 'coordinate_p' (expected=SORTED). Use UninvertingReader or index with docvalues.   at org.apache.lucene.index.DocValues.checkField(DocValues.java:208)   at org.apache.lucene.index.DocValues.getSorted(DocValues.java:264)   at org.apache.solr.request.PerSegmentSingleValuedFaceting$SegFacet.countTerms(PerSegmentSingleValuedFaceting.java:269)   at org.apache.solr.request.PerSegmentSingleValuedFaceting$1.call(PerSegmentSingleValuedFaceting.java:109)   at org.apache.solr.request.PerSegmentSingleValuedFaceting$1.call(PerSegmentSingleValuedFaceting.java:106)   at java.util.concurrent.FutureTask.run(FutureTask.java:266)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)   at java.util.concurrent.FutureTask.run(FutureTask.java:266)   at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor$1.run(ExecutorUtil.java:231)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)   ... 1 moreyacy07.log:java.io.FileNotFoundException: /usr/share/yacy/htroot/yacy/hello.html (Too many open files)yacy07.log:   at java.io.FileInputStream.open0(Native Method)yacy07.log:   at java.io.FileInputStream.open(FileInputStream.java:195)yacy07.log:   at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)yacy07.log:   at net.yacy.http.servlets.YaCyDefaultServlet.handleTemplate(YaCyDefaultServlet.java:1080)yacy07.log:   at net.yacy.http.servlets.YaCyDefaultServlet.doGet(YaCyDefaultServlet.java:314)yacy07.log:   at net.yacy.http.servlets.YaCyDefaultServlet.doPost(YaCyDefaultServlet.java:376)yacy07.log:   at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)yacy07.log:   at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)yacy07.log:   at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)yacy07.log:   at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)yacy07.log:   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)yacy07.log:   at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:553)yacy07.log:   at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)yacy07.log:   at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)yacy07.log:   at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)yacy07.log:   at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)yacy07.log:   at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)yacy07.log:   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)yacy07.log:   at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)yacy07.log:   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)yacy07.log:   at net.yacy.http.CrashProtectionHandler.handle(CrashProtectionHandler.java:33)yacy07.log:   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)yacy07.log:   at org.eclipse.jetty.server.Server.handle(Server.java:499)yacy07.log:   at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)yacy07.log:   at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)yacy07.log:   at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)yacy07.log:   at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)yacy07.log:   at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)yacy07.log:   at java.lang.Thread.run(Thread.java:748)yacy06.log:java.io.FileNotFoundException: /usr/share/yacy/DATA/INDEX/freeworld/QUEUES/CrawlerLimitStacks/www.orinstarn.com-#i9ulCZ.80/0004.stack (Too many open files)yacy06.log:   at java.io.FileInputStream.open0(Native Method)yacy06.log:   at java.io.FileInputStream.open(FileInputStream.java:195)yacy06.log:   at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)yacy06.log:   at net.yacy.kelondro.table.ChunkIterator.&lt;init&gt;(ChunkIterator.java:65)yacy06.log:   at net.yacy.kelondro.table.Table.&lt;init&gt;(Table.java:161)yacy06.log:   at net.yacy.kelondro.index.OnDemandOpenFileIndex.getIndex(OnDemandOpenFileIndex.java:61)yacy06.log:   at net.yacy.kelondro.index.OnDemandOpenFileIndex.size(OnDemandOpenFileIndex.java:153)yacy06.log:   at net.yacy.kelondro.index.BufferedObjectIndex.size(BufferedObjectIndex.java:152)yacy06.log:   at net.yacy.crawler.HostBalancer$1.run(HostBalancer.java:101)yacy06.log:W 2017/05/31 01:37:30 ConcurrentLog net.yacy.kelondro.util.kelondroException: /usr/share/yacy/DATA/INDEX/freeworld/QUEUES/CrawlerLimitStacks/www.orinstarn.com-#i9ulCZ.80/0004.stack (Too many open files)yacy06.log:net.yacy.kelondro.util.kelondroException: /usr/share/yacy/DATA/INDEX/freeworld/QUEUES/CrawlerLimitStacks/www.orinstarn.com-#i9ulCZ.80/0004.stack (Too many open files)yacy06.log:   at net.yacy.kelondro.table.Table.&lt;init&gt;(Table.java:228)yacy06.log:   at net.yacy.kelondro.index.OnDemandOpenFileIndex.getIndex(OnDemandOpenFileIndex.java:61)yacy06.log:   at net.yacy.kelondro.index.OnDemandOpenFileIndex.size(OnDemandOpenFileIndex.java:153)yacy06.log:   at net.yacy.kelondro.index.BufferedObjectIndex.size(BufferedObjectIndex.java:152)yacy06.log:   at net.yacy.crawler.HostBalancer$1.run(HostBalancer.java:101)yacy05.log:javax.servlet.ServletException: /usr/share/yacy/htroot/yacy/query.htmlyacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.handleTemplate(YaCyDefaultServlet.java:909)yacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.doGet(YaCyDefaultServlet.java:314)yacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.doPost(YaCyDefaultServlet.java:376)yacy05.log:   at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)yacy05.log:   at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)yacy05.log:   at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)yacy05.log:   at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)yacy05.log:   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)yacy05.log:   at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:553)yacy05.log:   at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)yacy05.log:   at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)yacy05.log:   at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)yacy05.log:   at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)yacy05.log:   at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)yacy05.log:   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)yacy05.log:   at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)yacy05.log:   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)yacy05.log:   at net.yacy.http.CrashProtectionHandler.handle(CrashProtectionHandler.java:33)yacy05.log:   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)yacy05.log:   at org.eclipse.jetty.server.Server.handle(Server.java:499)yacy05.log:   at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)yacy05.log:   at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)yacy05.log:   at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)yacy05.log:   at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)yacy05.log:   at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)yacy05.log:   at java.lang.Thread.run(Thread.java:748)yacy05.log:java.lang.reflect.InvocationTargetException: class /usr/share/yacy/htroot/yacy/query.class is missing:/usr/share/yacy/htroot/yacy/query.class (Too many open files):/usr/share/yacy/htroot/yacy/query.classyacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.rewriteMethod(YaCyDefaultServlet.java:808)yacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.invokeServlet(YaCyDefaultServlet.java:672)yacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.handleTemplate(YaCyDefaultServlet.java:883)yacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.doGet(YaCyDefaultServlet.java:314)yacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.doPost(YaCyDefaultServlet.java:376)yacy05.log:   at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)yacy05.log:   at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)yacy05.log:   at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)yacy05.log:   at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)yacy05.log:   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)yacy05.log:   at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:553)yacy05.log:   at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)yacy05.log:   at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)yacy05.log:   at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)yacy05.log:   at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)yacy05.log:   at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)yacy05.log:   at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)yacy05.log:   at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)yacy05.log:   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)yacy05.log:   at net.yacy.http.CrashProtectionHandler.handle(CrashProtectionHandler.java:33)yacy05.log:   at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)yacy05.log:   at org.eclipse.jetty.server.Server.handle(Server.java:499)yacy05.log:   at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)yacy05.log:   at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:258)yacy05.log:   at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)yacy05.log:   at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)yacy05.log:   at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)yacy05.log:   at java.lang.Thread.run(Thread.java:748)yacy05.log:Caused by: java.lang.ClassNotFoundException: /usr/share/yacy/htroot/yacy/query.class (Too many open files):/usr/share/yacy/htroot/yacy/query.classyacy05.log:   at net.yacy.server.serverClassLoader.loadClass(serverClassLoader.java:100)yacy05.log:   at net.yacy.http.servlets.YaCyDefaultServlet.rewriteMethod(YaCyDefaultServlet.java:792)yacy05.log:   ... 27 moreyacy05.log:W 2017/05/31 01:37:31 ConcurrentLog java.lang.NullPointerExceptionyacy05.log:java.lang.NullPointerExceptionyacy05.log:   at net.yacy.kelondro.io.CachedFileWriter.seek(CachedFileWriter.java:143)yacy05.log:   at net.yacy.kelondro.blob.HeapReader.get(HeapReader.java:498)yacy05.log:   at net.yacy.kelondro.blob.ArrayStack$BlobValues.next0(ArrayStack.java:701)yacy05.log:   at net.yacy.kelondro.blob.ArrayStack$BlobValues.next0(ArrayStack.java:685)yacy05.log:   at net.yacy.cora.util.LookAheadIterator.checkInit(LookAheadIterator.java:53)yacy05.log:   at net.yacy.cora.util.LookAheadIterator.hasNext(LookAheadIterator.java:60)yacy05.log:   at net.yacy.kelondro.rwi.ReferenceContainerArray.get(ReferenceContainerArray.java:308)yacy05.log:   at net.yacy.kelondro.rwi.IndexCell.get(IndexCell.java:355)yacy05.log:   at net.yacy.search.index.Segment$ReferenceReport.&lt;init&gt;(Segment.java:272)yacy05.log:   at net.yacy.search.index.Segment$ReferenceReportCache.getReferenceReport(Segment.java:244)yacy05.log:   at net.yacy.search.schema.CollectionConfiguration.postprocessing_references(CollectionConfiguration.java:1887)yacy05.log:   at net.yacy.search.index.Segment.storeDocument(Segment.java:597)yacy05.log:   at net.yacy.search.Switchboard.storeDocumentIndex(Switchboard.java:3134)yacy05.log:   at net.yacy.search.Switchboard.storeDocumentIndex(Switchboard.java:3068)yacy05.log:   at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)yacy05.log:   at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)yacy05.log:   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)yacy05.log:   at java.lang.reflect.Method.invoke(Method.java:498)yacy05.log:   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)yacy05.log:   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)yacy05.log:   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)yacy05.log:   at java.util.concurrent.FutureTask.run(FutureTask.java:266)yacy05.log:   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)yacy05.log:   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)yacy05.log:   at java.lang.Thread.run(Thread.java:748)yacy05.log:E 2017/05/31 01:37:31 BLOCKINGTHREAD Runtime Error in serverInstantThread.job, thread 'java.lang.reflect.Method.storeDocumentIndex.5': null</code></dd>
+</dl>
+
+<p><br />
+<br />
+In the few weeks I\&rsquo;ve been experimenting with Yacy, I noticed that this
+tends to happen when the local index gets to about 2 million pages, the
+size of the index was this:<br />
+<br />
+du -hcs freeworld/*<br />
+4.2Mfreeworld/NETWORK<br />
+36Gfreeworld/QUEUES<br />
+44Gfreeworld/SEGMENTS<br />
+79Gtotal<br />
+<br />
+Ultimately, I removed the QUEUES directory and I was able to restart
+Yacy preserving the index (even though the crawls have stopped).</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9756">eros</a>
+&mdash; Mi Mai 31, 2017 10:07 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

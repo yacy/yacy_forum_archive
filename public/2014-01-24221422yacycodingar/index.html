@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architektur-bilder-doubletten-erkennen">YaCy Coding &amp; Architektur • Bilder Doubletten erkennen</h1>
+
+<p>Date: 2014-01-24 22:14:22</p>
+
+<p>Man kann Momente von Bildern berechnen, die unter anderem invariant
+gegen Skalierung sind, d.h. wenn ein Bild in der Größe verändert wird,
+ändert sich die Zahl nicht.<br />
+<a href="https://en.wikipedia.org/wiki/Image_moment">https://en.wikipedia.org/wiki/Image_moment</a><br />
+<br />
+Ich habe das einfach mal programmiert. Jetzt habe ich 2 Zahlen (=
+Merkmale).<br />
+Was kann YaCy nun damit anfangen?<br />
+Ich habe die vorhandenen Parser angesehen, die speichern ihre
+Informationen offenbar in Prosa-Text in vorhandene Text-Felder in Solr.<br />
+Um Doubletten auszusortieren bräuchte man eine Suche nach \&ldquo;so ähnlich
+wie\&ldquo;. Beispielsweise über eine Sortierung der Merkmale und eine
+Clusterbildung (= Klassifizierung) nahe beieinander liegender. Einfacher
+Ansatz: Zurückweisungssschwelle ab erstem Element je Klasse.<br />
+Dass sie relativ ähnlich sein müssen, ist auch schon über die Vorauswahl
+durch die Tatsache, dass sie bei der Suche anhand eines Wortes gefunden
+wurden bekannt.<br />
+<br />
+Eigentlich auch eine ziemlich coole Sache:<br />
+Man könnte ein Bild zu YaCy hochladen, und dann finden lassen, wo es
+überall verwendet wurde. Komisch, dass Google das nicht kann.<br />
+<br />
+Leider schluckt das Bild einlesen und Pixel extrahieren in Java einige
+Performance. Ich habe es auch nicht schneller hinbekommen. Die Zeiten
+unten sind von einem Athlon X2 6000+ (3.1Ghz) mit 64 Bit Java. Das erste
+Bild ist nur eine Dummy-Messung damit Java den Code lädt.<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>import java.awt.image.BufferedImage;import java.io.File;import javax.imageio.ImageIO;public class ImageParser {   public static void main(String[] args) {      File f[] = {            new File(&quot;/mnt/Daten/dev/eclipse/testproj/kfz3.png&quot;),            new File(&quot;/mnt/Daten/dev/eclipse/testproj/kfz1.png&quot;),            new File(&quot;/mnt/Daten/dev/eclipse/testproj/kfz2.png&quot;),            new File(&quot;/mnt/Daten/dev/eclipse/testproj/kfz3.png&quot;),            new File(&quot;/mnt/Daten/dev/eclipse/testproj/kfz4.png&quot;),            new File(&quot;/mnt/Daten/dev/eclipse/testproj/kfz5.png&quot;)      };      for (int i = 0; i &lt; f.length; i++)      {         System.out.println(&quot;Bild &quot; + i);         calculateMoments(f[i]);         System.out.println(&quot;&quot;);      }   }   private static void calculateMoments(File f) {      long t = System.currentTimeMillis();      BufferedImage img = null;      try {         img = ImageIO.read(f);      } catch (Exception e) {         System.out.println(e.getMessage());         e.printStackTrace();      }      if (img != null) {         System.out.println(&quot;Zeit (0): &quot; + (System.currentTimeMillis() - t));         final int xmax = img.getWidth();         final int ymax = img.getHeight();         final int pic[][] = new int[xmax][ymax];         System.out.println(&quot;xmax: &quot; + xmax + &quot; ymax: &quot; + ymax + &quot;, &quot; + (xmax*ymax*32/8/1024) + &quot;kb&quot;);         // moments         long m00 = 0;         long m10 = 0;         long m01 = 0;         // get raw image         int raw[] = img.getRGB(0, 0, xmax, ymax, null, 0, xmax);         System.out.println(&quot;Zeit (1): &quot; + (System.currentTimeMillis() - t));         for (int x = 0; x &lt; xmax; x++) {            for (int y = 0; y &lt; ymax; y++) {               //int pixel = img.getRGB(x, y);               final int pixel = raw[y * xmax + x];               //int alpha = (pixel &gt;&gt; 24) &amp; 0xff;               final int red   = (pixel &gt;&gt; 16) &amp; 0xff;               final int green = (pixel &gt;&gt;  8) &amp; 0xff;               final int blue  = (pixel      ) &amp; 0xff;               //int grey = (int) Math.sqrt((double) (red*red + green*green + blue*blue));               final int grey = (red + green + blue) / 3;               pic[x][y] = grey;               m00 += grey;               m10 += grey*x;               m01 += grey*y;               //System.out.print(&quot;&quot; + x + &quot;.&quot; + y + &quot; &quot; + alpha + &quot; &quot; + red + &quot; &quot; + green + &quot; &quot; + blue + &quot;\n&quot;);            }         }         System.out.println(&quot;Zeit (2): &quot; + (System.currentTimeMillis() - t));         // center of mass         final long xs = m10/m00;         final long ys = m01/m00;         //System.out.println(&quot;xs=&quot; + xs + &quot; ys=&quot; + ys);         // central moments         long u00 = m00;         long u20 = 0;         long u02 = 0;         long u11 = 0;         for (int x = 0; x &lt; xmax; x++) {            for (int y = 0; y &lt; ymax; y++) {               long dx = x - xs;               long dy = y - ys;               u20 += pic[x][y]*dx*dx;               u02 += pic[x][y]*dy*dy;               u11 += pic[x][y]*dx*dy;            }         }         // normalized central moments         double n20 = (double) u20 / (u00 * u00);         double n02 = (double) u02 / (u00 * u00);         double n11 = (double) u11 / (u00 * u00);         // Hu invariant moments to translation, scale, rotation          double i1 = n20 + n02;         double i2 = (n20 - n02)*(n20 - n02) + 4*n11*n11;         System.out.println(&quot;i1=&quot; + i1);         System.out.println(&quot;i2=&quot; + i2);         //System.out.println(&quot;u20=&quot; + u20 + &quot; u02=&quot; + u02 + &quot; u20+u02=&quot; + (u20+u02));         //System.out.println(&quot;n20=&quot; + n20 + &quot; n02=&quot; + n02 + &quot; n20+n02=&quot; + (n20+n02));      }      System.out.println(&quot;Zeit (3): &quot; + (System.currentTimeMillis() - t));   }}</code></dd>
+</dl>
+
+<p></p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>Bild 0Zeit (0): 158xmax: 200 ymax: 150, 117kbZeit (1): 257Zeit (2): 351i1=0.001496248385046892i2=2.8157097923746405E-7Zeit (3): 366Bild 1Zeit (0): 747xmax: 3072 ymax: 2304, 27648kbZeit (1): 1353Zeit (2): 1869i1=0.0014866404030748307i2=2.7724108030034244E-7Zeit (3): 1900Bild 2Zeit (0): 57xmax: 800 ymax: 600, 1875kbZeit (1): 96Zeit (2): 102i1=0.0014912386304618134i2=2.7956183263973203E-7Zeit (3): 106Bild 3Zeit (0): 3xmax: 200 ymax: 150, 117kbZeit (1): 6Zeit (2): 7i1=0.001496248385046892i2=2.8157097923746405E-7Zeit (3): 8Bild 4Zeit (0): 24xmax: 800 ymax: 600, 1875kbZeit (1): 67Zeit (2): 73i1=0.001496248385046892i2=2.8157097923746405E-7Zeit (3): 76Bild 5Zeit (0): 28xmax: 800 ymax: 600, 1875kbZeit (1): 76Zeit (2): 82i1=0.0015016224895486679i2=2.808167327318427E-7Zeit (3): 85</code></dd>
+</dl>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=68">Lotus</a>
+&mdash; Fr Jan 24, 2014 10:14 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

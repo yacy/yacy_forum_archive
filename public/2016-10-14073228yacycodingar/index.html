@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architecture-re-ranking-transparency-roadmap">YaCy Coding &amp; Architecture • Re: Ranking Transparency Roadmap</h1>
+
+<p>Date: 2016-10-14 07:32:28</p>
+
+<p>Hi reger and luc,<br />
+<br />
+UX is not really my specialty, but my guess is that to really define
+\&ldquo;understandable\&rdquo; we would have to have some idea of what a user\&rsquo;s
+goal is.<br />
+<br />
+Some examples:<br />
+<br />
+1. \&ldquo;I think YaCy is ranking a website too high or low by accident, I
+want to figure out how this can be fixed by changing the ranking
+rules.\&rdquo;<br />
+2. \&ldquo;I think YaCy is ranking a website too high because that website is
+using abusive SEO / spam techniques, I want to figure out what the
+website is doing so we can make YaCy penalize such sites.\&rdquo;<br />
+3. \&ldquo;I have a new idea for a YaCy ranking method and I want to figure
+out whether it would be beneficial, and which pages would be most
+affected.\&rdquo;<br />
+4. \&ldquo;I have a website and I want to figure out how to change the site to
+make it rank more highly in YaCy using the default YaCy settings.\&rdquo;<br />
+<br />
+There may be some information that is beneficial for some of these use
+cases, but is superfluous for others of these use cases. It might be
+useful to consider these use cases independently for the purpose of
+figuring out what information should be highlighted and how it should be
+visualized. I think a good first step is to simply make the raw data
+available, since this allows people to experiment with layers on top of
+it, but I fully agree that making raw data available is not really
+sufficient by itself for most real-world use cases. (Although for my
+particular use cases, it\&rsquo;s sufficient given that I\&rsquo;m willing to code
+some Python scripts to do my additional analysis.)<br />
+<br />
+In terms of optimization/learning, a common technique in machine
+learning is backpropagation. Basically, this uses the partial derivative
+of an output variable with respect to some input variable, to determine
+how to change the input variable in order to optimize the output
+variable. I\&rsquo;m playing around with this technique in the context of YaCy
+ranking, but I don\&rsquo;t have any results to share yet. The important
+takeaway here is that because backpropagation needs partial derivatives,
+it needs to know what calculations were used to get the final ranking
+score.<br />
+<br />
+One potentially useful way to get data for deciding how to optimize
+ranking would be to use clickthrough data. There\&rsquo;s not much of a
+privacy implication to collecting clickthrough data as long as it\&rsquo;s not
+shared with peers, but my guess is that multiple nodes\&rsquo; clickthrough
+data would need to be combined in some way to get sufficiently
+noise-free data. There are some ways that this could be done; I\&rsquo;m
+investigating using a social graph method where users\&rsquo; own nodes do
+optimization using their own clickthrough data but share a weighted sum
+of their own optimizations and their friends\&rsquo; optimizations. This is
+reasonably private (users effectively act as a blind for the users in
+their social graph), and reasonably Sybil-resistant (social graphs have
+been reasonably well-studied for Sybil-resistance, including in the
+context of Freenet, for which the stakes are a lot higher). I don\&rsquo;t
+have any practical results to share on that yet.<br />
+<br />
+Cheers!<br />
+-Jeremy</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8861">biolizard89</a>
+&mdash; Fr Okt 14, 2016 6:32 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

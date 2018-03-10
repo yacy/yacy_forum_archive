@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-re-yacy-won-t-re-start">English • Re: Yacy won\&rsquo;t re-start</h1>
+
+<p>Date: 2017-05-14 11:50:52</p>
+
+<p>Yup, it happened again.<br />
+<br />
+I let the crawler run for about 14 hours, then I paused it before
+shutting down the server. It didn\&rsquo;t help and I got the same error
+message:<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>java.io.FileNotFoundException: /usr/share/yacy/DATA/INDEX/freeworld/QUEUES/CrawlerLimitStacks/toni.org-#gctLmQ.80/0003.stack (Too many open files)</code></dd>
+</dl>
+
+<p><br />
+<br />
+I moved the /INDEX/freeworld/QUEUES/ directory: the system started in no
+time and the index seems to be safe.<br />
+<br />
+BTW, this is the size of QUEUES:<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>root@amelia:/storage# ls -R QUEUES/| wc -l536442</code></dd>
+</dl>
+
+<p><br />
+<br />
+I\&rsquo;ll try increasing the \&ldquo;crawler.onDemandLimit\&rdquo; value to 50000, any
+suggestions on suitable values? Currently I assigned 64 GB of RAM to
+Yacy, but I could bump it up to 96 GB.<br />
+<br />
+I\&rsquo;m using the default Crawling depth of 3 for now, so that shouldn\&rsquo;t
+be the problem. I don\&rsquo;t need to restart the server that often, but I\&rsquo;m
+experimenting to see if Yacy is a viable solution to the problems I\&rsquo;m
+having with my research project, so I need to know that I can rely on
+it.<br />
+<br />
+Unfortunately, most of the documentation is is German and I don\&rsquo;t speak
+German, so I need to do a bit of trial and error and use Google
+Translate...
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_wink.gif" alt=";)" title="Wink" /><br />
+<br />
+Thanks for your help Luc!</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9756">eros</a>
+&mdash; So Mai 14, 2017 10:50 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

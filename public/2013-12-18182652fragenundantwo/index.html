@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-api-yacysarch-rss-fehlende-informationen-in-der-antwort">Fragen und Antworten • API yacysarch.rss - Fehlende Informationen in der Antwort?</h1>
+
+<p>Date: 2013-12-18 18:26:52</p>
+
+<p>Bei Verwendung der RSS Such-API bin ich auf ein kleines Problem
+gestossen. Trotzdem ich in der Suchanfrage den Parameter
+[meanCount=5]{style=&ldquo;font-style: italic&rdquo;} mitgebe, bekomme ich in der
+RSS Antwort keinerlei Informationen zum Thema \&lsquo;Did you mean\&lsquo;. Sowohl
+im Domains- als auch im Topics Abschnitt ist der Parameter mean auf 0
+gesetzt. Auch an anderer Stelle habe ich keine Vorschläge gefunden.<br />
+Bei der Analyse der zurückgelieferten RSS Antwort ist mir aufgefallen,
+das ein Teil der Suchanfrage fehlt. Ich bin mir nicht sicher, ob das
+teilweise Fehlen der URL nur ein Fehler im zurückgelieferten RSS ist,
+oder ob das eventuell die Ursache für die fehlenden Suchvorschläge (mean
+count) ist.<br />
+<br />
+Hier meine abgesetzte Suchanfrage:</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>http://localhost:31999/yacysearch.rss?query=hilden&amp;Enter=Suchen&amp;verify=iffresh&amp;contentdom=text&amp;nav=all&amp;startRecord=0&amp;indexof=&amp;meanCount=5&amp;resource=local&amp;prefermaskfilter=&amp;maximumRecords=100&amp;collection=collection1</code></dd>
+</dl>
+
+<p><br />
+<br />
+Hier die formatierte RSS Antwort, aus Platzgründen gekürzt auf nur ein
+Item und ohne Topics und Domains:</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>          'xmlns:yacy' =&gt; 'http://www.yacy.net/',          'xmlns:opensearch' =&gt; 'http://a9.com/-/spec/opensearch/1.1/',          'xmlns:atom' =&gt; 'http://www.w3.org/2005/Atom',          'xmlns:geo' =&gt; 'http://www.w3.org/2003/01/geo/wgs84_pos#',          'version' =&gt; '2.0',          'channel' =&gt; {                       'link' =&gt; 'http://localhost:31999/yacysearch.html?query=hilden&amp;resource=local&amp;contentdom=text&amp;verify=-UNRESOLVED_PATTERN-',                       'opensearch:Query' =&gt; {                                             'searchTerms' =&gt; 'hilden',                                             'role' =&gt; 'request'                                           },                       'yacy:navigation' =&gt; {                                            'yacy:facet' =&gt; {                                                            'topics' =&gt; {                                                                        'min' =&gt; '0',                                                                        'yacy:element' =&gt; {                              .....                                                                                        },                                                                        'max' =&gt; '0',                                                                        'displayname' =&gt; 'Topics',                                                                        'type' =&gt; 'String',                                                                        'mean' =&gt; '0'                                                                      },                                                            'domains' =&gt; {                                                                         'min' =&gt; '0',                                                                         'yacy:element' =&gt; {                              ......                                                                                         },                                                                         'max' =&gt; '0',                                                                         'displayname' =&gt; 'Domains',                                                                         'type' =&gt; 'String',                                                                         'mean' =&gt; '0'                                                                       }                                                          }                                          },                       'item' =&gt; [                                 {                                   'yacy:file' =&gt; {},                                   'yacy:host' =&gt; 'www.domain.de',                                   'dc:publisher' =&gt; {},                                   'link' =&gt; 'http://www.domain.de/',                                   'yacy:sizename' =&gt; '-1 bytes',                                   'yacy:path' =&gt; '/',                                   'description' =&gt; ' long description',                                   'dc:creator' =&gt; {},                                   'dc:subject' =&gt; 'long subject',                                   'guid' =&gt; {                                             'isPermaLink' =&gt; 'false',                                             'content' =&gt; 'McdQ1Q6NNc8B'                                           },                                   'title' =&gt; &quot;long title&quot;,                                   'pubDate' =&gt; 'Tue, 17 Dec 2013 01:46:34 +0000',                                   'yacy:size' =&gt; '-1'                                 },             'description' =&gt; 'Search for hilden',                       'opensearch:startIndex' =&gt; '0',                       'image' =&gt; {                                  'link' =&gt; 'http://localhost:31999/yacysearch.html?query=hilden&amp;resource=local&amp;contentdom=text&amp;verify=-UNRESOLVED_PATTERN-',                                  'url' =&gt; 'http://localhost:31999/env/grafics/yacy.gif',                                  'title' =&gt; 'Search for hilden'                                },                       'opensearch:itemsPerPage' =&gt; '100',                       'opensearch:totalResults' =&gt; [                                                    '0',                                                    '26'                                                  ],                       'title' =&gt; 'P2P Web Search: hilden',                       'atom:link' =&gt; {                                      'rel' =&gt; 'search',                                      'href' =&gt; 'http://localhost:31999/opensearchdescription.xml',                                      'type' =&gt; 'application/opensearchdescription+xml'                                    }                     },          'xmlns:dc' =&gt; 'http://purl.org/dc/elements/1.1/',          'xmlns:media' =&gt; 'http://search.yahoo.com/mrss/'        };</code></dd>
+</dl>
+
+<p><br />
+<br />
+Wie in der RSS Antwort zu sehen ist, kommt die Suchanfrage im RSS
+unvolständig zurück. Diese ist nach
+[verify=]{style=&ldquo;font-style: italic&rdquo;} zu Ende und wird stattdessen mit
+einem [-UNRESOLVED_PATTERN-]{style=&ldquo;font-style: italic&rdquo;}
+\&ldquo;aufgefüllt\&ldquo;. Desweiteren steht in der Antwort statt
+yacysearch[.rss]{style=&ldquo;font-weight: bold&rdquo;}
+yacysearch[.html]{style=&ldquo;font-weight: bold&rdquo;} .<br />
+<br />
+URL der Anfrage/URL in der Antwort im direkten Vergleich:</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>http://localhost:31999/yacysearch.rss?query=hilden&amp;Enter=Suchen&amp;verify=iffresh&amp;contentdom=text&amp;nav=all&amp;startRecord=0&amp;indexof=&amp;meanCount=5&amp;resource=local&amp;prefermaskfilter=&amp;maximumRecords=100&amp;collection=darksearchhttp://localhost:31999/yacysearch.html?query=hilden&amp;resource=local&amp;contentdom=text&amp;verify=-UNRESOLVED_PATTERN-</code></dd>
+</dl>
+
+<p><br />
+<br />
+Nutze ich die Search API falsch oder ist das möglicherweise ein Fehler?<br />
+<br />
+Ergänzung: Derzeit eingesetzt YaCy version 1.<sup>67</sup>&frasl;<sub>9439</sub></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9007">freak</a>
+&mdash; Mi Dez 18, 2013 6:26 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

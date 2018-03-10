@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-spioniert-yacy-wozu-canvas-bei-suchanfragen">Hilfe für Einsteiger und Anwender • Re: Spioniert YaCy? Wozu canvas bei Suchanfragen?</h1>
+
+<p>Date: 2015-01-29 14:38:26</p>
+
+<p>ich denke ich habe oben ausreichend belegt dass es gar kein canvas in
+YaCy code gibt bis auf den, der in libraries vorkommt. Daher habe ich
+versucht deine Beobachtung zu reproduzieren. Dazu habe ich mir das
+gleiche firefox Plugin installiert, dann aber in den Settings des
+Plugins die Anzeige der Datei und der Codestelle aktiviert, um eine
+genaue Auskunft zu bekommen aus welcher Quelle diese Warnung generiert
+wurde. Hier ist das Setting im Plugin:<br />
+CanvasBlocker_setting.png<br />
+Danach habe ich wie du beschrieben hast eine YaCy Seite aufgerufen. In
+diesem Fall <a href="http://31c3.yacy.net">http://31c3.yacy.net</a> also die 31c3 Suche. Das hat dann die
+folgenden beiden Meldungen erzeugt:<br />
+CanvasBlocker_1.png<br />
+und<br />
+CanvasBlocker_2.png<br />
+Weitere Meldungen sind nicht erschienen. D.h. die canvas-Tags kommen
+tatsächlich in bootstrap vor, aber eben nur in bootstrap. Ich habe keine
+weiteren Canvas-Warnungen erhalten.<br />
+Dann habe ich mir die Codestelle (hier von der 1. Warnung) im
+Bootstrap-Code angeschaut, hier ist sie:</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>canvas=document.createElement(&quot;canvas&quot;);var t=1,u=1,v=[];if(canvas.getContext)if(canvas.toDataURL(&quot;image/png&quot;).indexOf(&quot;data:image/png&quot;)&lt;0)q.use_fallback=!0;else var w=canvas.getContext(&quot;2d&quot;);else q.use_fallback=!0;document.createElementNS&amp;&amp;document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;,&quot;svg&quot;).createSVGRect&amp;&amp;(q.use_svg=!0,q.use_canvas=!1),q.use_fallback||(t=window.devicePixelRatio||1,u=w.webkitBackingStorePixelRatio||w.mozBackingStorePixelRatio||w.msBackingStorePixelRatio||w.oBackingStorePixelRatio||w.backingStorePixelRatio||1);</code></dd>
+</dl>
+
+<p><br />
+Leider ist das nur der minimalisierte Code, den Originalcode habe ich
+noch nicht gefunden, da würde ich Kommentarzeilen zu erwarten.<br />
+<br />
+Darf ich also feststellen dass hier die Ursache für deine Beobachtung
+gefunden wurde? Ich finde den Bootstrap-Code nicht verdächtig, eine
+\&lsquo;Spionage\&rsquo; wäre ja nur gegeben wenn der canvas-Bereich ein Nachladen
+von extern triggern würde, und dafür gibt es im Code keinen Hinweis.<br />
+<br />
+Zum Vergleich bitte ich, einfach mal <a href="http://getbootstrap.com/">http://getbootstrap.com/</a>
+anzusurfen, da kommen dann nämlich die gleichen Warnungen...
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
+&mdash; Do Jan 29, 2015 2:38 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-index-export-xml-funktioniert-nicht">Hilfe für Einsteiger und Anwender • Index Export XML funktioniert nicht</h1>
+
+<p>Date: 2017-03-11 16:30:16</p>
+
+<p>Hallo.<br />
+Dump und Wiederherstellen des Solr Index funktioniert.<br />
+Alle anderen Optionen wie z.B. Export Format Komplette Datensätze XML
+erzeugen Fehlermeldung:<br />
+</p>
+
+<blockquote>
+<div>
+
+\
+HTTP ERROR 500\
+\
+Problem accessing /IndexExport\_p.html. Reason:\
+\
+Server Error\
+\
+Caused by:\
+\
+javax.servlet.ServletException:
+C:\\Users\\user01\\YaCy\\DATA\\LOCALE\\htroot\\de\\IndexExport\_p.html\
+at
+net.yacy.http.servlets.YaCyDefaultServlet.handleTemplate(YaCyDefaultServlet.java:895)\
+at
+net.yacy.http.servlets.YaCyDefaultServlet.doGet(YaCyDefaultServlet.java:312)\
+at
+net.yacy.http.servlets.YaCyDefaultServlet.doPost(YaCyDefaultServlet.java:374)\
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)\
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\
+at
+org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)\
+at
+org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)\
+at
+org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)\
+at
+org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:553)\
+at
+org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)\
+at
+org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)\
+at
+org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)\
+at
+org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)\
+at
+org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)\
+at
+org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)\
+at
+org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)\
+at
+org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)\
+at
+net.yacy.http.CrashProtectionHandler.handle(CrashProtectionHandler.java:33)\
+at
+org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)\
+at org.eclipse.jetty.server.Server.handle(Server.java:499)\
+at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)\
+at
+org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)\
+at
+org.eclipse.jetty.io.AbstractConnection\$2.run(AbstractConnection.java:544)\
+at
+org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)\
+at
+org.eclipse.jetty.util.thread.QueuedThreadPool\$3.run(QueuedThreadPool.java:555)\
+at java.lang.Thread.run(Unknown Source)\
+\
+\
+YaCy 1.92 - powered by Jetty -\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Suche im Forum hier zeigte nur, dass auch andere Probleme mit dem Export
+haben, aber keine Lösung.<br />
+Hat jemad eine Idee, woran das liegen kann, was man ausprobieren kann?<br />
+<br />
+Danke!</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9740">MetaTom</a>
+&mdash; Sa Mär 11, 2017 4:30 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

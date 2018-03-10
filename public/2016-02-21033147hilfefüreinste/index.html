@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-lokale-dateien-indexieren">Hilfe für Einsteiger und Anwender • lokale Dateien indexieren</h1>
+
+<p>Date: 2016-02-21 03:31:47</p>
+
+<p>Hallo,<br />
+es geht um mein privates Intranet. Ich will nicht Peer des öffentlichen
+YaCy-Netzes werden, es geht nur um mein Intranet.<br />
+<br />
+[Ich möchte ein lokales Verzeichnis (ggf mit Unterverzeichnissen)
+indexieren.]{style=&ldquo;font-weight: bold&rdquo;} Der Crawler soll sich nicht
+irgendwo langhangeln, der soll einfach alle vorhandenen Dateien
+indexieren. An dieser Aufgabe scheitere ich. Das mag daran liegen, dass
+ich erst wenige Tage dabei bin. Oder es liegt an der Dokumentation, die
+ich als lückenhaft und wenig stringent empfinde. Oder es liegt daran,
+dass ich Andeutungen in Forenbeiträgen einfach nicht verstehe.<br />
+<br />
+Das fängt schon damit an, dass im WebInterface mehrere Stellen sind, an
+denen ich einen Crawler auf file:// starten kann. Und nichts
+funktioniert. (Dabei wäre eigentlich die deutlich schönere Idee, dass
+ich da nicht einmalig was starte - sondern der Crawler weiß, dass er
+regelmäßig sich das Verzeichnis ansehen soll.)<br />
+<br />
+Ich weiß also nicht, welches grundsätzliche Modell ich für diese Aufgabe
+auszuwählen habe. Und was ich dann an welchen Stellen einzustellen habe.
+Für mich wäre eine Art [howto:]{style=&ldquo;font-weight: bold&rdquo;} für den
+Anwendungsfall \&ldquo;lokale Dateien eines Verzeichnisses crawlen\&rdquo; ideal:
+Eine Beispielkonfiguration also.<br />
+<br />
+Denn es ist in der Doku und den Diskussionsbeiträgen schon unklar,
+welchen root-Bezug das file:// eigentlich hat: Würde im Extremfall ein
+Crawl auf / der Maschine gehen? Oder ist das relativ zu der Installation
+von YaCy?<br />
+<br />
+Auch eine weitere Version ist mir unklar:<br />
+Ich habe im Intranet einen Samba-Server. Ich könnte also via smb: diesen
+Server in ein Verzeichnis des YaCy-Servers einbinden. Aber wie geht es
+dann weiter?<br />
+<br />
+Mir würde eine konkrete Handlungsanweisung (wähle Modell xyz, dann gehe
+auf Seite abc und schalte ... usw) wirklich sehr helfen.<br />
+<br />
+Zur Verfügung steht:<br />
+Virtueller PC mit eigener IP. Ubuntu 14.04, dort die aktuellen
+Debian-Packages installiert.<br />
+<br />
+Ich bitte um Hilfe.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9652">Intra</a>
+&mdash; So Feb 21, 2016 3:31 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

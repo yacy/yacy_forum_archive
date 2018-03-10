@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-handlungsbedarf-client-can-t-execute-connection-timed">Fragen und Antworten • Re: Handlungsbedarf: Client can\&rsquo;t execute: Connection timed</h1>
+
+<p>Date: 2014-09-13 11:08:59</p>
+
+<p>Hallo,<br />
+</p>
+
+<blockquote>
+<div>
+
+flegno hat geschrieben:\
+
+Code: 
+:   `Message: Client can't execute: Connection timed out: connect duration=21016`
+
+\
+
+</div>
+</blockquote>
+
+<p>Also für mich klingt das so als hätte die Verbindung zum Ziel-Host
+(vermutlich gimpforum.de aber es könnte auch ein anderer Host sein der
+vom GimpForum mit eingebunden wird, z.B. googleanalytics.com oder etwas
+ähnliches) wegen einem TimeOut nicht geklappt, auf den ersten Blick kann
+ich nicht erkennen warum daran YaCy schuld sein soll oder warum das auf
+einen Bug in YaCy hindeuten soll. Der Rest der Fehlermeldung ist ein
+Stack-Trace und der zeigt normalerweise relativ exakt wo im Code das
+Problem ist.<br />
+Hast Du die Seite auch mal ohne den YaCy-Proxy probiert?<br />
+<br />
+Das einzigste was ich dabei nicht verstehe ist warum das mit einer
+Exception behandelt wird. Wäre es nicht besser an den Browser die
+korrekte Fehlermeldung zurückzuliefern anstatt damit das Log-File zu
+behelligen? Und wenn schon ein Log-Eintrag dann sollte Host-Name,
+IP-Adresse und Port-Nummer mit dabei stehen (diese Infos müssen für den
+Verbindungsaufbau ja vorhanden sein also sollten sie sich auch in die
+Fehlermeldung mit einbauen lassen ohne weitere Exceptions riskieren zu
+müssen), damit der User an YaCy vorbei testen kann ob der Ziel-Host
+tatsächlich nicht funktioniert.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Sa Sep 13, 2014 10:08 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+
