@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="mitmachen-re-raspberry-pi">Mitmachen • Re: Raspberry Pi</h1>
+
+<p>Date: 2014-01-16 00:29:49</p>
+
+<p>Sorry, sorry, that I\&rsquo;m not so fast!<br />
+<br />
+In order to get better information from the running YaCys I was thinking
+about my test environment. In the moment my two RasPis, my CubieTruck, a
+Desktop, my Laptop (additional services like TOR are also running) and
+my Spotify music, ... and a Tablet... and the Backup of my NAS to a
+friend... and my Smart phone ... all use the same Internet connection,
+the same router! It was enough for first experiences. But when we now
+test and compare together, I would like make this environment better.<br />
+<br />
+I will use my Workstation at work in order to simulate some web servers.
+This device should have enough power in comparison to ARM boards. And a
+second Ethernet card. What I have to buy is a Gig-Ethernet switch and
+some cables. Maybe I find a bit equipment by other colleagues. My
+equipment is working for other tasks in the moment. That\&rsquo;s the first
+thing.<br />
+<br />
+The second one is to have some possibilities to observe the YaCy boards.
+The first is, to collect the log-information together with the state of
+collecting of URLs and DHT words. The second is a post processing (maybe
+also in real-time) to analyse this information. And the third, to check
+the response for http questions.<br />
+<br />
+I wouldn\&rsquo;t like to sit next to the boards for days. We should have a
+data acquisition system as observer. Only by this way we will get
+comparable information.<br />
+<br />
+Please, let me time for this for two weeks.<br />
+<br />
+\@Orbiter: Do you have any software tool in order to observe YaCy? Or a
+script which processes the log files? I plan to write a small tool what
+can process this information and can calculate summary statistic
+information or graphs.<br />
+<br />
+\@all: I\&rsquo;m not so familiar with development under Linux (I\&rsquo;m a system
+integrator for special measurement and control equipment for research
+facilities. The most software, which I can use is only available in
+Windows.): Is there a simple possibility to send the YaCy log file to a
+TCP port in real-time? Similar like \&ldquo;tail\&rdquo; send this to the terminal?
+(But I saw that \&ldquo;tail\&rdquo; can hang up by itself, sometimes.)</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9031">fherb</a>
+&mdash; Do Jan 16, 2014 12:29 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

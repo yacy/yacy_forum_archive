@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="dev-seed">Dev:Seed</h1>
+
+<p>Date: 2013-11-22 12:07:37</p>
+
+<p>Seed anatonomy description</p>
+
+<p><strong>Neue Seite</strong></p>
+
+<div>
+
+A peer seed is the description of the anatomy of a peer. This is
+represented with a map of properties, which is called the DNA of a seed.
+The peer DNA contains the following nucleotides:\
+\* \"Name\" - the name of the peer\
+\* \"Hash\" - the peer hash, the unique identification and the DHT
+position of the peer. This is a 12-character ASCII which is generated
+from a \[\[Dev:EnhancedBase64\|Enhanced Base64\]\] encoding of a 72-bit
+cardinal number.\
+\* \"IP\" - the current IP of the peer, which may change frequently. The
+IP is assigned by the contacted peer, not by the contacting peer.\
+\* \"Port\" - the port where YaCy is running. This is assigned by the
+contacting peer.\
+\* \"BDate\" - Birthday = first startup time\
+\* \"Version\" - a version string\
+\* \"UTC\" - the UTC-Offset of the peer in context of the clock setting
+of the hosting computer (this does not show acually a hint of the
+longitude because every user can assign any UTC offset independently of
+the location)\
+\* \"LastSeen\" - a timestamp given by any peer which had contact with
+the peer\
+\* \"PeerType\" - the type of the peer, which can be \"virgin\",
+\"junior\", \"mentee\", \"senior\", \"mentor\", \"principal\";\
+\* \"ISpeed\" - the speed of indexing (pages/minute) of the peer\
+\* \"RSpeed\" - the speed of retrieval (queries/minute) of the peer\
+\* \"Uptime\" - the number of minutes that the peer is up in minutes/day
+(moving average MA30)\
+\* \"LCount\" - the number of links that the peer has stored (LURL\'s)\
+\* \"NCount\" - the number of links that the peer has noticed, but not
+loaded (NURL\'s)\
+\* \"RCount\" - the number of links that the peer provides for remote
+crawls (ZURL\'s)\
+\* \"ICount\" - the number of different words the peer has indexed\
+\* \"SCount\" - the number of seeds that the peer has stored\
+\* \"CCount\" - the number of clients that the peer connects
+(connects/hour as double)\
+\* \"sI\" - the number of send index/words\
+\* \"rI\" - the number of received index/words\
+\* \"sU\" - the number of send URLs\
+\* \"rU\" - the number of received URLs\
+\* \"Flags\" - a \[\[Dev:Bitfield\|Bitfield\]\]-encoded set of binary
+flags, where the bits are assigns as follows: (DIRECT\_CONNECT = 0,
+ACCEPT\_REMOTE\_CRAWL = 1, ACCEPT\_REMOTE\_INDEX = 2, ROOT\_NODE = 3,
+SSL\_AVAILABLE = 4). A DIRECT\_CONNECT is set to all peers which the own
+peer had contact with directly. ACCEPT\_REMOTE\_CRAWL and
+ACCEPT\_REMOTE\_INDEX is set by the peer owner to show the corresponding
+grants. ROOT\_NODE is set by contacting peer if the reporting IP of the
+peer is identical with the remote HTTP request IP and the connection
+speed is less that a given throughput. SSL\_AVAILABLE is set by the
+owning peer if the same IP as given in the IP field (not 443!) accepts
+https request.\
+\* \"Tags\" - peer tags. This is a \'\|\'-separated list of words which
+is used for robinson peer selection. It can be set to \'\*\' to show
+that the peer is willing to respond to every search request in the
+network.\
+\* \"seedURL\" - if the peer runs in principal mode, then it publishes a
+seedlist publication address which is given here\
+\* \"news\" - a \'news\' attachment which is used to propagate
+broadcasts of different kinds to all peers.\
+\* \"dct\" - the disconnect time, a time-stamp for an unsuccessful
+attempt to connect the peer.\
+\
+These attributes are stored in a Map to represent the Peer. The most
+important parts are the peer hash, the IP and the port. The peer must
+set only the hash and the port; the IP is assigned by the first peer
+which is contacted.\
+\
+There is no single interface to get the attributes of a peer seed in
+raw, but it is possible to retrieve a list of all seeds using the
+\[\[Dev:APIseedlist\|seedlist\]\] api.
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

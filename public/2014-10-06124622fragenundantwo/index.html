@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-yacy-als-proxy">Fragen und Antworten • Re: YaCy als Proxy?</h1>
+
+<p>Date: 2014-10-06 12:46:22</p>
+
+<p>Hallo,<br />
+<br />
+ich persönlich möchte mich dafür aussprechen das Proxy-Feature aus YaCy
+zu entfernen, aus folgenden Gründen:<br />
+Dieses Feature macht den HTTP-Server in YaCy komplexer da dieser für
+jeden Zugriff entscheiden muss ob der Zugriff den YaCy-Peer selber
+betrifft oder per Proxy weitergeleitet werden soll. Ein einfaches und
+simples Design fördert auch immer die Sicherheit und die Fehlerarmut des
+Systems und ist somit ein Vorteil für die User. Das selbe trifft auch
+auf den Crawler ansich zu der dann nur noch Seiten analysieren muss die
+er selber unter kontrollierten Bedingungen geholt hat und keine
+\&ldquo;vorbeifliegenden\&rdquo; Daten mehr Crawlen muss.<br />
+Das \&ldquo;nebenbei-crawlen\&rdquo; geht auch anders, es gibt ein Browser-AddOn das
+alle aufgerufenen URLs parallel an einen (beliebigen) konfigurierten
+YaCy-Peer weiterreicht und damit den dortigen Crawler quasi mit
+einzelnen URLs füttert. Für das \&ldquo;nebenbei-crawlen\&rdquo; muss eh eine
+Modifikation am Browser vorgenommen werden, ob nun einen Proxy zu
+konfigurieren oder ein AddOn zu installieren ist kein großer
+Unterschied. Dafür kann das AddOn eventuell besser auf die Privatsphäre
+des Users achten, es könnte z.B. im \&ldquo;Privat-Modus\&rdquo; (den heutzutage
+alle Browser unterstützen) inaktiv bleiben.<br />
+Per HTTPS verschlüsselte Seiten sind per Proxy gar nicht crawlbar aber
+wenn YaCy einfach nur die URL gegeben wird kann der Crawler selber eine
+verschlüsselte Verbindung zum Web-Server aufbauen. In HTTP 2 soll
+Verschlüsselung zur Pflicht werden, Chromium wird per HTTP 2 wohl gar
+keine unverschlüsselten Verbindungen mehr aufbauen können und in Firefox
+ist das nur versteckt erreichbar. Der Nutzwert eines Proxy-Crawlers
+könnte also demnächst gen Null sinken.<br />
+<br />
+Das einzigste Feature das wirklich aus YaCy verschwinden würde wäre der
+einfache Zugriff auf die beiden Top-Level-Domains .yacy und .yacyh aber
+dafür habe ich eine Lösung die sich kurz vor den Startlöchern befindet.<br />
+</p>
+
+<blockquote>
+<div>
+
+TmoWizard hat geschrieben:\
+Eine einfache Webseite kann immerhin mehrere Stunden brauchen, bis der
+Crawler fertig ist.\
+
+</div>
+</blockquote>
+
+<p>Oder auch mal Tage, für wireshark.org hat mein Peer mehrere Tage
+gebraucht und das trotz dickem PC und schneller Internetanbindung. Wobei
+ich da eher der Meinung bin das die Limitierung auf 2 Zugriffe pro
+Sekunde das Problem darstellt aber hier gilt es natürlich abzuwägen wie
+viel Leistung der eigene PC als Crawler erübrigen kann und ob die
+gecrawlte Web-Seite durch zu intensives crawlen eventuell geDOSt wird.
+Ich würde mir hier lieber eine Limitierung in Bytes pro Sekunde wünschen
+damit meine Internetanbindung nicht überlastet wird selbst wenn der PC
+auf dem YaCy läuft über ausreichend CPU-Power verfügt. Da es keinen Weg
+gibt einer TCP-Verbindung eine Priorität mitzugeben, die z.B. der
+Heim-Router beachten könnte damit andere PCs im heimischen Netz nicht
+ausgebremst werden, ist ein festes Bandbreiten-Limit die einzigst
+machbare Lösung.<br />
+<br />
+Gerade wegen dem langsamen Crawlen durch nur einen Crawler gibt es ja
+das Feature die Crawl-Last auf mehrere Peers zu verteilen aber kaum
+einer hat in seinem Peer das Akzeptieren von Remote-Crawls aktiviert
+also bleibt dieser Vorteil einer
+[verteilten]{style=&ldquo;text-decoration: underline&rdquo;} Suchmaschine leider
+ziemlich ungenutzt. Auf der anderen Seite kann ich natürlich verstehen
+warum die Leute (und auch ich) keine Remote-Crawls akzeptieren wollen,
+wer weiß schon was für URLs da so alles kommen und auf was für Servern
+man damit die eigene IP-Adresse im Logfile hinterlässt (vom User-Agent
+mal abgesehen). Das Risiko früh um 6 Uhr eine unangemeldete
+Hausdurchsuchung mit Beschlagnahmung aller Computer (seine Computer
+sieht man mit hoher Wahrscheinlichkeit nie oder erst nach vielen Jahren
+wieder selbst wenn man nachweislich unschuldig ist) usw. zu bekommen
+will ganz sicher niemand freiwillig eingehen. Da solche Dinge in
+Deutschland leider schon öfters vorgekommen sind ist das kein rein
+fiktives Risiko sondern eine ernstzunehmende Gefahr. Hier leidet also
+eine technische Lösung unter einem politischen Problem.<br />
+</p>
+
+<blockquote>
+<div>
+
+flegno hat geschrieben:\
+einfach nebenbei eine Art erweiterte Lesezeichen-Sammlung (meine Sicht
+auf den YaCy-Index) generieren\
+
+</div>
+</blockquote>
+
+<p>Ich sehe das genauso, gerade das \&ldquo;nebenbei-crawlen\&rdquo; zeigt doch der
+Suchmaschine meines Vertrauens wofür ich mich wirklich interessiere und
+baut somit einen (für mich) maximal nützlichen Index auf.<br />
+<br />
+Ich bin dafür dass das Proxy-Feature aus YaCy verschwindet, damit wären
+auch die HTTP-403-Fehler vorbei, und dafür die Möglichkeiten zum
+\&ldquo;nebenbei-crawlen\&rdquo; per Browser-AddOn zu verbessern. Für letzteres
+würde ich eventuell Geld ausgeben.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Mo Okt 06, 2014 11:46 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

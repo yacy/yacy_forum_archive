@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="dev-apipush">Dev:APIpush</h1>
+
+<p>Date: 2014-06-24 15:43:58</p>
+
+<p>[Call Attributes: ]{.autocomment} markup fix</p>
+
+<p>← Nächstältere Version</p>
+
+<p>Version vom 24. Juni 2014, 13:43 Uhr</p>
+
+<p>(Eine dazwischenliegende Version von einem Benutzer wird nicht
+angezeigt)</p>
+
+<p>Zeile 1:</p>
+
+<p>Zeile 1:</p>
+
+<p> </p>
+
+<div>
+
+= Document Push API =
+
+</div>
+
+<p> </p>
+
+<div>
+
+= Document Push API =
+
+</div>
+
+<p>−</p>
+
+<div>
+
+Documents can be pushed directly to YaCy using ~~this API~~. All
+documents are parsed and analysed using the YaCy built-in document
+parser and written to the Solr index using this servlet.
+
+</div>
+
+<p>+</p>
+
+<div>
+
+Documents can be pushed directly to YaCy using [the servlet at
+/api/push\_p.json]{.underline}. All [pushed]{.underline} documents are
+parsed and analysed using the YaCy built-in document parser and written
+to the Solr index using this servlet.
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[== Call Attributes ==]{.underline}
+
+</div>
+
+<p> </p>
+
+<div>
+
+This servlet must be called at /api/push\_p.json using HTTP POST request
+using multipart/form-data parameter encoding. It may also be possible to
+call this servlet using GET, but this should only be done for test cases
+because the purpose of that servlet is a transmission of large, binary
+data.
+
+</div>
+
+<p> </p>
+
+<div>
+
+This servlet must be called at /api/push\_p.json using HTTP POST request
+using multipart/form-data parameter encoding. It may also be possible to
+call this servlet using GET, but this should only be done for test cases
+because the purpose of that servlet is a transmission of large, binary
+data.
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p>Zeile 29:</p>
+
+<p>Zeile 30:</p>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'lastModified-X\'\'\'
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'lastModified-X\'\'\'
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\|A date which is assigned to the document. The date format must be
+according to \[~~RFC 1123~~ http://www.ietf.org/rfc/rfc1123.txt\] like
+\"EEE, dd MMM yyyy HH:mm:ss Z" with a time zone indicator according to
+\[~~RFC 5322~~ http://www.ietf.org/rfc/rfc5322.txt\]
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|A date which is assigned to the document. The date format must be
+according to \[http://www.ietf.org/rfc/rfc1123.txt [RFC
+1123]{.underline}\] like \"EEE, dd MMM yyyy HH:mm:ss Z" with a time zone
+indicator according to \[http://www.ietf.org/rfc/rfc5322.txt [RFC
+5322]{.underline}\]
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'contentType-X\'\'\'
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'contentType-X\'\'\'
+
+</div>
+
+<p>Zeile 36:</p>
+
+<p>Zeile 37:</p>
+
+<p> </p>
+
+<div>
+
+\|}
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|}
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[== Performance ==]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[When called with synchronous=false and commit=false, this API may be
+the fastest way to inser raw document data into the YaCy search index.
+It is strongly recommended to avoid synchronous=true or commit=true to
+get the best performance since the pushed documents are parsed and
+indexed using a concurrent, self-scaling and full multi-core capable
+application infrastructure. It is also possible to concurrently call the
+/api/push\_p.json servlet with more than one client tasks. The
+concurrent indexing option with synchronous=false and commit=false is
+recommendet for typical initial-load tasks where only once a large set
+of documents are indexed.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[If the API is called with ynchronous=true and/or commit=true, then the
+processing time will be linear with the number of documents in one call
+and will get an additional delay when commit=true. Using forced a commit
+too frequently will cause a strong defragmentation which will slow down
+search result processing as well.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[== Test Environment ==]{.underline}
+
+</div>
+
+<p> </p>
+
+<div>
+
+To make it easier to test this servlet, it is also possible to call the
+API with GET. A typical call looks like:
+
+</div>
+
+<p> </p>
+
+<div>
+
+To make it easier to test this servlet, it is also possible to call the
+API with GET. A typical call looks like:
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="de-raspberry-pi">De:Raspberry Pi</h1>
+
+<p>Date: 2013-01-22 15:28:19</p>
+
+<p>Deutsche Version der Installationsanleitung für Raspberry Pi</p>
+
+<p><strong>Neue Seite</strong></p>
+
+<div>
+
+{{interwikiEN\|En:Raspberry Pi}}\
+\
+== Raspberry Pi mit YaCy Setup ==\
+\
+Der \[http://www.raspberrypi.org/ Raspberry Pi\] (\'RPi\') ist ein
+Computer auf einer Platine in Kreditkarten Größe der Linux Kernel
+basierte Betriebssysteme unterstützt. Wir empfehlen das \'Modell B\' des
+Raspberry Pi zu verwenden das mit 512 MB SDRAM ausgeliefert wird - im
+Vergleich zum \'Modell A\' mit nur 256 MB Arbeitsspeicher. Da der ganze
+Rechner nur bis zu 3,5 Watt verbraucht ist es eine ideale Plattform für
+private \"Cloud\"-Anwendungen und natürlich auch um einen YaCy Peer 24
+Stunden 7 Tage die Woche laufen zu lassen.\
+\
+Es gibt eine große Anzahl von \[http://elinux.org/RPi\_Distributions
+verfügbaren Betriebssystemen für den RPi\]. Und auch ein \'Standard\'
+System das von den Machern des RPi empfohlen wird und \"Raspbian\"
+genannt wird weil es auf der debian wheezy Distribution aufsetzt.\
+\
+Es gibt also vielfältige Optionen für ein Betriebssystem auf dem
+Rasperry Pi (\'RPi\'). In der Anleitung hier lassen wir YaCy auf Raspian
+laufen - aber man kann hier auch andere Auswahlen für eines OS\'
+einstellen.\
+\
+=== YaCy auf Raspbian laufen lassen ===\
+Wir nehmen das Standard Raspian Image aber passen es für unsere
+Bedürfnisse an:\
+====Raspbian Vorbereitung====\
+\* Downloaden der soft-float ABI Version von Raspian mit dem Namen
+\"wheezy-armel\" von http://www.raspberrypi.org/downloads\
+\* Schreiben des Abbilds auf eine mindestens 2GB große SD Karte. Ein
+Handbuch für Windows, Mac und Linux ist hier verfügbar:
+http://elinux.org/RPi\_Easy\_SD\_Card\_Setup\
+\* Nach dem ersten Start des RPi den SSH Server im raspi-config Menü
+aktivieren und die Option expand-rootfs ausführen, damit der ganze Platz
+auf der SD-Karte genutzt werden kann.\
+\* Mit ssh Verbindung zum RPi herstellen und Einloggen mit dem
+Benutzernamen \'pi\' und dem Password \'raspberry\'.\
+\* Zuweisen einer \[\[En:StaticIP \| Statischen IP\]\] Adresse für den
+RPi. Das erlaubt es uns einen eindeutigen statischen Link auf unseren
+YaCy Knoten (Peer) im Intranet zu setzen. Wenn es keinen Konflikt mit
+dem Setup Ihres Netzwerks ergibt, nehmen Sie die Standard IP
+192.168.1.70.\
+\* Auslagerungsdatei (swap space) vergrößern. Es ist nicht
+empfehlenswert eine Auslagerungsdatei auf einer SD-Karte einzurichten -
+aber Java stürzt ab wenn aus irgendeinem Grund mehr Speicher gebraucht
+wird als wir dachten wäre notwendig. Deswegen konfigurieren wir YaCy so
+dass es nur soviel Platz einnimmt dass nicht geswappet wird. Aber um
+YaCy vor Abstürzen zu schützen, vergrößern wir die Größe des swap.\
+:\*Öffne die Datei /etc/dphys-swapfile und ersetze den Wert \'100\' mit
+i.e. \'1024\'. Das ergibt 1GB swap. Die Änderung wird nach einem \'sudo
+dphys-swapfile setup\' oder einem Neustart aktiv.\
+:\*Um Raspian vor dem Auslagern zu schützen (während wir noch die
+Möglichkeit haben) brauchen wir einen niedrigen swappiness Wert. Wir
+öffnen die Datei /proc/sys/vm/swappiness und überprüfen dass ein
+niedriger Wert gesetzt ist. Standardmäßig steht dort eine 1 aber wir
+ersetzen es mit einer 0.\
+\* Optional/Empfohlen: Verkleinern von Raspian mit dem Tutorial
+\[\[En:DebianHeadless \| Headless Debian\]\] durch Löschen aller X11
+Pakete samt der Abhängikeiten. Nach diesem Tutorial können auch die
+Python Spile vom RPi entfernt werden:\
+rm -Rf \~/python\_games\
+\* Optional/Empfohlen: Entfernen aller Programmiersprachen die nicht für
+die Ausführung von YaCy benötigt werden:\
+sudo apt-get remove \--purge python python2.6 python2.7 python3
+python3.2 perl\
+:Sie sollten auch alle verwaisten (orphan) und nicht mehr benötigten
+Pakete entfernen nach der Anwendung des \[\[En:DebianHeadless \|
+Headless Debian\]\] Tutorial.\
+\* Optional/Empfohlen: Die neuesten System Updates holen\
+sudo apt-get update\
+sudo apt-get upgrade\
+sudo apt-get dist-upgrade\
+:Gefolgt von einem Neustart\
+sudo shutdown -r now\
+:Wiederholen bis keine neuen Updates mehr angezeigt werden. Dann
+Aufräumen mit\
+sudo apt-get clean\
+:Nach diesem Prozedere sollten maximal 627M auf der SD-Karte in
+Verwendung sein:\
+df -h .\
+\
+====Installation von Java====\
+\* (Empfohlene) Erste Option: Installieren der Oracle Headless JVM. Das
+ist möglicherweise die schnellte JVM (Java Virtuelle Maschine).\
+:\* Download der ARMv6/7 Version von
+http://www.oracle.com/technetwork/java/embedded/downloads/javase/index.html
+- Java 1.6 ist ausreichend\
+:\* Kopieren der ejre\*.tar.gz Datei mit scp auf den RPi to \~pi/ z.B.\
+scp
+ejre-1\_6\_0\_38-fcs-b05-linux-arm-vfp-eabi-headless-13\_nov\_2012.tar.gz
+pi\@192.168.1.70:\~/\
+:\* Entpacken der ejre\*.tar.gz Datei mit untar auf dem RPi, z.B.\
+sudo tar xfz
+ejre-1\_6\_0\_38-fcs-b05-linux-arm-vfp-eabi-headless-13\_nov\_2012.tar.gz
+-C /usr/lib/\
+:Das erzeugt ein Verzeichnis ejre1.6.0\_38 in /usr/lib. Um das java
+Kommando zum ausführbaren Pfad hinzuzufügen, folgendes Kommando
+ausführen:\
+sudo ln -s /usr/lib/ejre1.6.0\_38/bin/java /usr/bin/java\
+\
+\* Alternative Option: OpenJDK installieren. Das funktioniert auch ist
+aber ein sehr viel größeres Paket und wahrscheinlich nicht so schnelle
+wie die Oracle JVM. Wir brauchen aber nur die headless JRE. Also einfach
+mit folgendem Befehl installieren:\
+sudo apt-get install openjdk-6-jre-headless\
+\
+\* Um zu Prüfen, ob Java richtig installiert wurde, folgendes Kommando
+ausführen\
+java\
+\
+====Installation von YaCy====\
+Es gibt die Möglichkeit YaCy wie jedes andere debian Paket zu
+installieren (Anleitung hier: \[\[En:DebianInstall\| Debian
+Installation\]\]). Aber dann können Sie nicht die Oracle JVM wie oben
+beschrieben verwenden. Darum verwenden wir das YaCy tarball Release.\
+\* YaCy mit dem tarball von http://latest.yacy.net installieren z.B.\
+wget http://latest.yacy.net/yacy\_v1.03\_20120619\_9000.tar.gz\
+tar xfz yacy\_v1.03\_20120619\_9000.tar.gz\
+:Wir sollten einige Standardwerte in de Datei yacy.init verändern:
+(niedrigere Einstellungen für Arbeitsspeicher Verbrauch und kleines
+Festplattenplatz-Limit)\
+sed \"s/disk.free = 3000/disk.free = 1000/\" -i
+\~/yacy/defaults/yacy.init\
+sed \"s/javastart\_Xmx=Xmx600m/javastart\_Xmx=Xmx120m/\" -i
+\~/yacy/defaults/yacy.init\
+Jetzt kann YaCy gestartet werden:\
+\~/yacy/startYACY.sh\
+\* Wenn Sie die Standard IP 192.168.1.70 gesetzt haben, dann ist Ihr
+YaCy Knoten(Peer) nun erreichbar unter http://192.168.1.70:8090 (Geduld
+beim Start - einfach etwas warten oder mit \'tail -f
+DATA/LOG/yacy00.log\' im Log schauen was passiert)\
+\* YaCy wird das Standard Passwort für die Administration das zu Beginn
+leer ist mit einem zufälligen Passwort ersetzen. Sie sollten Ihr eigenes
+Passwort festlegen mit dem Aufruf:\
+\~/yacy/bin/passwd.sh {IhrNeuesPasswort}\
+:Wenn Sie auf eine geschützte Seite in YaCy klicken muss dieses Passwort
+angegeben werden.\
+\
+====YaCy Autostart und Watchdog====\
+Wir wollen dass unser RPi YaCy immer beim Booten startet und es dann
+auch sauber herunterfährt. Dazu legen wir eine Datei in /etc/init.d/yacy
+mit folgendem Inhalt an:\
+\#! /bin/sh\
+\#\#\# BEGIN INIT INFO\
+\# Provides: YaCy\
+\# Required-Start: \$local\_fs \$remote\_fs \$network \$time\
+\# Required-Stop: \$local\_fs \$remote\_fs \$network \$time\
+\# Default-Start: 2 3 4 5\
+\# Default-Stop: 0 1 6\
+\# Short-Description: YaCy Search Engine\
+\#\#\# END INIT INFO\
+case \"\$1\" in\
+start)\
+su - pi -c \"/home/pi/yacy/startYACY.sh\"\
+;;\
+stop)\
+su - pi -c \"/home/pi/yacy/stopYACY.sh\"\
+;;\
+\*)\
+exit 3\
+;;\
+esac\
+:\
+und machen die Datei ausführbar und linken es für den init Prozess\
+sudo chmod 755 /etc/init.d/yacy\
+sudo update-rc.d yacy defaults\
+Das startet und stoppt YaCy automatisch. Wir wollen zudem dass YaCy mit
+einem Watchdog überwacht wird und automatisch neu gestartet wird im
+Falle es fehlschlägt, crasht oder sich tot verhält. Dazu fügen wir
+folgende Zeile in die Datei /etc/crontab ein:\
+0 \* \* \* \* pi cd /home/pi/yacy/bin && ./checkalive.sh\
+Das überprüft YaCy jede Stunde und startet YaCy wenn es nötig sein
+sollte neu.
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

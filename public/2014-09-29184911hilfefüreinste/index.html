@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-yacydns-in-aktion">Hilfe für Einsteiger und Anwender • Re: yacyDNS in Aktion</h1>
+
+<p>Date: 2014-09-29 18:49:11</p>
+
+<p>Hallo,<br />
+</p>
+
+<blockquote>
+<div>
+
+flegno hat geschrieben:\
+Hier mein Versuch yacyDNS graphisch darzustellen.\
+
+</div>
+</blockquote>
+
+<p>Okay, das Bild ist gut aber es müsste noch die Information dazu das es
+einen zeitlichen Ablauf von Oben nach Unten gibt.<br />
+Ich gehe mal davon aus das Du mit dem Text \&ldquo;mit oder ohne Kommunikation
+mit yacyDNS\&rdquo; andeuten möchtest das Dein Bild beide Vorschläge von mir
+darstellen soll aber dar zweite Vorschlag sieht deutlich anders aus. Ich
+möchte mich noch einmal für meine unpräzise Art entschuldigen.<br />
+Daher mein zweiter Vorschlag mal als ASCII-Art:</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>User                                                 Web-Server                                              yacyDNS[Browser]              ------------------------------&gt;              {HTTP-Request} auf              http://yacy.sprechrun.de/search                                                     [Script]                                                                    -----------------------------------&gt;                                                                    {HTTP-Request} auf                                                                    http://DNS-IP:Port/query?name=flegno                                                                                                             [interne DNS-Abfrage]                                                                    &lt;-----------------------------------                                                                    {HTTP-Response} mit                                                                    IP und Port als simplen Klartext                                                     [Script]              &lt;------------------------------              {HTTP-Response} mit 307-Weiterleitung auf              http://IP:port/search[Browser]kontaktiert nun dentatsächlichen YaCy-Peermit aktueller IP-Adresse</code></dd>
+</dl>
+
+<p>Der wesentliche Unterschied zu meinem ersten Vorschlag ist das der
+Browser des Anwenders gar keinen Kontakt zu meinem YaCy-DNS-System hat,
+dafür muss der Web-Server (in der Mitte) mehr und komplexere Arbeit
+leisten. Auch hier gilt ein zeitlicher Ablauf von Oben nach Unten, ich
+hoffe diese Darstellung ist einigermaßen Verständlich.<br />
+</p>
+
+<blockquote>
+<div>
+
+flegno hat geschrieben:\
+Und übrigens, Sinn und Zweck von Dia ist, das man keine künstlerische
+Begabung braucht.\
+
+</div>
+</blockquote>
+
+<p>Tja, ich persönlich bin der Meinung ich machte etwas ordentlich oder ich
+lasse es bleiben. Ich habe keinerlei künstlerische Begabung also male
+ich keine Bilder. Jeder Mensch hat nur einen begrenzten Umfang an
+Fertigkeiten und ich denke eine der wichtigsten Aufgaben im Leben eines
+jeden Menschen ist es diesen Umfang zu ermitteln (wenigstens grob) um
+dann im Rahmen seiner Möglichkeiten ein möglichst glückliches und
+erfülltes Leben führen zu können. Das zu tun was einem liegt und
+hinterher den Erfolg seines Schaffens zu sehen ist meiner persönlichen
+Meinung nach eine der wesentlichen Quellen von Glück und Wohlbefinden,
+deswegen programmiere ich so gerne und viel.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Mo Sep 29, 2014 5:49 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

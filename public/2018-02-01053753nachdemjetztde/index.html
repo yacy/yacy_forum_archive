@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="nachdem-jetzt-der-neue-linux-kernel-mit-meltdown-spectre-fix">Nachdem jetzt der neue Linux-Kernel mit Meltdown+Spectre-Fix ...</h1>
+
+<p>Date: 2018-02-01 05:37:53</p>
+
+<p>Nachdem jetzt der neue Linux-Kernel mit Meltdown+Spectre-Fix draußen
+ist, wollte ich mal messen, wie sich das auswirkt. Um mal zu gucken,
+habe ich einen gatling laufen lassen und mit einem Benchmark-Tool ein
+bisschen Netzwerk-Stress gemacht. Ich habe ein 165MB-File gewählt, das
+in beiden Fällen natürlich sofort vollständig im Buffer Cache ist.</p>
+
+<p>Die Benchmark-Parameter waren:</p>
+
+<pre><code>./bench -n 1000 -c 10 -k -K 5 http://127.0.0.1/testfile
+</code></pre>
+
+<p>Das heißt: 1000 Mal diese Datei laden, über 10 Verbindungen parallel,
+mit 5 Downloads pro TCP-Verbindung via HTTP-Keepalive. Sowohl das
+Benchmark-Tool als auch gatling sind Single-Threaded und laufen auf
+jeweils einem Core nebeneinander. Es sollte also nicht zu vielen Context
+Switches kommen, aber natürlich sehr viele Wechsel vom User Space in den
+Kernel und zurück. Und die sind genau das, was durch den Fix langsamer
+werden. Die CPU ist ein Haswell (noch ohne Microcode-Update). Das sollte
+also ziemlich nahe am Worst Case sein. Und in der Tat. Mit dem alten
+Kernel:</p>
+
+<pre><code>bench: 164835678432 bytes in 24.7616 seconds.
+bench: Throughput: 6.2GiB/sec
+bench: Requests per second: 40
+</code></pre>
+
+<p>und mit dem neuen Kernel:</p>
+
+<pre><code>bench: 164870699232 bytes in 39.3921 seconds.
+bench: Throughput: 3.9GiB/sec
+bench: Requests per second: 25
+</code></pre>
+
+<p>Das ist ein ziemlich krasser Einbruch. Und da ist kein SSD beteiligt,
+das ist alles Buffer Cache ohne tatsächlichen I/O zu tatsächlicher
+Hardware.</p>
+
+<p><strong>Update</strong>: Nach Einspielen des neuen Microcodes wird es ein bisschen
+weniger schlimm (4.5GiB/sec), aber das ist immer noch katastrophal viel
+schlechter als vorher. Kann mir mal jemand erzählen, wieso das jetzt
+keinen Recall gibt?</p>
+
+<p>Ich hatte übrigens den 4.15 mit Retpoline-Support gebaut, aber ohne
+einen gcc mit Retpoline-Support. Laut Dokumentation werden dann von Hand
+an einigen Stellen Assembler-Fixes eingebaut.</p>
+
+<p><strong>Update</strong>: Intel hatte den Microcode zurückgezogen. Stellt sich raus:
+Das Microcode-Update, das ich probiert habe, war gar nicht der
+Meltdown-Fix. Hatte mich schon gewundert, wieso da 2017 dran stand.
+Damit ist der Unterschied zwischen den 3,9 und den 4,5 GiB/sec
+anscheinend <del>Messvarianz</del> Messfehler.</p>
+
+<p><strong>Update</strong>: Ach und der gcc 7.3, mit dem ich den Kernel gebaut hatte,
+kann doch Retpolines. Haben sie nur nicht für relevant genug gehalten,
+um es im Changelog online zu erwähnen.</p>
+
+<p><strong>Update</strong>: Haswell ist gar nicht der Worst Case, wie sich rausstellt.
+Ich habe schon pcid und invpcid im /proc/cpuinfo. Bei Sandy Bridge und
+co ist das wohl noch deutlich schlimmer.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

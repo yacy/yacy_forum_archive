@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-re-disk-space-problem">English • Re: Disk space problem</h1>
+
+<p>Date: 2017-07-24 21:03:30</p>
+
+<p>Hello,<br />
+<br />
+following your idea, will result in lower disk-usage, but you will also
+loose a lot of additional Information.<br />
+<br />
+YaCy uses multiple indexes - think of which is needed.<br />
+At Index Administration -&gt; Index Source &amp; Targets
+(/IndexFederated_p.html) you can switch them on and of.<br />
+<br />
+The Solr Search Index ist the core and YaCy won\&rsquo;t be useful without
+that - so this can\&rsquo;t be switched off.<br />
+<br />
+There are 2 kinds of Web Structure Index. This index is about the
+references between pages and sites. Without them YaCy will only loose
+some of its Index quality. I also don\&rsquo;t use them in the Freeworld.<br />
+If you uncheck the citation Index, you can remove the
+SEGMENTS/default/citation.index* files once you shut down YaCy.<br />
+If you uncheck the webgraph index you can remove the
+SEGMENTS/solr_6_6/webgraph directory once you shut down YaCy.<br />
+<br />
+The Reverse Word Index is used to distribute your index to other peers
+in the Network. That\&rsquo;s why I not recommend to uncheck this - but if
+doing so you can remove SEGMENTS/default/text.index* files once you
+shut down YaCy.<br />
+But there is a way to reduce the data used by the Reverse Word Index.<br />
+You may want to limit the count of references per word(-hash) by setting
+System Administration -&gt; Advanced Properties. Set the Key
+index.maxReferences to the value of 10000 for eg. This will remove the
+oldest References per word during merge of
+SEGMENTS/default/citation.index* files.<br />
+If you have a System that is able to handle huge files (64Bit JRE) you
+can change the key filesize.max.other / filesize.max.win (depending on
+your OS) to 21474836470 (20GB) for eg.<br />
+The bigger the Filesize, the lower space is wasted.<br />
+(These change will need a restart of YaCy)<br />
+<br />
+The Solr Search Index can be optimized to larger files too - with the
+same result in wasting less space. At Index Administration -&gt; Optimize
+Solr (/IndexControlURLs_p.html) you can merge the index to a few
+(larger) files, without loosing anything.<br />
+<br />
+Please be careful while following these steps! (Backup, etc.)<br />
+And keep in mind that larger files truly do save space - but there needs
+to be room to write them, while the old ones are not deleted.<br />
+You need at least the volume for next largest file.<br />
+<br />
+Cu, sixcooler.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=274">sixcooler</a>
+&mdash; Mo Jul 24, 2017 8:03 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

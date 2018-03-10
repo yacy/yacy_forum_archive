@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="de-lighttpd">De:Lighttpd</h1>
+
+<p>Date: 2012-10-30 20:58:29</p>
+
+<p>Seite neu angelegt</p>
+
+<p><strong>Neue Seite</strong></p>
+
+<div>
+
+=YaCy hinter lighttpd betreiben=\
+Soll YaCy hinter einer \'\'lighttpd\'\'-Instanz betrieben werden, muss
+der Server unter einer eigenen Domain erreichbar sein und es muss
+möglich sein, Subdomains einzurichten. Für dieses Beispiel soll
+angenommen werden, dass der Server unter der Domain
+\'\'\'example.org\'\'\' erreichbar ist. Die Beschreibung bezieht sich
+auf \'\'lighttpd\'\' unter Debian, sollte aber mit ggf.angepassten
+Pfaden auch auf anderen Systemen funktionieren.\
+\
+Für die YaCy-Instanz wird zunächst die Subdomain
+\'\'\'yacy.example.org\'\'\' angelegt, so dass nun unter dieser
+Subdomain ebenfalls der Server erreichbar ist.\
+\
+Wenn \'\'mod\_proxy\'\' noch nicht aktiviert ist, muss dies nun getan
+werden:\
+\
+\<pre\>\
+lighty-enable-mod proxy\
+\</pre\>\
+\
+Danach muss die Datei
+\'\'\'/etc/lighttpd/conf-enabled/10-proxy.conf\'\'\' um die folgenden
+Zeilen ergänzt werden:\
+\
+\<pre\>\
+\$HTTP\[\"host\"\]=\~\"yacy.example.org\" {\
+proxy.server = ( \"\" =\>\
+( (\
+\"host\" =\> \"127.0.0.1\",\
+\"port\" =\> 8090\
+) )\
+)\
+}\
+\</pre\>\
+\
+Dann muss \'\'lighttpd\'\' neu gestartet werden, damit die Änderungen
+wirksam werden:\
+\
+\<pre\>\
+/etc/init.d/lighttpd restart\
+\</pre\>\
+\
+YaCy sollte nun unter http://example.org:8090 und unter
+http://yacy.example.org erreichbar sein.\
+\
+\[\[Kategorie:De:Anleitung\]\]
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

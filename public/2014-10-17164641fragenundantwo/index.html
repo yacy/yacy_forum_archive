@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-seed-list-defekt">Fragen und Antworten • Seed-List defekt</h1>
+
+<p>Date: 2014-10-17 16:46:41</p>
+
+<p>Hallo,<br />
+<br />
+mir sind gerade Fehlermeldungen meines Analyse-Tools aufgefallen das die
+Anführungszeichen bei manchen Feldern fehlen und ein manuelles
+nachschauen hat ergeben das dem tatsächlich so ist.<br />
+Bei mehreren Peers mit Version 1.81009106 sind die Felder \&ldquo;Hash\&rdquo; und
+\&ldquo;Address\&rdquo; bei allen Peers in der Seed-Liste defekt.</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>&quot;Hash&quot;:0000000000,&quot;Address&quot;:[&quot;0.0.0.0:8090&quot;]</code></dd>
+</dl>
+
+<p>(die 0en hab ich geändert, der eigentliche Inhalt der Felder ist korrekt
+nur die Syntax ist defekt)<br />
+<br />
+Wie die anderen Peers darauf reagieren weiß ich natürlich nicht aber für
+mein Tool sind die betreffenden Peers nicht mehr online da sie auch sich
+selbst (im ersten Eintrag der Seed-Liste) nicht mehr korrekt melden.<br />
+<br />
+Alle anderen Felder sind korrekt. Meiner Meinung nach kann das Feld
+\&ldquo;Address\&rdquo; komplett entfallen aber das Feld \&ldquo;Hash\&rdquo; muss in jeden Fall
+repariert werden.<br />
+Und wenn eh gerade was geändert wird, ich möchte noch einmal darum
+Bitten bei den IPv6-Adressen die Interface-Identifier zu entfernen.<br />
+In der Seed-Liste die ich gerade manuell durchgesehen hab war aber auch
+ein Peer dabei der eine IPv4-Adresse im Feld \&ldquo;IP6\&rdquo; und eine
+IPv6-Adresse (mit Interface-Identifier) im Feld \&ldquo;IP\&rdquo; hat (und beides
+im Feld \&ldquo;Address\&rdquo; ganz komisch zusammen aber dafür ohne
+Interface-Identifier).<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Fr Okt 17, 2014 3:46 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

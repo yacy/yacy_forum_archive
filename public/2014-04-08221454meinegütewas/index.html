@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="meine-güte-was-für-ein-tag-es-fing-damit-an-dass">Meine Güte, was für ein Tag. Es fing damit an, dass ...</h1>
+
+<p>Date: 2014-04-08 22:14:54</p>
+
+<p>Meine Güte, was für ein Tag. Es fing damit an, dass der gatling mit
+openssl, den ich gestern auf dem Server selbst gebaut hatte, nicht
+funktionierte. Ich hatte an den Bauteilen kürzlich ein paar
+Veränderungen vorgenommen, aber zuhause getestet und da ging es.
+Unterschied: gcc 4.8.0 und 4.8.2. Also wollte ich auf dem Server mal gcc
+updaten, dann auch gleich mit x32-Support. Dafür fehlte aber die glibc,
+und eigentlich könnte ich ja auch gleich mal die glibc updaten,
+entschloss ich mich. Das zerschoss dann aber den ld.so, weil das ranzige
+Debian, das das auf dem Server mal war, /lib und /lib64 per Symlink auf
+das gleiche Verzeichnis zeigen lässt. Daraufhin ging sudo nicht mehr.</p>
+
+<p>Naja, kein Problem, dachte ich mir, für sowas gibt es ja eine
+Rescue-Umgebung. Wollte die klicken &mdash; der Knopf fehlte im
+Webinterface. Nanu? Ticket aufgemacht. Knopf da. Knopf gedrückt &mdash;
+Server platt, kein Rescue kommt hoch. Ticket aufgemacht. Pause. Antwort:
+Wir haben da mal ne Intel e100 NIC eingebaut, damit das Rescue
+hochkommt, und die Onboard-NIC ausgemacht. Musst du dann in deinem
+Debian fixen.</p>
+
+<p>Die Meldung sah ich aber erst, nachdem ich mein Problem gefixt hatte,
+und umgebootet hatte, und da kam dann das System zwar hoch, aber ohne
+Netzwerk.</p>
+
+<p>Also zurück ins Rescue, aber das kam dann auch nicht mehr hoch. Ticket
+aufgemacht. Die haben irgendwas gebastelt, damit kam das wieder hoch.</p>
+
+<p>Oh, erwähnte ich, dass das Rescue-System ohne mdadm kam? Ich hab seit
+gefühlt 10 Jahren kein Rescue-System mehr gebraucht. Stellt sich raus,
+dass sowas heutzutage ein richtiges Debian ist, wo man konfigurieren
+kann, inklusive apt-get install mdadm. Allerdings will er dafür über 50
+MB nachladen, also hab ich lieber ein statisches dietlibc-mdadm
+hochgeladen und benutzt.</p>
+
+<p>Das Problem, so stellte sich raus, war: Die e100-Netzwerkkarte möchte
+gerne Firmware nachladen, die nicht da war. Ich trag also das Repository
+ein und rufe apt-get auf ... da baut irgendein Debian-Automatismus eine
+initrd neu und die ist nicht mehr bootfähig.</p>
+
+<p>Nun hat mir der Hoster freundlicherweise ein KVM zur Verfügung gestellt,
+sonst hätte ich den Aspekt gar nicht sehen können. Aber mit der neuen
+initrd fand der Kernel sein root-fd nicht und panicte.</p>
+
+<p>Die nächsten Schritte waren: Debian dist-upgrade (das war noch ein
+wheezy), grub erneuern, grub stirbt mit symbol grub_divmod64_full not
+found. Bekanntes Problem, offenbar, aber die Lösungen funktionierten
+alle nicht. purge, reinstall, deinstall, config fummel, reinstall, auf
+die zweite platte auch installieren, half alles nichts.</p>
+
+<p>In der Mitte hatte ich noch versucht, einen eigenen Kernel zu bauen, der
+auf der Hardware laufen würde, aber der tat es nicht und auf dem
+80x25-Screen der KVM sah ich dann auch nur die letzten statischen Zeilen
+eines genischen Panic-Stackdumps und konnte nicht hochscrollen. Aus
+irgendeinem Grund kamen Tastatureingaben nicht an über die KVM. Ich
+tippe auf ein Java-Problem, aber am Ende &mdash; who cares.</p>
+
+<p>Der einzige Ausweg war am Ende, dass ich einen eigenen grub 2.02 beta 2
+aus den Sourcen kompiliert habe. Der warf zwar auch noch lustige
+Fehlermeldungen, aber hat dann am Ende den Kernel doch gebootet.</p>
+
+<p>So, jetzt hab ich zwar immer noch einen veralteten gcc und eine
+veraltete glibc, aber immerhin ist die Kiste wieder oben. Seufz.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

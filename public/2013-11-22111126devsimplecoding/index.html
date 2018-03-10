@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="dev-simplecoding">Dev:SimpleCoding</h1>
+
+<p>Date: 2013-11-22 11:11:26</p>
+
+<p>explained SimpleEncoding as basis for the explanation of seedlists</p>
+
+<p><strong>Neue Seite</strong></p>
+
+<div>
+
+The YaCy API contains some strings which are encoded with a
+\'SimpleCoding\' method (from class net.yacy.utils.crypt).\
+Strings encoded with the SimpleCoding method have the following form:\
+\<encoding-type-char\>\'\|\'\<encoded-ascii\>\
+where \<encoding-type-char\> is a single character which selects the
+used encoding and \<encoded-ascii\> is the content consisting of ASCII
+characters. There is a pipe-symbol (\'\|\') between these two parts. The
+pipe symbol can be used as encoding-magic to test if a string is
+SimpleEncoded.\
+\
+The \<encoding-type-char\> can have three different values:\
+\'b\' : the \<encoded-ascii\> is an
+\[\[Dev:EnhancedBase64\|EnhancedBase64\]\]-encoded String of the
+(binary) content\
+\'z\' : the \<encoded-ascii\> is an
+\[\[Dev:EnhancedBase64\|EnhancedBase64\]\]-encoded String of a
+gzip-compressed stream of the (binary) content\
+\'p\' : the \<encoded-ascii\> is the (not binary) content (that means
+that the encoded content is equal to the \<encoded-ascii\> and not
+actually encoded)\
+\
+Most methods which write SimpleEncoding strings do first an encoding
+with and without gzip and compare the size of the output. Sometimes the
+gzip-encoded result is larger than the uncompressed result and that is
+the basis to choose \'b\' or \'z\'.\
+\
+Example: a typical SimpleEncoding looks like:\
+z\|H4sIAAAAAAAAAD2QT0-DUBDEv0ovetCV7L4\_y2vMXqRWqbUlLXg1JL4oiQXCw5hq\_O7SUj3\_ZmZn5\_vJd6FqaqGILeJUM8MqaT7qXpQjpaYOiravdl4IDSQjMRHCsgz91vtaFJKmQUlIysRQbFvvXwQhFGJZoXUGtqONdAxpJoYjYh1xHDEsTyRWHDuGdDQTxbAZyZCTilVWE8J9Gd5knj27h8VXs6CqhazpenE4Rci87\_J96yX4umo6KPJELpEQYVUO5Wfrx9vV3foKyUD638axYcjL1yAX0KXCbKwxGrpCyBrlDoWyY-i537X9\_ho2p-ciRK0HToOk9p9B4GZW9v5vi-Gucgph\_n7IPptMJj-\_CQ5ytGgBAAA
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

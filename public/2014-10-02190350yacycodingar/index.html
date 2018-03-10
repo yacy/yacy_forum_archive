@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architektur-re-ipv6">YaCy Coding &amp; Architektur • Re: IPv6</h1>
+
+<p>Date: 2014-10-02 19:03:50</p>
+
+<p>Hallo,<br />
+<br />
+das mit der ::2 ist meiner Meinung nach nicht so arg kritisch, deswegen
+werden von meinem Tool nur ein paar Peers weggefiltert, der
+Interface-Identifier ist da häufiger ein Problem.<br />
+Wenn ich mir was wünschen dürfte dann das die Probleme mit der
+LastSeen-Zeit gelöst würden, das ist mit Abstand die häufigste
+Fehlermeldung von meinem Tool. Die verursacht auch die meisten Probleme
+beim updaten meiner Peer-Datenbank weil dann alte Einträge mit
+fehlerhafter LastSeen-Zeit als neuer wirken und umgekehrt.<br />
+<br />
+Eine Instabilität des YaCy-Netzes kann ich jedenfalls nicht sehen, ich
+denke das einfach genügend Peers eine aktuelle Software-Version
+benötigen damit IPv6 wirklich wirksam wird und die IPv6-only-Peers auch
+einen vollen Senior-Beitrag leisten können.<br />
+<br />
+Nachdem ich mein Tool nun so umgebaut habe das es immer alle IP-Adressen
+eines Peers (nacheinander) abfragt, ist mir aufgefallen das an der
+blauen Schachtel eine IPv6-Adrsse immer mit \&ldquo;Permision denied\&rdquo;
+abgelehnt wird wogegen die andere IPv6-Adresse gut funktioniert. Die
+abgelehnte IP-Adresse sieht so aus als würde sie den Privacy-Extensions
+entstammen und endet auf ::2BC0, die andere IP-Adresse hat eine
+MAC-Adresse (des Herstellers Pegatron Corporation) als Host-Teil (untere
+64Bit) und endet auf ::7A82. Allem Anschein nach hat der Heim-Router ein
+Problem damit alle IP-Adressen eines Hosts einer Firewall-Regel für
+diesen Host zuzuordnen, falls das ein generelles Problem solcher
+Heim-Router ist könnte das für YaCy zusätzliche Schwierigkeiten
+bedeuten.<br />
+<br />
+Gerade zu den IP-Adressen die den Privacy-Extensions entstammen muss
+noch einiges überlegt werden, es könnte sein das ein Host regelmäßig
+eine neue IP-Adresse auswürfelt während die alten IP-Adressen solange
+gültig bleiben wie sie benutzt werden und wenn im großen YaCy-Netzwerk
+die alten IP-Adressen nicht aus den Seed-Listen verschwinden und die
+immer weiter benutzt werden könnte es sein das ein Host nach längerer
+Laufzeit sehr viele IP-Adressen hat (und die YaCy-Seed-Listen
+entsprechend groß werden). Ich denke hier ist eine Art vorsätzlicher
+Obsoleszenz erforderlich wo bei genügend neuen IP-Adressen die alten
+langsam aber sicher gelöscht werden, selbst wenn sie noch funktionieren
+würden, damit der betreffende Host die auch irgendwann endgültig
+abschalten kann. Auch hierfür wäre es praktisch wenn die
+LastSeen-Zeitstempel immer verlässlich wären. Ich werde auf jeden Fall
+mal nachdenken wie dieses Problem zu lösen ist.<br />
+<br />
+Grüße<br />
+Erik<br />
+<br />
+edit:<br />
+Der Fehler \&ldquo;Permision denied\&rdquo; beim Zugriff per IPv6 ist mir noch bei
+mehreren anderen Peers aufgefallen während IPv4 problemlos klappt,
+offensichtlich sind wohl auch andere Heim-Router so eingestellt das per
+IPv6 ankommende TCP-Verbindungen grundsätzlich geblockt werden (die
+alten Port-Weiterleitungsregeln gelten ja nur für IPv4). UPnP u.ä.
+werden vermutlich doch nicht ganz so obsolet wie ich dachte.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Do Okt 02, 2014 6:03 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

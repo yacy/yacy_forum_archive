@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="benutzt-hier-jemand-exiv2-für-exif-parsing-when-i">Benutzt hier jemand exiv2 für EXIF-Parsing?When I ...</h1>
+
+<p>Date: 2017-07-01 13:56:38</p>
+
+<p><a href="http://www.openwall.com/lists/oss-security/2017/06/30/1">Benutzt hier jemand exiv2 für
+EXIF-Parsing</a>?</p>
+
+<blockquote>
+<p>When I previously tried to report bugs in exiv2 found via fuzzing the
+upstream author made it clear to me that he has little interest in
+fixing those issues and doesn\&rsquo;t consider his software suitable to
+parse defect files (which basically means it\&rsquo;s unsuitable for
+untrusted input).</p>
+</blockquote>
+
+<p>Weil <a href="http://dev.exiv2.org/issues/1248">Das Bugtracking-System so schnarchlahm
+ist</a>, hier ein paar Money Quotes:</p>
+
+<blockquote>
+<p>Returning to Hanno\&rsquo;s request that we say that Exiv2 is \&ldquo;not suitable
+for untrusted input\&ldquo;. I will not do that. The default (for all open
+source software) is that the user must determine suitability for
+his/her purposes. <strong>We do not claim that Exiv2 is safe for all files.
+I doubt if we could ever make such a claim</strong> even if we pepper our
+code with checks for malicious images. I don\&rsquo;t believe in 2016 that
+it is possible to guarantee the safety and reliability of any
+software.</p>
+</blockquote>
+
+<p>Und</p>
+
+<blockquote>
+<p>I know nothing about hacking and exploiting buffer overflows. Perhaps
+we need more caution about them. This is a mind-boggling issue. The
+code to defend our image read/write code could be larger than the
+current library.</p>
+</blockquote>
+
+<p>Wie schlimm ist es? So schlimm:</p>
+
+<blockquote>
+<p>Are you aware of the term \&ldquo;fuzzing\&ldquo;? I believe this is the art of
+creating illegal files to put software under stress. <strong>I am aware that
+libexiv2 can be exploited in this way, however I have never had time
+to work on this topic.</strong></p>
+</blockquote>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-vorstellung-fragen-und-anmerkungen">Hilfe für Einsteiger und Anwender • Re: Vorstellung, Fragen und Anmerkungen</h1>
+
+<p>Date: 2013-09-02 20:59:11</p>
+
+<p>Hallo wollomatic!<br />
+</p>
+
+<blockquote>
+<div>
+
+wollomatic hat geschrieben:\
+- Was sind Node Candidates? Was sind die technischen Unterschiede zu
+den anderen Peers und wie entscheidet sich, wann ein Peer ein Node
+Candidate ist?\
+
+</div>
+</blockquote>
+
+<p><br />
+[The info of node-candidates is currently a test - these are peers with
+good response-times and direct<br />
+connection the internet (not behind a
+NAT-router).]{style=&ldquo;font-style: italic&rdquo;}
+(<a href="http://forum.yacy-websuche.de/viewtopic.php?p=27723#p27723">Quelle</a>{.postlink})<br />
+</p>
+
+<blockquote>
+<div>
+
+wollomatic hat geschrieben:\
+- In den Leistungseinstellungen (/Performance\_p.html) kann ich
+zwischen \'default (crawl)\' und \'prefer DHT\' wählen. Was ändere ich
+dabei am Verhalten meines Peers \...\
+
+</div>
+</blockquote>
+
+<p><br />
+Wenn du von \&ldquo;Crawl\&rdquo; nach \&ldquo;prefer DHT\&rdquo; wechselst, werden Crawls etwas
+weniger schnell abgearbeitet, dafür wird die Verteilung und Empfang der
+Indexdaten im Netzwerk via DHT beschleunigt.<br />
+</p>
+
+<blockquote>
+<div>
+
+wollomatic hat geschrieben:\
+und was hat es sich mit der Prozent-Angabe bei der vorgegebenen
+Geschwindigkeit auf sich?\
+
+</div>
+</blockquote>
+
+<p><br />
+Damit kannst du die Geschwindigkeit beeinflussen in der die Aufgaben
+(Crawls und DHT-Distribution) abgearbeitet werden. Wenn du den
+Prozentwert veränderst, verändern sich entsprechend die
+Verzögerungszeiten auf der Seite \&ldquo;Performance Settings of Queues and
+Processes\&rdquo; <a href="http://localhost:8090/PerformanceQueues_p.html">http://localhost:8090/PerformanceQueues_p.html</a></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8887">David</a>
+&mdash; Mo Sep 02, 2013 7:59 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

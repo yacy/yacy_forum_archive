@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architecture-re-increase-the-priority-of-the-re-crawl-index-documents">YaCy Coding &amp; Architecture • Re: Increase the priority of the \&rsquo;Re-Crawl Index Documents\&rsquo;</h1>
+
+<p>Date: 2016-11-07 20:02:49</p>
+
+<p>Ok LA_FORGE, I didn\&rsquo;t played much with this feature, so it is possible
+there is something to fix so the performance settings on this task are
+not so easily lost...<br />
+<br />
+By the way, if you wish to experiment with the Thread priority property,
+you can modify the
+<a href="https://github.com/yacy/yacy_search_server/blob/Release_1.90/source/net/yacy/crawler/RecrawlBusyThread.java#L67">RecrawlBusyThread</a>{.postlink}
+class : just change the line</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>this.setPriority(Thread.MIN_PRIORITY);</code></dd>
+</dl>
+
+<p>to</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>this.setPriority(Thread.MAX_PRIORITY);</code></dd>
+</dl>
+
+<p>or</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>this.setPriority(value);</code></dd>
+</dl>
+
+<p>with a value between 1 and 10 (Max priority).<br />
+<br />
+But please note the only involved code is in the
+<a href="https://github.com/yacy/yacy_search_server/blob/Release_1.90/source/net/yacy/crawler/RecrawlBusyThread.java#L150">RecrawlBusyThread.job()</a>{.postlink}
+method performing a Solr request to select documents to recrawl
+(<a href="https://github.com/yacy/yacy_search_server/blob/Release_1.90/source/net/yacy/crawler/RecrawlBusyThread.java#L167">RecrawlBusyThread.processSingleQuery()</a>{.postlink})
+and feeding URLs to the local crawler
+(<a href="https://github.com/yacy/yacy_search_server/blob/Release_1.90/source/net/yacy/crawler/RecrawlBusyThread.java#L113">RecrawlBusyThread.feedToCrawler()</a>{.postlink}).
+Then local crawler performance settings applies.<br />
+<br />
+If you really wish, you can also modify the local crawler Thread
+priority when it is created, in the
+<a href="https://github.com/yacy/yacy_search_server/blob/Release_1.90/source/net/yacy/search/Switchboard.java#L1073">Switchboard</a>{.postlink}.<br />
+<br />
+Happy hacking!</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9609">luc</a>
+&mdash; Mo Nov 07, 2016 8:02 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

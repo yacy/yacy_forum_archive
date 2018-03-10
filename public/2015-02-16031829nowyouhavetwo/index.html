@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="now-you-have-two-problems-and-one-of-them-is-flash">Now you have two problems, and one of them is Flash.</h1>
+
+<p>Date: 2015-02-16 03:18:29</p>
+
+<p><a href="http://googleprojectzero.blogspot.com/2015/02/exploitingscve-2015-0318sinsflash.html"><img src="http://www.jwz.org/images/weirdmachines.jpg" alt="" />Project Zero:
+(\^Exploiting)\s<em>(CVE-2015-0318)\s</em>(in)\s*(Flash\$)</a></p>
+
+<blockquote>
+<p>Quick summary - it\&rsquo;s a bug in the PCRE regex engine as used in Flash.
+Spoiler: it\&rsquo;s exploitable. [...]</p>
+
+<p>Below is what happens when we compile a regex that combines the \c
+escape sequence (which is intended to match a single ASCII character)
+with a multibyte UTF-8 character. A simple trigger for the bug is
+\&rsquo;\\c\xd0\x80+\&lsquo;, below. [...]</p>
+
+<p>So clearly something has gone wrong... The question is now how to
+leverage this invalid bytecode to get code execution.</p>
+</blockquote>
+
+<p><a href="http://www.jwz.org/blog/2014/05/so-this-happened/">Previously</a>,
+<a href="http://www.jwz.org/blog/2011/12/now-you-have-two-problems/">previously</a>,
+<a href="http://www.jwz.org/blog/2011/12/the-turing-police-say-you-have-more-than-two-problems/">previously</a>,
+<a href="http://www.jwz.org/blog/2011/11/you-doom-us-all-to-inhuman-toil-for-the-one-whose-name-cannot-be-expressed-in-the-basic-multilingual-plane/">previously</a>,
+<a href="http://www.jwz.org/blog/2014/03/accidentally-turing-complete/">previously</a>,
+<a href="http://www.jwz.org/blog/2015/02/youtube-ditches-flash-and-it-hardly-matters/">previously</a>,
+<a href="http://www.jwz.org/blog/2014/10/we-live-in-a-magical-future-where-strings-is-exploitable/">previously</a>,
+<a href="http://www.jwz.org/blog/2014/10/dooming-us-to-inhuman-toil-etc-etc/">previously</a>.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

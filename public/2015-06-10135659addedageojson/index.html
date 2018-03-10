@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="added-a-geojson-parser-and-import-methods">added a geojson parser and import methods.</h1>
+
+<p>Date: 2015-06-10 13:56:59</p>
+
+<pre><code class="language-style=&quot;white-space:pre-wrap;width:81ex&quot;">added a geojson parser and import methods.
+
+This new function will read all files which are thrown into the
+data/external/geojson/import directory. All records in geojson files are
+parsed and translate it into our internal message format. All files in
+that directory must end with '.json'. Files which had been processed are
+moved to data/external/geojson/imported. No of the imported records are
+added to the message dump. If a loklak instance is reconstructed from
+dumps, the geolocation dumps must be imported as well.
+
+At this time, the import mechanism reads records from
+http://www.paris-streetart.com/test/map.geojson
+only. Because the 'property' object inside geojson is not defined
+formally, the import process can only understand whats inside the
+example file. This must be changed in the future.
+
+Right now, there is one important attribute for the visualization of
+markers from messages with geolocation: location_mark
+
+There are I two locations in the json attached:
+- the center of the location in location_point
+- if the location is a point, the value in location_radiusis 0. If it is
+large, there is a number which means meter. An example would be the
+marker for a city with the radius of the city in this field
+- a single location within the radius is in location_mark. This is set
+randomly within the the radius of the location and shall be used for
+visualization of the marker. The reason for using such a random field
+is, that a location within a tweet can be very weak but we want to
+calculate a location anyway. If we then have thousands of location for
+i.e. Singapore, we don't want to have them overlapping in a single
+point, but evenly distributed in a cloud around the center. To prevent
+that these locations 'jump' every time you re-paint the map, they will
+be computet once and you get that location in this field.
+- the source of the location in location_source. This value will either
+be REPORT if it was received from an external source or ANNOTATION if we
+computed this location ourself using annotation techniques (i.e.
+geo-database matching)
+</code></pre>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

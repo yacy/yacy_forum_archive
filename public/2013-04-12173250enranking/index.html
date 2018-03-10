@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="en-ranking">En:Ranking</h1>
+
+<p>Date: 2013-04-12 17:32:50</p>
+
+<p>ranking description (stub)</p>
+
+<p><strong>Neue Seite</strong></p>
+
+<div>
+
+==Define ranking rules in YaCy==\
+\
+\[http://en.wikipedia.org/wiki/Ranking Ranking\] is the technical
+instance of \[http://en.wikipedia.org/wiki/Relevance relevance\], which
+is \'what the user thinks is important\'. Since almost every user has a
+different opinion about such \'relevance\' it should be possible to
+define a personal ranking for a personal relevance. Also in different
+search environments the ranking should change, i.e. within a site-only
+search the user expects more in-depth results in contrast to popular
+documents in unlimited internet search.\
+\
+A ranking can be done by the application of coefficients to document
+attributes. Such attributes can be various counts, like a count of
+words, bytes, outbound links, inbound links (from same or other domains)
+and so on. There is a large number of such attributes in YaCy. To see
+them all, open localhost:8090/IndexControlURLs\_p.html in your YaCy
+peer. The ranking is done using Solr ranking methods. If your peer does
+a remote search, then also your own ranking configuration is applied to
+the remote peer. The configuration interface for this is in
+http://localhost:8090/RankingSolr\_p.html\
+\
+For a distributed search in YaCy there is a special challenge: some
+results from other peers may be returned without this rich set of
+attributes. They return a so-called Reverse Word Index References
+containing a small set of attributes. To combine search results from
+other peers, they must be ranked using this subset of attributes. We
+call that process \'post-ranking\'. The configuration interface for this
+is in http://localhost:8090/RankingRWI\_p.html. If you use YaCy for a
+portal search or intranet search without p2p mode, then you don\'t need
+to care about it.\
+\
+===Solr Ranking in /RankingSolr\_p.html===\
+The default ranking in Solr is done using \'boosts\' on search fields.
+You can define which fields in the index Schema can be searched when you
+submit a search and how strong they are boosted on every field using the
+\"Solr Boosts\" section within /RankingSolr\_p.html. If you would like
+to have search results, which have matches with your search word in a
+specific field higher, then increase the boost value for that specific
+field. Each field will produce a ranking value and the resulting ranking
+score will be the sum of these boosted fields multiplied with a norming
+factor which is the inverse of the square root of the sum of squared
+weights.\
+\
+The boosted field ranking is just a formula for the relevancy of the
+search hit regarding the text content and construction of the document,
+but not for the topology of the document within the searched document
+set. To influence the ranking your can use Boost Queries and Boost
+Functions.\
+\
+A Boost Query is a query that is attached to the other queries that YaCy
+calculates from the boost field configuration. It can be considered as a
+default, fixed add-on to a search. The purpose is, to boost specific
+attributes within the index schema. By default, we set this to\
+fuzzy\_signature\_unique\_b:true\^100000.0\
+Which boost a field which assignes that a document is unique. This moves
+double content to the back. You can use this like a default filter for
+your documents which move forward or backward in the result list
+independently from the searched word.\
+\
+A Boost Function is a formula which evaluates attributes which are not
+search fields. You can use this i.e. to evaluate the date fields (for a
+date ordering) or to move documents with a lower clickdepth to the
+front. Example formulars are:\
+recip(ms(NOW,last\_modified),3.16e-11,1,1)\
+to sort by last\_modified and bring the most current documents to the
+top,\
+div(add(references\_internal\_i,product(references\_external\_i,references\_exthosts\_i)),add(clickdepth\_i,1))\
+to consider documents with many external references as more important
+but also count the clickdepth. Just try to do your own experiments using
+the attributes from the index schema.\
+\
+===RWI (post-) Ranking in /RankingRWI\_p.html===
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

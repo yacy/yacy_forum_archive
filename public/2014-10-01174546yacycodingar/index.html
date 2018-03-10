@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architektur-re-ipv6">YaCy Coding &amp; Architektur • Re: IPv6</h1>
+
+<p>Date: 2014-10-01 17:45:46</p>
+
+<p>Hallo,<br />
+<br />
+also mein erster Zwischenstatus nachdem mein Tool nun auch das Feld
+\&ldquo;IP6\&rdquo; auswerten kann ist das bereits einige Peers eine oder mehrere
+IPv6-Adressen melden.<br />
+Mal von dem Interface-Identifier abgesehen sind mit diesem neuen Feld
+nur zwei neue Probleme aufgetaucht:<br />
+Zum einen gibt es Peers die im Feld \&ldquo;IP\&rdquo; einen Domain-Namen
+publizieren und trotzdem im Feld \&ldquo;IP6\&rdquo; eine oder mehrere IP-Adressen
+melden, das sollte nicht sein da bei Peers die Domain-Namen haben zum
+Zeitpunkt des Zugriffs immer das normale DNS-System befragt werden
+sollte um die zugehörigen IP-Adresse[n]{style=&ldquo;font-weight: bold&rdquo;} zu
+ermitteln.<br />
+Zum anderen ist eine neue nicht global routbare IP-Adresse aufgetaucht:
+0:0:0:0:0:0:0:2 (mal mit und mal ohne Interface-Identifier) aber da kann
+ich mir gar nicht erklären wo die herkommt, diese IP-Adresse ist
+komplett ungültig (die ist weder Local-Host noch Link-Local noch
+irgendeine andere Art Unicast) so dass das Betriebssystem so eine IP nie
+melden dürfte.<br />
+<br />
+Ich denke mit Deinem Versuch die ungültigen IP-Adressen einzeln
+auszufiltern wirst Du bei der enormen Anzahl an IPv6-Adressen wohl nie
+fertig werden, meiner Meinung nach solltest Du einen Test haben der
+bestätigt ob die IP-Adresse global routbar (oder eventuell lokal routbar
+falls YaCy nur in einem lokalen Netzwerk als private Suchmaschine läuft)
+ist und alles andere ist ungültig.<br />
+<br />
+Der Interface-Identifier gibt an über welches Interface eine IP-Adresse
+erreichbar ist bzw. bei eigenen IP-Adressen welchem Interface diese
+zugeordnet ist. Das ist eigentlich nur bei den Link-Lokalen-Adressen
+FE80::/10 von Interesse da alle anderen IPv6-Netze grundsätzlich niemals
+mehrfach vorhanden sein dürfen. Solange YaCy nicht in einem lokalem
+Netzwerk (als rein private Suchmaschine) läuft und dort nur dieser
+Adressbereich vorhanden ist, was eigentlich so nicht in Ordnung ist (für
+rein lokale Netze gibt es FC00::/7), kann YaCy den Interface-Identifier
+immer ignorieren. Andere Peers können damit sowieso nichts anfangen da
+sie ja andere Interfaces haben. Gültige öffentliche IP-Adressen nur
+wegen dem Interface-Identifier wegzuwerfen ist meiner Meinung nach keine
+gute Idee, filtere den Interface-Identifier bei allen Adressen außer
+FE80::/10 weg und beim Verteilen als Seed-Liste muss der immer weg auch
+bei FE80::/10.<br />
+<br />
+Für einen von 0 auf fast 100 Start war der IPv6-Startschuss in YaCy
+durchaus recht erfolgreich, dazu gratuliere ich Dir.<br />
+In den Peer-Listen sind auch schon eine ganze Menge Peers mit
+IPv6-Adresse vorhanden und auch mein Analyse-Tool findet bereits schon
+einige davon und kann die auch erfolgreich per IPv6 ansprechen.<br />
+Selbst die allten Versionen meines Tools, die noch immer laufen, haben
+bereits ein paar Peers per IPv6 kontaktiert falls diese im Feld \&ldquo;IP\&rdquo;
+eine IPv6 melden (falls die blaue Kiste Dir gehört dann trifft das auch
+auf Deinen Peer zu, seitdem die Portsperre wieder weg ist).<br />
+Sobald die aktuellen kleinen Problemchen gefixt sind sollte versucht
+werden so viele Peers wie möglich auf die aktuelle Version zu updaten,
+ich bin mir ziemlich sicher das somit das YaCy-Netzwerk um einige
+Senior-Peers größer wird.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Mi Okt 01, 2014 4:45 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

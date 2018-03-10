@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-where-is-the-file-that-makes-table-api-p-html-please">English • Where is the file that makes Table_API_p.html , please</h1>
+
+<p>Date: 2015-01-02 20:34:44</p>
+
+<p>Hello,<br />
+We want to copy the entire file that makes the data displayed on page<br />
+Table_API_p.html<br />
+Then we want to insert it in a new server.<br />
+Imagine there are 900 hundred valuable crawling instructions in
+<a href="http://zxc.asd.e.wt:8090/Table_API_p.html">http://zxc.asd.e.wt:8090/Table_API_p.html</a><br />
+A URL line on page zxc.asd.e.wt:8090/Table_API_p.html - such as this -
+will display the entire list<br />
+/Table_API_p.html?startRecord=1&amp;maximumRecords=900&amp;inline=false&amp;filter=.*<br />
+<br />
+These URLs and RSS feeds, etcetera are In the list entitled \&rdquo; Recorded
+Actions \&rdquo;<br />
+Prepare the list by cleaning it of the majority of housekeeping duties,
+if possible.<br />
+<br />
+We wish to extract the crawling data and the frequency of crawling
+instructions, only.<br />
+The common technique is to copy all the instructions, but this becomes
+impractical as the number of instructions grows and the frequency of
+crawl is difficult to manage.<br />
+Doing this the \&rdquo; old \&rdquo; way is extremely manual and time consuming. It
+assumes that each instruction and frequency will be manually reinserted
+into another server.<br />
+<br />
+You can, alternatively, place the data in an spreadsheet and use
+selectors to remove housekeeping instructions.<br />
+Still, this is very manual.<br />
+<br />
+After removing all server housekeeping instructions, we wish to reinsert
+the pages to crawl and RSS feeds into the same file format, but in a
+fresh server.<br />
+Then we will insert the prepared file into the new server - replacing
+the generic file.<br />
+Why do this?<br />
+Our experience indicates that doing an extraction of URLs in RSS format
+does not capture all the URLs for some unknown reason.<br />
+<br />
+Where is the file that holds the data that generates
+the/Table_API_p.html , please?<br />
+Many thanks</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9463">xioc752</a>
+&mdash; Fr Jan 02, 2015 8:34 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

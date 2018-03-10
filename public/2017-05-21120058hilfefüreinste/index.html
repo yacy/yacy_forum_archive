@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-porgammupdate">Hilfe für Einsteiger und Anwender • Re: Porgammupdate</h1>
+
+<p>Date: 2017-05-21 12:00:58</p>
+
+<p>Hallöchen Manfred!<br />
+<br />
+Es scheint mir so, daß Du bei Linux ein Neuling bist! Als erstes machst
+Du mal folgendes:<br />
+</p>
+
+<blockquote>
+<div>
+
+Manfred hat geschrieben:\
+W: GPG-Fehler: <http://debian.yacy.net> ./ Release: Die folgenden
+Signaturen konnten nicht überprüft werden, weil ihr öffentlicher
+Schlüssel nicht verfügbar ist: NO\_PUBKEY
+[[1F968B3903D886E7]{style="font-style: italic"}]{style="font-weight: bold"}\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Du mußt diesen Schlüssel übernehmen, das geht mit folgendem Befehl:<br />
+</p>
+
+<blockquote>
+<div>
+
+\
+sudo apt-key adv \--keyserver keyserver.ubuntu.com \--recv-keys
+1F968B3903D886E7\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Dann gilt
+[[\&ldquo;sudo\&ldquo;]{style=&ldquo;font-style: italic&rdquo;}]{style=&ldquo;font-weight: bold&rdquo;}
+immer nur für einen Befehl, folglich war das hier falsch:<br />
+</p>
+
+<blockquote>
+<div>
+
+Manfred hat geschrieben:\
+manfred\@aldebaran:\~\$ sudo apt-get update && apt-get install yacy\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Das sieht man auch an folgender Meldung:<br />
+</p>
+
+<blockquote>
+<div>
+
+Manfred hat geschrieben:\
+E: Sperren des Administrationsverzeichnisses (/var/lib/dpkg/) nicht
+möglich, [[sind Sie
+root?]{style="font-style: italic"}]{style="font-weight: bold"}\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Richtig wäre das hier:<br />
+</p>
+
+<blockquote>
+<div>
+
+\
+sudo apt-get update &&
+[[sudo]{style="font-style: italic"}]{style="font-weight: bold"}
+apt-get install yacy\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Beim Update selbst, also deinem zweiten Versuch sollte dann jetzt eine
+entsprechende Meldung kommen, ob alles aktuell ist.<br />
+</p>
+
+<blockquote>
+<div>
+
+Manfred hat geschrieben:\
+Ansonsten habe ich noch die Frage, ob man im YACY selbst irgendwo
+sehen kann, ob die Installation auf dem aktuellen Stand ist.\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Zum Einen siehst Du
+[[<a href="http://yacy.net/de/index.html">&gt;hier&lt;</a>{.postlink}]{style=&ldquo;font-style: italic&rdquo;}]{style=&ldquo;font-weight: bold&rdquo;}
+die derzeit aktuelle Version [(1.<sup>92</sup>&frasl;<sub>9000</sub>)]{style=&ldquo;font-style: italic&rdquo;},
+zum Anderen sieht man in YaCy unter Systemstatus die verwendete Version,
+wenn man als Administrator angemeldet ist. Da Du aber die Debian-Quellen
+verwendest nehme ich doch schwer an, daß Du wie auch ich eben die
+aktuelle Version von YaCy verwendest!<br />
+<br />
+Grüße aus Augsburg<br />
+<br />
+Mike, TmoWizard</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9448">TmoWizard</a>
+&mdash; So Mai 21, 2017 11:00 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

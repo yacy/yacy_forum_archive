@@ -1,0 +1,6 @@
+[submodule "themes/docapi"]
+	path = themes/docapi
+	url = https://github.com/bep/docuapi
+[submodule "themes/blackburn"]
+	path = themes/blackburn
+	url = https://github.com/yoshiharuyamashita/blackburn

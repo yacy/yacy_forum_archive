@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="zum-re-keying-kam-folgender-sachdienlicher-hinweis">Zum Re-Keying kam folgender sachdienlicher Hinweis ...</h1>
+
+<p>Date: 2017-03-09 11:23:31</p>
+
+<p>Zum Re-Keying kam folgender sachdienlicher Hinweis rein:</p>
+
+<blockquote>
+<p>Der re-keying code in vielen libraries, allermindestens openssl, nss,
+gnutls, ist total kaputt. Wir haben das über Jahre in postgres (nur
+openssl zu dem Zeitpunkt) verwendet, und haben unmengen von Bugs
+gefunden. Und weitgehend sind die immer noch vorhanden.</p>
+
+<p>Das reicht von \&ldquo;passiert nichts mehr über der Verbindung\&rdquo; weil der
+interne Status keinen Sinn mehr macht bis zu crashes. In postgres war
+das wohl besonders schlimm weil wir a) non-blocking IO verwendet haben
+und openssl da noch weniger getestet ist b) teilweise sehr viele Daten
+transferiert werden (replication läuft auch über so eine Verbindung
+und eine Verbindung kann terrabytes überleben).</p>
+</blockquote>
+
+<p>Und zu meinem Bauchgefühl, dass dann ja auch der initiale Handshake im
+Arsch sein müsste, schreibt er:</p>
+
+<blockquote>
+<p>Zumindest in openssl würde ich sagen dass das nicht ganz so ist -
+während die renegotiation in progress ist muss openssl auch noch damit
+zurechtkommen dass Daten mit dem alten Schlüssel ankommen. Ich finde
+es schwer dem openssl code wirklich zu folgen, aber soweit ich es
+verstanden habe sind schlichtweg nicht alle korrekt implementiert.</p>
+
+<p>Man bemerke auch <a href="https://tlswg.github.io/tls13-spec/">dass tls 1.3 key renegotiation komplett
+rausschmeisst</a>.</p>
+
+<p>Ich wäre *sehr* verwundert wenn der \&ldquo;live\&rdquo; renegotiation code in
+openssl nicht ein paar exploitable bugs hätte.</p>
+</blockquote>
+
+<p>Oha. Mein Verständnis war, dass man renegotiation benutzt, um in TLS
+auszuschließen, dass die Cipher-Suites in der initialen
+(unverschlüsselten) Handshake-Negotiation von einem aktiven Angreifer
+ausgedünnt worden sind. D.h. wenn man Renegotiation wegschmeißt, man
+messbar Sicherheit einbüßt. Aber vielleicht habe ich das falsch
+verstanden.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

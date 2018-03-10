@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-1-of-2-identical-machines-is-incredibly-slow">English • 1 of 2 identical machines is incredibly slow</h1>
+
+<p>Date: 2014-10-23 08:57:22</p>
+
+<p>HI, we have 2 engines on Ubuntu. Ubuntu 12.04.5 LTS<br />
+(We have not done the \&rsquo; offered \&rsquo; upgrade to 14.04.1 LTS as we lost
+all data the last time we attempted it)<br />
+</p>
+
+<blockquote>
+<div>
+
+\
+New release \'14.04.1 LTS\' available.\
+Run \'do-release-upgrade\' to upgrade to it.\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+Both are cloud installations. Each on a 30 GB block, 1 GB Ram, 1 VCPU.<br />
+We always have the latest Ubuntu &amp; YaCy versions and we update them
+every day - whenever presented the opportunity in PuTTy.<br />
+The have ~30 million web edges, each.<br />
+They are both nearly constantly crawling - with a long list of scheduled
+RSS feeds to process, each.<br />
+<br />
+They read each other, but only write locally.<br />
+Memory reserved for JVM 768 on both machines<br />
+\&ldquo;Online Caution Caseindexer delay\&rdquo; Proxy, Local Search, Remote Search
+(not active) all - 5000<br />
+<br />
+Survey the Problem:<br />
+A) Server 1 is fine. Fast, crawls quickly - at different
+speeds-sometimes very quickly! Boots reasonably quickly from \&lsquo;cold
+start\&rsquo; including cold reboot of Ubuntu. Good \&lsquo;warm reboot\&rsquo; times with
+Ubuntu running.<br />
+B) Server 2 unbelievably SLOW. Horribly Slow to boot up from a cold
+start (including cold boot of Ubuntu) or restart with Ubuntu running
+(take extra minutes, sometimes many), visibly much more slow to
+crawl...really miserably slowly, sometimes. Sometimes does not start
+form cold boot of Ubuntu+crawler. Uses its available memory quickly,
+hence the need to reboot ~ 2 X - 3 X in a 24 hour \&rsquo; day \&lsquo;. Sometimes
+it stops &amp; fails to respond if it doesn\&rsquo;t get the most current Ubuntu
+updates (and YaCy updates. Then it will start. Without it, it is dead
+and won\&rsquo;t re-start, apparently.)<br />
+C) Server 2 -blocks- every day and needs manual reboots from a \&lsquo;cold\&rsquo;
+start to stay online, even slowly. Crawled data seems OK + saved,
+however.<br />
+D) Remote requests for information from the clouds go through Slow
+Server 2, presently. It often takes 1-2 minutes for a \&ldquo;searched
+phrase\&rdquo; in red to appear in the window at / Status.html<br />
+E) Users are frustrated because the server takes sometimes x minutes to
+respond, prompting multiple clicks on \&ldquo;Search\&rdquo;<br />
+<br />
+Note: Boot up times for Ubuntu are comparable when measured by the time
+needed to get a web prompt \&lsquo;available\&rsquo; message at the root address,
+without the port number for the crawler<br />
+<br />
+Current specs:<br />
+Fast Machine:<br />
+Memory Usage<br />
+RAM used:244.73 MB<br />
+RAM max:742.44 MB<br />
+DISK used:(approx.) 18.27 GB<br />
+DISK free:6.1 GB<br />
+<br />
+Slow Machine:<br />
+Memory Usage<br />
+RAM used:717.33 MB<br />
+RAM max:742.44 MB<br />
+DISK used:(approx.) 15.61 GB<br />
+DISK free:8.31 GB<br />
+<br />
+Updates and upgrades to ubuntu make no change in this. Updates to YaCy
+also have no effect on the situation.<br />
+<br />
+What we want to do:<br />
+1) Get Server 2 running at the same healthy speed as Server 1<br />
+2) Give priority to searchers on one of the machines, so that they get a
+result quickly.<br />
+<br />
+Thanks so much for your advice!
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_biggrin.gif" alt=":D" title="Very Happy" /></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9463">xioc752</a>
+&mdash; Do Okt 23, 2014 7:57 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="mitmachen-re-ssl-tls-verschlüsselung-auf-den-seiten-von-yacy">Mitmachen • Re: SSL/TLS-Verschlüsselung auf den Seiten von yacy</h1>
+
+<p>Date: 2015-07-29 13:36:41</p>
+
+<p>Ich habe schon des Öfteres Apache mit Zertifikaten gefüttert.<br />
+Das ist eine Arbeit von rund 15 Minuten.<br />
+<br />
+Meine Zertifikate sind von Startssl.<br />
+Anfangs etwas undurchschaubar, aber wenn man es einmal raus hat, kein
+Problem.<br />
+<br />
+Das Modul muss dann noch geladen werden.<br />
+# a2enmod ssl<br />
+<br />
+Und der Port 443 als Listener neben dem Port 80 eingetragen werden.<br />
+<br />
+Meine Config sieht z. B. so aus:</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>&lt;VirtualHost ???IP???:443&gt;...       SSLEngine On       SSLCipherSuite ECDHE-RSA-AES256-GCM-SHA384:HIGH:!RC4:!MD5:!aNULL:!EDH       SSLCertificateFile /path/to/certificate.crt       SSLCertificateKeyFile /path/to/keyfile.key       ProxyHTMLExtended On       ProxyPass / http://localhost:8090/       ProxyHTMLURLMap http://localhost:8090 /       &lt;Location /&gt;               ProxyPassReverse /               RequestHeader    unset  Accept-Encoding       &lt;/Location&gt;...&lt;/VirtualHost&gt;</code></dd>
+</dl>
+
+<p><br />
+<br />
+<br />
+Ach so, haha... geht natürlich nur, wenn man den Kram zusätzlich noch
+über https aufrufen möchte.<br />
+Bei mir wäre das dann: <a href="https://yacy.msging.de">https://yacy.msging.de</a><br />
+<br />
+Aber der normale Aufruf, über Port 8090, bleibt unverschlüsselt
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_wink.gif" alt=";)" title="Wink" /></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9586">AkDk7</a>
+&mdash; Mi Jul 29, 2015 12:36 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

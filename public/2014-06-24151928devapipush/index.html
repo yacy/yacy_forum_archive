@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="dev-apipush">Dev:APIpush</h1>
+
+<p>Date: 2014-06-24 15:19:28</p>
+
+<p>added push api documentation</p>
+
+<p><strong>Neue Seite</strong></p>
+
+<div>
+
+= Document Push API =\
+Documents can be pushed directly to YaCy using this API. All documents
+are parsed and analysed using the YaCy built-in document parser and
+written to the Solr index using this servlet.\
+\
+This servlet must be called at /api/push\_p.json using HTTP POST request
+using multipart/form-data parameter encoding. It may also be possible to
+call this servlet using GET, but this should only be done for test cases
+because the purpose of that servlet is a transmission of large, binary
+data.\
+\
+{\| style=\"color:black; background-color:\#efefef;\" cellpadding=\"20\"
+cellspacing=\"0\" border=\"0\"\
+\|\'\'\'count\'\'\'\
+\|An integer number denoting the number of documents pushed within this
+POST request\
+\|-\
+\|\'\'\'synchronous\'\'\'\
+\|Possible values are \'true\' and \'false\'. If synchronous=true, then
+all documents within this POST request are written to the search index
+before the servlet returns a http success code to the caller. If the
+attribute is not present or synchronous=false, then the submitted
+documents are written to a concurrent indexing job and processed
+efficiently, scaling with the number of cores in the CPU of YaCys search
+server; in this case the servlet returns a http success code
+immediately.\
+\|-\
+\|\'\'\'commit\'\'\'\
+\|Possible values are \'true\' and \'false\'. If commit=true, then a
+Solr commit command is appended to the processing of synchronous
+document writes. This will cause that documents, pushed with this
+interface are immediately searchable right after the servlet returns a
+http success code. The commit option is only useful, if also
+synchronous=true; in case that synchronous=false and commit=true the
+synchronous flag is switched to true as well.\
+\|-\
+\|}\
+\
+Also attached must be a set of \<count\> documents with their metadata.
+The documents are numbered from 0 to \<count\>-1. This document number X
+is used to name attribute field names for each of the documents. In the
+following list, replace the character X with those numbers of the file:\
+\
+{\| style=\"color:black; background-color:\#efefef;\" cellpadding=\"20\"
+cellspacing=\"0\" border=\"0\"\
+\|\'\'\'url-X\'\'\'\
+\|The URL which is used in a search result as link to the submitted
+document.\
+\|-\
+\|\'\'\'data-X\'\'\'\
+\|This is the binary data of the document.\
+\|-\
+\|\'\'\'collection-X\'\'\'\
+\|A name for a collection which is assigned to the document. This can be
+an arbitrary word or a comma-separated list of terms. These words will
+be listed in the collection navigation for a search facet (if that facet
+is switched on).\
+\|-\
+\|\'\'\'lastModified-X\'\'\'\
+\|A date which is assigned to the document. The date format must be
+according to \[RFC 1123 http://www.ietf.org/rfc/rfc1123.txt\] like
+\"EEE, dd MMM yyyy HH:mm:ss Z" with a time zone indicator according to
+\[RFC 5322 http://www.ietf.org/rfc/rfc5322.txt\]\
+\|-\
+\|\'\'\'contentType-X\'\'\'\
+\|The mime type of the document\
+\|-\
+\|}\
+\
+To make it easier to test this servlet, it is also possible to call the
+API with GET. A typical call looks like:\
+\
+\<pre\>\
+http://localhost:8090/api/push\_p.json?count=1&url-0=http://nowhere.cc/example.txt&data-0=hello%20world&lastModified-0=Tue,%2015%20Nov%201994%2012:45:26%20GMT&contentType-0=text/plain&collection-0=testpush\
+\</pre\>\
+\
+Using a command-line script, you would call i.e. (using wget)\
+\<pre\>\
+wget -qO-
+\"http://localhost:8090/api/push\_p.json?count=1&url-0=http://nowhere.cc/example.txt&data-0=hello%20world&lastModified-0=Tue,%2015%20Nov%201994%2012:45:26%20GMT&contentType-0=text/plain&collection-0=testpush"\
+\</pre\>\
+\
+The servlet then returns a json result which explains how successful the
+transmission was. A typical result looks like\
+{\
+\"count\":\"1\",\
+\"successall\": \"true\",\
+\"item-0\":{\
+\"item\":\"0\",\
+\"url\":\"http://nowhere.cc/example.txt\",\
+\"success\": \"true\",\
+\"message\":
+\"http://localhost:8090/solr/select?q=sku:%22http://nowhere.cc/example.txt%22\"\
+},\
+\"countsuccess\":1,\
+\"countfail\":0\
+}\
+The \"message\" attribute contains a link to a solr search result which
+shows the pushed document in indexed metadata format.\
+In case that a push is not successful, the \"success\" attribute turns
+to \"false\" and the \"message\" field contains the reason for the
+failure.\
+\
+\[\[Category: API\]\]
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

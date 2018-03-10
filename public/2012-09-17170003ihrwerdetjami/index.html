@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="ihr-werdet-ja-mitgekriegt-haben-dass-dnssec-eine-wichtige">Ihr werdet ja mitgekriegt haben, dass DNSSEC eine wichtige ...</h1>
+
+<p>Date: 2012-09-17 17:00:03</p>
+
+<p>Ihr werdet ja mitgekriegt haben, dass DNSSEC eine wichtige Sache ist.
+Damit soll das Internet abgesichert werden, und Leute denken schon
+darüber nach, wie man auch andere Protokolle im DNSSEC ankern kann, z.B.
+PGP-Schlüssel, SSH-Schlüssel und SSL-Schlüssel. Das fußt alles auf der
+Annahme, dass die DNSSEC-Schlüssel nie geknackt werden.</p>
+
+<p>Das ist schon deshalb sportlich, weil DNSSEC bei den Kryptoprimitiven
+immer etwas hinterherhinkt. Die haben 2048 Bit RSA-Schlüssel erst Jahre
+später spezifiziert, nachdem die paranoideren Leute das schon für ihr
+SSH und PGP und SSL ausgerollt hatten.</p>
+
+<p>Bei DNSSEC war daher Designentscheidung, dass die privaten Schlüssel gar
+nicht erst im Server stecken sollen. Man signiert seine Zonen off-line
+und läd dann die signierten Zonen zum Server hoch. Selbst wenn jemand
+den Server hackt, kann er den Schlüssel nicht klauen, weil der nicht auf
+dem Server ist.</p>
+
+<p>Die Idee ist natürlich, dass der Schlüssel gar nicht am Internet hängt.
+Jetzt stellt sich aber raus: das mit dem off-line, das ist so
+unhandlich, wir machen das lieber online!1!! Damit das automatisierbar
+ist. Bei einer TLD wie .de oder .ch kommen ja auch im Sekundentakt
+Änderungen rein. Da muss dann jeweils neu signiert werden. Da erhöhen
+sich dann natürlich die Anforderungen an das Hosting entsprechend.
+Immerhin könnte die Sicherheit der ganzen Welt auf diesem DNSSEC ankern.</p>
+
+<p>Wie wird das denn dann am Ende gehostet? <a href="https://prefix.pch.net/applications/dnssec/zurich.php">Hier gibt es
+Webcams</a>. Das ist
+ein kleiner Server in einem Safe, in einem Safe. Mit klein meine ich den
+Stromverbrauch, denn Abwärmeabtransport ist ein bisschen schwierig,
+könnt ihr euch ja vorstellen. Alleine von der \&ldquo;Alien Power
+Source\&ldquo;-Optik her ein echter Sieger, dieses Hosting. Oh und der
+Schlüssel ist nicht auf dem PC sondern auf einem separaten sicheren
+Hardwaremodul. Wenn jemand die Kiste hackt, kann er zwar Änderungen
+signieren, aber er kann nicht den Schlüssel extrahieren. Nachdem der
+Hacker gefunden und rausgeschmissen wurde, kann er nichts mehr
+signieren. Er kann natürlich immer noch anderen Leuten seine vorher
+signierten Falschdaten unterschieben. Dazu sagt die DNSSEC-Spec: Aber,
+äh, *räusper* *aufdieuhrguck* oh schaut mal, schon sooo spät
+*wegrenn*</p>
+
+<p>Oh, übrigens. Wie bindet man so ein Hardwaremodul an? Per IP über
+Ethernet! Genau wie den Rechner selbst. Auf dem läuft übrigens Linux,
+der ist also unhackbar!1!!</p>
+
+<p>Noch ein paar Zahlen: der Rechner verbraucht so 30W, und die LEDs
+draußen auch noch mal so viel :-)</p>
+
+<p><strong>Update</strong>: Solange die Site down ist, könnt ihr euch ja <a href="http://www.nanog.org/meetings/nanog55/presentations/Tuesday/Martin.pdf">die Folien
+hier
+angucken</a>,
+die haben noch ein paar Details zu dem Setup.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

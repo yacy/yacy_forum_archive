@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="srcset-and-printing">srcset and printing</h1>
+
+<p>Date: 2017-09-22 06:58:05</p>
+
+<p>\&ldquo;Today I learned something new and stupid.\&rdquo;</p>
+
+<p>I should know that everything involving printing is just...
+perma-stupid. But still.</p>
+
+<p>I\&rsquo;ve been tweaking both web sites to use <code>&lt;IMG SRCSET&gt;</code> in a few places
+in an attempt to speed things up a bit by downloading less data. The
+spec for <code>SRCSET</code> is actually pretty sensible, allowing the browser to
+download an appropriately-sized image based on the size of its window,
+the relationship between screen pixels and display pixels, and your hint
+as to how much of the screen the image will take up..</p>
+
+<p>So let\&rsquo;s say you\&rsquo;ve got a stack of <code>SRCSET</code> images, and the image on
+your screen is, let\&rsquo;s say \&ldquo;five inches\&rdquo; wide, whatever that means,
+and the vagaries of the world result in the 768px image being used for
+that. So then you hit print. And now you\&rsquo;re going to be printing a
+\&ldquo;five inch\&rdquo; image on a 300dpi device. Does it use the 1600px image for
+that?</p>
+
+<p>The hell it does. It scales up the blurry-assed 768px image.</p>
+
+<p>Safari, Mozilla, Chrome and Opera all do this.</p>
+
+<dl>
+<dt>are presented with a page with a image of your ticket on it, like so:</dt>
+</dl>
+
+<dl>
+<dt>are presented with a page with a image of your ticket on it, like so:</dt>
+</dl>
+
+<p>::: {style=&ldquo;max-width: 5in; margin: auto; text-align: center&rdquo;}
+<img src="https://www.jwz.org/images/scaled/768/2017/dnaticket.png" alt="" />{sizes=&ldquo;(max-width: 660px) 100vw, 72em&rdquo;
+srcset=&ldquo;<a href="https://www.jwz.org/images/scaled/768/2017/dnaticket.png">https://www.jwz.org/images/scaled/768/2017/dnaticket.png</a> 1601w, <a href="https://www.jwz.org/images/scaled/1280/2017/dnaticket.png">https://www.jwz.org/images/scaled/1280/2017/dnaticket.png</a> 1280w, <a href="https://www.jwz.org/images/scaled/768/2017/dnaticket.png">https://www.jwz.org/images/scaled/768/2017/dnaticket.png</a> 768w, <a href="https://www.jwz.org/images/scaled/640/2017/dnaticket.png">https://www.jwz.org/images/scaled/640/2017/dnaticket.png</a> 640w, <a href="https://www.jwz.org/images/scaled/360/2017/dnaticket.png">https://www.jwz.org/images/scaled/360/2017/dnaticket.png</a> 360w&rdquo;}
+:::</p>
+
+<p>One of the common use cases here is \&ldquo;print it out and take it with
+you\&ldquo;. So I\&rsquo;ve been serving 1600px PNGs, so that they will print well.
+But it sure would be nice if the people who <em>aren\&rsquo;t</em> printing were
+being served a smaller file.</p>
+
+<p>So I guess my choices are to keep serving large images always, or have
+prints be blurry. \&ldquo;Hooray.\&rdquo;</p>
+
+<p>Maybe there\&rsquo;s some nuttery I could do with <code>@print</code> stylesheets in the
+CSS to override the <code>SRC</code> but that sure sounds fragile.</p>
+
+<p>I mean, hopefully most people are using the Apple Wallet
+<a href="https://www.jwz.org/blog/2016/01/apple-pass-push-notifications/"><code>pkpass</code></a>
+attachment we send them instead of printing, but still, this is dumb and
+ought to work.</p>
+
+<dl>
+<dt>ticket](<a href="https://www.dnalounge.com/tickets/">https://www.dnalounge.com/tickets/</a>) and send me a screen shot.)</dt>
+</dl>
+
+<dl>
+<dt>ticket](<a href="https://www.dnalounge.com/tickets/">https://www.dnalounge.com/tickets/</a>) and send me a screen shot.)</dt>
+</dl>
+
+<dl>
+<dt>ticket](<a href="https://www.dnalounge.com/tickets/">https://www.dnalounge.com/tickets/</a>) and send me a screen shot.)</dt>
+</dl>
+
+<dl>
+<dt>ticket](<a href="https://www.dnalounge.com/tickets/">https://www.dnalounge.com/tickets/</a>) and send me a screen shot.)</dt>
+</dl>
+
+<dl>
+<dt>ticket](<a href="https://www.dnalounge.com/tickets/">https://www.dnalounge.com/tickets/</a>) and send me a screen shot.)</dt>
+</dl>
+
+<dl>
+<dt>ticket](<a href="https://www.dnalounge.com/tickets/">https://www.dnalounge.com/tickets/</a>) and send me a screen shot.)</dt>
+</dl>
+
+<dl>
+<dt>ticket](<a href="https://www.dnalounge.com/tickets/">https://www.dnalounge.com/tickets/</a>) and send me a screen shot.)</dt>
+</dl>
+
+<dl>
+<dt>screen shot.)</dt>
+</dl>
+
+<p>::: {align=&ldquo;CENTER&rdquo;}
+<a href="https://www.jwz.org/blog/2011/05/illustrator-margins-and-safari-idiocy/">Previously</a>,
+<a href="https://www.jwz.org/blog/2010/10/every-day-i-learn-something-new-and-stupid/">previously</a>,
+<a href="https://www.jwz.org/blog/2007/05/devshredder/">previously</a>,
+<a href="https://www.jwz.org/blog/2007/04/slow-shredders/">previously</a>.
+:::</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

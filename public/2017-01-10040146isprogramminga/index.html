@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="is-programming-an-arduino-from-macos-always-a-nightmarish-clusterfuck-or-am-i-just-lucky">Is programming an Arduino from MacOS always a nightmarish clusterfuck, or am I just lucky?</h1>
+
+<p>Date: 2017-01-10 04:01:46</p>
+
+<p><img src="https://www.jwz.org/images/tumblr_n2f042ozwk1rg61bmo2_500.gif" alt="" />I
+spend like 95% of my time wondering why the god damned serial port
+isn\&rsquo;t working.</p>
+
+<p>Of late, it goes like this:</p>
+
+<ul>
+<li>Upload the code.</li>
+<li>Unplug the <a href="https://www.sparkfun.com/products/retired/9115">FTDI</a>
+from the <a href="https://www.adafruit.com/products/418">Arduino Ethernet</a>
+and change something.</li>
+<li>Plug it back in.</li>
+<li>FFS, where did <code>/dev/cu.usbserial-WTFBBQ</code> go?</li>
+<li>Yup. It\&rsquo;s gone.</li>
+<li>Power cycle my USB hub.</li>
+<li>Oh great, now my Mac\&rsquo;s <em>entire USB stack</em> has gone away and now I
+don\&rsquo;t even have a mouse or keyboard.</li>
+<li>Hold down the power button and reboot.</li>
+</ul>
+
+<p>Unplugging the FTDI doesn\&rsquo;t <em>always</em> make /dev/cu go away, just like
+nine times out of ten. But as soon as that happens, I\&rsquo;m within minutes
+of needing to hold down the power button.</p>
+
+<p>To whom do I address my hate? The authors of the comically horrible
+Arduino IDE app? I\&rsquo;m gonna guess, \&ldquo;yes, there\&rdquo; because the fucking
+thing is written in <em>Java</em> and anyone who made <em>that</em> decision any later
+than 1997 clearly can\&rsquo;t be trusted to find their own ass in the dark
+with both hands. But I would certainly entertain the idea that this is
+all Apple\&rsquo;s fault somehow. Maybe they\&rsquo;ve assigned maintenance of their
+USB stack to some intern who sees it as a great learning experience.</p>
+
+<p>But, holy crap, do people really <em>put up with this?</em> Or am I just lucky?
+Or doing something wrong?</p>
+
+<p>Is someone going to say, \&ldquo;You just <em>unplugged</em> it? You can\&rsquo;t just
+<em>unplug</em> it, USB isn\&rsquo;t hot-swappable! Chickens must be bled first!\&rdquo;
+Ok, but I didn\&rsquo;t read anything in the manual about these chickens, tell
+me more.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

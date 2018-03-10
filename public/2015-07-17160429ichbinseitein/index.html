@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="ich-bin-seit-ein-paar-tagen-am-überlegen-wie-man">Ich bin seit ein paar Tagen am Überlegen, wie man ...</h1>
+
+<p>Date: 2015-07-17 16:04:29</p>
+
+<p>Ich bin seit ein paar Tagen am Überlegen, wie man Logdaten am besten
+durchsuchbar macht. Für normalen Fließtext habe ich mal eine
+Volltextsuche geschrieben, und das erfolgreich für HTML-Seiten und für
+Software-Quellcode benutzt. Dort macht man das so, dass man eine
+Datenstruktur baut, die einem sagt: Dieses Wort kommt in diesen
+Dokumenten vor.</p>
+
+<p>Bei Logdaten ist das für den Fuß, denn der Index würde einem sagen:
+Dieses Wort kommt in allen Logs des Webservers vor. Ja super. Da bin ich
+dann so weit wie vorher und muss die alle der Reihe nach durchsuchen.</p>
+
+<p>Oder man könnte \&ldquo;Dokument\&rdquo; umdeuten, und zum Beispiel sagen: Alle 15
+Minuten Weblog sind ein Dokument.</p>
+
+<p>Aber man will ja auch andere Arten von Anfragen stellen können bei
+Logdaten. Man will ja sowas fragen können wie: Welche IPs haben in den
+letzten Stunden mehr als doppelt so häufig wie der Median zugegriffen?</p>
+
+<p>Oder, bei Maillogs: Welche IP, die wir sonst selten sehen, versucht das
+Absetzen von mehr als 2 Mails in einer Minute.</p>
+
+<p>Für diese Anfragen von Logs reicht ein Volltextindex nicht.</p>
+
+<p>Und eigentlich wil man diese Art von Anfragen auch nicht ad hoc auf den
+Corpus anwenden, sondern man will sie auf einen vorbeifließenden Stream
+ansetzen, und dann einen Trigger auslösen können.</p>
+
+<p>Nun kann man da auf mehrere Arten rangehen. Ich überlege gerade, ob man
+das nicht weniger schlimm machen kann, wenn man die Daten später
+durchsuchen will. Also man läuft immer noch komplett durch (ich vermute,
+dass das für einige ad-hoc-Anfragen gar nicht anders gehen wird), aber
+man reduziert den Aufwand, den man treiben muss. Ich dachte mir das so,
+dass man aus den rohen Logdaten die Felder extrahiert, d.h. die Logdaten
+in einen pro Logzeilentyp konstanten Format-String (wie bei
+printf/strftime) und die Datenfelder zerlegt. Und dann speichert man den
+Stream binär ab, die Format-Strings jeweils nur als Referenz auf ein
+Dictionary, und die Inhalte der Felder aus den Daten herausgeparsed.
+Dann muss man statt 127.0.0.1 nur vier Bytes abspeichern. Pro Logzeile
+legt man dann eine Referenz auf den Format-String ab (ich nenne das mal
+Template), dann das Offset zur nächsten Zeile, und dann binär kodiert
+die ganzen Werte. Die Idee wäre, dass man dann beim Suchen weiß, an
+welchem Template man interessiert ist, und die anderen schnell
+überspringen kann.</p>
+
+<p>Konzeptionell versuche ich also ein Komprimierungsverfahren zu basteln,
+das ein Matching ohne vollständige Rekonstruktion der Quelldaten
+erlaubt. Oder zumindest ein fail fast beim Matching.</p>
+
+<p>Was ich an der Stelle unbedingt vermeiden möchte sind irgendwelche
+Sammlungen von regulären Ausdrücken. Das Parsing muss automatisiert
+funktionieren.</p>
+
+<p>Der erste Schritt dabei wäre, dass man erstmal typische Felder erkennt.
+Ich habe da mal eine Heuristik gehackt, die erkennt schonmal
+IP-Adressen, Timestamps in einigen üblichen Formaten, Hostnamen,
+Dateinamen, Pfadnamen, URLs, Email-Adressen. Das Problem ist halt, dass
+man Hostnamen und Dateinamen nicht wirklich erkennen und
+auseinanderhalten kann. Möglicherweise braucht es diese Aufteilung ja
+auch gar nicht und ich könnte auch einfach sagen: Das ist ein
+String-Feld.</p>
+
+<p>Nehmen wir mal diese Logzeile hier:</p>
+
+<pre><code>Jul 17 12:34:56 ptrace sshd[2342]: Accepted publickey for usereins from 1.2.3.4 port 59932 ssh2: ED25519 00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee:ff
+</code></pre>
+
+<p>Daraus macht mein Tool sowas wie</p>
+
+<pre><code>%t %h %P[%i]: Accepted publickey for usereins from %4 port %i ssh2: ED25519 00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee:ff
+</code></pre>
+
+<p>Den Hex-String könnte mein Tool auch erkennen, tut es aber im Moment
+noch nicht. Aber das größere Problem ist, wenn ich zwei solcher Zeilen
+habe, eine mit usereins und eine mit userzwei, wie führe ich die
+Templates zusammen und mache aus usereins/userzwei ein %s?</p>
+
+<p>Klassische Verfahren für sowas sind Edit-Distance/Levenshtein oder
+sowas, aber das muss doch auch irgendwie geschickter gehen. Und ich
+bräuchte das auf Wörtern, nicht auf Zeichen. Bonusproblem: Mit Feldern
+klarkommen, die Leerzeichen beinhalten dürfen.</p>
+
+<p>Daran knabbere ich gerade herum.</p>
+
+<p>Spannenderweise findet man für dieses Problem auf Anhieb wenig Kram,
+weil alles mit Template im Namen in die andere Richtung geht, aus
+Rohdaten und einem Template den String zu rekonstruieren. Was ich ja
+trivial genug finde, dass mir nicht klar ist, wieso sich so viele Leute
+damit beschäftigen. Aber gut.</p>
+
+<p>Vielleicht fehlt mir auch einfach der richtige Suchbegriff?</p>
+
+<p><strong>Update</strong>: A-Ha! Der erste sachdienliche Hinweis geht ein. Ein
+verwandtes Problem ist das <a href="https://en.wikipedia.org/wiki/Longest_common_subsequence_problem">Longest coommon subsequence
+problem</a>.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

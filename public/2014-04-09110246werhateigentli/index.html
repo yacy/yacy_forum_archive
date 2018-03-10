@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="wer-hat-eigentlich-diesen-openssl-code-geschrieben">Wer hat eigentlich diesen OpenSSL-Code geschrieben, ...</h1>
+
+<p>Date: 2014-04-09 11:02:46</p>
+
+<p>Wer hat eigentlich diesen OpenSSL-Code geschrieben, wegen dem jetzt alle
+Keys kompromittiert sind? <a href="http://news.netcraft.com/archives/2014/04/08/half-a-million-widely-trusted-websites-vulnerable-to-heartbleed-bug.html">Ein Typ namens Robin
+Seggelmann</a>.
+Kann mal passieren, ich will jetzt nicht mit dem Finger auf den zeigen.
+Aber es sollte vielleicht mal jemand den anderen Code auditieren, den
+der so geschrieben hat.</p>
+
+<p><a href="http://git.openssl.org/gitweb/?p=openssl.git;a=commit;h=4817504d069b4c5082161b02a22116ad75f822b1">Hier ist der git
+commit</a>.
+Das ist aber nicht der Punkt hier gerade.</p>
+
+<p>Wo arbeitet der? Was meint ihr? <a href="http://tools.ietf.org/html/draft-tuexen-tsvwg-sctp-prpolicies-01">Kommt ihr NIE
+drauf</a>!</p>
+
+<pre><code>   Robin Seggelmann
+   T-Systems International GmbH
+   Fasanenweg 5
+   70771 Leinfelden-Echterdingen
+   DE
+</code></pre>
+
+<p><strong>Update</strong>: Eine Sache noch. Nehmen wir mal an, jemand würde mich
+bezahlen, eine Backdoor in OpenSSL einzubauen. Eine, die auf den ersten
+Blick harmlos aussieht, die aber ohne Exploit-Schwierigkeiten auf allen
+Plattformen tut und von den verschiedenen Mitigations nicht betroffen
+ist. Genau so würde die aussehen.</p>
+
+<p>Ich sehe in dem Code nicht mal den Versuch, die einkommenden Felder
+ordentlich zu validieren. Und auch protokolltechnisch ergibt das keinen
+Sinn, so eine Extension überhaupt zu definieren. TCP hat seit 30 Jahren
+keep-alive-Support. Es hätte also völlig gereicht, das für TLS über UDP
+zu definieren (und auch da würde ich die Sinnhaftigkeit bestreiten). Und
+wenn man ein Heartbeat baut, dann tut man da doch keinen Payload rein!
+Der Sinn von sowas ist doch, Timeouts in Proxy-Servern und NAT-Routern
+vom Zuschlagen abzuhalten. Da braucht man keinen Payload für. Und wenn
+man einen Payload nimmt, dann ist der doch nicht variabel lang und schon
+gar nicht schickt man die Daten aus dem Request zurück. Das ist auf
+jeder mir ersichtlichen Ebene völliger Bullshit, schon das RFC (das der
+Mann auch geschrieben hat), das ganze Protokoll, und die Implementation
+ja offensichtlich auch. Aus meiner Sicht riecht das wie ein Backdoor, es
+schmeckt wie eine Backdoor, es hat die Konsistenz einer Backdoor, und es
+sieht aus wie eine Backdoor. Und der Code kommt von jemandem, der bei
+einem Staatsunternehmen arbeitet, das für den BND den IP-Range betreut
+(jedenfalls vor ein paar Jahren, ob heute immer noch weiß ich nicht). Da
+muss man kein Adam Riese sein, um hier 1+1 zusammenzählen zu können.</p>
+
+<p><strong>Update</strong>: Es stellt sich raus, dass der Mann damals noch an <a href="http://blog.fefe.de/duepublico.uni-duisburg-essen.de/servlets/DerivateServlet/Derivate-31696/dissertation.pdf">seiner
+Dissertation</a>
+geschrieben hat und an der Uni war und erst später bei T-Systems anfing.
+In der Dissertation geht es unter anderem um die Heartbeat-Extension,
+die mit UDP begründet wird. In dem Text steht auch drin, dass man keine
+Payload braucht. Aber lasst uns das mal trotzdem so machen, weil ...
+Flexibilität und so!</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

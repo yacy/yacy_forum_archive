@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="ist-euch-mal-aufgefallen-dass-grep-n-langsamer-ist">Ist euch mal aufgefallen, dass grep -n langsamer ist ...</h1>
+
+<p>Date: 2015-01-24 06:40:51</p>
+
+<p>Ist euch mal aufgefallen, dass grep -n langsamer ist als grep ohne -n?
+Das liegt daran, dass grep ohne -n beim Suchen nach einer Zeichenkette
+ein sehr cooles Verfahren namens Boyer-Moore anwenden kann. Bei
+Boyer-Moore (es gibt davon noch Varianten) muss man sich diverse Zeichen
+gar nicht erst angucken. Sagen wir mal, wir suchen nach \&ldquo;fnord\&ldquo;. Dann
+würde die naive Suche nach \&ldquo;f\&rdquo; suchen, und wenn eines gefunden wurde,
+gucken, ob dahinter ein \&ldquo;nord\&rdquo; kommt. Boyer-Moore würde sich zuerst
+das 5. Zeichen angucken. Wenn da z.B. ein \&ldquo;z\&rdquo; steht, was im
+Suchbegriff gar nicht vorkommt, dann kann man es sich sparen, die
+anderen vier Zeichen davor anzugucken. So kann man sich bis zu <sup>4</sup>&frasl;<sub>5</sub> des
+Aufwandes sparen bei einem Suchbegriff der Länge 5.</p>
+
+<p>Eines meiner Projekte ist eine Suchmaschine für Code. Damit indiziere
+ich dann den Quellcode bei Kundenprojekten, damit ich schnell darin
+herumnavigieren kann. Für kleinere Codebasen lohnt sich das nicht, da
+macht man lieber grep -r und hat die Quellen in einer Ramdisk. Aber bei
+manchen Kunden ist der Quellcode im höheren zweistelligen
+Gigabytebereich. Da braucht man dann schon einen Index.</p>
+
+<p>Wenn ich in meinem Index jetzt nach einem Wort sucht, und im
+Allgemeinfall ist das ein Bezeichner aus dem Quellcode, d.h. ein
+längeres Wort, dann sagt mir mein Index die Namen der Dateien, in denen
+das Wort vorkommt. Aber ich will ja nicht nur wissen, in welchen Dateien
+es ist, sondern auch die Zeilennummer, damit ich da schön honnavigieren
+kann.</p>
+
+<p>Mein Code muss daher die Datei öffnen und darin nach dem Wort suchen und
+mir dann die Trefferzeilen mit Zeilennummer ausgeben. Wenn ich die
+Zeilennummer ausgeben will, kann ich aber nicht Boyer-Moore verwenden
+und dann Zeichen in der Mitte überspringen. Daher wird die Suche
+langsamer.</p>
+
+<p>Das war der Grund, wieso ich gestern mal mit der Frage verbracht habe,
+wie man möglichst schnell die Newlines in einem Speicherblock zählen
+kann. Wenn es nämlich gelingt, die Newlines in einem Speicherblock
+effizienter als durch zeichenweises Lesen zu zählen, dann ist es
+möglicherweise effizienter, erst mit Boyer Moore nach dem Match zu
+suchen und dann im Speicher davor nochmal die Newlines zu zählen.</p>
+
+<p>Damit das klappt, müsste man deutlich effizienter zählen. Um zu
+verstehen, wie man effizienter sein kann, als jedes Byte einmal kurz
+anzugucken, muss man die Speicherhierarchie in CPUs verstehen. Die CPUs
+sind heutzutage rasend schnell, aber der Speicher ist vergleichsweise
+langsam. CPUs haben mehrere Hierarchien von Zwischenspeichern, aber
+selbst die sind noch langsam. Wenn man ein Byte aus dem schnellsten (und
+kleinsten) Cache liest, dem Level 1-Cache, dann hat man immer noch pro
+Zugriff eine Straflatenz zu erdulden, bis der Wert vorliegt. Auf meinem
+etwas älteren AMD-Desktop war es ein Taktzyklus, bei einem modernen i7
+ist es offenbar eher 2 oder 3. Wie sich rausstellt ist diese Latenz aber
+nicht pro Byte sondern pro Zugriff. Wenn man also mehr als ein Byte auf
+einmal liest, dann zahlt man diese Strafsteuer nur einmal. Auf einer
+64-bit-Architektur passen in ein Maschinen-Register 8 Bytes rein. Die
+Kosten für Newlinezählen wären damit also potentiell ein Achtel dessen,
+was man für die naive Implementation zahlt. Zum Vergleich:</p>
+
+<pre><code>size_t byfoot(const char* s,size_t l) {
+  size_t i,r;
+  for (i=r=0; i&lt;l; ++i)
+    if (s[i]==n) ++r;
+  return r;
+}
+</code></pre>
+
+<p>Das ist die naive Implementation. Die braucht für eine 5k-Datei ca.
+15000 CPU-Zyklen auf einem 4000er i7.</p>
+
+<p>Der erste Verbesserungsansatz wäre, dass man wortweise liest und dann
+innerhalb des Wortes die Bytes einzeln rausmaskiert zum Vergleichen.</p>
+
+<pre><code>size_t byfoot2(const char* s,size_t l) {
+  size_t i,r;
+  for (i=r=0; i+sizeof(i)&lt;=l; i+=sizeof(i)) {
+    size_t x=*(size_t*)(s+i);
+    while (x) {
+      r += ((x&amp;0xff) == 0x0a);
+      x &gt;&gt;= 8;
+    }
+  }
+  for (; i&lt;l; ++i)
+    if (s[i]==n) ++r;
+  return r;
+}
+</code></pre>
+
+<p>Hier haben wir pro Byte deutlich mehr Operationen, aber die laufen alle
+innerhalb der CPU asynchron ab, und es bleibt noch Zeit übrig, um auf
+den Speicher zu warten. Hiermit bin ich schon runter auf 11800
+CPU-Zyklen.</p>
+
+<p>Wenn man noch mehr Performance will, muss man tricksen. Die beste
+Variante, die ich dafür gestern gefunden habe, ist die hier:</p>
+
+<pre><code>static size_t fold(size_t v) {
+  return (v * (size_t)0x0101010101010101) &gt;&gt; (sizeof(v)*8-8);
+}
+
+static size_t nlto1(size_t v) {
+  v ^= (size_t)0x0a0a0a0a0a0a0a0a;
+  v |= (v &amp; (size_t)0x0101010101010101ull) &lt;&lt; 1;
+  v = ((v - (size_t)0x0101010101010101ull) &amp; ~v &amp; (size_t)0x8080808080808080ull);
+  return v &gt;&gt; 7;
+}
+
+size_t newlines(const char* s,size_t l) {
+  size_t i,n=0,r=0,max=l/sizeof(n);
+  size_t* S=(size_t*)s;
+  int o=255;
+  for (i=0; i&lt;max; ++i) {
+    n += nlto1(S[i]);
+    if (!--o) {
+      r += fold(n);
+      n=0;
+      o=255;
+    }
+  }
+  r += fold(n);
+  if (l %= sizeof(i)) {
+    s += i*sizeof(n);
+    for (; l; --l)
+      r += (*s++==n);
+  }
+  return r;
+}
+</code></pre>
+
+<p>Ich habe mal die Kommentare entfernt, weil ich mir dachte, dass
+vielleicht der eine oder andere von euch Spaß daran haben könnte, zu
+verstehen, wie das funktioniert, und warum jeder einzelne Schritt davon
+da ist und nötig ist. Mit diesem Code bin ich für die selben Daten schon
+runter auf 5200 Zyklen. Nicht schlecht! Geht aber noch besser. Moderne
+CPUs haben Vektorinstruktionen für sowas, und mit SSE komme ich auf 2500
+Zyklen. Ich vermute, dass auch damit noch nicht das Ende der
+Fahnenstange erreicht ist.</p>
+
+<p>Wenn jemand eine klarere oder schnellere Variante des portablen
+Codestücks findet, bitte ich um eine Email mit den Details!</p>
+
+<p>Die mir wichtige Lektion an der Stelle ist jedenfalls, dass Performance
+auf heutigen CPUs fast ausschließlich eine Frage von \&ldquo;wieviel
+Speicherzugriffe habe ich\&rdquo; ist. Unter dem Gesichtspunkt muss man auch
+Datenstrukturen bewerten.</p>
+
+<p><strong>Update</strong>: Oh, einer noch. Das da oben ist im 64-bit-Modus. Im
+32-bit-Modus lohnt sich das Bitgefrickel nur wenig bis gar nicht, da ist
+in meinem Messungen die zweite Variante von oben sogar geringfügig
+schneller als die dritte. Dafür braucht spannenderweise der selbe
+SSE-Code nur noch 1800 Zyklen. Keine Ahnung, wie das kommt.</p>
+
+<p>Es gibt übrigens auch noch eine Bitfrickel-Variante von fold:</p>
+
+<pre><code>static size_t fold(size_t v) {
+  v=(v &amp; (size_t)0x00ff00ff00ff00ff) + ((v&gt;&gt;8) &amp; (size_t)0x00ff00ff00ff00ff);
+  v=(v &amp; (size_t)0x0000ffff0000ffff) + ((v&gt;&gt;16) &amp; (size_t)0x0000ffff0000ffff);
+  if (sizeof(v)&gt;4)
+    v = (v &amp; 0xffffffff) + (v&gt;&gt;32);
+  return v;
+}
+</code></pre>
+
+<p>Die ist aber geringfügig langsamer bei mir. Das hängt von der
+Performance der Integer-Multiplikationseinheit ab. Auf anderen CPUs ist
+möglicherweise das Bitfrickeln schneller.</p>
+
+<p><strong>Update</strong>: Wie das erste Adlerauge (Glückwunsch!) schon gemerkt hat,
+hat die Nicht-Bitfrickel-Fold-Funktion ein Overflow-Problem, wenn zu
+viele Newlines auf einmal reinkommen. Das ist leider nicht so einfach zu
+fixen. Ich verwendet daher gerade die Bitfrickel-Funktion, auch wenn das
+in der Praxis so gut wie nicht vorkommt in Code. Ich wollte euch den
+Fold-Code trotzdem nicht vorenthalten, weil er so schön
+bewusstseinserweiternd ist.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

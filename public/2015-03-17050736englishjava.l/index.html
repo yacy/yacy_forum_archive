@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="english-java-lang-outofmemoryerror-unable-to-create-new-native-t">English • java.lang.OutOfMemoryError: unable to create new native t...</h1>
+
+<p>Date: 2015-03-17 05:07:36</p>
+
+<p>Hello,<br />
+<br />
+After two hours of uptime since I launched a crawler, YaCy quit, leaving
+the following log file.<br />
+<br />
+[System specs:]{style=&ldquo;font-weight: bold&rdquo;}</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>$ uname -r2.6.32-042stab076.8$ java -versionjava version &quot;1.7.0_65&quot;OpenJDK Runtime Environment (IcedTea 2.5.1) (7u65-2.5.1-5~deb7u1)OpenJDK Client VM (build 24.65-b04, mixed mode, sharing)# YacY version 1.82</code></dd>
+</dl>
+
+<p><br />
+<br />
+[./DATA/LOG/yacy00.log]{style=&ldquo;font-weight: bold&rdquo;}</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>W 2015/03/17 04:39:49 ConcurrentLog java.lang.OutOfMemoryError: unable to create new native threadjava.lang.OutOfMemoryError: unable to create new native thread   at java.lang.Thread.start0(Native Method)   at java.lang.Thread.start(Thread.java:714)   at net.yacy.crawler.robots.RobotsTxt.ensureExist(RobotsTxt.java:249)   at net.yacy.crawler.HostBalancer.push(HostBalancer.java:226)   at net.yacy.crawler.data.NoticedURL.push(NoticedURL.java:167)   at net.yacy.crawler.CrawlStacker.stackCrawl(CrawlStacker.java:336)   at net.yacy.crawler.CrawlStacker.job(CrawlStacker.java:134)   at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)   at java.lang.reflect.Method.invoke(Method.java:606)   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)   at java.util.concurrent.FutureTask.run(FutureTask.java:262)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)   at java.lang.Thread.run(Thread.java:745)E 2015/03/17 04:39:49 BLOCKINGTHREAD Runtime Error in serverInstantThread.job, thread 'java.lang.reflect.Method.job.1': nullI 2015/03/17 04:39:49 HostQueue opened HostQueue /usr/local/share/java/yacy/DATA/INDEX/webportal/QUEUES/CrawlerCoreStacks/www.baodagroup.com.80 with 0 urls.E 2015/03/17 04:39:49 BLOCKINGTHREAD Internal Error in serverInstantThread.job: nullE 2015/03/17 04:39:49 BLOCKINGTHREAD shutting down thread 'java.lang.reflect.Method.job.1'W 2015/03/17 04:39:49 ConcurrentLog java.lang.reflect.InvocationTargetExceptionjava.lang.reflect.InvocationTargetException   at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)   at java.lang.reflect.Method.invoke(Method.java:606)   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)   at java.util.concurrent.FutureTask.run(FutureTask.java:262)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)   at java.lang.Thread.run(Thread.java:745)Caused by: java.lang.OutOfMemoryError: unable to create new native thread   at java.lang.Thread.start0(Native Method)   at java.lang.Thread.start(Thread.java:714)   at net.yacy.crawler.robots.RobotsTxt.ensureExist(RobotsTxt.java:249)   at net.yacy.crawler.HostBalancer.push(HostBalancer.java:226)   at net.yacy.crawler.data.NoticedURL.push(NoticedURL.java:167)   at net.yacy.crawler.CrawlStacker.stackCrawl(CrawlStacker.java:336)   at net.yacy.crawler.CrawlStacker.job(CrawlStacker.java:134)   ... 10 moreW 2015/03/17 04:39:49 ConcurrentLog java.lang.OutOfMemoryError: unable to create new native threadjava.lang.OutOfMemoryError: unable to create new native thread   at java.lang.Thread.start0(Native Method)   at java.lang.Thread.start(Thread.java:714)   at net.yacy.crawler.robots.RobotsTxt.ensureExist(RobotsTxt.java:249)   at net.yacy.crawler.HostBalancer.push(HostBalancer.java:226)   at net.yacy.crawler.data.NoticedURL.push(NoticedURL.java:167)   at net.yacy.crawler.CrawlStacker.stackCrawl(CrawlStacker.java:336)   at net.yacy.crawler.CrawlStacker.job(CrawlStacker.java:134)   at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)   at java.lang.reflect.Method.invoke(Method.java:606)   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)   at java.util.concurrent.FutureTask.run(FutureTask.java:262)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)   at java.lang.Thread.run(Thread.java:745)W 2015/03/17 04:39:49 ConcurrentLog java.lang.OutOfMemoryError: unable to create new native threadjava.lang.OutOfMemoryError: unable to create new native thread   at java.lang.Thread.start0(Native Method)   at java.lang.Thread.start(Thread.java:714)   at net.yacy.crawler.robots.RobotsTxt.ensureExist(RobotsTxt.java:249)   at net.yacy.crawler.HostBalancer.push(HostBalancer.java:226)   at net.yacy.crawler.data.NoticedURL.push(NoticedURL.java:167)   at net.yacy.crawler.CrawlStacker.stackCrawl(CrawlStacker.java:336)   at net.yacy.crawler.CrawlStacker.job(CrawlStacker.java:134)   at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)   at java.lang.reflect.Method.invoke(Method.java:606)   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)   at java.util.concurrent.FutureTask.run(FutureTask.java:262)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)   at java.lang.Thread.run(Thread.java:745)E 2015/03/17 04:39:49 BLOCKINGTHREAD Runtime Error in serverInstantThread.job, thread 'java.lang.reflect.Method.job.1': nullI 2015/03/17 04:39:49 HostQueue opened HostQueue /usr/local/share/java/yacy/DATA/INDEX/webportal/QUEUES/CrawlerCoreStacks/www.juicedsystems.com.80 with 0 urls.E 2015/03/17 04:39:49 BLOCKINGTHREAD Internal Error in serverInstantThread.job: nullE 2015/03/17 04:39:49 BLOCKINGTHREAD shutting down thread 'java.lang.reflect.Method.job.1'W 2015/03/17 04:39:49 ConcurrentLog java.lang.reflect.InvocationTargetExceptionjava.lang.reflect.InvocationTargetException   at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)   at java.lang.reflect.Method.invoke(Method.java:606)   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)   at java.util.concurrent.FutureTask.run(FutureTask.java:262)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)   at java.lang.Thread.run(Thread.java:745)Caused by: java.lang.OutOfMemoryError: unable to create new native thread   at java.lang.Thread.start0(Native Method)   at java.lang.Thread.start(Thread.java:714)   at net.yacy.crawler.robots.RobotsTxt.ensureExist(RobotsTxt.java:249)   at net.yacy.crawler.HostBalancer.push(HostBalancer.java:226)   at net.yacy.crawler.data.NoticedURL.push(NoticedURL.java:167)   at net.yacy.crawler.CrawlStacker.stackCrawl(CrawlStacker.java:336)   at net.yacy.crawler.CrawlStacker.job(CrawlStacker.java:134)   ... 10 moreW 2015/03/17 04:39:49 ConcurrentLog java.lang.OutOfMemoryError: unable to create new native threadjava.lang.OutOfMemoryError: unable to create new native thread   at java.lang.Thread.start0(Native Method)   at java.lang.Thread.start(Thread.java:714)   at net.yacy.crawler.robots.RobotsTxt.ensureExist(RobotsTxt.java:249)   at net.yacy.crawler.HostBalancer.push(HostBalancer.java:226)   at net.yacy.crawler.data.NoticedURL.push(NoticedURL.java:167)   at net.yacy.crawler.CrawlStacker.stackCrawl(CrawlStacker.java:336)   at net.yacy.crawler.CrawlStacker.job(CrawlStacker.java:134)   at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)   at java.lang.reflect.Method.invoke(Method.java:606)   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)   at java.util.concurrent.FutureTask.run(FutureTask.java:262)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)   at java.lang.Thread.run(Thread.java:745)W 2015/03/17 04:39:49 ConcurrentLog java.lang.OutOfMemoryError: unable to create new native threadjava.lang.OutOfMemoryError: unable to create new native thread   at java.lang.Thread.start0(Native Method)   at java.lang.Thread.start(Thread.java:714)   at net.yacy.crawler.robots.RobotsTxt.ensureExist(RobotsTxt.java:249)   at net.yacy.crawler.HostBalancer.push(HostBalancer.java:226)   at net.yacy.crawler.data.NoticedURL.push(NoticedURL.java:167)   at net.yacy.crawler.CrawlStacker.stackCrawl(CrawlStacker.java:336)   at net.yacy.crawler.CrawlStacker.job(CrawlStacker.java:134)   at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)   at java.lang.reflect.Method.invoke(Method.java:606)   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)   at java.util.concurrent.FutureTask.run(FutureTask.java:262)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)   at java.lang.Thread.run(Thread.java:745)E 2015/03/17 04:39:49 BLOCKINGTHREAD Runtime Error in serverInstantThread.job, thread 'java.lang.reflect.Method.job.1': nullI 2015/03/17 04:39:49 HostQueue opened HostQueue /usr/local/share/java/yacy/DATA/INDEX/webportal/QUEUES/CrawlerCoreStacks/judaqipei.en.ec21.com.80 with 0 urls.E 2015/03/17 04:39:49 BLOCKINGTHREAD Internal Error in serverInstantThread.job: nullE 2015/03/17 04:39:49 BLOCKINGTHREAD shutting down thread 'java.lang.reflect.Method.job.1'W 2015/03/17 04:39:49 ConcurrentLog java.lang.reflect.InvocationTargetExceptionjava.lang.reflect.InvocationTargetException   at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)   at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)   at java.lang.reflect.Method.invoke(Method.java:606)   at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)   at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)   at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)   at java.util.concurrent.FutureTask.run(FutureTask.java:262)   at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)   at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)   at java.lang.Thread.run(Thread.java:745)Caused by: java.lang.OutOfMemoryError: unable to create new native thread   at java.lang.Thread.start0(Native Method)   at java.lang.Thread.start(Thread.java:714)   at net.yacy.crawler.robots.RobotsTxt.ensureExist(RobotsTxt.java:249)   at net.yacy.crawler.HostBalancer.push(HostBalancer.java:226)   at net.yacy.crawler.data.NoticedURL.push(NoticedURL.java:167)   at net.yacy.crawler.CrawlStacker.stackCrawl(CrawlStacker.java:336)   at net.yacy.crawler.CrawlStacker.job(CrawlStacker.java:134)   ... 10 more</code></dd>
+</dl>
+
+<p><br />
+<br />
+The log file continues for about another 1MB.<br />
+<br />
+Is this a system limit, YaCy\&rsquo;s, or OpenJDK\&rsquo;s?<br />
+How can I work this around?</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8883">davide</a>
+&mdash; Di Mär 17, 2015 5:07 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

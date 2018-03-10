@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-yacy-neu-starten">Hilfe für Einsteiger und Anwender • Re: Yacy neu starten</h1>
+
+<p>Date: 2015-07-18 18:30:38</p>
+
+<p>danke für die rasche Antwort.<br />
+<br />
+Nein, an einem übriggebliebenen Java-Prozess scheint\&rsquo;s nicht zu liegen.
+Ein<br />
+\$ ps -ef | grep java<br />
+zeigt an, dass kein Java mehr läuft<br />
+<br />
+und<br />
+<br />
+\$ sudo netstat -taupen |grep 8093 &lt;-- mein SSL-Port<br />
+\$ sudo netstat -taupen |grep 8090<br />
+liefern keine Einträge.<br />
+<br />
+Mit<br />
+\$ \&rsquo;&lt;YACY-HOME&gt;/startYACY.sh -d\&rsquo;<br />
+wird Yacy zwar gestartet, aber sobald jetty anläuft kommt die
+Fehlermeldung und Yacy bricht ab.<br />
+<br />
+Selbst nach einem \&lsquo;reboot\&rsquo; und erneutem<br />
+\$ \&rsquo;&lt;YACY-HOME&gt;/startYACY.sh -d\&rsquo;<br />
+zeigt Yacy die gleiche Fehlermeldung und kommt nicht wieder auf die
+Beine.<br />
+<br />
+Meine Version:<br />
+[snip]<br />
+&gt;&gt; YaCy started as daemon process. Administration at
+<a href="http://localhost:8093">http://localhost:8093</a> &lt;&lt;<br />
+Asserts are enabled<br />
+[ YaCy v1.83, build 20150412 by Michael Christen /
+<a href="http://www.yacy.net">http://www.yacy.net</a> ]<br />
+-------------------------------------------------------------------------------<br />
+STARTUP: Trying to load logging configuration from file
+&lt;YACY-HOME&gt;/DATA/LOG/yacy.logging<br />
+I &lt;DATUM&gt; 17:46:54 Domain Init local host address: fe80:0:0:0:x:x:x:x
+(local)<br />
+I &lt;DATUM&gt; 17:46:54 Domain Init local host address: fe80::x:x:x:x
+(local)<br />
+I &lt;DATUM&gt; 17:46:54 Domain Init local host address: 0::1 (local)<br />
+I &lt;DATUM&gt; 17:46:54 Domain Init local host address: 0:0:0:0:0:0:0:1
+(local)<br />
+I &lt;DATUM&gt; 17:46:54 Domain Init local host address: 127.0.0.1 (local)<br />
+I &lt;DATUM&gt; 17:46:54 Domain Init local host address: 192.168.x.x
+(local)<br />
+[snap]<br />
+<br />
+Vermutlich gibt\&rsquo;s keine einfache Lösung. Deshalb werde ich Yacy wieder
+neu konfigurieren und neu starten.<br />
+Oder gleich eine neuere Version ausprobieren.<br />
+<br />
+Gruß<br />
+lux</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8916">lux</a>
+&mdash; Sa Jul 18, 2015 5:30 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

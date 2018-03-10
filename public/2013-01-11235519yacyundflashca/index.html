@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-und-flashcache">Yacy und Flashcache</h1>
+
+<p>Date: 2013-01-11 23:55:19</p>
+
+<p>Die Seite wurde neu angelegt: „= Yacy und flashcache = Diese Wiki Seite
+beschreibt wie man Yacy auf Debian 7.0 inkl.
+[<a href="https://github.com/facebook/flashcache/blob/master/doc/flashcache-doc.t...&quot;">https://github.com/facebook/flashcache/blob/master/doc/flashcache-doc.t...&quot;</a></p>
+
+<p><strong>Neue Seite</strong></p>
+
+<div>
+
+= Yacy und flashcache =\
+\
+Diese Wiki Seite beschreibt wie man Yacy auf Debian 7.0 inkl.
+\[https://github.com/facebook/flashcache/blob/master/doc/flashcache-doc.txt
+flashcache\] installiert. Flashcache ist ein Devicemapper Modul mit
+dessen Hilfe man eine \"langsame\" SATA Festplatte mit einer SSD
+beschleunigen kann. Die zufälligen Zugriffe auf das Filesystem werden
+von flashcache in \"sequenzielle\" für die Festplatte gepuffert, was der
+Yacy Performance SEHR zugute kommt!\
+\
+Im klaren sollte man sich allerdings darüber sein, das wenn die SSD
+verstirbt, (in meinem Fall) 120GB vom Filesystem fehlen können und die
+Daten auf der Festplatte dann auch nicht mehr zu gebrauchen sind! Auf
+meinem Server setzte ich deswegen ein Raid 10 aus 4 SSD\'s ein um ein
+Raid 6 mit 10 Festplatten zu beschleunigen\...\
+\
+Für diese Anleitung nutzte ich eine OCZ-VERTEX3 120GB SSD um eine lahme
+5400 RPM Western Digital Caviar Green 500GB Festplatte zu beschleunigen.
+Das Verhältnis SSD Cache zu Festplatte ist etwas überdimensioniert, aber
+ich hatte keine kleinere SSD frei.\
+Mit einer 120GB SSD kann man leicht Platten mit 1-2TB noch effektiv
+beschleunigen\...\
+\
+\
+== Debian Setup ==\
+\
+Starten wir mit einer normalen Debian Wheezy Installation.\
+Ich benutzte die aktuelle testing Release vom 07.01.2013 als
+\[http://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/ ISO
+Image\].\
+\
+Ich benutzte folgende Partitionierung:\
+\
+SATA - 5400 RPM Western Digital Caviar Green 500GB Festplatte:\
+/dev/sda1 / 5GB Ext4\
+/dev/sda2 /var 10GB Ext4\
+/dev/sda3 swap 8GB swap\
+/dev/sda5 - 477GB Ext4\
+\
+\
+SATA - OCZ-VERTEX3 120GB SSD:\
+/dev/sdb1 - 120GB -\
+\
+Ich installierte ein Standard System mit SSH Server\...\
+\
+Die \[http://www.yacy-websuche.de/wiki/index.php/De:DebianInstall Yacy
+Installation\] wie auf der
+\[http://www.yacy-websuche.de/wiki/index.php/De:DebianInstall Wiki
+Seite\] beschrieben durchführen.\
+\
+\
+\
+== Flashcache einrichten ==\
+Anschließend installiere ich alle aus ständigen Pakete zum bauen von
+flashcache.\
+\
+aptitude install dkms build-essential linux-headers-amd64 git debhelper
+pandoc devscripts vim mc smartmontools sysfsutils\
+\
+\
+\
+=== Flashcache compile ===\
+\
+Und anschließende das Bauen und installieren von flashcache:\
+\
+cd /usr/src\
+git clone https://bitbucket.org/Svedrin/flashcache-debian.git\
+cd flashcache-debian\
+debian/rules get-orig-source\
+mv flashcache\_\*.orig.tar.gz ..\
+dpkg-source \--commit\
+dpkg-buildpackage -rfakeroot\
+dpkg -i ../flashcache-\*.deb\
+\
+Die Festplatten Partition darf für das Anlegen von Flashcache nicht
+gemountet sein!\
+\
+\#Usage: flashcache\_create \[-v\] \[-p back\|thru\|around\] \[-b block
+size\] \[-m md block size\] \[-s cache size\] \[-a associativity\]
+cachedev ssd\_devname disk\_devname\
+\
+flashcache\_create -b 4k -p back fc1 /dev/sdb1 /dev/sda5\
+\
+Die fstab muss für das neue Cache Device umgeschrieben werden. Mein
+Eintrag für /srv sieht dabei so aus:\
+\# /srv flashcache\
+/dev/mapper/fc1 /srv ext4 defaults 0 0\
+\
+Ein abschließendes\
+mount -a\
+mountet unser neues Flashcache Device auf /srv\
+\
+Die Flashcache Einstellungen lasse ich von sysctl setzen\...\
+\
+\<nowiki\>cat \<\< EOF \>\> /etc/sysctl.conf\
+dev.flashcache.sdb1+sda5.reclaim\_policy = 1\
+dev.flashcache.sdb1+sda5.dirty\_thresh\_pct = 80\
+dev.flashcache.sdb1+sda5.fallow\_delay = 0\
+dev.flashcache.sdb1+sda5.fallow\_clean\_speed = 2\
+dev.flashcache.sdb1+sda5.fast\_remove = 1\
+dev.flashcache.sdb1+sda5.skip\_seq\_thresh\_kb = 512\
+EOF\</nowiki\>\
+\
+ein\
+sysclt -p\
+lädt die Einstellungen.\
+\
+\
+== I/O scheduler tuning ==\
+\
+Für die Festplatte ist CFQ und für die SSD der Deadline I/O Scheduler am
+besten geeignet. Ein paar tuning Parameter dazu dann noch\...\
+\
+\<nowiki\>cat \<\< EOF \>\> /etc/sysfs.conf\
+block/sda/queue/scheduler = cfq\
+block/sda/queue/max\_sectors\_kb = 4096\
+block/sda/queue/read\_ahead\_kb = 8192\
+block/sda/queue/iosched/slice\_idle = 6\
+\
+block/sdb/queue/scheduler = deadline\
+block/sdb/queue/max\_sectors\_kb = 16384\
+block/sdb/queue/read\_ahead\_kb = 16384\
+block/sdb/queue/iosched/writes\_starved = 1 \# 1 = 1:1 // 3 = 3:1
+Read:Writes Default 3\
+block/sdb/queue/iosched/fifo\_batch = 256 \# Default 16\
+block/sdb/queue/iosched/read\_expire = 250 \# Default 500\
+block/sdb/queue/iosched/write\_expire = 1000 \# Default 5000\
+EOF\</nowiki\>\
+\
+Ein anschließendes\
+service sysfsutils start\
+lädt die Werte\...\
+\
+\
+== yacy Daten verschieben ==\
+\
+Nachdem ich ein schnelles /srv habe, wäre es schade die yacy Daten unter
+/var/lib/yacy liegen zu lassen.\
+\
+Ein\
+service yacy stop\
+mv /var/lib/yacy /srv\
+ln -s /srv/yacy /var/lib/yacy\
+service yacy start\
+behebt diesen Umstand\...\
+\
+\
+== Benchmark ==\
+\
+Die Benchmark Werte passierten alle auf der System Festplatte, was das
+laufende System auch beeinflussen kann. Somit können die Hintergrund
+Dienste die Performance drücken. Es wurden alle unnötigen Dienste
+gestoppt um den Effekt so gering wie möglich zu halten\...\
+\
+\<nowiki\>cat \<\< EOF \> /srv/benchmark.fio\
+\[global\]\
+rw=randread\
+size=256m\
+directory=/srv\
+ioengine=libaio\
+iodepth=4\
+invalidate=1\
+direct=1\
+\
+\[bgwriter\]\
+rw=randwrite\
+iodepth=32\
+\
+\[queryA\]\
+iodepth=1\
+ioengine=mmap\
+direct=0\
+thinktime=3\
+\
+\[queryB\]\
+iodepth=1\
+ioengine=mmap\
+direct=0\
+thinktime=5\
+\
+\[bgupdater\]\
+rw=randrw\
+iodepth=16\
+thinktime=40\
+size=32m\
+EOF\</nowiki\>\
+\
+Den Benchmark ruft man einfach mit\
+fio /srv/benchmark.fio\
+auf.\
+\
+Nun ein paar fio Benchmark Ergebnisse zum vergleichen.\
+\
+\'\'\'Die Festplatte alleine (HDD):\'\'\'\
+READ: io=540632KB, aggrb=508KB/s, minb=50KB/s, maxb=252KB/s,
+mint=322093msec, maxt=1063467msec\
+WRITE: io=278568KB, aggrb=577KB/s, minb=50KB/s, maxb=543KB/s,
+mint=322093msec, maxt=482159msec\
+\
+\
+\'\'\'Flashcache und die Festplatte (SSD + HDD):\'\'\'\
+Wenn man nur zufällige Schreib / Lesezugriffe der SSD aufbürdet, steigt
+die Geschwindigkeit auch schön an, nach 512kB sequenziellem
+lesen/schreiben wird dann nicht mehr gepuffert auf der SSD.\
+Das reduziert die Schreibzugriffe auf die SSD und erhöht die
+Lebensdauer.\
+\
+dev.flashcache.sdb1+sda5.skip\_seq\_thresh\_kb=512\
+\
+READ: io=540688KB, aggrb=640KB/s, minb=235KB/s, maxb=322KB/s,
+mint=69785msec, maxt=844083msec\
+WRITE: io=278512KB, aggrb=3895KB/s, minb=234KB/s, maxb=3666KB/s,
+mint=69785msec, maxt=71494msec\
+\
+\
+Und wenn man jeden Schreibzugriff immer zuerst auf die SSD abladet,
+bekommt man mit der verkürzten Lebensdauer der SSD dafür dann auch fast
+SSD only Geschwindigkeit beim schreiben und bei einem cache hit\...\
+dev.flashcache.sdb1+sda5.skip\_seq\_thresh\_kb=0\
+\
+READ: io=540572KB, aggrb=26918KB/s, minb=13053KB/s, maxb=14123KB/s,
+mint=1153msec, maxt=20082msec\
+WRITE: io=278628KB, aggrb=67317KB/s, minb=14296KB/s, maxb=63335KB/s,
+mint=1153msec, maxt=4139msec\
+\
+\
+== Datensicherheit ==\
+Am Schluss noch ein Hinweis bzgl. der Sicherheit der Daten. Wenn man
+sich herum spielt mit Flashcache, kann man bei unachtsamer Nutzung
+schnell mal seine Daten in die ewigen Jagdgründe schicken. Ein Backup
+seiner Daten ist somit Pflicht bevor man Flashcache einzieht!\
+\
+Man kann ein rausschreiben der noch nicht auf der Festplatte
+befindlichen Daten erzwingen mit:\
+echo -n 1 \> /proc/sys/dev/flashcache/sdb1+sda5/do\_sync\
+\
+oder das vor jedem Reboot machen lassen. Das kann einen Reboot aber um
+Stunden verzoegern!\
+dev.flashcache.sdb1+sda5.fast\_remove = 0\
+\
+Weswegen ich den unsicheren Weg mit\
+dev.flashcache.sdb1+sda5.fast\_remove = 1\
+bevorzuge\...\
+\
+\
+Viel Spass mit Flashcache wuenscht botec!
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

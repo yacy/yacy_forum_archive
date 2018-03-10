@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-stable-yacy">Fragen und Antworten • Re: Stable YaCy</h1>
+
+<p>Date: 2014-01-27 12:42:42</p>
+
+<p>Hi davidk,<br />
+<br />
+i think you are right in many o fyour points.<br />
+<br />
+I think it would be good to provide different configurations.<br />
+e.g.:<br />
+- just searching<br />
+- just DHT<br />
+- just crawling<br />
+- combinations of the upper ones<br />
+<br />
+and each one for different memorysizes<br />
+<br />
+The normal home user might just want to search.<br />
+<br />
+My conclusions on stability:<br />
+- never use the dev versions<br />
+- oracle java seems to run more stable then icedtea<br />
+- when crawling you have to reduce crawling speed to a point where the
+io is less then 100% of what the disks can manage /Performance_p.html<br />
+- when crawling my yacy was crashing within 5 days with a chanche of
+100%<br />
+<br />
+My current stragedy:<br />
+- just DHT distribution<br />
+- set timeout for DHT to 1000ms /PerformanceQueues_p.html<br />
+- just 10000 words in wordcache /PerformanceQueues_p.html<br />
+- runs stable for over two weeks with just 1G RAM and currently 11Mio.
+documents<br />
+<br />
+NoGos wich should get fixed:<br />
+- yacy eating up ram und stalling with 100% cpu utilization<br />
+-- perhaps some kind of watchdog wich tries to restart yacy and sens
+mail if problem occurs more the x times in x days / hours<br />
+- yacy not starting again with same amount of ram it ran before, cause
+this normaly means you are loosing your index
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_sad.gif" alt=":(" title="Sad" /><br />
+<br />
+Communication in the forum should be english in general. I think most
+people writing in german just because it\&rsquo;s easier.<br />
+<br />
+To summarize: It would be nice to develop yacy more like a product.
+Perhaps it would be an idea to provide a out of the box version like
+openelec does for xbmc. So you can ran yacy in an special configurated
+VM.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=658">CaptainPsycho</a>
+&mdash; Mo Jan 27, 2014 12:42 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

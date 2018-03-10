@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-was-liest-man-aus-dem-log-wenn-peer-nicht-reagiert">Fragen und Antworten • Re: Was liest man aus dem Log, wenn Peer nicht reagiert?</h1>
+
+<p>Date: 2013-12-27 03:03:49</p>
+
+<blockquote>
+<div>
+
+fherb hat geschrieben:\
+[Ist das jetzt schon drin?]{style="font-weight: bold"} (Deiner
+Reaktion zu Folge ist Dir das Problem also alt-bekannt. Ist für mich
+halt schlecht als Neueinsteiger eine inhaltliche Chronologie aus den
+Forenbeiträgen zu erkennen. Bzw. die wichtigen Foreneinträge zu
+finden.)\
+
+</div>
+</blockquote>
+
+<p><br />
+Das ist drin in den Versionen die es über den auto-updater gibt. Das
+Problem ist, nun ja, nicht alt-bekannt sondern eine alte Plage. Mal
+läufts, mal nicht. Es kann dazu mehrere Baustellen geben, sei es dass
+der User seine Kiste schlicht überfordert oder dass es Deadlocks gibt
+für die der User nichts kann. Allgemein sollte es keine nicht-Reaktion
+geben wenn genügend RAM da ist, ansonsten gibts halt GC-Tode die sich
+aber wieder \&lsquo;entkrampfen\&rsquo; können. Dann gibts noch memory leaks die ich
+aber permanent stopfe wenn mir einer begegnet. In diesem Kontext sieht
+man dass das Thema komplex und chaotisch ist (im Sinne von vielen
+Freiheitsgraden) und so eine heftige Änderung wie der httpd-Austausch
+schon eine neue Situation ist.<br />
+</p>
+
+<blockquote>
+<div>
+
+fherb hat geschrieben:\
+-\> [Gibt\'s]{style="font-weight: bold"} nen Foren-Thread, wo Du das,
+was Du derzeit prinzipiell an der Software machst kurz kommentierst?
+Also nicht das Update-Log mit einzelnen
+Programm-Code-Änderungs-Details, sondern, wo prinzipielle Änderungen
+kommentiert sind, die sich auf das Verhalten der Software entscheidend
+auswirken können? Bzw. was Du in nächster Zeit ändern willst.\
+
+</div>
+</blockquote>
+
+<p><br />
+Nein, es gibt mein kleines schwarzes Buch
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_smile.gif" alt=":)" title="Smile" />
+Das ist randvoll mit vielen kleinen Baustellen-Notizen, das
+protokolliere ich nicht öffentlich. Wenn ich will dass jemand weiss dass
+es was ganz tolles neues gibt, dann steht das in Twitter:
+<a href="https://twitter.com/yacy_search">https://twitter.com/yacy_search</a></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
+&mdash; Fr Dez 27, 2013 3:03 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architektur-re-ipv6">YaCy Coding &amp; Architektur • Re: IPv6</h1>
+
+<p>Date: 2014-09-24 23:32:42</p>
+
+<p>Hallo,<br />
+</p>
+
+<blockquote>
+<div>
+
+Orbiter hat geschrieben:\
+und bekomme IPv4 nur noch über einem IPv6-Tunnel und einem NAT beim
+Provider\
+
+</div>
+</blockquote>
+
+<p>Du darfst Dir meines tiefsten Mitgefühls sicher sein. Carrier-Grade-NAT
+ist meiner Meinung nach eine der miesesten Krücken die sich die Provider
+haben einfallen lassen um den IPv6-Umstieg hinauszuzögern.<br />
+</p>
+
+<blockquote>
+<div>
+
+Orbiter hat geschrieben:\
+jetzt habe ich eine IPv6 Entwicklungsumgebung!\
+
+</div>
+</blockquote>
+
+<p>Meinen Glückwunsch und herzlich willkommen im Internetz der Zukunft.<br />
+</p>
+
+<blockquote>
+<div>
+
+Orbiter hat geschrieben:\
+um zumindest einen IPv6-Backping der remote Hosts erzwingen zu können\
+
+</div>
+</blockquote>
+
+<p>Das dürfte aber mit den meisten YaCy-Peers schon wegen dem Parameter
+\&ldquo;-Djava.net.preferIPv4Stack=true\&rdquo; der Java-VM relativ schwer werden,
+falls die Peers überhaupt IPv6-Konektivität haben. Beim YaCy-Peer den
+ich betreibe habe ich das Java-VM-Parameter entfernt und er reagiert
+ganz sicher auf IPv6-Verbindungen und sollte auch selber
+IPv6-Verbindungen initiieren können. Wenn Du möchtest sende ich Dir per
+PM die statische IPv6-Adresse meines Peers, falls Du mir Hash und Name
+Deines Peers gibst wird mein Analyse-Tool die Augen offen halten wenn
+sich was in den Seed-Listen tut. Als ich meinem YaCy-Peer, der eine
+vollwertige Dual-Stack-Anbindung hat, probeweise die IPv6-Adresse als
+statische IP konfiguriert hatte hat sich diese auch in den Seed-Listen
+der anderen Peers rumgesprochen aber kein anderer Peer hat per IPv6
+Verbindung zu meinem Peer aufgenommen, alles was noch von außen kam kam
+nur von Peers die noch die alte IPv4 (die natürlich weiterhin gültig war
+und auf die mein Peer auch weiterhin geantwortet hat) in ihren Listen
+hatten aber das wird bei Dir wohl nicht der Fall sein, ich fürchte Dein
+Peer wird fürs erste relativ einsam sein.<br />
+<br />
+Wenn Du Code schreibst der die öffentliche IPv6-Adresse Deines Computers
+ermittelt vergiss nicht das bei IPv6 jedes Netzwerkinterface
+grundsätzlich mehrere IPv6-Adressen hat und das wenn die
+IPv6-Privacy-Extensions aktiv sind (bei Mac OS X wimre seit mehreren
+Jahren die Defaulteinstellung) dann hast Du auch mehrere öffentliche
+global routbare IPv6-Adressen (die regelmäßig geändert werden,
+zusätzlich zu den privaten IPv6-Adressen) an dem Netzwerkinterface das
+zum Router geht.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Mi Sep 24, 2014 10:32 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

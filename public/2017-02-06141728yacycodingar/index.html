@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architecture-re-privacy-and-referer-http-header">YaCy Coding &amp; Architecture • Re: Privacy and Referer http header</h1>
+
+<p>Date: 2017-02-06 14:17:28</p>
+
+<blockquote>
+<div>
+
+luc hat geschrieben:\
+Hi everyone,\
+I am sure some YaCy users once opened a browser console and had a look
+at the HTTP headers transmitted when opening a search result link. By
+the way if you do that you will see that the \'Referer\' header sent
+to the visited website contains the full YaCy search URL including
+request parameters (at least with default major browsers settings, and
+except when your peer is requested with https and the target link is
+http\...).\
+To my mind it can be quite an issue regarding privacy. Having a look
+at other major search engines related strategy, it looks like most of
+them redirect their search result links and take the opportunity to
+fill this header only with the search engine host name.\
+\
+What about YaCy? I believe many users are not only concerned by
+decentralization but also privacy. So why not set that \"Referer\"
+header empty as default for P2P and web portal modes (in Intranet mode
+it probably makes sense to let it as it is), and add a configuration
+setting for those who still want to send this header filled (some rare
+websites may block visitors with an empty Referer header).\
+\
+Technically I propose to add a [\"rel=\'noreferrer\'\"
+attribute](https://html.spec.whatwg.org/multipage/semantics.html#link-type-noreferrer){.postlink}
+to search results links in yacysearch.html. Eventually finer settings
+will become standard (see W3C [Referer
+Policy](https://www.w3.org/TR/2017/CR-referrer-policy-20170126/){.postlink}
+Candidate Recommendation).\
+\
+So what do you think about it? Where would you see that new
+configuration setting?\
+
+</div>
+</blockquote>
+
+<p><br />
+<br />
+<a href="https://duckduckgo.com/privacy#s1">DuckDuckGo has some interesting
+documentation</a>{.postlink} about
+various methods of hiding this private data.<br />
+<br />
+DuckDuckGo\&rsquo;s solution is to implement a redirect, which is its own
+privacy problem if you don\&rsquo;t trust DuckDuckGo\&rsquo;s server not to spy on
+you. However, I don\&rsquo;t think this is really a problem for YaCy, since
+it\&rsquo;s just trusting a locally running free software application that you
+can inspect to make sure it\&rsquo;s not doing something sketchy.<br />
+<br />
+According to <a href="https://wordpress.org/plugins/noreferrer/">a WordPress plugin\&rsquo;s
+documentation</a>{.postlink},
+rel=\&ldquo;noreferrer\&rdquo; is supported by Firefox since version 33 and Chromium
+since 2009. Referrer policy meta elements are supported by Firefox since
+version 37 and Chromium since 2011. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types">Mozilla\&rsquo;s
+documentation</a>{.postlink}
+says that Firefox prior to version 37 incorrectly handled
+rel=\&ldquo;noreferrer\&ldquo;. This means that the Firefox ESR releases (upon which
+Tor Browser is based) and the ~1.5-year-old Chromium releases (upon
+which Replicant WebView is based) should handle both of them without
+trouble. (I haven\&rsquo;t tested this myself.)<br />
+<br />
+(Coincidentally, this topic came up a few days ago on #yacy on
+Freenode. Cool to see that you\&rsquo;ve been thinking about this topic too.
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_smile.gif" alt=":)" title="Smile" />
+)</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8861">biolizard89</a>
+&mdash; Mo Feb 06, 2017 2:17 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

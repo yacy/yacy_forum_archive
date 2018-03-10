@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="dev-apihello">Dev:APIhello</h1>
+
+<p>Date: 2013-12-17 22:49:52</p>
+
+<p>restructuring</p>
+
+<p>← Nächstältere Version</p>
+
+<p>Version vom 17. Dezember 2013, 21:49 Uhr</p>
+
+<p>Zeile 2:</p>
+
+<p>Zeile 2:</p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<div>
+
+/yacy/hello.html is a servlet which returns a property list as result,
+not a html page as the name would suggest. The purpose of this servlet
+is a handshake between two peers wich ensure doing this that they are
+alive and by the way transport some critical information about their
+network position and the status of their operation together with some
+\'news\', which is (from both sides) a list of recently known or new
+peers in the network. Every peer is doing one peer-ping each minute by
+calling the \'hello.html\'-servlet of one of the peers in the known list
+of peers.
+
+</div>
+
+<p> </p>
+
+<div>
+
+/yacy/hello.html is a servlet which returns a property list as result,
+not a html page as the name would suggest. The purpose of this servlet
+is a handshake between two peers wich ensure doing this that they are
+alive and by the way transport some critical information about their
+network position and the status of their operation together with some
+\'news\', which is (from both sides) a list of recently known or new
+peers in the network. Every peer is doing one peer-ping each minute by
+calling the \'hello.html\'-servlet of one of the peers in the known list
+of peers.
+
+</div>
+
+<p>−</p>
+
+<div>
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+~~=== Properties in the callers http header ===~~
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+~~The caller must obey the \[\[Dev:APIHttpHeader\|http header
+rules\]\].~~
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<div>
+
+=== Operations performed when the servlet is called ===
+
+</div>
+
+<p> </p>
+
+<div>
+
+=== Operations performed when the servlet is called ===
+
+</div>
+
+<p> </p>
+
+<div>
+
+When a peer is pinged by calling the hello.html servlet the ping\'ed
+peer tries to ping the ping-ing peer back by calling the ping-ing peers
+\[\[Dev:APIquery\|/yacy/query.html\]\] servlet. If the ping\'ed peer
+gets a respond from the ping-ing peer, it assigns the ping-ing peer the
+\[\[Dev:PeerType\#senior\|senior\]\] status, otherwise the status is
+\[\[Dev:PeerType\#junior\|junior\]\]. After the ping-ing peer gets a
+result, it assigns itself the status as reported by the ping process. If
+the peer gets no answer at all (i.e. a timeout happens), the peer
+assigns itself the \[\[Dev:PeerType\#virgin\|virgin\]\] status.
+
+</div>
+
+<p> </p>
+
+<div>
+
+When a peer is pinged by calling the hello.html servlet the ping\'ed
+peer tries to ping the ping-ing peer back by calling the ping-ing peers
+\[\[Dev:APIquery\|/yacy/query.html\]\] servlet. If the ping\'ed peer
+gets a respond from the ping-ing peer, it assigns the ping-ing peer the
+\[\[Dev:PeerType\#senior\|senior\]\] status, otherwise the status is
+\[\[Dev:PeerType\#junior\|junior\]\]. After the ping-ing peer gets a
+result, it assigns itself the status as reported by the ping process. If
+the peer gets no answer at all (i.e. a timeout happens), the peer
+assigns itself the \[\[Dev:PeerType\#virgin\|virgin\]\] status.
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+=== Properties in the ~~callers~~ http post-arguments ===
+
+</div>
+
+<p>+</p>
+
+<div>
+
+=== Properties in the [http header ===]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[The caller must obey the \[\[Dev:APIHttpHeader\|http header
+rules\]\].]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+ 
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[=== Properties in the]{.underline} http post-arguments ===
+
+</div>
+
+<p> </p>
+
+<div>
+
+Calls to the servlet is made using a POST operation. The properties are:
+
+</div>
+
+<p> </p>
+
+<div>
+
+Calls to the servlet is made using a POST operation. The properties are:
+
+</div>
+
+<p> </p>
+
+<div>
+
+\* \<code\>seed=\<the \[\[Dev:SimpleCoding\|SimpleCoding\]\] of the own
+\[\[Dev:Seed\|Peer Seed\]\]\>\</code\>
+
+</div>
+
+<p> </p>
+
+<div>
+
+\* \<code\>seed=\<the \[\[Dev:SimpleCoding\|SimpleCoding\]\] of the own
+\[\[Dev:Seed\|Peer Seed\]\]\>\</code\>
+
+</div>
+
+<p> </p>
+
+<div>
+
+\* \<code\>count=\<integer, wanted number of seeds to be
+returned\>\</code\>
+
+</div>
+
+<p> </p>
+
+<div>
+
+\* \<code\>count=\<integer, wanted number of seeds to be
+returned\>\</code\>
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+=== Result ~~Properties~~ ===
+
+</div>
+
+<p>+</p>
+
+<div>
+
+=== Result ===
+
+</div>
+
+<p> </p>
+
+<div>
+
+The returned document contains a list of property lines. These
+properties are:
+
+</div>
+
+<p> </p>
+
+<div>
+
+The returned document contains a list of property lines. These
+properties are:
+
+</div>
+
+<p> </p>
+
+<div>
+
+\* \<code\>version=\<YaCy version number of responding peer\>\</code\>
+
+</div>
+
+<p> </p>
+
+<div>
+
+\* \<code\>version=\<YaCy version number of responding peer\>\</code\>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architektur-yacy-zweite-instanz-ausführen-fehlerhaftes-verhalten">YaCy Coding &amp; Architektur • YaCy zweite Instanz ausführen - fehlerhaftes Verhalten?</h1>
+
+<p>Date: 2014-09-01 18:54:41</p>
+
+<p>Hallo,<br />
+<br />
+Das Equipment:</p>
+
+<ol>
+<li>ich habe zwei YaCy- Instanzen parallel ausgeführt.</li>
+<li>Port-Nr. jeweils 8090 (Öffentlich) und 8091 (Sudportal Intranet).</li>
+<li>8091-Instanz habe ich im Promt-Fenster ausgeführt</li>
+<li>Die Administrationsoberfläche habe ich bei diesen zwei Instanzen in
+Browsern mit separaten Profilen ausgeführt.</li>
+</ol>
+
+<p>Ich habe im 8091-Browser versehentlich als Proxy
+<a href="http://127.0.0.1:8090/autoconfig.pac">http://127.0.0.1:8090/autoconfig.pac</a> angegeben. Dann kam eine
+Aufforderung sich einzuloggen. Die Zugangsdaten für 8091 wurden nicht
+akzeptiert. Ich habe die Login-Daten vom 8090-System im 8091-Browser
+eingegeben - diese wurden akzeptiert. Dann habe ich festgestellt, dass
+8091-System eine öffentliche externe Adresse vom 8090-System übernommen
+hat und habe 8091-System über die Admin-Oberfläche heruntergefahren.
+Dabei habe ich festgestellt, dass im Browser- Fenster, wo
+<a href="http://localhost:8091/">http://localhost:8091/</a> eingeblendet wurde, die 8090-Instanz
+heruntergefahren wurde. 8091-Instanz im Promt-Fenster läuft immer noch.<br />
+<br />
+Unabhängig von meinen Fehlern - ist das Verhalten von YaCy - im
+localhost:8091- Fenster die 8090-Instanz herunterfahren - so korrekt und
+nicht zu beanstanden? Ich habe nicht erwartet, dass die Einrichtung
+eines Roxy-Eintrags im Browser mit der Eingabe eines Passworts verbunden
+ist. Ist dieser [Passwort-Zwang]{style=&ldquo;font-weight: bold&rdquo;} so korrekt?</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9475">flegno</a>
+&mdash; Mo Sep 01, 2014 5:54 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

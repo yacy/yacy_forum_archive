@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architektur-mentor-und-mentee-peers-für-junior-upgrades-zum-server">YaCy Coding &amp; Architektur • \&ldquo;Mentor\&rdquo; und \&ldquo;Mentee\&rdquo; Peers für Junior Upgrades zum Server</h1>
+
+<p>Date: 2013-05-11 11:56:55</p>
+
+<p>ich überlege nun wie man den Junior-Peers einen offenen Port über andere
+Senior Peers durchreichen kann, damit auch Junior Peers durchsuchbar
+werden können.<br />
+Dabei habe ich folgendes Konzept:<br />
+<br />
+- (a) Ein Senior Peer muss einem Junior Peer einen Server Port
+\&lsquo;durchreichen\&lsquo;. Ist dies erfolgreich, erlangt der Senior Peer einen
+neuen Peer-Status, er darf sich dann \&lsquo;Mentor\&rsquo; nennen. Der Junior Peer
+bekommt auch einen Upgrade und heisst dannn \&lsquo;Mentee\&lsquo;.<br />
+- (b) Ich habe zwei Optionen in Betracht gezogen, wie der Mentor zum
+Mentee routen könnte:<br />
+(1) entweder per http und dem Host-Namen, der in http/1.1 obligatorisch
+ist damit ein Server multi-Hosting machen kann. Als Hostnamen würde dann
+die yacyh-domäne in Betracht kommen, also &lt;peer-hash&gt;.yacyh. Das wäre
+eine ziemlich transparente Sache. Nachteil: der Mentor kann theoretisch
+\&lsquo;mitlauschen\&lsquo;. Daher Option (2):<br />
+(2) der Mentor operiert als https-Proxy, routet also über das
+http:CONNECT Kommando transparent zum Mentee. Das erfordert aber, dass
+der Mentee seinen Server mit einem ssl Key ausgestattet hat und den
+https Server Port an den Mentor übergibt. Das erfordert aber, dass der
+Mentee einen default ssl Schlüssel hat, das habe ich gestern
+eingecheckt.<br />
+- &copy; Wenn der Mentor nun also nun ein transparenter https Proxy ist,
+dann muss man sicherstellen, dass das nicht jeder missbrauchen kann. Es
+muss also eine Anmeldephase geben, bei der ein Client des Mentors zeigt,
+dass er ein YaCy Peer ist und auch einen Suchindex hat, den der Mentor
+testen kann bevor er dem Junior den Mentee-Status gibt.<br />
+- (d) damit der Mentee keine Belastung für RAM und IO des Mentors ist,
+darf der Mentor beim \&lsquo;Durchreichen\&rsquo; weder zwischenspeichern noch IO
+machen. Das geht leicht, ein transparenter Proxy braucht fast nichts.<br />
+- (e) damit der Mentor einen guten upstream hat, muss dafür ein Root
+Server o.ä. vorhanden sein. Das können wir ja inzwischen identifizieren,
+das sind die \&lsquo;Node Candidates\&lsquo;. Ein Junior sollte also nur Node
+Candidates anfragen, um einen Mentor zu bekommen und somit Mentee zu
+werden. Alternativ kann ein Peer direkt benannt werden können, damit man
+das selbst managen und testen kann.<br />
+- (f) Damit ein Routing zu einem Mentee möglich wird, muss der Mentee
+seinen Mentor im eigenen Seed benennen. Damit diese Info nicht zu
+schnell veraltet, sollte ein Mentee bei jedem Start den gleichen Mentor
+um Routing bitten.<br />
+- (g) Analog zu (f) muss ein Mentor einen wiederkehrenden Mentee
+bevorzugt aufnehmen, wenn er diesen schon vorher mal akzeptiert hat.
+Ansonsten kann ein Mentor natürlich einen Mentee ablehnen, wenn er über
+eine Kapazitätsgrenze ist. Wo diese Grenze ist, müssen wir
+herausfinden.<br />
+- (h) Default-Einstellungen: ein Senior Peer sollte per default Mentees
+akzeptieren, jedoch sollte es eine Funktion geben, dies auszuschalten.
+Aber per default eben an, sonst machts keiner. Wem die
+Sicherheitsmechanismen zu gering sind, damit getestet werden kann dass
+ein Mentee auch ein YaCy Peer ist, der kann das ja ausschalten. Wir
+müssen also sehr stark an &copy; arbeiten, damit das mehr oder weniger
+sicher ist.<br />
+- (i) Für Mentor und Mentee sollten Visualisierungen in die Netzgrafik
+und Tabelle, das habe ich schon mit neuen Icons vorbereitet.
+Entsprechend sollte die Statistik dann von mehr aktiven Peers
+berichten.<br />
+- (j) Folgeeffekt von (i): wir wissen ja gar nicht wieviele Junior Peers
+momentan vorhanden sind, wir wissen nur welche Junior Peers überhaupt
+mal beim eigenen Peer \&lsquo;geklingelt\&rsquo; haben. Das sind wahrscheinlich viel
+weniger als tatsächlich vorhanden sind aber gleichzeitig ist die Zahl
+viel höher als aktive Peers vorhanden sind. Wenn dieser Effekt bei den
+Mentees behoben werden sollte, muss ein Mentor davon berichten welche
+Mentees bei ihm gemeldet sind. Dies könnten wir schonmal vorab
+\&lsquo;simulieren\&lsquo;, indem Node Peers in ihrem hello respone auch bekannte
+junior peers mit angeben.<br />
+<br />
+Bitte mithelfen das durchzudenken, was kann man verbessern, was habe ich
+übersehen?</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
+&mdash; Sa Mai 11, 2013 10:56 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

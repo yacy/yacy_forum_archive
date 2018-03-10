@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="solr-support-1-83-9644-illegalstateexception">Solr Support • 1.<sup>83</sup>&frasl;<sub>9644</sub> - IllegalStateException</h1>
+
+<p>Date: 2016-01-14 17:51:46</p>
+
+<p>Hi,<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>E 2016/01/14 17:46:05 org.apache.solr.handler.RequestHandlerBase java.lang.IllegalStateException: unexpected docvalues type NONE for field 'url_chars_i' (expected=NUMERIC). Use UninvertingReader or index with docvalues.        at org.apache.lucene.index.DocValues.checkField(DocValues.java:208)        at org.apache.lucene.index.DocValues.getNumeric(DocValues.java:227)        at org.apache.lucene.search.FieldComparator$NumericComparator.getNumericDocValues(FieldComparator.java:167)        at org.apache.lucene.search.FieldComparator$NumericComparator.doSetNextReader(FieldComparator.java:153)        at org.apache.lucene.search.SimpleFieldComparator.getLeafComparator(SimpleFieldComparator.java:36)        at org.apache.lucene.search.FieldValueHitQueue.getComparators(FieldValueHitQueue.java:183)        at org.apache.lucene.search.TopFieldCollector$SimpleFieldCollector.getLeafCollector(TopFieldCollector.java:164)        at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:812)        at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:535)        at org.apache.solr.search.SolrIndexSearcher.buildAndRunCollectorChain(SolrIndexSearcher.java:202)        at org.apache.solr.search.SolrIndexSearcher.getDocListNC(SolrIndexSearcher.java:1672)        at org.apache.solr.search.SolrIndexSearcher.getDocListC(SolrIndexSearcher.java:1491)        at org.apache.solr.search.SolrIndexSearcher.search(SolrIndexSearcher.java:557)        at org.apache.solr.handler.component.QueryComponent.process(QueryComponent.java:525)        at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:273)        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:156)        at net.yacy.cora.federate.solr.connector.EmbeddedSolrConnector.query(EmbeddedSolrConnector.java:220)        at net.yacy.cora.federate.solr.connector.EmbeddedSolrConnector.getDocumentListByParams(EmbeddedSolrConnector.java:370)        at net.yacy.cora.federate.solr.connector.AbstractSolrConnector.getDocumentListByQuery(AbstractSolrConnector.java:423)        at net.yacy.cora.federate.solr.connector.MirrorSolrConnector.getDocumentListByQuery(MirrorSolrConnector.java:233)        at net.yacy.cora.federate.solr.connector.AbstractSolrConnector$2.run(AbstractSolrConnector.java:268)</code></dd>
+</dl>
+
+<p><br />
+<br />
+diese Exception wirft er wenn ich einen Reindex anstoße. Kann man da was
+machen?<br />
+<br />
+<br />
+Viele Grüße<br />
+<br />
+LA_FORGE</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=324">LA_FORGE</a>
+&mdash; Do Jan 14, 2016 5:51 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

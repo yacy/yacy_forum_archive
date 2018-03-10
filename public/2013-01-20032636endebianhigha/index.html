@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="en-debian-high-availability">En:Debian High Availability</h1>
+
+<p>Date: 2013-01-20 03:26:36</p>
+
+<p>added reverse proxy, replication and automated update</p>
+
+<p>← Nächstältere Version</p>
+
+<p>Version vom 20. Januar 2013, 02:26 Uhr</p>
+
+<p>Zeile 20:</p>
+
+<p>Zeile 20:</p>
+
+<p> </p>
+
+<div>
+
+Then log in into the new account yacyappliance.
+
+</div>
+
+<p> </p>
+
+<div>
+
+Then log in into the new account yacyappliance.
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+===~~Create the~~ YaCy ~~Application~~===
+
+</div>
+
+<p>+</p>
+
+<div>
+
+===[Install Redundant]{.underline} YaCy [Applications]{.underline}===
+
+</div>
+
+<p> </p>
+
+<div>
+
+We could use the official tarball from yacy.net here but to get full
+availability of YaCy updates without the dependency on official update
+servers we will use a self-generated YaCy update taken from the git
+repositoy.
+
+</div>
+
+<p> </p>
+
+<div>
+
+We could use the official tarball from yacy.net here but to get full
+availability of YaCy updates without the dependency on official update
+servers we will use a self-generated YaCy update taken from the git
+repositoy.
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p>Zeile 40:</p>
+
+<p>Zeile 40:</p>
+
+<p> </p>
+
+<div>
+
+We can now update the peers yacy0 and yacy1 just by overwriting the
+current code with new code that we create ourself (don\'t do this now!):
+
+</div>
+
+<p> </p>
+
+<div>
+
+We can now update the peers yacy0 and yacy1 just by overwriting the
+current code with new code that we create ourself (don\'t do this now!):
+
+</div>
+
+<p> </p>
+
+<div>
+
+  cd \~/yacy\_deploy && git pull origin master && ant clean all dist
+
+</div>
+
+<p> </p>
+
+<div>
+
+  cd \~/yacy\_deploy && git pull origin master && ant clean all dist
+
+</div>
+
+<p>−</p>
+
+<div>
+
+  cd \~/yacy\_deploy/RELEASE && tar xfz \`ls -1tr \| tail -1\` -C
+../../yacy0  \--strip-components=1
+
+</div>
+
+<p>+</p>
+
+<div>
+
+  cd \~/yacy\_deploy/RELEASE && tar xfz \`ls -1tr \| tail -1\` -C
+../../yacy0 [\--strip-components=1]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+  [cd \~/yacy\_deploy/RELEASE && tar xfz \`ls -1tr \| tail -1\` -C
+../../yacy1]{.underline} \--strip-components=1
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<div>
+
+Now prepare the peer yacy0 to use the \'allip\' network which will allow
+you to index both, intranet and internet addresses without connecting
+the YaCy P2P network: edit the file \~/yacy0/defaults/yacy.init and
+search the line containing network.unit.definition, set the value of
+that property to defaults/yacy.network.allip.unit
+
+</div>
+
+<p> </p>
+
+<div>
+
+Now prepare the peer yacy0 to use the \'allip\' network which will allow
+you to index both, intranet and internet addresses without connecting
+the YaCy P2P network: edit the file \~/yacy0/defaults/yacy.init and
+search the line containing network.unit.definition, set the value of
+that property to defaults/yacy.network.allip.unit
+
+</div>
+
+<p>Zeile 58:</p>
+
+<p>Zeile 59:</p>
+
+<p> </p>
+
+<div>
+
+We can now start both peers
+
+</div>
+
+<p> </p>
+
+<div>
+
+We can now start both peers
+
+</div>
+
+<p> </p>
+
+<div>
+
+  \~/yacy0/startYACY.sh && \~/yacy1/startYACY.sh
+
+</div>
+
+<p> </p>
+
+<div>
+
+  \~/yacy0/startYACY.sh && \~/yacy1/startYACY.sh
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[===Auto-Start for YaCy===]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[Because the two YaCys are not installed using the debian package
+manager, there is no autostart for these applications.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[We will create the autostart manually. Become root and edit the
+/etc/rc.local, add the lines]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[su - yacyappliance -c \"nohup /home/yacyappliance/yacy0/startYACY.sh \>
+/dev/null &\"]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[su - yacyappliance -c \"nohup /home/yacyappliance/yacy1/startYACY.sh \>
+/dev/null &\"]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[This will start the two YaCy on startup of the server. To stop these
+Peers correctly, create the file /etc/rc0.d/K01yacyappliance with the
+following content:]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[\#!/bin/bash]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[case \"\$1\" in]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  start)]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[    exit 0]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[    ;;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  stop)]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[    su - yacyappliance -c
+\"/home/yacyappliance/yacy0/stopYACY.sh\"]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[    su - yacyappliance -c
+\"/home/yacyappliance/yacy1/stopYACY.sh\"]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[    exit 0]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[    ;;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  \*)]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[    exit 1]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[    ;;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[esac]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[exit 0]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[and set the executable flag of that file]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[chmod 755 /etc/rc0.d/K01yacyappliance]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[Finally do a restart of your server to see if this is working
+fine.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[===Fail-Over Access to Redundant YaCy Installations using a Reverse
+Proxy===]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[We will use a nginx http server and use it as a reverse proxy with
+fail-over as load balancer for the two YaCy that we are running
+now.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[Become root, run]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[apt-get install nginx]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[and edit the file /etc/nginx/nginx.conf. Locate the http section and
+modify it:]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[\* add a comment in front of the \"include
+/etc/nginx/sites-enabled/\*;\" line to disable it]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[\* add the following at the end of the http section:                   
+                                                     ]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[upstream yacyappliance {]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  ip\_hash;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  server  localhost:8090;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  server  localhost:8091;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[}]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[server {]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  listen 8100;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  server\_name yacy-appliance;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  location / {]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_pass  http://yacyappliance;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_redirect off;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_set\_header  Host            \$host;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_set\_header  X-Real-IP        \$remote\_addr;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_set\_header  X-Forwarded-For 
+\$proxy\_add\_x\_forwarded\_for;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  client\_max\_body\_size      10m;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  client\_body\_buffer\_size    128k;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_connect\_timeout      90;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_send\_timeout        90;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_read\_timeout        90;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_buffer\_size          4k;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_buffers              4 32k;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_busy\_buffers\_size    64k;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_temp\_file\_write\_size 64k;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  }]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  location \\.(jpg\|png\|gif\|jpeg\|css)\$ {]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_buffering on;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  proxy\_cache\_valid 200 120m;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  expires 864000;]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[  }]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[}]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[This will run nginx at port 8100; if you want to run it at port 80 then
+just replace the 8100 with 80.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[Finally run]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[/etc/init.d/nginx restart]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[and open http://{yourhost}:8100 to check that nginx is running and
+successfully routes the access from 8100 to either 8090 or
+8091.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[You can also stop one of the yacy0 or yacy1 and the search interface at
+http://{yourhost}:8100 will still be available.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[===Test Indexing, Replication and Fail-Over Access===]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[We must put some document data to check fail-over after a
+replication.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[Open http://{yourhost}:8090/CrawlStartExpert\_p.html and start a web
+crawl.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[When the crawl has created some data in the search index, first test
+that a search request succeeds at http://{yourhost}:8090/]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[Then call (as user yacyappliance)]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[\~/yacy1/bin/indexrestore.sh \`\~/yacy0/bin/indexdump.sh\`]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[This replicates the index from yacy0 to yacy1. You can now open
+http://{yourhost}:8091/ and get the same search result as
+before.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[During the replication process the index in yacy0 is first unmounted
+and during this process the search inteface does not respond on search
+requests. At that time the load balancer on http://{yourhost}:8100/
+should switch to the second peer. When the dump is done, the index in
+the second peer becomes unavailable and the load balancer should switch
+to the first peer again.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[===Add a Heartbeat Check for the YaCy Peers===]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[There is a check-alive script which checks if a YaCy server responds on
+the web interface and restarts the application if it does not respond.
+This script can be called on a regular basis using a cronjob. As root,
+edit /etc/crontab and add the following lines]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[10 \* \* \* \* yacyappliance cd /home/yacyappliance/yacy0/bin &&
+./checkalive.sh]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[40 \* \* \* \* yacyappliance cd /home/yacyappliance/yacy1/bin &&
+./checkalive.sh]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[This will cause that twice an hour a peer is checked and restarted, if
+needed.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[===Automatically do an Index Backup===]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[As user yacyappliance do]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[mkdir \~/indexbackup]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[to create a storage directory for the index backup dumps. Now you can
+create a backup with]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[mv \`\~/yacy0/bin/indexdump.sh\` \~/indexbackup/]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[To create such a backup automatically once every day during night-time,
+add the following line to /etc/crontab]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[40 3 \* \* \* yacyappliance cd /home/yacyappliance/ && mv
+\`yacy0/bin/indexdump.sh\` indexbackup/]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[Then, every night a 3:40h the index is dumped.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[===Add Automated Index Replication===]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[We use the index generated in the backup process to feed the index dump
+to the replication peer yacy1.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[This is done manually by calling]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[\~/yacy1/bin/indexrestore.sh \~/indexbackup/\`ls -1tr \~/indexbackup \|
+tail -1\`]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[and automatically using the following entry in
+/etc/crontab]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[10 4 \* \* \* yacyappliance cd /home/yacyappliance/ &&
+yacy1/bin/indexrestore.sh indexbackup/\`ls -1tr indexbackup \| tail
+-1\`]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[which will use the dump created half an hour before.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[===Automatically Update to Latest Code Changes===]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[This optional function will cause that the YaCy Search Appliance will
+always be up-to-date. As user yacyappliance do:]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[cd \~/yacy\_deploy]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[git pull \--tags origin master && ant clean all dist && cd
+RELEASE]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[../../yacy0/stopYACY.sh && tar xfz \`ls -1tr \| tail -1\` -C
+../../yacy0 \--strip-components=1 &&
+../../yacy0/startYACY.sh]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[../../yacy1/stopYACY.sh && tar xfz \`ls -1tr \| tail -1\` -C
+../../yacy1 \--strip-components=1 &&
+../../yacy1/startYACY.sh]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[We can run this also automatically in three steps in the /etc/crontab,
+add the following lines:]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[20 4 \* \* \* yacyappliance cd /home/yacyappliance/yacy\_deploy && git
+pull \--tags origin master && ant clean all dist]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[40 4 \* \* \* yacyappliance cd /home/yacyappliance/yacy\_deploy/RELEASE
+&& ../../yacy0/stopYACY.sh && tar xfz \`ls -1tr \| tail -1\` -C
+../../yacy0 \--strip-components=1 &&
+../../yacy0/startYACY.sh]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[10 5 \* \* \* yacyappliance cd /home/yacyappliance/yacy\_deploy/RELEASE
+&& ../../yacy1/stopYACY.sh && tar xfz \`ls -1tr \| tail -1\` -C
+../../yacy1 \--strip-components=1 &&
+../../yacy1/startYACY.sh]{.underline}
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

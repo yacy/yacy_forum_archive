@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="dev-api">Dev:API</h1>
+
+<p>Date: 2012-11-13 17:21:50</p>
+
+<p>[Understanding YaCy crawl profiles: ]{.autocomment} added new deleteold
+options</p>
+
+<p>← Nächstältere Version</p>
+
+<p>Version vom 13. November 2012, 16:21 Uhr</p>
+
+<p>Zeile 642:</p>
+
+<p>Zeile 642:</p>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'mustnotmatch\'\'\' =  
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'mustnotmatch\'\'\' =  
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|This filter must not match with the URL to allow that the page is
+accepted for crawling. The empty string is a never-match filter which
+should do well for most cases.
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|This filter must not match with the URL to allow that the page is
+accepted for crawling. The empty string is a never-match filter which
+should do well for most cases.
+
+</div>
+
+<p>−</p>
+
+<div>
+
+~~\|-~~
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+~~\|\'\'\'deleteold\'\'\' =~~
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+~~\|if \'range\' is either \'domain\' or \'subpath\' or the
+mustmatch-value is not catchall, this option can be used to delete all
+urls for given start-hosts. The deletion is done if deleteold=on~~
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'ipMustmatch\'\'\' =
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'ipMustmatch\'\'\' =
+
+</div>
+
+<p>Zeile 658:</p>
+
+<p>Zeile 655:</p>
+
+<p> </p>
+
+<div>
+
+\|This filter must not match to allow that the page is accepted for
+indexong. Default is an empty string, which is a never-match to exclude
+no documents from indexing.
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|This filter must not match to allow that the page is accepted for
+indexong. Default is an empty string, which is a never-match to exclude
+no documents from indexing.
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\|\'\'\'~~recrawl~~\'\'\' =  
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|\'\'\'[deleteold]{.underline}\'\'\' =  
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\|~~value~~ is either \'~~nodoubles~~\'~~,~~ \'~~reload~~\' or
+~~\'scheduler\'. This~~ value is ~~a switch which activates the usage
+of~~ \'~~crawlingIfOlderNumber~~\'~~,~~ \'~~crawlingIfOlderUnit~~\',
+\'~~repeat\_time~~\' ~~and~~ \'~~repeat\_unit~~\' ~~values~~. If
+\'~~nodoubles~~\' is ~~selected then every url that~~ the ~~crawler
+discovers and is already stored in the index is rejected and not loaded
+again. If~~ \'~~reload~~\' ~~is selected then~~
+\'~~crawlingIfOlderNumber~~\' and ~~\'crawlingIfOlderUnit\' is a~~ limit
+for the ~~double-check~~: if the load date of a ~~new page url~~ is
+older than the given time, then it is ~~considered as stale and reloaded
+for indexing. If it is newer then it is considered as fresh and
+therefore as \'double\' in the double-chech. If \'scheduler\' is
+selected, then the crawl is automatically repeated after the given
+time-out~~.
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|[if \'range\']{.underline} is either \'[domain]{.underline}\'
+[or]{.underline} \'[subpath]{.underline}\' or [the
+mustmatch-]{.underline}value is [not catchall, this option can be used
+to delete all urls for given start-hosts. Possible values
+for]{.underline} \'[deleteold]{.underline}\' [are]{.underline}
+\'[off]{.underline}\' [(do not delete)]{.underline},
+\'[on]{.underline}\' [(delete all documents for the start host(s),
+or]{.underline} \'[age]{.underline}\'. If \'[age]{.underline}\' is
+[used,]{.underline} the [values]{.underline}
+\'[deleteIfOlderNumber]{.underline}\' [and]{.underline}
+\'[deleteIfOlderUnit]{.underline}\' [must be set]{.underline} and [this
+defines the]{.underline} limit for the [deletion]{.underline}: if the
+load date of a [stored document]{.underline} is older than the given
+time, then it is [deleted]{.underline}.  
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\|\'\'\'~~crawlingIfOlderNumber~~\'\'\' =  
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|\'\'\'[deleteIfOlderNumber]{.underline}\'\'\' =  
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\|If \'~~recrawl~~\' is \'~~reload~~\', then this must be set with a
+numeric value. The unit is given in field \'~~crawlingIfOlderUnit~~\'.
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|If \'[deleteold]{.underline}\' is \'[age]{.underline}\', then this
+must be set with a numeric value. The unit is given in field
+\'[deleteIfOlderUnit]{.underline}\'.
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\|\'\'\'~~crawlingIfOlderUnit~~\'\'\' =  
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|\'\'\'[deleteIfOlderUnit]{.underline}\'\'\' =  
+
+</div>
+
+<p> </p>
+
+<div>
+
+\| Possible values are \'year\', \'month\', \'day\', \'hour\'
+
+</div>
+
+<p> </p>
+
+<div>
+
+\| Possible values are \'year\', \'month\', \'day\', \'hour\'
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\|\'\'\'~~repeat\_time~~\'\'\' =  
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|\'\'\'[recrawl]{.underline}\'\'\' =  
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\| ~~If~~ \'~~recrawl~~\' is \'~~scheduler~~\', then ~~this must be set
+with a numeric value~~. ~~The unit~~ is given ~~in field~~
+\'~~crawlingIfOlderUnit~~\'.
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|[value is either]{.underline} \'[nodoubles]{.underline}\' [or
+\'reload\'. This value]{.underline} is [a switch which activates the
+usage of]{.underline} \'[reloadIfOlderNumber]{.underline}\', [and
+\'reloadIfOlderUnit\' values. If \'nodoubles\' is selected]{.underline}
+then [every url that the crawler discovers and is already stored in the
+index is rejected and not loaded again]{.underline}. [If
+\'reload\']{.underline} is [selected then \'reloadIfOlderNumber\' and
+\'reloadIfOlderUnit\' is a limit for the double-check: if the load date
+of a new page url is older than the]{.underline} given [time, then it is
+considered as stale and reloaded for indexing. If it is newer then it is
+considered as fresh and therefore as]{.underline}
+\'[double]{.underline}\' [in the double-chech]{.underline}.
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\|\'\'\'~~repeat\_unit~~\'\'\' =  
+
+</div>
+
+<p>+</p>
+
+<div>
+
+\|\'\'\'[reloadIfOlderNumber\'\'\' =]{.underline}
+
+</div>
+
+<p>−</p>
+
+<div>
+
+\| Possible values are \'~~minutes~~\', \'~~hours~~\', \'~~days~~\'
+
+</div>
+
+<p>+</p>
+
+<div>
+
+[\|If \'recrawl\' is \'reload\', then this must be set with a numeric
+value. The unit is given in field \'crawlingIfOlderUnit\'.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[\|-]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[\|\'\'\'reloadIfOlderUnit]{.underline}\'\'\' =  
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+\| Possible values are \'[year\', \'month]{.underline}\',
+\'[day]{.underline}\', \'[hour]{.underline}\'
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|-
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'crawlingDomMaxCheck\'\'\' =  
+
+</div>
+
+<p> </p>
+
+<div>
+
+\|\'\'\'crawlingDomMaxCheck\'\'\' =  
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

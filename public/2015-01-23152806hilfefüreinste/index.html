@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-spioniert-yacy-wozu-canvas-bei-suchanfragen">Hilfe für Einsteiger und Anwender • Re: Spioniert YaCy? Wozu canvas bei Suchanfragen?</h1>
+
+<p>Date: 2015-01-23 15:28:06</p>
+
+<p>auf diese Suggestivfrage von peteding gibts natürlich auch eine einfache
+Antwort: nein, YaCy spioniert nicht und es gibt kein canvas bei
+Suchanfragen.<br />
+<br />
+Tatsächlich gibt es in dem gesamten YaCy Source code, html und
+javascript nicht ein einziges Mal das Wort \&lsquo;canvas\&lsquo;. Das kann man
+leicht nachvollziehen:<br />
+</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>wget http://yacy.net/release/yacy_v1.82_20150121_9000.tar.gztar xfz yacy_v1.82_20150121_9000.tar.gzcd yacygrep -Rl canvas .</code></dd>
+</dl>
+
+<p><br />
+<br />
+Dies listet alle Dateien, in denen das Wort \&lsquo;canvas\&rsquo; vorkommt. Diese
+sind:</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>./htroot/env/bootstrap/css/bootstrap-rtl.css./htroot/env/bootstrap/css/bootstrap-rtl.min.css./htroot/env/bootstrap/css/bootstrap.css./htroot/env/bootstrap/css/bootstrap.css.map./htroot/env/bootstrap/css/bootstrap.min.css./htroot/env/bootstrap/js/docs.min.js./htroot/env/bootstrap/js/html5shiv.js./htroot/env/bootstrap/js/jquery.min.js./htroot/jquery/js/jquery-1.7.min.js./htroot/jquery/js/jquery-ui-1.8.16.custom.min.js./htroot/yacy/ui/js/jquery-ui-1.7.2.min.js./htroot/yacy/ui/js/jquery.ui.all.min.js</code></dd>
+</dl>
+
+<p><br />
+Das sind alles Standard-Libraries (bootstrap und jquery) die überall auf
+Webseiten Verwendung finden.<br />
+<br />
+Ich empfinde den Topic \&ldquo;Wozu canvas bei Suchanfragen?\&rdquo; als recht
+agressiv-suggestiv. Dazu gibt es keine Grundlage oder Rechtfertigung.
+Ich bitte um eine Richtigstellung!</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
+&mdash; Fr Jan 23, 2015 3:28 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

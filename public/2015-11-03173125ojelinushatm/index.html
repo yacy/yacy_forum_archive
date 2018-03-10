@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="oje-linus-hat-mal-wieder-auf-lkml-herumgerantet-diesmal">Oje, Linus hat mal wieder auf LKML herumgerantet, diesmal ...</h1>
+
+<p>Date: 2015-11-03 17:31:25</p>
+
+<p>Oje, <a href="http://lkml.iu.edu/hypermail/linux/kernel/1510.3/02866.html">Linus hat mal wieder auf LKML
+herumgerantet</a>,
+diesmal ging es um Integer Overflow Checks. Hier ist der Code vorher:</p>
+
+<pre><code>mtu -= hlen + sizeof(struct frag_hdr);
+</code></pre>
+
+<p>Und hier ist, was der neue Code tut:</p>
+
+<pre><code>if (overflow_usub(mtu, hlen + sizeof(struct frag_hdr), &amp;mtu) || mtu &lt;= 7)
+  goto fail_toobig;
+</code></pre>
+
+<p>Als erstes fällt auf, dass der Code nicht das selbe tut. Nehmen wir mal
+an, dass overflow_usub zwei unsigned ints subtrahiert und dann meckert,
+wenn das Ergebnis negativ würde. Dann fängt dieser Code nicht nur den
+Overflow ab, sondern er prüft auch, dass mtu danach mindestens 8 ist.
+Allerdings prüft der Code nicht, ob <code>hlen + sizeof(struct frag_hdr)</code>
+bereits überläuft. Und das ist an sich schon ein Problem. Komme ich
+gleich drauf.</p>
+
+<p>Linus\&rsquo; Kritik ist im Wesentlichen: Ist schlecht lesbar, ist ineffizient
+und immer noch unsicher.</p>
+
+<p>Ich glaube, dass er bei allen drei Kritikpunkten irrt. Hier ist Linus\&rsquo;
+Gegenvorschlag, wie der Code lesbarer aussehen könnte:</p>
+
+<pre><code>if (mtu &lt; hlen + sizeof(struct frag_hdr) + 8)
+  goto fail_toobig;
+mtu -= hlen + sizeof(struct frag_hdr);
+</code></pre>
+
+<p>Ich finde das lesbar. Aber ich mache das auch beruflich, in Code nach
+Integer Overflows zu checken. Viele Programmierer werden sich das
+angucken und gar nicht verstehen, was hier das Problem ist, das da
+geprüft wird. Wenn das Label nicht \&ldquo;fail_toobig\&rdquo; hieße, wäre gar
+nicht klar, was hier eigentlich geprüft werden soll. Linus\&rsquo; Version ist
+daher meiner Meinung nach nicht lesbarer. Und sie hat eine gewisse
+Fragilität. Wenn hlen ein size_t ist und beliebig groß sein kann,
+schlägt der Test fehl. Wird hier nicht so sein, so gut wie niemand hat
+64-bit Headerlängen in der Praxis in seinen Protokollen. Aber es gibt
+Ausnahmen. Gut, nehmen wir mal an, hlen ist ein unsigned short (oder wir
+sind auf einer 64-bit-Plattform und hlen ist ein unsigned int). Wenn der
+Compiler das evaluiert, gibt es keinen Overflow, wenn in der
+Reihenfolge, in der der Compiler das evaluiert, zuerst eine Addition mit
+dem sizeof-Wert gemacht wird. Dann promoted C den Typ des Ergebnisses zu
+size_t, das ist an der Stelle groß genug und hat keine
+Overflow-Probleme. Aber was wenn ein weniger fitter Programmierer so
+einen Test zu bauen versucht und die Reihenfolge verkackt?</p>
+
+<pre><code>if (mtu &lt; hlen + 8 + sizeof(struct frag_hdr))
+</code></pre>
+
+<p>Wenn das sorum dasteht, und hlen groß genug reinkommt, und der Compiler
+hlen+8 zuerst evaluiert, dann kann der Teil überlaufen und wir addieren
+auf das abgeschnittene Ergebnis das sizeof drauf und das ist dann
+size_t, aber hatte schon einen Überlauf. Meines Wissens gibt es keinen
+Compiler, der Linus\&rsquo; Ausdruck böswillig umsortieren würde. <del>Aber der
+Standard garantiert keine Reihenfolge der Auswertung. Der Compiler
+dürfte das meines Wissens machen. Und würde damit Linus\&rsquo; Check
+kaputtmachen.</del></p>
+
+<p>Die Compiler-Builtins, die hinter diesem Makro stehen, <a href="https://gcc.gnu.org/onlinedocs/gcc/Integer-Overflow-Builtins.html">sind hier
+beschrieben</a>.
+gcc hat das ursprünglich von clang geklaut, aber hat es an einer
+wichtigen Stelle besser und damit überhaupt erst ordentlich benutzbar
+gemacht. Bei clang musste man anfänglich je nach Datentyp ein anderes
+Builtin aufrufen, und das ist natürlich auch voll für den Arsch, denn
+diese Subtilitäten sind ja gerade die Fehlerquelle, die wir durch sowas
+ausschließen wollen. Heute gibt es auch bei clang
+__builtin_add_overflow, und das sieht in Beispielcode so aus:</p>
+
+<pre><code>#include &lt;stdlib.h&gt;int s(int a,int b) {
+  int c;
+if (__builtin_add_overflow(a,b,&amp;c))
+    exit(1);
+  return c;
+}
+</code></pre>
+
+<p>Der Compiler erzeugt für diese Funktion diesen Code:</p>
+
+<pre><code>s:
+        movl    %edi, %eax
+        addl    %esi, %eax
+        jo      .L9
+        rep ret
+.L9:
+[... Error handling ...]
+</code></pre>
+
+<p>Aus meiner Sicht ist dieser Code an dieser Stelle optimal. Ich wüsste
+jedenfalls nicht, wie man das besser machen könnte. Das \&ldquo;rep ret\&rdquo; ist
+übrigens ein Fix für einen Bug in einem der ersten 64-bit Athlons
+damals. Wusstet ihr nicht? Ja, so ist das, die Compiler sind ziemlich
+smart heutzutage. Smarter als die meisten Programmierer :-)</p>
+
+<p>Was ich damit sagen will: Nein, Linus, die Builtins generieren keinen
+schlechten Code. Wenn der Code an der Stelle mehr tut als einen
+Conditional Jump einfügen, der im Normalfall nicht genommen wird (und
+damit fast kostenlos ist), dann war der Compiler möglicherweise smarter
+als du an der Stelle und hat erkannt, dass die beiden reinkommenden
+Typen nicht gleich breit waren und einen zusätzlichen Check eingefügt,
+ob ein Zwischenergebnis abgeschnitten wird.</p>
+
+<p>So. Also nochmal zu den drei Argumenten. Unlesbar bestreite ich, weil
+bei dem Makro explizit und offensichtlich ist, was der Programmierer
+erreichen will. Das ist immer besser als eine Packung
+Ultrasmart-Bitpfriemel-Kram, bei dem der Auditor zehn Minuten braucht,
+bis er versteht, was hier der Trick und das gewünschte Ergebnis ist, und
+ob der Weg dahin überhaupt korrekt ist.</p>
+
+<p>Das zweite Argument war Ineffizienz. Das habe ich gerade widerlegt.</p>
+
+<p>Das dritte Argument war Unsicherheit. Nun, Linus, das mag jetzt
+schmerzen, aber der Code ist sicherer als der vorgeschlagene Ersatzcode
+:-)</p>
+
+<p>Daher, liebe Leser: Wenn ihr C programmiert, und euch fragt, ob ihr
+lieber die Builtins verwenden sollt oder auch alte Compiler
+unterstützten, dann NEHMT DIE BUILTINS. Ich bin sogar dafür, gar keinen
+Fallback-Pfad für alte gcc-Versionen anzubieten. Wer neuen Code mit
+alten Compilern übersetzt, hat verdient, dass das kracht. Diese ganze
+Debian-Antiquitätenhändler-Fraktion braucht mal ein paar Warnschüsse vor
+den Bug. Das ist ja schlimmer als Windows XP!</p>
+
+<p>Wenn ihr überlegt, ob ihr lieber selber Overflow-Checks hackt oder
+lieber die Builtins nehmen sollt, NEHMT DIE BUILTINS.</p>
+
+<p>Wenn ihr überlegt, ob ihr Overflow-Checks braucht oder nicht, dann NEHMT
+DIE BUILTINS. Die Checks kosten so gut wie nichts. Nein, wirklich. Da
+muss man sich anstrengen, um das überhaupt mit geschickten
+Mikrobenchmarks messen zu können. Und wenn der Check an der Stelle
+überflüssig wäre, und gcc das erkennen kann, dann fliegen auch die eh
+schon fast kostenlosen Checks noch raus.</p>
+
+<p>Es gibt keine Ausreden. Nehmt die Builtins. Jedes einzelne Mal.
+Insbesondere, wenn es um Multiplikation geht. Das verkacken <strong>so viele
+Programmierer</strong> da draußen, dass ich das naheliegende Trinkspiel
+aufgeben musste. Probiert es gar nicht erst. Nehmt die Builtins. Und ich
+empfehle euch das, obwohl mein Lebensunterhalt davon abhängt, dass es
+Leute gibt, die nicht die Builtins benutzen.</p>
+
+<p><strong>Update</strong>: Wie sich rausstellt, sagt der C-Standard doch was zur
+Assoziativität von arithmetischen Operatoren. Der Compiler darf sich
+also nicht aussuchen, in welcher Reihenfolge er was addiert.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

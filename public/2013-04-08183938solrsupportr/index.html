@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="solr-support-re-fette-solr-select-abrfagen">Solr Support • Re: fette /solr/select - Abrfagen</h1>
+
+<p>Date: 2013-04-08 18:39:38</p>
+
+<p>/solr/select-Abfragen sind, dachte ich, einfach Suchen - geht da nun
+auch DHT drüber?<br />
+Die Abfragende IP ist irgendwer - aber keine von meinem IPs.<br />
+So fand ich z.B. eine Abfrage unter /Connections_p.html vor - das waren
+dan ca 40MB die der Peer senden musste
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_smile.gif" alt=":-)" title="Smile" /></p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>/solr/select?q=%28%28text_t%3A%28%22clement%22+AND+%22moulin%22%29%5E2.0%29+OR+%28url_paths_sxt%3A%28%22clement%22+AND+%22moulin%22%29%5E20.0%29+OR+%28title%3A%28%22clement%22+AND+%22moulin%22%29%5E100.0%29+OR+%28synonyms_sxt%3A%28%22clement%22+AND+%22moulin%22%29%5E1.0%29%29+AND+httpstatus_i%3A200&amp;defType=edismax&amp;bq=fuzzy_signature_unique_b%3Atrue%5E100000.0&amp;start=0&amp;rows=20&amp;facet=true&amp;facet.limit=30&amp;facet.sort=count&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;facet.field=host_s&amp;facet.field=url_protocol_s&amp;facet.field=url_file_ext_s&amp;hl=true&amp;hl.fragsize=220&amp;hl.simple.post=%3C%2Fb%3E&amp;hl.simple.pre=%3Cb%3E&amp;hl.snippets=1&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;hl.fl=h1_txt&amp;hl.fl=h2_txt&amp;hl.fl=text_t&amp;fl=*%2Cscore&amp;wt=xml&amp;version=2.2</code></dd>
+</dl>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=274">sixcooler</a>
+&mdash; Mo Apr 08, 2013 5:39 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

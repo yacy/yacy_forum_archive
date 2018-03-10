@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="zdi-droppt-mal-eine-packung-0day-auf-microsoft-es">ZDI droppt mal eine Packung 0day auf Microsoft. Es ...</h1>
+
+<p>Date: 2015-06-19 19:09:28</p>
+
+<p><a href="http://h30499.www3.hp.com/t5/HP-Security-Research-Blog/There-and-back-again-a-journey-through-bounty-award-and/ba-p/6756465">ZDI droppt mal eine Packung 0day auf
+Microsoft</a>.
+Es geht um Internet Explorer.</p>
+
+<p>Das Problem, um das es geht, ist dass man memprotect als Orakel benutzen
+kann, um ASLR auszuhebeln. ASLR heißt, dass Code nicht an vorhersagbare
+Stellen im Adressraum geladen wird, damit man in einem Exploit nicht
+einfach zu der Stelle springen kann, die tut, was man will. ASLR ist
+einer der Hauptgründe, wieso stabile Exploits heutzutage so teuer
+geworden sind.</p>
+
+<p>ZDI hat dieses Problem gefunden, Beispiel-Code gemacht (!), und mit dem
+bei Microsoft sogar einen Award abgeräumt, oder ein Kopfgeld, wie immer
+man das nennen will.</p>
+
+<p>Und jetzt droppen sie den 0day, weil Microsoft ihnen zu verstehen
+gegeben hat, dass sie das Problem nicht fixen wollen.</p>
+
+<p>Was man dazu wissen muss, ist dass Microsofts Verständnis von solchen
+Bug Bounties ist, dass sie dann die Details \&ldquo;vom Markt genommen
+haben\&ldquo;. Ich denke, dass Microsoft denen das Geld gegeben hat, in der
+Gewissheit, dass das dann nicht später veröffentlicht wird. Das könnte
+also noch Stress geben.</p>
+
+<p>Wieso will denn Microsoft das Problem nicht fixen? Weil memprotect ihr
+Hack ist, um use-after-free-Bugs in IE zu fixen. Das können sie also
+jetzt nicht abschalten, um ASLR wieder ordentlich zu kriegen, ohne dass
+sie auch die ganzen use-after-free-Bugs wieder reaktivieren. Und von
+denen gab es anscheinend eine ganze Menge, denn sonst würde Microsoft
+das ja jetzt abschalten und fertig ist die Laube.</p>
+
+<p>Ich beobachte sowas ja immer mit einer gewissen Häme aus der Ferne, wenn
+ein Security-Feature an einem Security-Problem Schuld ist. Das ist jetzt
+jedenfalls eine ganz beschissene Situation für alle Involvierten.</p>
+
+<p>Stellt sich natürlich noch die Frage, ob man nicht memprotect so
+umbasteln kann, dass es nicht mehr als Orakel missbrauchbar ist. Ich
+vermute mal nicht, denn sonst hätten sie das wohl getan.</p>
+
+<p>Ich bin ja kein Freund von so Exploit-Händlern, aber vor ZDI muss man an
+der Stelle echt den Hut ziehen. Die scheißen echt jedem in den
+Vorgarten, der seine Bugs nicht in akzeptablem Zeitrahmen fixt. Sogar
+ihrem aktuellen Eigentümer HP.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

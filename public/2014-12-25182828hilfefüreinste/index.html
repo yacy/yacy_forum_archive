@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-öffentliches-suchportal-abschalten-und-funktionalität">Hilfe für Einsteiger und Anwender • Re: öffentliches Suchportal abschalten und Funktionalität</h1>
+
+<p>Date: 2014-12-25 18:28:28</p>
+
+<p>Hallo,<br />
+<br />
+soweit ich das verstanden habe ist das Suchportal eines YaCy-Peers der
+aktives Mitglied des globalen Index \&ldquo;freeworld\&rdquo; ist auch immer für
+jeden benutzbar. Dein lokaler Index ist aber auf jeden Fall von außen,
+also durch die anderen YaCy-Peers, abfragbar. Das ist meiner
+persönlichen Meinung nach auch grundsätzlich richtig so, wer vom
+globalen Index profitieren will muss auch dazu beitragen.<br />
+<br />
+Wirklich Anonym bist Du als Betreiber eines YaCy-Peers (der von außen
+erreichbar ist, also mindestens Senior-Status hat) nicht, zumindest
+Deine aktuelle IP-Adresse ist immer sichtbar. Außerdem ist Dein Peer als
+solcher identifizierbar und damit auch über einen längeren Zeitraum
+hinweg wiedererkennbar, ganz ohne dem funktioniert das Prinzip der
+Distributed-Hash-Table nicht.<br />
+<br />
+Viele Leute betreiben ihren YaCy-Peer als \&ldquo;nebenbei-crawler\&ldquo;, also der
+eigene Peer crawlt beim normalen surfen im Internet nebenbei alles was
+so im Browserfenster auftaucht. Da zu jedem gefundenen Wort auch immer
+die URL der Seite auf der es gefunden wurde mit im Index landet,
+ansonsten würde eine Suchmaschine auch keinen Sinn machen, lässt sich
+durch geschicktes Abfragen eines bestimmten Peers ganz sicher auch die
+Surf-History des Browser analysieren der diesen Peer zum
+\&ldquo;nebenbei-crawlen\&rdquo; benutzt. Zumindest in groben Zügen da die Links im
+lokalem Index mit der Zeit mit von außen, per DHT-Transfer, kommenden
+Links durchsetzt werden. Wie stark Deine persönliche Surf-History über
+Deinen Peer analysierbar ist, falls Du überhaupt das Feature
+\&ldquo;nebenbei-crawlen\&rdquo; benutzt, hängt also wesentlich davon ab wie
+intensiv die YaCy-Peers die Links per DHT-Transfer austauschen. Näheres
+hierzu kann aber nur der Programmierer von YaCy (das bin nicht ich)
+wirklich schlüssig erklären.<br />
+<br />
+Aber all das lässt sich nur bis zu Deiner IP-Adresse zurückverfolgen,
+allein daraus kommt man noch nicht auf Deine konkrete Person (Name,
+Adresse, ...), das können in Deutschland üblicherweise nur die
+offiziellen Strafverfolgungsbehörden.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Do Dez 25, 2014 6:28 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

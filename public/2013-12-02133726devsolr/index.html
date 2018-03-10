@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="dev-solr">Dev:Solr</h1>
+
+<p>Date: 2013-12-02 13:37:26</p>
+
+<p>restructuring</p>
+
+<p>← Nächstältere Version</p>
+
+<p>Version vom 2. Dezember 2013, 12:37 Uhr</p>
+
+<p>Zeile 7:</p>
+
+<p>Zeile 7:</p>
+
+<p> </p>
+
+<div>
+
+The remote index scheme is similar (but extended) to SolrCell; see
+http://wiki.apache.org/solr/ExtractingRequestHandler
+
+</div>
+
+<p> </p>
+
+<div>
+
+The remote index scheme is similar (but extended) to SolrCell; see
+http://wiki.apache.org/solr/ExtractingRequestHandler
+
+</div>
+
+<p> </p>
+
+<div>
+
+We added some more generic fields, added a second solr core and
+therefore we need to use the solr.xml and schema.xml from a YaCy
+installation.
+
+</div>
+
+<p> </p>
+
+<div>
+
+We added some more generic fields, added a second solr core and
+therefore we need to use the solr.xml and schema.xml from a YaCy
+installation.
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[== Use the deep-embedded Solr in YaCy and an external Solr concurrently
+==]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[This is the default setting. The assignment of a remote Solr and also
+switching off of the embedded Solr is done in the servlet
+/IndexFederated\_p.html.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[The embedded Solr is switched on, if the flag \"Use deep-embedded local
+Solr\" is switched on.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[== Use an external Solr or Solr Shards to have a distributed
+Solr-backend for a single YaCy ==]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[In the \"Solr URL(s)\" field of the
+http://localhost:8090/IndexFederated\_p.html servlet, you can enter
+several Solr addresses. If there is more than one Solr assigned, these
+are accessed as a \'Shard\'. This will cause that each document is
+hashed using the document id and stored only in one of the shards. If a
+query to Solr is made, then all shards are queried concurrently and the
+results are merged.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[== Concurrent usage of the embedded Solr and an external Solr or Solr
+Shard ==]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[It is possible to leave the \"Use deep-embedded local Solr\" flag
+switched on while using an external Solr. Then each document is stored
+in the local and the remote Solr. If a document is searched, this is
+done concurrently in the local and remote Solr as if they are a Solr
+Shard.]{.underline}
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<div>
+
+= How to deploy an external Solr for YaCy =
+
+</div>
+
+<p> </p>
+
+<div>
+
+= How to deploy an external Solr for YaCy =
+
+</div>
+
+<p>Zeile 96:</p>
+
+<p>Zeile 106:</p>
+
+<p> </p>
+
+<div>
+
+and restart tomcat. You can now access Solr with the url
+http://yacyadmin:yacy123\@localhost:8080/solr4yacy/
+
+</div>
+
+<p> </p>
+
+<div>
+
+and restart tomcat. You can now access Solr with the url
+http://yacyadmin:yacy123\@localhost:8080/solr4yacy/
+
+</div>
+
+<p> </p>
+
+<div>
+
+This is the url which you can set in the \"Use remote Solr server(s)\"
+field of the /IndexFederated\_p.html servlet in YaCy. The
+account:password encoding in the url is used by YaCy to access the solr
+index within tomcat.
+
+</div>
+
+<p> </p>
+
+<div>
+
+This is the url which you can set in the \"Use remote Solr server(s)\"
+field of the /IndexFederated\_p.html servlet in YaCy. The
+account:password encoding in the url is used by YaCy to access the solr
+index within tomcat.
+
+</div>
+
+<p>−</p>
+
+<div>
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+~~= Use the deep-embedded Solr in YaCy and an external Solr concurrently
+=~~
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+~~It is possible to leave the \"Use deep-embedded local Solr\" flag
+switched on. Then each document is stored in the local and the remote
+Solr. If a document is searched, this is done concurrently in the local
+and remote Solr as if they are a Solr Shard (see also the next
+section).~~
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+~~= Use Solr Shards to have a distributed Solr-backend for a single YaCy
+=~~
+
+</div>
+
+<p> </p>
+
+<p>−</p>
+
+<div>
+
+~~In the \"Solr URL(s)\" field of the
+http://localhost:8090/IndexFederated\_p.html servlet, you can enter
+several Solr addresses. If there is more than one Solr assigned, these
+are accessed as a \'Shard\'. This will cause that each document is
+hashed using the document id and stored only in one of the shards. If a
+query to Solr is made, then all shards are queried concurrently and the
+results are merged.~~
+
+</div>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<div>
+
+= Copy the deeply-embedded Solr Index to an external Solr =
+
+</div>
+
+<p> </p>
+
+<div>
+
+= Copy the deeply-embedded Solr Index to an external Solr =
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

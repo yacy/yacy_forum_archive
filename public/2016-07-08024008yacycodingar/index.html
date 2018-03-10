@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architecture-re-automated-yacy-docker-image">YaCy Coding &amp; Architecture • Re: Automated YaCy Docker image</h1>
+
+<p>Date: 2016-07-08 02:40:08</p>
+
+<p>Hi, I have played with Heroku deploy first. You can from now try
+yourself the one-click deploy button for Heroku on <a href="https://github.com/luccioman/yacy_search_server/tree/heroku_experiments">this
+branch</a>{.postlink}.<br />
+<br />
+Thus with a free Heroku account you should be able to run a YaCy peer in
+senior mode (don\&rsquo;t forget the only manual step : filling
+MAVEN_CUSTOM_OPTS environment variable with
+-Dyacy.staticIP=your_app_name.herokuapp.com, as explained in the open
+deploy page).<br />
+<br />
+Remarks :<br />
+- I transformed main Readme file from mediawiki syntax to markdown as it
+is far easier and better documented to add button links in Markdown<br />
+<br />
+- YaCy Jetty server http port has to be bound to the PORT arbitrarily
+chosen by Heroku, but external public port has to be set to 80, as
+your_app_name.herokuapp.com is the only way to reach an Heroku
+container from external machines. A small hack to serverSwitch.java do
+the job on the branch for now. But in yacy.init file there is a property
+named \&ldquo;bindPort\&ldquo;, which looks like currently unused. It could be
+convenient to use it and to be able to define both a local bindPort and
+a public port in /Configbasic.html. What do you think about it?<br />
+<br />
+- I am now faced with a big limitation of YaCy deployment in Heroku :
+files (Solr index, settings, logs...) are correctly written to
+container file system, but they are discarded each time the container
+(Heroku call it a \&ldquo;dyno\&ldquo;) is restarted. This is an Heroku feature and
+this happens about once a day. So deploying in Heroku becomes quite
+handy for testing purpose, or for YaCy first try, but it is not very
+useful for long term use. Is it the same for loklak on Heroku or what is
+the storage solution? To overcome this limitation, it is documented that
+we should rely on cloud storage such as Amazon S3, but this would
+involve much refactoring, especially to keep compatibility with local
+file system storage for non-cloud peers. An intermediate solution could
+be to use <a href="https://elements.heroku.com/addons/websolr">Websolr
+Add-on</a>{.postlink} to store
+solr index, but this is quite expensive (lowest price : 20 dollars a
+month for only 20000 documents!)...</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9609">luc</a>
+&mdash; Fr Jul 08, 2016 1:40 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

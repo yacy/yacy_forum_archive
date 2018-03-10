@@ -1,0 +1,24 @@
+baseURL = ""
+languageCode = "de-de"
+title = "Yacy Old Forum Archiv"
+theme = "blackburn"
+canonifyurls = true
+paginate = 10
+[menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 1
+    identifier = "home"
+    url = "/"
+
+
+
+[social]
+  # Link your social networking accounts to the side menu
+  # by entering your username or ID.
+
+  # SNS microblogging
+  twitter = "http://twitter.com/yacy_search"
+  github = "yacy"

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="weil-ich-hier-gerne-und-häufig-über-andere-leute">Weil ich hier gerne und häufig über andere Leute ...</h1>
+
+<p>Date: 2014-03-16 22:38:38</p>
+
+<p>Weil ich hier gerne und häufig über andere Leute meckere, wenn sie
+vermeidbare Fehler machen: Natürlich mache auch ich Fehler. Im Moment
+arbeite ich an einer größeren Aufräumaktion in libowfat und habe dabei
+schon einige Fehler gefunden. Ich will hier mal einen posten. Es geht um
+die Funktion <code>scan_ushort</code>. Hier ist der Code vom letzten Checkin aus
+dem Jahre 2006:</p>
+
+<pre><code>size_t scan_ushort(const char* src,unsigned short* dest) {
+  if (sizeof(unsigned short) == sizeof(unsigned int)) {
+    /* a good optimizing compiler should remove the else clause when not
+     * needed */
+    return scan_uint(src,(unsigned int*)dest);
+  } else {
+    register const char *tmp=src;
+    register unsigned short int l=0;
+    register unsigned char c;
+    while ((c=*tmp-'0')&lt;10) {
+      unsigned short int n;
+      /* division is very slow on most architectures */
+      n=l&lt;&lt;3; if ((n&gt;&gt;3)!=l) break;
+      if (n+(l&lt;&lt;1) &lt; n) break;
+      n+=l&lt;&lt;1;
+      if (n+c &lt; n) break;
+      l=n+c;
+      ++tmp;
+    }
+    if (tmp-src) *dest=l;
+    return tmp-src;
+  }
+}
+</code></pre>
+
+<p>Der Code nimmt eine Zeichenkette und versucht das als ASCII-Dezimalzahl
+zu parsen. Rückgabewert ist die Anzahl der Bytes, die gelesen wurden.
+Der Punkt an der Funktion ist, dass sie Integer Overflow erkennen und
+dann abbrechen soll. Bei <code>scan_ushort</code> ist auf meinem System der maximal
+abbildbare Wert 65535. Wenn man <code>scan_ushort</code> mit \&ldquo;65535\&rdquo; aufruft,
+soll er 5 zurückgeben und 65535 nach dest schreiben. Wenn man es mit
+\&ldquo;65536\&rdquo; aufruft, soll er 4 zurückgeben und 6553 nach dest schreiben.</p>
+
+<p>Der Überlauf-Check sieht so aus, weil die anderen Optionen doof sind.
+Die offensichtliche Option wäre, dass ich einen Zwischenwert eines
+breiteren Integertypen nehme. Für <code>scan_ushort</code> würde das auch gehen,
+aber für <code>scan_ulonglong</code> nicht. Daher nehme ich die Option lieber
+nicht. Der zentrale Schritt ist:</p>
+
+<pre><code>l=l*10+(naechstes_zeichen-'0')
+</code></pre>
+
+<p>Dabei kann sowohl die Multiplikation als auch die Addition überlaufen,
+und beides muss geprüft werden. Option 1:</p>
+
+<pre><code>temp=l*10;
+if (l!=temp/10) goto fail;
+</code></pre>
+
+<p>Leider sind Multiplikation und vor allem Division auf vielen
+verbreiteten Prozessoren sehr teuer. Option 2:</p>
+
+<pre><code>temp=l*8;  // *8 ist ein Linksshift um drei Bits, kostet so gut wie nichts
+if (temp/8!=l) goto fail;   // /8 ist ein Rechtsshift um drei Bits, kostet auch so gut wie nichts
+if (temp+(l*2) &lt; temp) goto fail;   // l*8+l*2==l*10, l*2 ist Linksshift um 1, ist billig
+</code></pre>
+
+<p>Sieht sehr kompliziert aus, ist aber eigentlich sehr einfach. Und dann
+gibt es noch den finalen Schritt, dass man zu <code>temp</code> (im Code oben als
+<code>n</code> bezeichnet) noch die aktuelle Ziffer dazuaddiert. Das kann auch
+überlaufen, daher:</p>
+
+<pre><code>if (n+c &lt; n) goto fail;
+</code></pre>
+
+<p>Und hier war der Bug. Dieser Test schlug nie an. Der Hintergrund sind
+die Integer-Promotion-Regeln in C. Die sagen, dass in arithmetischen
+Ausdrücken beide Seiten zu <code>int</code> promoted werden, wenn sie kleiner sind.
+Das heißt, dass <code>n+c</code> nicht überläuft, sondern komfortabel in dem <code>int</code>
+Platz hat.</p>
+
+<p>Natürlich frage ich mich heute, wie mir dieser offensichtliche Fehler
+2006 passieren konnte. Die Antwort ist, dass ich das von <code>scan_uint</code>
+kopiert hatte, und dort funktioniert der Check. Hätte ich trotzdem sehen
+müssen. Oder zumindest ein Unit-Test hätte es finden müssen. Aber mein
+Unit-Test hat nur 655350 getestet, nicht 65536.</p>
+
+<p>Ich rolle das hier aus, weil immer wieder Leute irgendwo behaupten, ich
+hielte mich selbst für unfehlbar. Das ist natürlich völliger Bullshit.
+Fehler machen alle. Sogar djb. :-)</p>
+
+<p>Wichtig ist, dass man dazuzulernen bereit ist, und dass man alten Code
+alle paar Jahre nochmal anguckt, um sowas zu finden. Es sind ja auch
+nicht alle \&ldquo;Fehler\&rdquo; tatsächlich Fehler. Manchmal haben sich auch die
+Ansprüche geändert. So hatte ich dieses \&ldquo;bei Overflow abbrechen\&rdquo; nur
+bei ein paar Integer-Parsern implementiert damals, weil mir das bei Hex
+und Oktal schlicht nicht so wichtig war. Das lasse ich mir heute nicht
+mehr durchgehen.</p>
+
+<p>Ich erinnere mich daran, dass ich vor Jahren mal eine Mail von Florian
+Weimer kriegte, damals beim RUS-CERT. Das war 2002. Der meinte, dass das
+<code>calloc</code> in dietlibc unsicher sei. Wenn man da zwei große Zahlen
+reintut, dann kann die Multiplikation überlaufen, und dann kann <code>calloc</code>
+Erfolg zurückliefern, obwohl die Werte zu groß waren. Ich fand damals,
+dass das nicht meine Schuld sei, wenn die Leute das falsch aufrufen. Ich
+habe das widerwillig trotzdem gefixt. Heute habe ich da meine
+Philosophie komplett geändert. Wenn du ein Stück Code schreibst, das man
+falsch aufrufen kann, dann musst du das soweit sinnvoll und möglich
+abfangen. Der Grund ist, dass das die TCB reduziert. Wenn zehn Leute
+deine Funktion aufrufen, dann muss ich beim Security-Audit nur noch
+gucken, ob der Check in deiner Funktion sauber ist, nicht ob nicht einer
+deiner zehn Aufrufer Mist macht.</p>
+
+<p><strong>Update</strong>: Hier kam die Frage auf, ob ich das heute noch so schreiben
+würde. Nein, würde ich nicht. Seit dem habe ich <a href="http://www.fefe.de/source-code-optimization.pdf">ein paar Sachen
+ausgemessen</a> und würde
+lieber <code>n*8</code> als <code>n&lt;&lt;3</code> schreiben. Auch der Trick mit dem <code>c=*tmp-'0'</code>
+(c ist unsigned, daher mappt der Fall <code>c&lt;'0'</code> auf einen großen Wert und
+der Test auf kleiner Zehn schlägt fehl) ist überflüssig, wie ich in der
+Zwischenzeit gelernt habe. Das register-Schlüsselwort bringt nichts,
+schadet aber auch nichts. Die Variablennamen könnten länger sein, aber
+das würde die Lesbarkeit nicht erhöhen. Ob da jetzt \&ldquo;temp\&rdquo; oder \&ldquo;n\&rdquo;
+steht, spielt auch keine Rolle. <code>l</code> und <code>c</code> würde ich auch heute so
+benennen. <code>tmp</code> würde ich heute <code>cur</code> oder so nennen. Die Integer
+Overflow Checks würde ich auch heute noch so machen. Wieso habe ich mir
+überhaupt so viel Gedanken um die Performance gemacht? Weil jeder Cycle,
+den dein Code langsamer als nötig läuft, ein Argument für deine User
+ist, lieber was anderes zu benutzen. Und das andere ist dann weniger
+sorgfältig und merkt nicht, wenn eine zu große Zahl reinkommt.</p>
+
+<p>Für Library-Programmierer gibt es meiner Erfahrung nach mehrere goldene
+Richtlinien, an die man sich dringend halten sollte.</p>
+
+<ol>
+<li>Die Interfaces müssen offensichtlich sein.</li>
+<li>Es muss einfacher sein, die APIs richtig zu benutzen, als sie falsch
+zu benutzen.</li>
+<li>Die Implementation darf keine Zweifel lassen, dass \&ldquo;ich mach das
+mal schnell von Hand\&rdquo; keine Vorteile und nur Nachteile hat.</li>
+<li>Insbesondere muss die Performance besser sein, als man das mal eben
+selber hingekriegt hätte.</li>
+</ol>
+
+<p>Sonst kann man es auch gleich bleiben lassen.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

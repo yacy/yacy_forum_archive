@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="das-schöne-bei-tech-themen-im-internet-ist-ja-dass">Das Schöne bei Tech-Themen im Internet ist ja, dass, ...</h1>
+
+<p>Date: 2017-02-23 10:15:09</p>
+
+<p>Das Schöne bei Tech-Themen im Internet ist ja, dass, egal wie viel man
+weiß oder zu wissen glaubt, es gibt da draußen immer noch Leute, die
+noch mehr wissen :-)</p>
+
+<blockquote>
+<p>Das Mem, dass die PSHUFB-Lösung schneller sei als POPCNT, geht schon
+länger rum, stimmt allerdings nicht, wenn man\&rsquo;s richtig macht. :)</p>
+
+<p>Dan Luu hat darüber geschrieben, das verlinke ich einfach mal:<br />
+<a href="http://danluu.com/assembly-intrinsics/">http://danluu.com/assembly-intrinsics/</a></p>
+
+<p>Das POPCNT-Erratum, dass er da am Ende nennt, existiert über mehrere
+CPU-Generationen von Intel und ist möglicherweise \&ldquo;Absicht\&ldquo;. Nicht
+um die Performance von POPCNT für nicht-NSA-User zu sabotieren :),
+sondern weil ein x86-Decoder ziemlich haarig ist und der Bug nicht
+wirklich schlimm.</p>
+
+<p>Die meisten x86-Befehle sind ja bekanntlich dest = dest OP src. Jedes
+\&ldquo;Loch\&rdquo; in der Opcode map, in dem ein unärer Befehl steht, muss in
+der Instruction Decoding-Logik kodiert werden, damit der Renamer
+weiss, dass der Destination-Operand keine Quelle ist. Nun ist x86
+sowieso relativ unregelmäßig, allerdings bei weitem nicht so sehr (auf
+Encoding-Ebene und für die häufig vorkommenden Befehle), wie viele das
+denken.</p>
+
+<p>Ursprünglich (bei Nehalem, dem original-Core-i7) war das ziemlich
+sicher ein Bug, den sie zu spät bemerkt haben: da hat jemand den
+Spezialfall vergessen und es macht halt nichts wirklich kaputt, also
+haben sie das Design lieber nicht angefasst. CPU-Hersteller sind bei
+sowas sehr konservativ: wenn man spät einen nicht-kritischen Bug mit
+einfachem Workaround findet, dann fixt man den in der Regel nicht.
+Denn bei dem Bug weiss man, was passiert - ein Fix macht
+möglicherweise was anderes kaputt, und Validierungszeit und neue
+Steppings sind extrem teuer. Wenn da was schief geht, hat man
+erstaunlich schnell zweistellige Millionenbeträge verbrannt,
+dementsprechend vorsichtig geht man da vor.</p>
+
+<p>In diesem Fall ist der Bug insgesamt harmlos genug, dass er offenbar
+über mehrere Generationen in der Bug-Datenbank lag und nie gefixt
+wurde, weil er nicht genug Priorität hatte. Sowas ist nicht selten.</p>
+
+<p>Popcount ist übrigens für diverse SIMD-Anwendungen hilfreich, nicht
+nur Video. Eigentlich, wann immer es um \&ldquo;filter\&ldquo;-artige
+Transformationen geht (nicht Filter im DSP-Sinne, sondern die Funktion
+höherer Ordnung). Bei x86 macht man eine Vergleichsoperation, dann
+movmskps (oder pmovmskb) um eine Bitmaske mit den Resultaten in ein
+Integer-Register zu kriegen, und dann kann man mit ein wenig
+rumgeshuffle die Daten rausschreiben. Popcount braucht man dann am
+Ende, um rauszufinden, um wieviele Bytes man den Output-Zeiger
+verschieben soll. Auch da habe ich einen Link:
+<a href="https://deplinenoise.files.wordpress.com/2015/03/gdc2015_afredriksson_simd.pdf">https://deplinenoise.files.wordpress.com/2015/03/gdc2015_afredriksson_simd.pdf</a></p>
+
+<p>Für SSE2 und 32-bit-Daten ist POPCNT noch ein bisschen albern (eine
+16-Element-Tabelle tuts auch), wenn man auf 8-bit oder 16-bit arbeitet
+oder AVX macht (8 Lanes statt 4) lohnt sichs aber langsam.</p>
+</blockquote>
+
+<p>Wieder was gelernt! :-)</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

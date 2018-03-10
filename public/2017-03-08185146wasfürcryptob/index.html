@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="was-für-crypto-benutzt-die-cia-eigentlich-um-ihre">Was für Crypto benutzt die CIA eigentlich, um ihre ...</h1>
+
+<p>Date: 2017-03-08 18:51:46</p>
+
+<p>Was für Crypto benutzt die CIA eigentlich, um ihre abgeschnüffelten
+Privatsphäreverletzungen nach Hause zu telefonieren?</p>
+
+<p><a href="https://wikileaks.org/ciav7p1/cms/files/NOD%20Cryptographic%20Requirements%20v1.1%20SECRET.pdf">Da ist auch ein PDF zu
+geleaked</a>,
+und die Details sind durchaus interessant. Beispielsweise:</p>
+
+<blockquote>
+<p>All tools must utilize Operating System (OS) provided cryptographic
+primitives where available (e.g., Microsoft CryptoAPI-NG, OpenSSL,
+PolarSSL, GnuTLS, etc).</p>
+</blockquote>
+
+<p>Dass sie da Polarssl und Gnutls explizit nennen, finde ich erstaunlich.
+Auch generell ist das nicht unbedingt ein guter Ratschlag, denn wenn du
+von irgendeinem gammeligen Schrott-Debian oder Embedded Höllendevice mit
+OpenSSL 0.98 Daten exfiltrieren willst, dann erscheint es schon ratsam,
+da lieber nicht die Krypto zu nehmen, die vom OS kommt. Ich sage nur
+Heartbleed und erinnere an das Debian Weak Key Massaker.</p>
+
+<blockquote>
+<p>Messages should be compressed prior to encryption.</p>
+</blockquote>
+
+<p>Die Begründung ist: Weniger Clear Text, weniger Angriffsoberfläche.
+Stimmt auch, aber bei TLS schaltet man im Allgemeinen das
+Compression-Feature absichtlich ab, weil <a href="https://blog.qualys.com/ssllabs/2012/09/14/crime-information-leakage-attack-against-ssltls">es da mal ein Problem
+gab</a>.
+Die CIA sagt jetzt nicht, man soll das anschalten. Aber es steht auch
+nicht explizit da, dass man es nicht anschalten soll. Von einem Papier,
+dessen expliziter Existenzgrund ist, Verwirrung zu verringern, hätte ich
+das erwartet.</p>
+
+<blockquote>
+<p>Tools should perform key exchange exactly once per connection. Many
+algorithms have weaknesses during key exchange and the volume of data
+expected during a given connection does not meet the threshold where a
+re-key is required. To reiterate, re-keying is <strong>not recommended</strong>.</p>
+</blockquote>
+
+<p>Das ist so m.W. eine eher selten ausgesprochene Empfehlung. Ich finde
+ihre Begründung jetzt nicht absurd. Da müsste man mal drüber
+diskutieren. SSH macht z.B. automatisch Re-Keying nach einer Stunde oder
+so (einstellbar). Mein Bauchgefühl wäre: Wenn ein Bug im Key Exchange
+ist, dann wäre der auch im initialen Key-Exchange, nicht nur im
+Re-Keying.</p>
+
+<p>Spannend ist auch dieses Detail bei der Collection Encryption Suite, das
+ist ihre Empfehlung für die Verschlüsselung von abgehörten Daten, die
+sie irgendwo abgefangen haben, die aber unterwegs auf irgendwelchen
+unvertrauenswürdigen Wegen zu ihnen kommen. Da nennen sie als Beispiel:</p>
+
+<blockquote>
+<p>The Collection Encryption Suite is intended to safeguard collected
+information as it resides temporarily on an untrusted file system or
+as it transits a file-oriented communication mechanism (e.g., gap
+jumpers, <strong>bit torrent</strong>, HTTP post, etc.).</p>
+</blockquote>
+
+<p>Oh, ach? Die CIA benutzt Bittorrent für den Transport ihrer abgehörten
+Daten? Das ist ja mal unerwartet.</p>
+
+<p>Unten in der Kommentar-Abteilung wird es nochmal spannend. Da sagen sie
+nämlich explizit, dass sie nicht als Ausrede gegen die Benutzung der
+installierten OS-Krypto gelten lassen, dass die jemand gehackt haben
+könnte (ein anderer Geheimdienst beispielsweise):</p>
+
+<blockquote>
+<p>In particular, the justification that an attacker might hook the OS
+provided cryptographic API to perform reverse engineering of the
+implant is not acceptable; any service (including execution) provided
+by the OS may be subverted and the security of a proven library
+outweighs the risk of attack.</p>
+</blockquote>
+
+<p>Das ist nicht von der Hand zu weisen. Einzige Ausnahme ist, wenn man
+Windows XP angreifen will. Nein, wirklich! Denn XP kommt mit oller
+Gammel-Krypto, die nicht gut genug ist, um ihren Mindestanforderungen zu
+genügen. Da soll man dann halt ein OpenSSL statisch reinlinken.</p>
+
+<p>SHA1 hat die CIA intern übrigens schon länger verboten.</p>
+
+<p>Interessant ist auch, dass die CIA sagt, wenn du ein File exfiltrieren
+willst, und du machst Krypto und nen Hash für die Integrität drüber,
+dann machst du den Hash bittesehr über den Ciphertext, nicht über den
+Plaintext. Begründung: Wenn ein ausländischer Geheimdienst das per
+SIGINT mitschnüffelt, könnte er den Hash sonst gegen alle Dateien auf
+dem System vergleichen und so sehen, welche Datei wir exfiltriert haben.
+Hier ist der Absatz:</p>
+
+<blockquote>
+<p>The digest is calculated over the ciphertext vice plaintext in order
+to protect against a SIGINT actor with access to a compromised host
+obtaining any information about the transfer. Using the example of an
+exfiltrated file (and depending on communication protocols) it is
+possible that a SIGINT actor could compare the hash value of every
+file on the compromised host to the intercepted message and thereby
+determine which file was exfiltrated. Calculating the digest over the
+ciphertext eliminates this possible information leakage without
+altering difficulty of implementation. See also the various debates
+about Encrypt-and-MAC, MAC-then-Encrypt, and Encrypt-then-MAC. The IV
+is authenticated by the digest in order to prevent a manipulated IV
+from flipping bits in the first block of the plaintext upon decryption
+under certain modes.</p>
+</blockquote>
+
+<p>Da bin ich mal gespannt, was die Crypto-Community dazu sagt. Das klingt
+für mich nach grobem Unfug; daher nimmt man ja nen MAC, keinen tumben
+Digest. Aber hey, ich bin kein professioneller Kryptologe.</p>
+
+<p>In einem Absatz schreiben sie explizit vor, dass ihre innere
+Authentisierung nicht auf Basis von irgendwelchem gammeligen Root-CAs
+stattfinden darf, sondern auf einer hard-coded List von CIA- CAs
+basieren muss. Begründung in den Fußnoten:</p>
+
+<blockquote>
+<p>This makes tool X very valuable in those countries known to routinely
+MitM SSL (e.g., China, Iran, and other hard targets).</p>
+</blockquote>
+
+<p>HARR HARR</p>
+
+<p>Die letzte Fußnote hat auch das letzte Highlight:</p>
+
+<blockquote>
+<p>One novel technique seen in the wild and provided purely as an example
+of a clever solution is the Random Decryption Algorithm (RDA)
+technique whereby a piece of malware does not possess the decryption
+key for its own main execution component. This malware is designed to
+brute force the decryption key, a process that can take several hours
+on modern hardware and has the added benefit of extreme resiliency to
+polymorphic detection heuristics and static scanning. Authors who
+believe they have a particularly novel approach are encouraged to
+contact the OCRB for a detailed discussion.</p>
+</blockquote>
+
+<p>Das ist in der Tat eine seit ~12 Jahren diskutierte Technik aus der
+Virusentwicklung :-)</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

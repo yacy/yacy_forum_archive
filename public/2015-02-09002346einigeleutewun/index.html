@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="einige-leute-wundern-sich-jetzt-darüber-dass-ich">Einige Leute wundern sich jetzt darüber, dass ich ...</h1>
+
+<p>Date: 2015-02-09 00:23:46</p>
+
+<p>Einige Leute wundern sich jetzt darüber, dass ich kaputtes
+Fließkommazahlenzeug in dietlibc habe. dietlibc hatte nie den Anspruch,
+für Fließkommakram zu sein. Ich habe nicht mal ne libm. Irgendwann hat
+jemand für x86 ein paar x87-libm-Sachen eingesendet, die hab ich dann
+reingenommen, aber supported ist das alles nicht. Könnte ich auch gar
+nicht.</p>
+
+<p>Warum dulde ich so eine schwelende Eiterbeule an meiner libc? Die
+dietlibc ist kein Produkt, sondern das ist ein Lernprojekt. Ich lerne
+Software-Dinge, indem ich sie implementiere oder mit ihnen herumspiele.
+Ich habe keine Ahnung, wie man eine libm implementiert, oder wie man
+Fließkommazahlen ordentlich ein- oder ausgibt. Ich hatte da mal was
+zusammengestümpert, das für triviale Fälle reicht, und weitergehenedes
+Interesse habe ich nicht an Fließkommakram. Betrifft mich nicht. Ich
+habe auch nicht den Anspruch, eine vollständige libc anzubieten. Ich
+biete an, was ich habe. Wenn das reicht: gut. Wenn nicht: dann halt
+nicht. Wer ein System aufsetzen will und dafür eine libc sucht, der ist
+mit etwas wie musl sicher besser bedient.</p>
+
+<p>Es ist faszinierend, wie viele Schwachköpfe da draußen glauben, mich mal
+so richtig anpissen zu können mit einem schneidenden Kommentar, dass
+meine Software ja wohl generell untauglich sein muss, wenn ich noch
+nicht mal Fließkommaausgabe in printf hinkriege. Mann seid ihr alle
+erbärmlich.</p>
+
+<p>Aber wenn ich schon von so viel Fließkommaexperten umgeben bin: schickt
+mir doch einen Patch!</p>
+
+<p>Nicht? Na dann zeigt mir wenigstens die Stelle in eurer libc, wo ihr das
+gelöst habt. Und wehe wenn das dann von irgendwo geguttenbergt ist!</p>
+
+<p>Oh, ihr habt gar keine libc programmiert?</p>
+
+<p>Verstehe...</p>
+
+<p>Irgendwann werde ich vielleicht mit meinen aktuellen Interessen durch
+sein und mich plötzlich für Fließkommaarithmetik interessieren. Wer
+weiß. Bis dahin bleibt das Mathe-Zeug vermutlich in dem Zustand, in dem
+es jetzt ist.</p>
+
+<p>Ich spreche das alles an, weil offenbar viele von euch gar nicht
+verstanden haben, dass sich Kritik immer nur auf Basis des
+Eigenanspruchs des Kritisierten mit Sinn füllt. Ich kann Israels
+Menschenrechtspolitik kritisieren, weil sie den Anspruch haben, eine
+Demokratie und ein Rechtsstaat zu sein. Saudi Arabien hat den Anspruch
+nicht, daher ist die selbe Kritik dort sinnlos. Putin hatte zu Zeiten
+von Schröders berühmtem Ausspruch gar nicht den Anspruch, ein
+lupenreiner Demokrat zu sein. Der Vorwurf, er sei keiner, sagte daher
+mehr über die Vorwerfenden als über Putin aus.</p>
+
+<p>Was mich daran am meisten erstaunt, ist dass die Leute nicht merken, wie
+sie sich öffentlich zum Klops machen! Aber das scheint auf Twitter und
+co ja generell problematisch zu sein. Ich finde das sehr schade. Wie
+effektiv wir als Gesellschaft sein könnten, wenn wir uns nicht immer mit
+solchem Unsinn aufhalten würden.</p>
+
+<p>Und so schließt sich der Kreis. Wer dietlibc vorwirft, nicht so
+vollständig wie musl zu sein, macht sich lächerlich. Das ist besonders
+schön, weil dieser Vorwurf häufig mit dem Ziel erhoben wird, mich
+irgendwie lächerlich zu machen. Genau so verhält es sich mit der Frage,
+wieso ich hier immer auf Israel rumbashe und nicht auf den Saudis.</p>
+
+<p>Der Vollständigkeit halber: Dieses Blog hat auch nicht den Anspruch, nur
+neutral die Fakten zu berichten.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

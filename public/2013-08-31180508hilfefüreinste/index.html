@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-vorstellung-fragen-und-anmerkungen">Hilfe für Einsteiger und Anwender • Vorstellung, Fragen und Anmerkungen</h1>
+
+<p>Date: 2013-08-31 18:05:08</p>
+
+<p>Hallo zusammen,<br />
+<br />
+seit längerer Zeit kenne ich YaCy. Wegen den jüngsten Ereignissen
+(NSA-Skandal und der 4minütige Google-Ausfall) habe ich mich
+entschieden, mich etwas näher mit YaCy zu befassen. Mittlerweile habe
+ich zusätzlich zu YaCy auf meinem Heim-PC noch zwei YaCy-Peers auf
+virtuellen Servern dauerhaft am laufen.<br />
+<br />
+Nun zu meinen Fragen:<br />
+- Was sind Node Candidates? Was sind die technischen Unterschiede zu den
+anderen Peers und wie entscheidet sich, wann ein Peer ein Node Candidate
+ist?<br />
+- In den Leistungseinstellungen (/Performance_p.html) kann ich zwischen
+\&lsquo;default (crawl)\&rsquo; und \&lsquo;prefer DHT\&rsquo; wählen. Was ändere ich dabei am
+Verhalten meines Peers und was hat es sich mit der Prozent-Angabe bei
+der vorgegebenen Geschwindigkeit auf sich?<br />
+<br />
+Und noch zwei Anmerkungen:<br />
+Im Beispielscript auf ConfigLiveSearch.html hat sich ein kleiner Fehler
+eingeschlichen. Statt</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>&lt;script src=&quot;http://xxx.xxx.xxx.xxx:8090/jquery/js/jquery-1.7.min.js&quot; type=&quot;text/javascript&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&lt;script&gt;</code></dd>
+</dl>
+
+<p><br />
+sollte es</p>
+
+<dl>
+<dt>Code:</dt>
+<dd><code>&lt;script src=&quot;http://xxx.xxx.xxx.xxx:8090/jquery/js/jquery-1.7.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;</code></dd>
+</dl>
+
+<p><br />
+lauten, damit das Skript validiert.<br />
+<br />
+Im Debian-Package fehlen drei Skripte im yacy-Homeverzeichnis:
+stopYACY.sh, killYACY.sh und startYACY.sh. Damit funktioniert aber auch
+die bin/checkalive.sh im Fehlerfall nicht so, wie es sein sollte.<br />
+<br />
+Alles was ich hier schreibe, bezieht sich auf die aktuelle Version
+1.62.<br />
+<br />
+Herzliche Grüße<br />
+Wolfgang</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8989">wollomatic</a>
+&mdash; Sa Aug 31, 2013 5:05 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

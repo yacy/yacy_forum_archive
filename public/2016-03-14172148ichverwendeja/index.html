@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="ich-verwende-ja-wenn-ich-mal-text-verarbeiten-muss">Ich verwende ja, wenn ich mal Text verarbeiten muss, ...</h1>
+
+<p>Date: 2016-03-14 17:21:48</p>
+
+<p>Ich verwende ja, wenn ich mal Text verarbeiten muss, gerne vim. Habe mir
+auch unter Windows dann einen vim installiert, und wollte da den selben
+Font einstellen wie unter Linux. Unter Linux verwende ich Roboto Mono
+(<a href="https://github.com/google/fonts/tree/master/apache/robotomono">kann man sich hier aus dem github
+ziehen</a>).
+Das ist der Nachfolger von Droid Sans, die ich vorher verwendet habe,
+und kommt aus dem Google-Font-Fundus für Android.</p>
+
+<p>Droid Sans hat den Nachteil, dass O und 0 praktisch nur schwer
+unterscheidbar sind. Bei Roboto Sans hat die 0 einen Querstrich.</p>
+
+<p>Leider lässt sich unter Windows Roboto Mono nicht auswählen, weil Google
+beim Erzeugen der Truetype-Dateien ein Flag nicht gesetzt hat.</p>
+
+<p>Früher war man dann aufgeschmissen, weil man größere Ausgaben für ein
+kommerzielles Tool ausgeben musste. Heute gibt es für solche
+Minimal-Eingriffe <a href="https://github.com/behdad/fonttools/">ein Python-Tool namens
+TTX</a>. Das kann Binär-Fontdateien
+nach XML und zurück wandeln. So kann man dann mit TTX aus
+RobotoMono-Regular.ttf ein RobotoMono-Regular.ttx machen, das mit vim
+oder sed editieren (das Flag heißt isFixedPitch) und dann daraus wieder
+TTF-Dateien machen, und wenn man die dann unter Windows installiert,
+dann nimmt auch vim Roboto Mono.</p>
+
+<p>Ich dachte mir, ich erwähne das hier mal, denn das Wissen um TTX scheint
+mir nicht sehr weit verbreitet zu sein.</p>
+
+<p><strong>Update</strong>: Ich wollte mir gerade einen Github-Account machen, um einen
+Bug melden zu können, aber Github schafft es nicht, mir die
+Verifikationsmail zuzustellen. Nicht weil mein Spamfilter die abfängt,
+bei mir kommt nicht mal ein Versuch an.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

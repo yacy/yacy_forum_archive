@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="yacy-coding-architecture-renovating-p2p-ranking-challenge-proposal">YaCy Coding &amp; Architecture • Renovating P2P ranking challenge - proposal</h1>
+
+<p>Date: 2017-01-04 04:07:46</p>
+
+<p>IMHO we\&rsquo;ve a unsolved challenge with the result ranking and I think
+it\&rsquo;s time (between now and v2.0) to tackle this issue.<br />
+<br />
+[What challenge do we have]{style=&ldquo;font-weight: bold&rdquo;}</p>
+
+<ul>
+<li>internally we work with 2 indexes and 2 ranking models (Solr and RWI
+index/ranking)</li>
+<li>ranking figures (numbers) of these 2 are not comparable &ndash; currently
+just adjusted to be in a similar number range</li>
+<li>remote Solr results are ranked by provided fields and boosts but the
+same doc from different peers can have different ranking results
+returned</li>
+<li>ranking from RWI changes over search time as factored in
+result-feature range changes (e.g. one ranking factor is
+(urllength-min.urllength)/(max.urllength-min.urllength). As results
+are collected the min/max will change possibly with every new
+result, already ranked items don\&rsquo;t reflect that.</li>
+<li>in P2P (remote) searches the quickest available result is shown on
+1st page while better results maybe shown later (especially the 1st
+page is in regards to ranking the worst because of this concurrency
+topic)</li>
+</ul>
+
+<p><br />
+<br />
+[Proposal for a solution]{style=&ldquo;font-weight: bold&rdquo;}<br />
+If we do a local search, in one index only we don\&rsquo;t have any issue,
+because we just keep the order the search process supplies the results.
+Hm.&hellip;. that\&rsquo;s pretty simple, why not expanding on this procedure.<br />
+Means if we do a search in 2 indexes (A and B), why not keeping the
+order too and simply display A1, B1, A2, B2 &hellip;. and if remote peers
+come into play were we basically need to behaive a bit like a metasearch
+engine joining many already ordered search results into a final result
+list expanding it to [A..Z]1 [A..Z]2 &hellip;. etc.<br />
+<br />
+That\&rsquo;s probably the simplest metasearch merge strategy available, see a
+description e.g. here (with some tuning ideas)<br />
+<a href="http://www.technicaljournalsonline.com/ijaers/VOL%20II/IJAERS%20VOL%20II%20ISSUE%20I%20%20OCTBER%20DECEMBER%202012/231.pdf">http://www.technicaljournalsonline.com/ ...
+<sup>12</sup>&frasl;<sub>231</sub>.pdf</a>{.postlink}<br />
+<br />
+The nice part is &hellip; it is relative simple and actually I don\&rsquo;t have
+found any similar easy but good one without to do the whole ranking (the
+search process did already) again what is not really possible without
+having all ranking data (means loading the resource).<br />
+<br />
+Here a nice understandable overview of other methods
+<a href="http://ijcsi.org/papers/IJCSI-9-4-3-239-251.pdf">http://ijcsi.org/papers/IJCSI-9-4-3-239-251.pdf</a><br />
+<br />
+[What is now the proposal:]{style=&ldquo;font-weight: bold&rdquo;}</p>
+
+<ul>
+<li>apply the position ranking (from above) to P2P result list (maybe
+later fine tuning to take original source ranking or peers dht
+position or available results etc. as quality factor into account)</li>
+<li>give ranking credit to same result coming from diff. peers</li>
+<li>still add a post-ranking</li>
+<li>still display quickest result first but assure the 1st page shows
+not the worst from one resource if we expect more coming in (maybe
+except it\&rsquo;s from local)</li>
+</ul>
+
+<p><br />
+[Comment:]{style=&ldquo;font-weight: bold&rdquo;}<br />
+I did some rudimentary verification testing of the 1st basic part
+(position ranking). The result was not THAT great (best result not the
+first &hellip;. but in the 1st 20) but also not worse as current 1st pages
+(tested without any fine tuning and post-ranking). What makes sense as
+today the quickest available solr &amp; rwi results are shown in turns what
+is basically a position ranking from the first 2 available
+peer-results.<br />
+<br />
+[P.S.]{style=&ldquo;font-weight: bold&rdquo;} To not beak everything with unknown
+(not completely tested) outcome we could/should apply changes to a clone
+or branch and have it tested, adjusted and fine tuned by all
+interested.<br />
+<br />
+Any better idea... let me know...</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8860">reger</a>
+&mdash; Mi Jan 04, 2017 4:07 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="was-passiert-eigentlich-wenn-man-mal-in-der-innenstadt">Was passiert eigentlich, wenn man mal in der Innenstadt ...</h1>
+
+<p>Date: 2014-12-14 14:04:58</p>
+
+<p>Was passiert eigentlich, wenn man mal in der Innenstadt im
+Regierungsbezirk gezielt nach IMSI-Catchern sucht? <a href="http://mm.aftenposten.no/stortinget-og-statsministeren-overvakes/">In Oslo hat das mal
+jemand
+gemacht</a>.
+Auf der Grafik sind die grünen Kreise die Gegenden, wo sie
+Fake-Basisstationen gefunden haben, und bei den roten Punkten haben sie
+merkwürdige Aktivität bei ihrem Telefon gemessen. Dazu muss man wissen,
+das Smartphones einmal einen \&ldquo;normalen Computer\&rdquo; haben, der die Apps
+und das Betriebssystem ausführt, und einmal einen zweiten Prozessor auf
+einem eingebetteten Mini-Computer, das sogenannte Baseband, das sich um
+das GSM kümmert. Dieser Baseband-Teil ist seit Jahren ein großes
+Problem, weil darüber so gut wie nichts bekannt ist. Das wird von
+irgendwelchen Zulieferern in Taiwan gehackt, ist wahrscheinlich unsicher
+und hat zusätzlich noch Backdoors drin, aber es gibt keinen Quellcode
+und die Hardware-Details sind alle Betriebsgeheimnisse, daher ist das so
+gut wie unauditierbar.</p>
+
+<p>Was Aftenposten jetzt gemacht hat, ist dass sie mit einem Cryptophone
+herumgelaufen sind, und die Baseband-Firewall an hatten. Dabei wird das
+Baseband sozusagen in einem Debug-Modus betrieben und zeigt interne
+Dinge gegenüber dem Betriebssystem an, was das dann anzeigen kann. Nun
+ist das nicht völlig ungewöhnlich, wenn ein Mobiltelefon vom Netz Daten
+kriegt, ohne danach gefragt zu haben. Wenn eine SMS kommt, will man das
+ja, oder wenn man Web klickt und die Antwort kommt. Daher hat
+Aftenposten diese Aktivitäten rausgerechnet und nur die übrigen
+Aktivitäten geplottet. Auch davon sind einige normal, z.B. wenn man sich
+ein Update für das assisted GPS holt, und es gibt auch einige gutartige
+Ncahrichten, die das Netz einem schicken kann. So 10-15 davon pro Tag
+sind normal. Aber so eine geographische Häufung ist ungewöhnlich, daher
+sind die Aftenposten-Leute nochmal mit einer Counterintelligence-Bude
+und ordentlichem Messequipment losgezogen und haben da komische Dinge
+gemessen und die Details ihrer Regierung übergeben.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="speaking-of-the-marvels-of-internet-commerce">Speaking of the marvels of Internet Commerce...</h1>
+
+<p>Date: 2015-06-14 01:49:51</p>
+
+<p>I am continually amazed that banks still don\&rsquo;t fail <em>safe</em>, and
+apparently haven\&rsquo;t learned about SYN/ACK. I mean, I know it\&rsquo;s a recent
+invention, the three-way handshake is only the single most fundamental
+concept that makes TCP/IP work.</p>
+
+<p>One of the amazing things about the design of the payment processing
+system is that it\&rsquo;s easy to get into a situation where A) you know the
+customer\&rsquo;s card is good; B) you\&rsquo;ve tried to charge them; and C)
+something has gone wrong and you <em>don\&rsquo;t know</em> whether you\&rsquo;ve taken
+their money or not.</p>
+
+<p>This happens to us every couple of weeks:</p>
+
+<ol>
+<li>Customer places an order.</li>
+<li>Us to bank: \&ldquo;Can I charge \$30?\&rdquo;</li>
+<li>Bank to us: \&ldquo;Yes\&ldquo;.</li>
+<li>Us to bank: \&ldquo;Ok, do it.\&rdquo;</li>
+<li>...radio silence.</li>
+</ol>
+
+<p>If response #3 never comes, we get to show the customer an error, and
+that\&rsquo;s fine. But if that response #5 times out and doesn\&rsquo;t come back,
+which happens regularly, we have no idea whether the failure was that
+step #4 was not received, or that step #4 was received but reply #5
+was lost. Sometimes it\&rsquo;s one, sometimes it\&rsquo;s the other. In the former
+case, the customer wasn\&rsquo;t charged, and in the latter case they were! We
+have to fix these by hand, and there\&rsquo;s no easy way to automate it. It
+sucks.</p>
+
+<p>If banks understood TCP/IP, it would go like this:</p>
+
+<ol>
+<li>Customer places an order.</li>
+<li>SYN: Can I charge \$30?</li>
+<li>SYN/ACK: Yes.</li>
+<li>ACK + SYN: Do it.</li>
+<li>SYN/ACK: I am gonna do it.</li>
+<li>ACK: I see that you\&rsquo;re gonna do it.</li>
+</ol>
+
+<p>If that was their model, then at no point does a communication failure
+cause a charge to be in an ambiguous state. If I never get the message
+in #5, the customer is not charged. If I get the message in #5 and my
+response in #6 is not received, the customer is not charged.</p>
+
+<p>If #6 is sent but not received, then I would think the customer was
+charged when they were not, but the converse can\&rsquo;t happen. There\&rsquo;s
+only one possible failure mode and not two, and that failure mode is the
+safer one.</p>
+
+<p>This is orthogonal to the <a href="http://www.dnalounge.com/store/avs.html">complete flying clusterfuck that is
+AVS</a>, unfortunately, where they
+put a hold on the money <em>before validating the billing address</em>, and
+then if that didn\&rsquo;t match, often fail to release that hold. Double-you
+tee fuck.</p>
+
+<p><a href="http://www.jwz.org/blog/2015/06/internet-commerce-how-does-it-fucking-work/">Previously</a>.</p>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

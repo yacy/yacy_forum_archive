@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="hilfe-für-einsteiger-und-anwender-re-new-usa-user-many-questions-interface-memory-crash">Hilfe für Einsteiger und Anwender • Re: New USA User, many questions: interface/memory/crash...</h1>
+
+<p>Date: 2013-04-06 00:39:30</p>
+
+<p>The default* YaCy 32 bit install test is complete. Approximately 7 days
+after starting the node, the memory was \&ldquo;full\&rdquo; as the graph below
+shows. Performing a single search for \&ldquo;freedom\&rdquo; crashed the web
+interface within a minute or two, and it was no longer responsive. The
+java task is still running since I performed these tests yesterday, but
+the web interface is inaccessible. I\&rsquo;m not sure if the process is doing
+anything useful, the logs are just filling up with:<br />
+<br />
+E 2013/04/05 18:22:35 BUSYTHREAD Runtime Error in
+serverInstantThread.job, thread
+\&lsquo;net.yacy.search.Switchboard.cleanupJob\&rsquo;: null; target exception:
+null<br />
+.<br />
+.<br />
+W 2013/04/05 18:27:36 StackTrace null<br />
+java.lang.reflect.InvocationTargetException<br />
+<br />
+These messages appear repetitively in the log file since yesterday.<br />
+<br />
+<img src="http://kd8cgo.com/wp-content/uploads/2013/04/yacy_mem_full.png" alt="Bild" /><br />
+<br />
+<img src="http://kd8cgo.com/wp-content/uploads/2013/04/yacy_Search_freedom.png" alt="Bild" /><br />
+<br />
+Since this is the behavior of the default install, what can be done to
+prevent the memory from filling but still be able to search in
+freeworld? If I turn off DHT-In, I cannot search freeworld (remote
+search) any longer, is this correct? Is there any way to keep YaCy from
+outgrowing a small memory footprint? How do you keep it running on the
+Raspberry Pi continuously, for instance? My \&ldquo;low memory\&rdquo; 32 bit test
+only worked for a week with only passive use (no local searching or
+proxy)..?</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8892">killswitch</a>
+&mdash; Fr Apr 05, 2013 11:39 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

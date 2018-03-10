@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="mitmachen-re-raspberry-pi">Mitmachen • Re: Raspberry Pi</h1>
+
+<p>Date: 2013-12-03 00:56:12</p>
+
+<p>Kurzer Zwischenstand, wen es interessiert. Und vielleicht kann ich
+jemanden mobilisieren, mitzumachen.<br />
+------------------------------------------------------------------------------------------------------------------------------------<br />
+<br />
+Habe jetzt 3 auf interessante Weise vergleichbare Systeme laufen:<br />
+<br />
+[*] <a href="http://88.198.156.62:8090/Status.html">fherb-hetzn62</a>{.postlink}
+Läuft auf einer virtuellen Maschine bei Hetzner; bekannte Randdaten:
+512MB RAM, 100MBit-Anbindung, Verwendung eines Swapfiles<br />
+[*] <a href="http://fherb.de:8090/Status.html">fherb-CubieTruck1</a>{.postlink}
+Läuft bei mir zu Hause über LAN am Router. Der genannte CubieTruck.
+Randdaten: Dual-Core-Arm; derzeit reichlich 800MB RAM ansprechbar (noch
+Firmwareproblem; 2GB sind verlötet)<br />
+[*] <a href="http://fherb.de:8091/Status.html">fherb-RasPi1</a>{.postlink} Läuft
+ebenfalls bei mir zu Hause, aber über WLAN am Router. Hier tuckert ein
+ARM mit 512MB RAM.<br />
+<br />
+Die beiden ARMse hängen an 24...32MBit Downloadrate und 2MBit
+Uploadrate im Netz von Kabeldeutschland.<br />
+<br />
+Soweit ich das aber bisher beobachten kann: Nicht der mittlere Durchsatz
+des Netzes scheint die Kommunikation mit anderen Peers zu beeinflussen,
+sondern die Reaktionszeiten am Netz. Richtig? Ein reaktionsschneller
+Peer wird offenbar \&ldquo;gerne\&rdquo; ausgewählt, um Daten zu speichern, die von
+anderen Peers kommen. (s. Bemerkung unten)<br />
+<br />
+Interessant: Der knappe Speicher von 512MB beim Hetzner-System scheint
+YACY bei der Netzwerkarbeit mit den anderen Peers wenig auszubremsen.
+Offenbar zählt hier vor allem schnelle Reaktion in der
+Netzwerkkommunikation. Die zugeteilte Prozessorleistung und Zugriff auf
+die Festplatte für diese VM scheint ganz passabel. Vielleicht sind das
+wenig beanspruchte Systeme, mit denen ich die Hardware bei Hetzner
+teilen muss. Auch scheint das Indexieren vor allem Leistung im Download
+(Netzanbindung) und im Parsen (Prozessor) zu fordern. Auch das geht ganz
+zügig.<br />
+<br />
+Der CubieTruck hat mich inzwischen von seiner Leistungsfähigkeit
+gegenüber dem Raspberry Pi überzeugt. Beide liegen natürlich weit hinter
+dem Hetzner-System zurück. Beim RasPi macht das Zusammenspiel aus
+begrenzter Leistungsfähigkeit und nicht allzu großem RAM vor allem beim
+Crawlen Probleme. Aber: Er arbeitet stabil. Vermutlich sind aber auch
+seine Reaktionszeiten am Netz nicht so dolle, weswegen er von anderen
+Peers kaum zur Verwaltung von Daten angesprochen wird. Das klappt beim
+CubieTruck schon deutlich besser. Ob den CubieTruck nun eher die
+Netzwerkanbindung oder die eigene Leistungsfähigkeit bremst, weiß ich
+noch nicht. Die zwei Kerne sind jedenfalls nicht permanent bei 100%.<br />
+<br />
+Die Probleme mit der SATA-Festplatte am CubieTruck sind gelöst: Auch ein
+2A-Netzteil reicht nicht aus. Der zentrale Stromversorgungsbaustein
+resetet den Prozessor in dem Moment, wenn die Festplatte vom Prozessor
+eingeschaltet wird. Der Treiber beherrscht inzwischen alles: SATA wie
+auch das Einschalten der Stromversorgung. Und: Die Festplate wird nur
+versorgt, wenn man den Strom über den Rundsteckverbinder zuführt. Das
+CubieBoard lässt ebenso die Versorgung über die Mini-USB-Buchse zu. Aber
+wie ich der Schaltung inzwischen entnehmen konnte, ohne einen Teil der
+Peripherie zu versorgen. Also auch ein kräftiges
+12W-Apple-Steckernetzteil mit Mini-USB-Stecker reicht nicht zu, um die
+Anordung mit Festplatte zu betreiben. - Ob man mittels Stützkondensator
+das CubieTruck inckl. Festplatte an einem 2A-Netzteil verwenden kann,
+teste ich noch. Nach dem Einschaltmoment des Spindelantriebs sollte das
+völlig ausreichend sein. - Nutzer von SSD-Festplaten haben dieses
+Problem nicht. Aber das wird vorerst der Sonderfall bleiben, da eine SSD
+am CubieTruck, wie auch am Raspberry Pi kostenmäßig Unsinn ist. Dann
+lieber das Geld in leistungsfähigere Prozessor(Mainboard)hardware
+stecken.<br />
+<br />
+Das Tuning der Parameter zur Verbesserung der Leistungsfähigkeit ist für
+mich noch ein Rätsel. Manche Parameter sind ein wenig verständlich. Aber
+um das wirklich ausgewogen zu tun, muss man wohl die YACY-Software
+besser in ihrer Struktur und Leistungsverteilung kennen. Was ich vor
+allem tue: performanceIO etwas reduzieren. Sowie den Heap für Java
+gegenüber der Standardeinstellung zu reduzieren.<br />
+<br />
+Bemerkung: Wenn reaktionsschnelle Peers von den Teilnehmern \&ldquo;gern\&rdquo; zur
+Ablage der Index-Informationen verwendet werden würde es doch Sinn
+machen, wenn wir neben zusätzlicher Hardware zu Hause lieber einen
+Server, von mir aus auch einen Virtuellen, bei einem gut angebundenen
+Hoster für das Netzwerk sponsoren (betreiben), das Crawlen aber vor
+allem mit unseren Systemen zu Hause erledigen, wenn sie gerade
+eingeschaltet sind. Dann müsste das Netz als solches doch auf
+Suchanfragen einerseits schnelle Antworten liefern können, während die
+mit reichlich Verzögerung versehenen Systeme zu Hause den Input liefern.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9031">fherb</a>
+&mdash; Di Dez 03, 2013 12:56 am</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

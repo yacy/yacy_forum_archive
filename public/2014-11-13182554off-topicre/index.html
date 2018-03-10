@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="off-topic-re-yacystats-neuauflage">Off-Topic • Re: yacystats Neuauflage?</h1>
+
+<p>Date: 2014-11-13 18:25:54</p>
+
+<p>Hallo,<br />
+<br />
+eventuell hat es schon jemand bemerkt: ich habe heute Früh auf dem
+Server eine neue Version meines Tools yacyDNS eingespielt.<br />
+Es hat sich vor allem einiges unter der Haube geändert und auch drum
+herum ist etliches anders.<br />
+<br />
+yacyDNS ist jetzt mit einem richtigen Domain-Namen erreichbar:
+<a href="http://yacy.info/">yacy.info</a>{.postlink} bzw.
+<a href="http://yacy.info/stats_main">yacy.info/stats_main</a>{.postlink} mit den
+Statistiken. Auch der Port 5353 ist jetzt nicht mehr notwendig, es
+funktioniert der HTTP-Standard-Port 80 so das keine derartige Angabe in
+Links u.ä. mehr erforderlich ist. Für die IP-Adresse 130.255.73.69 gibt
+es aber eine interne Weiterleitung von Port 5353 auf Port 80 so das
+externe Scripte/Links/usw. erst einmal weiter funktionieren, trotzdem
+sollte überall \&ldquo;130.255.73.69:5353/\&rdquo; gegen \&ldquo;yacy.info/\&rdquo; ausgetauscht
+werden.<br />
+<br />
+Die Statistikseite ist zwar noch immer recht spartanisch aber ich hoffe
+das ich da demnächst einiges ändern kann. Aus der internen Datenbank von
+yacyDNS lassen sich jedenfalls einige recht interessante Informationen
+extrahieren.<br />
+So ist eine neue Punkt-Linie dazugekommen die anzeigt wie viele der
+bekannten Peers von yacyDNS niemals erreicht wurden. In den ersten 24
+Stunden nach einem Neustart von yacyDNS (womit bisher leider immer die
+interne Datenbank komplett verloren war) wird die Anzahl der
+unerreichbaren Peers kleiner (in dieser Zeit kommen all die Peers die
+nur für begrenzte Zeit pro Tag online sind als erreichbar hinzu) und ab
+dann wird diese Zahl langsam immer größer. Hinter letzterem vermute ich
+das es Peers gibt die nur so kurz online sind das mein Tool diese gar
+nicht erwischt aber da diese Peers trotzdem in den Seedlisten weniger
+anderer Peers eine Spur hinterlassen kommen sie trotzdem in die interne
+Datenbank von yacyDNS.<br />
+Da yacyDNS jetzt auch regelmäßig die komplette interne Datenbank als
+Datei abspeichert konnte ich mir mal die Liste der Peers genauer
+ansehen. Auffallend ist das bei vielen Peers nur kurze Zeiten zwischen
+\&ldquo;Birth-Date\&rdquo; und \&ldquo;Last-Seen\&rdquo; vergangen sind und die meisten dieser
+Peers auch aktuell nicht mehr erreichbar sind. Das deutet darauf hin das
+sehr viele YaCy-Installationen nur kurz benutzt/getestet werden und dann
+nie wieder kommen.<br />
+<br />
+Zusammenfassend komme ich zu dem Schluss das es höchstens etwa 250
+regelmäßig aktive Peers mit Senior-Status gibt und der Rest entweder nur
+sehr selten benutzt wird oder nur kurzlebige Eintagsfliegen waren.
+Letzteres lässt vermuten das viele Anwender keinen ausreichenden
+\&ldquo;Nutzwert\&rdquo; in YaCy sehen um sich für einen längerfristigen Betrieb
+eines eigenen Peers zu entscheiden.<br />
+<br />
+Ich würde mich sehr freuen wenn wir diese Beobachtungen hier mal
+angemessen diskutieren würden. Schon weil meine Schlussfolgerungen auch
+falsch sein können würde ich gerne andere Meinungen dazu lesen.<br />
+<br />
+Hinter der Domain yacy.info stecken zwei unabhängige Server (einzeln per
+a.yacy.info und b.yacy.info erreichbar) damit ein Ausfall wie Ende
+Oktober nicht noch einmal vorkommt. Natürlich sind beide Server per IPv4
+und IPv6 erreichbar.<br />
+<br />
+Momentan arbeite ich daran das die Instanzen von yacyDNS auf den
+unterschiedlichen Servern ihre interne Datenbank untereinander
+synchronisieren können. Das soll dann den Total-Verlust bei einem
+Neustart endlich abschaffen.<br />
+<br />
+Hat schon mal jemand probiert yacyDNS als Proxy für die beiden
+YaCy-Top-Level-Domains (.yacy und .yacyh) zu benutzen? Enthalten ist
+diese Funktion schon eine kleine Weile aber ich bin bis jetzt noch nicht
+dazu gekommen das mal gründlich auszutesten. Theoretisch sollte es in
+Firefox reichen das AddOn FoxyProxy zu installieren und für die beiden
+YaCy-Top-Level-Domains als HTTP-Proxy \&ldquo;yacy.info\&rdquo; einzutragen.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Do Nov 13, 2014 6:25 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

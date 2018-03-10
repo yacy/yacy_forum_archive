@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="off-topic-re-yacystats-offline">Off-Topic • Re: Yacystats offline</h1>
+
+<p>Date: 2014-09-17 13:19:24</p>
+
+<p>Eine Statistikerfassung in YaCy ist auf dem Weg, Erklärung dazu hier im
+commit: <a href="https://gitorious.org/yacy/rc1/commit/ad35d9294f88bea4bd0e468a4c5c8bfb9c2364bd">https://gitorious.org/yacy/rc1/commit/a ...
+fb9c2364bd</a>{.postlink}<br />
+<br />
+Man kann das dann über <a href="http://localhost:8090/Tables_p.html?table=stats">http://localhost:8090/Tables_p.html?table=stats</a>
+abfragen. Eine XML/JSON Abfrage wird ggf. ermöglicht. Die Werte in der
+Tabelle sind:<br />
+<br />
+aM: activeLastMonth<br />
+aW: activeLastWeek<br />
+aD: activeLastDay<br />
+aH: activeLastHour<br />
+cC: countConnected (Active Senior)<br />
+cD: countDisconnected (Passive Senior)<br />
+cP: countPotential (Junior)<br />
+cR: count of the RWI entries<br />
+cI: size of the index (number of documents)<br />
+<br />
+Der Primary Key PK der Tabelle ist das Datum, als yyyyMMddHHmm<br />
+Die Werte werden dort zur Zeit zwei mal die Stunde hineingeschrieben,
+aber nicht zu exakten Uhrzeiten sondern nur dann wenn der
+Cleanup-Prozess eben mal gelaufen ist.<br />
+<br />
+Ihr könnt ja schon mal überlegen ob ihr eine Visualisierung aufgrund der
+Daten selber bauen könnt, wenn ein XML/JSON dazu da wäre. Das wäre toll,
+dann muss ich mir die Arbeit nicht machen
+<img src="http://forum.yacy-websuche.de/images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /><br />
+Ich empfehle dazu d3js, das haben wir nämlich schon eingebunden. Siehe
+auch: <a href="https://github.com/mbostock/d3/wiki/Gallery">https://github.com/mbostock/d3/wiki/Gallery</a><br />
+<br />
+Gebrauchen könnte man z.B. diese Beispiele hier:<br />
+<a href="http://bl.ocks.org/NPashaP/113f7fea0751fa1513e1">http://bl.ocks.org/NPashaP/113f7fea0751fa1513e1</a><br />
+<a href="http://bl.ocks.org/mbostock/3885211">http://bl.ocks.org/mbostock/3885211</a></p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
+&mdash; Mi Sep 17, 2014 12:19 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

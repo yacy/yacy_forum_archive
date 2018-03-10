@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="dev-solrcloud">Dev:SolrCloud</h1>
+
+<p>Date: 2014-01-12 11:26:21</p>
+
+<p>[Zookeeper Client for Solr: ]{.autocomment} adopted paths to solr in
+/opt</p>
+
+<p>← Nächstältere Version</p>
+
+<p>Version vom 12. Januar 2014, 10:26 Uhr</p>
+
+<p>(2 dazwischenliegende Versionen von einem Benutzer werden nicht
+angezeigt)</p>
+
+<p>Zeile 51:</p>
+
+<p>Zeile 51:</p>
+
+<p> </p>
+
+<div>
+
+==== Solr Installation ====
+
+</div>
+
+<p> </p>
+
+<div>
+
+==== Solr Installation ====
+
+</div>
+
+<p> </p>
+
+<div>
+
+Download a solr release from http://lucene.apache.org/solr/ i.e.
+
+</div>
+
+<p> </p>
+
+<div>
+
+Download a solr release from http://lucene.apache.org/solr/ i.e.
+
+</div>
+
+<p>−</p>
+
+<div>
+
+  cd /~~var/lib/tomcat6/~~
+
+</div>
+
+<p>+</p>
+
+<div>
+
+  cd /[opt]{.underline}
+
+</div>
+
+<p> </p>
+
+<div>
+
+  wget
+http://apache.mirrors.spacedump.net/lucene/solr/4.6.0/solr-4.6.0.tgz
+
+</div>
+
+<p> </p>
+
+<div>
+
+  wget
+http://apache.mirrors.spacedump.net/lucene/solr/4.6.0/solr-4.6.0.tgz
+
+</div>
+
+<p> </p>
+
+<div>
+
+  tar xfz solr-4.6.0.tgz
+
+</div>
+
+<p> </p>
+
+<div>
+
+  tar xfz solr-4.6.0.tgz
+
+</div>
+
+<p>−</p>
+
+<div>
+
+  ~~cp~~ solr-4.6.0~~/dist/~~solr-4.6.0~~.war webapps~~/
+
+</div>
+
+<p>+</p>
+
+<div>
+
+  [ln -s]{.underline} solr-4.6.0 [solr]{.underline}
+
+</div>
+
+<p>−</p>
+
+<div>
+
+~~After the war-file is copied to webapps, tomcat automatically
+decompresses the war file and writes the content to
+/var/lib/tomcat6/webapps~~/solr-4.6.0. ~~Check that this exists~~.
+
+</div>
+
+<p>+</p>
+
+<div>
+
+[ln -s]{.underline} solr-4.6.0/[dist]{.underline}/solr-4.6.0.[war
+solr]{.underline}.[war]{.underline}
+
+</div>
+
+<p>−</p>
+
+<div>
+
+Because Solr uses a different logging in jetty as implemented in solr,
+we must ~~copy~~ the ~~logging libraries to~~ tomcat ~~as well:~~
+
+</div>
+
+<p>+</p>
+
+<div>
+
+Because Solr uses a different logging in jetty as implemented in solr,
+we must [add slf4j adapters to]{.underline} the tomcat
+[library]{.underline}
+
+</div>
+
+<p>−</p>
+
+<div>
+
+  ~~cp~~
+/~~var~~/~~lib~~/tomcat6/~~solr-4.6.0~~/~~example~~/~~lib~~/~~ext~~/~~\*~~
+/~~usr~~/~~share~~/~~tomcat6~~/~~lib~~/
+
+</div>
+
+<p>+</p>
+
+<div>
+
+  [cd]{.underline}
+/[usr]{.underline}/[share]{.underline}/tomcat6/[lib]{.underline}/
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[wget
+http:]{.underline}//[www.slf4j.org]{.underline}/[dist]{.underline}/[slf4j-1.6.6.zip]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[apt-get install unzip]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[unzip slf4j-1.6.6.zip]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[cp slf4j-1.6.6]{.underline}/[jcl-over-slf4j-1.6.6.jar .]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[cp slf4j-1.6.6]{.underline}/[log4j-over-slf4j-1.6.6.jar .]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[cp slf4j-1.6.6]{.underline}/[slf4j-api-1.6.6.jar .]{.underline}
+
+</div>
+
+<p> </p>
+
+<p>+</p>
+
+<div>
+
+[cp slf4j-1.6.6]{.underline}/[slf4j-jdk14-1.6.6.jar .]{.underline}
+
+</div>
+
+<p> </p>
+
+<div>
+
+and restart tomcat:
+
+</div>
+
+<p> </p>
+
+<div>
+
+and restart tomcat:
+
+</div>
+
+<p> </p>
+
+<div>
+
+  /etc/init.d/tomcat6 restart
+
+</div>
+
+<p> </p>
+
+<div>
+
+  /etc/init.d/tomcat6 restart
+
+</div>
+
+<p>Zeile 73:</p>
+
+<p>Zeile 80:</p>
+
+<p> </p>
+
+<div>
+
+==== Zookeeper Client for Solr ====
+
+</div>
+
+<p> </p>
+
+<div>
+
+==== Zookeeper Client for Solr ====
+
+</div>
+
+<p> </p>
+
+<div>
+
+First, we need a Zookeeper client for Solr because Solr provides it\'s
+own client app to upload the relevant configuration files. We must
+fabricate this client using the libraries inside the Solr war-file and
+additional libraries for logging. We use the already installed war file,
+you must adopt the paths here if you used a more recent version of Solr:
+
+</div>
+
+<p> </p>
+
+<div>
+
+First, we need a Zookeeper client for Solr because Solr provides it\'s
+own client app to upload the relevant configuration files. We must
+fabricate this client using the libraries inside the Solr war-file and
+additional libraries for logging. We use the already installed war file,
+you must adopt the paths here if you used a more recent version of Solr:
+
+</div>
+
+<p>−</p>
+
+<div>
+
+~~apt-get install unzip \# a war file is in zip file format; we need
+that to get the \'inside\' of the war file~~
+
+</div>
+
+<p>+</p>
+
+<div>
+
+  unzip -q /[opt]{.underline}/solr.war -d /tmp/solr-war/
+
+</div>
+
+<p>−</p>
+
+<div>
+
+  unzip -q /~~var/lib/tomcat6/webapps~~/solr~~-4.6.0~~.war -d
+/tmp/solr-war/
+
+</div>
+
+<p>+</p>
+
+<div>
+
+</div>
+
+<p> </p>
+
+<div>
+
+  mkdir /usr/share/zookeeper/solr-cli-lib
+
+</div>
+
+<p> </p>
+
+<div>
+
+  mkdir /usr/share/zookeeper/solr-cli-lib
+
+</div>
+
+<p> </p>
+
+<div>
+
+  cp /tmp/solr-war/WEB-INF/lib/\* /usr/share/zookeeper/solr-cli-lib/ \#
+solr libs
+
+</div>
+
+<p> </p>
+
+<div>
+
+  cp /tmp/solr-war/WEB-INF/lib/\* /usr/share/zookeeper/solr-cli-lib/ \#
+solr libs
+
+</div>
+
+<p>−</p>
+
+<div>
+
+  cp /~~var/lib/tomcat6~~/solr~~-4.6.0~~/example/lib/ext/\*
+/usr/share/zookeeper/solr-cli-lib/ \# logger libs
+
+</div>
+
+<p>+</p>
+
+<div>
+
+  cp /[opt]{.underline}/solr/example/lib/ext/\*
+/usr/share/zookeeper/solr-cli-lib/ \# logger libs
+
+</div>
+
+<p> </p>
+
+<div>
+
+  rm -Rf /tmp/solr-war
+
+</div>
+
+<p> </p>
+
+<div>
+
+  rm -Rf /tmp/solr-war
+
+</div>
+
+<p> </p>
+
+<div>
+
+Now we can take advantage of the SolrCloud ZooKeeper CLI commands.
+
+</div>
+
+<p> </p>
+
+<div>
+
+Now we can take advantage of the SolrCloud ZooKeeper CLI commands.
+
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

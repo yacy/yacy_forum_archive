@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-yacy-hört-nicht-auf-port-8090">Fragen und Antworten • Re: YaCy hört nicht auf Port 8090</h1>
+
+<p>Date: 2015-12-07 21:54:59</p>
+
+<p>Hi lux.<br />
+<br />
+Ich fürchte nicht. In der Logdatei steht nichts davon. Lediglich in der
+endlosen Kommandozeile um java steht etwas dazu, aber es ist kein
+eigener Task. Bin allerdings auch nicht so vertraut mit Java. Ich paste
+mal:<br />
+<br />
+----&gt;8----<br />
+venty\@hotdog:~/yacy \$ ps aux | grep jetty<br />
+venty 2465 99.5 15.6 371852 77492 pts/0 SNl 21:45 1:17 /usr/bin/java
+-Xms90m -Xmx200m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8
+-classpath
+.:htroot:lib/J7Zip-modified.jar:lib/apache-mime4j-0.6.jar:lib/bcmail-jdk15-1.46.jar:lib/bcprov-jdk15-1.46.jar:lib/chardet.jar:lib/commons-codec-1.9.jar:lib/commons-compress-1.8.1.jar:lib/commons-fileupload-1.3.1.jar:lib/commons-io-2.3.jar:lib/commons-jxpath-1.3.jar:lib/commons-lang-2.6.jar:lib/commons-logging-1.2.jar:lib/fontbox-1.8.8.jar:lib/geronimo-stax-api_1.0_spec-1.0.1.jar:lib/guava-18.0.jar:lib/htmllexer.jar:lib/httpclient-4.3.6.jar:lib/httpcore-4.3.3.jar:lib/httpmime-4.3.6.jar:lib/icu4j-core.jar:lib/jakarta-oro-2.0.8.jar:lib/jaudiotagger-2.0.4-20111207.115108-15.jar:lib/javax.servlet-api-3.1.0.jar:lib/jcifs-1.3.17.jar:lib/jcl-over-slf4j-1.7.9.jar:lib/jempbox-1.8.8.jar:lib/jetty-client-9.2.6.v20141205.jar:lib/jetty-continuation-9.2.6.v20141205.jar:lib/jetty-deploy-9.2.6.v20141205.jar:lib/jetty-http-9.2.6.v20141205.jar:lib/jetty-io-9.2.6.v20141205.jar:lib/jetty-jmx-9.2.6.v20141205.jar:lib/jetty-proxy-9.2.6.v20141205.jar:lib/jetty-security-9.2.6.v20141205.jar:lib/jetty-server-9.2.6.v20141205.jar:lib/jetty-servlet-9.2.6.v20141205.jar:lib/jetty-servlets-9.2.6.v20141205.jar:lib/jetty-util-9.2.6.v20141205.jar:lib/jetty-webapp-9.2.6.v20141205.jar:lib/jetty-xml-9.2.6.v20141205.jar:lib/jsch-0.1.51.jar:lib/json-simple-1.1.1.jar:lib/jsoup-1.8.1.jar:lib/log4j-over-slf4j-1.7.9.jar:lib/lucene-analyzers-common-4.10.3.jar:lib/lucene-analyzers-phonetic-4.10.3.jar:lib/lucene-classification-4.10.3.jar:lib/lucene-codecs-4.10.3.jar:lib/lucene-core-4.10.3.jar:lib/lucene-facet-4.10.3.jar:lib/lucene-grouping-4.10.3.jar:lib/lucene-highlighter-4.10.3.jar:lib/lucene-join-4.10.3.jar:lib/lucene-memory-4.10.3.jar:lib/lucene-misc-4.10.3.jar:lib/lucene-queries-4.10.3.jar:lib/lucene-queryparser-4.10.3.jar:lib/lucene-spatial-4.10.3.jar:lib/lucene-suggest-4.10.3.jar:lib/metadata-extractor-2.7.0.jar:lib/noggit-0.5.jar:lib/org.restlet.jar:lib/pdfbox-1.8.8.jar:lib/poi-3.10.1.jar:lib/poi-scratchpad-3.10.1.jar:lib/slf4j-api-1.7.9.jar:lib/slf4j-jdk14-1.7.9.jar:lib/solr-core-4.10.3.jar:lib/solr-solrj-4.10.3.jar:lib/spatial4j-0.4.1.jar:lib/webcat-0.1-swf.jar:lib/weupnp-0.1.2.jar:lib/wstx-asl-3.2.9.jar:lib/xercesImpl.jar:lib/xml-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar:
+net.yacy.yacy<br />
+----&gt;8----<br />
+<br />
+Allerdings hab ich auch noch festgestellt, dass YaCy auf dem Raspi 1
+nach ein paar Minuten jeweils crasht. Ich glaube, das bringt nichts,
+wenn ich da weiterhin versuch auf der Plattform das zum Laufen zu
+bringen. Muss mir da wohl was anderes überlegen.<br />
+<br />
+Hier noch die Ausgabe von ./startYACY.sh -d:<br />
+<br />
+----8&lt;----<br />
+venty\@hotdog:~/yacy \$ ./startYACY.sh -d<br />
+****************** YaCy Web Crawler/Indexer &amp; Search
+Engine *******************<br />
+**** &copy; by Michael Peter Christen, usage granted under the GPL
+Version 2 ****<br />
+**** USE AT YOUR OWN RISK! Project home and releases:
+<a href="http://yacy.net/">http://yacy.net/</a> ****<br />
+** LOG of YaCy: DATA/LOG/yacy00.log (and yacy&lt;xx&gt;.log) **<br />
+** STOP YaCy: execute stopYACY.sh and wait some seconds **<br />
+** GET HELP for YaCy: see <a href="http://wiki.yacy.net">http://wiki.yacy.net</a> and
+<a href="http://forum.yacy.de">http://forum.yacy.de</a> **<br />
+*******************************************************************************<br />
+&gt;&gt; YaCy started as daemon process. Administration at
+<a href="http://localhost:8090">http://localhost:8090</a> &lt;&lt;<br />
+Asserts are enabled<br />
+WARNING: the file /home/venty/yacy/DATA/yacy.running exists, this
+usually means that a YaCy instance is still running. If you want to
+restart YaCy, try first ./stopYACY.sh, then ./startYACY.sh. If
+./stopYACY.sh fails, try ./killYACY.sh<br />
+INFO: delete old yacy.running file; likely previous YaCy session was not
+orderly shutdown!<br />
+[ YaCy v1.82, build 20150121 by Michael Christen /
+<a href="http://www.yacy.net">www.yacy.net</a>{.postlink} ]<br />
+-------------------------------------------------------------------------------<br />
+STARTUP: Trying to load logging configuration from file
+/home/venty/yacy/DATA/LOG/yacy.logging<br />
+I 2015/12/07 20:51:19 Domain Init local host address: 0::1 (local)<br />
+I 2015/12/07 20:51:20 Domain Init local host address: 0:0:0:0:0:0:0:1
+(local)<br />
+I 2015/12/07 20:51:20 Domain Init local host address: 127.0.0.1 (local)<br />
+I 2015/12/07 20:51:20 Domain Init local host address:
+fe80:0:0:0:24b:5bfc:8a9e:b148 (local)<br />
+I 2015/12/07 20:51:20 Domain Init local host address:
+fe80::24b:5bfc:8a9e:b148 (local)<br />
+I 2015/12/07 20:51:20 Domain Init local host address:
+2001:1620:f00:8250:ba27:ebff:fe69:a351 (public)<br />
+I 2015/12/07 20:51:20 Domain Init local host address: 127.0.1.1 (local)<br />
+I 2015/12/07 20:51:20 Domain Init local host address: 192.168.200.94
+(local)<br />
+I 2015/12/07 20:51:24 Domain Init local host address: 169.254.185.103
+(local)<br />
+I 2015/12/07 20:51:24 Domain Init local host address:
+fe80:0:0:0:ba27:ebff:fe69:a351 (local)<br />
+I 2015/12/07 20:51:24 Domain Init local host address:
+fe80::ba27:ebff:fe69:a351 (local)<br />
+#<br />
+# A fatal error has been detected by the Java Runtime Environment:<br />
+#<br />
+# Internal Error (cppInterpreter_arm.S:2625), pid=2536,
+tid=2684744800<br />
+# fatal error: *** Unimplemented opcode: 232 = &lt;unknown&gt;<br />
+<br />
+#<br />
+# JRE version: OpenJDK Runtime Environment (7.0_91-b02) (build
+1.7.0_91-b02)<br />
+# Java VM: OpenJDK Zero VM (24.91-b01 mixed mode linux-arm )<br />
+# Derivative: IcedTea 2.6.3<br />
+# Distribution: Raspbian GNU/Linux 8.0 (jessie), package
+7u91-2.6.3-1~deb8u1+rpi1<br />
+# Failed to write core dump. Core dumps have been disabled. To enable
+core dumping, try \&ldquo;ulimit -c unlimited\&rdquo; before starting Java again<br />
+#<br />
+# An error report file with more information is saved as:<br />
+# /home/venty/yacy/hs_err_pid2536.log<br />
+/home/venty/yacy/hs_err_pid2536.logr]<br />
+#<br />
+# If you would like to submit a bug report, please include<br />
+# instructions on how to reproduce the bug and visit:<br />
+# <a href="http://icedtea.classpath.org/bugzilla">http://icedtea.classpath.org/bugzilla</a><br />
+#<br />
+Aborted<br />
+----&gt;8-----<br />
+<br />
+Ich versuchs bei Gelegenheit auf einer anderen, etwas stärkeren
+Plattform. Trotzdem danke einstweilen!</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9634">Venty</a>
+&mdash; Mo Dez 07, 2015 9:54 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

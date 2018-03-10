@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="wunschliste-re-abschalten-der-visualisierung-in-der-crawler-überwachung">Wunschliste • Re: Abschalten der Visualisierung in der Crawler-Überwachung</h1>
+
+<p>Date: 2014-10-03 15:16:06</p>
+
+<p>Hallo,<br />
+<br />
+laut Orbiter wird die Graphik auf \&lsquo;/Crawler_p.html\&rsquo; per Java-Script
+erzeugt und angezeigt, also warum nicht einfach für diese Seite
+Java-Script abschalten? Bei mir ist damit die CPU-Last komplett weg und
+es wird keine Graphik mehr neu gerendert.<br />
+</p>
+
+<blockquote>
+<div>
+
+flegno hat geschrieben:\
+Wie in Kommentaren zu lesen ist, existieren offensichtlich
+grundsätzlich unterschiedliche Ansichten \...\
+
+</div>
+</blockquote>
+
+<p>Du hast die CPU-Last als Ursache für Bugs in der Webgraph-Library
+angenommen:</p>
+
+<blockquote>
+<div>
+
+flegno hat geschrieben:\
+Die CPU-Last ist zwar die Ursache, aber diese Ursache ist deswegen
+ernst zu nehmen, da diese [immer wieder zu den
+YaCy-Abstürzen]{style="color: #FF0000"} führt.\
+
+</div>
+</blockquote>
+
+<p>aber da die Webgraph-Library für die Crawler-Überwachung gar nicht
+verwendet wird fällt es mir noch immer schwer da einen Zusammenhang zu
+sehen.<br />
+<br />
+Letzten Endes gibt es meiner Meinung nach nur zwei echte Gründe für das
+Abschalten der Graphik auf \&lsquo;/Crawler_p.html\&rsquo; : die ist Graphik
+uninteressant oder die CPU-Last (auf dem PC wo der Browser läuft) ist zu
+hoch.<br />
+Beides sind absolut nachvollziehbare Gründe und an diesen ist definitiv
+nichts auszusetzen. In der Hinsicht ist es natürlich bedauerlich das
+dieser Wunsch bei Orbiter so weit hinten auf der Dringlichkeitsliste
+steht, aber da sich das Problem auch einfach auf der Browser-Seite lösen
+lässt und es meiner Meinung nach deutlich wichtigere Probleme in YaCy
+gibt kann ich das gut nachvollziehen. Durch Abschalten von Java-Script
+im Browser lassen sich so weit ich sehen konnte alle automatischen
+Graphiken und auch der News-Ticker auf \&lsquo;/Status.html\&rsquo; abschalten.<br />
+<br />
+Bitte versteht mich nicht falsch, der Wunsch nach Abschaltbarkeit der
+Graphiken ist absolut verständlich, nur sollten dafür keine irrelevanten
+Gründe (wie Bugs im Code) aufgeführt werden.<br />
+<br />
+Grüße<br />
+Erik</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
+&mdash; Fr Okt 03, 2014 2:16 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+Orbiter commented on issue fossasia/susi\_android\#360
+======================================================
+
+Date: 2016-11-26 22:39:05
+
+::: {.time}
+Nov 26, 2016
+:::
+
+::: {.title}
+[Orbiter](https://github.com/Orbiter) commented on issue
+[fossasia/susi\_android\#360](https://github.com/fossasia/susi_android/issues/360#issuecomment-263087487 "Show a google search result list for new answer action type "websearch"")
+:::
+
+::: {.details}
+[![\@Orbiter](https://avatars3.githubusercontent.com/u/238730?v=3&s=60){.gravatar
+width="30" height="30"}](https://github.com/Orbiter)
+
+::: {.message .markdown-body}
+> this is a misunderstanding. Just recently the android app gained the
+> ability to search for google search results itself. That shall be
+> triggered wi...
+:::
+:::

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.37.1" />
+
+  <title> &middot; Yacy Old Forum Archiv</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="fragen-und-antworten-re-crawler-verwirft-seiten-wenn-remote-proxy-offline">Fragen und Antworten • Re: Crawler verwirft Seiten, wenn Remote-Proxy offline</h1>
+
+<p>Date: 2015-08-15 00:47:21</p>
+
+<p>... also ich verstehe das nicht.<br />
+<br />
+--- Nebenbei: Ich beschreibe weiter unten mein eigentliches
+Einsetzungs-Szenario. Vielleict kann mir jemand grundsätzlich helfen. Es
+handelt sich inhaltlich, in der Anwendung, um eine eigene, ehrenamtliche
+Initiative. Das vollständige System wird nicht zum Geldverdienen
+existieren. Aber, wenn es läuft, wird es nicht nur mich erfreuen. ---<br />
+<br />
+Mit der gleichen Prozess Scheduler-Liste habe ich in der embedded
+solr-Datenbank die letzten Tage systematisch Crawlen und indizieren
+können. Mach ich das nun mit der externen Datenbank, wird das ständig
+unterbrochen und der No-Load-Crawler wird in der Zeit ohne Input in die
+Datenbank abgearbeitet. Dieser Anteil ist zeitlich größer, als die
+Crawl-Tätigkeit. Deutlich größer.<br />
+<br />
+Ich habe YaCy die letzten Monate und in Abständen auch die letzten 3
+Jahre getestet und in der Doku und den Foren gelesen, um zu verstehen,
+was abläuft. Jetzt endlich möchte ich ein Produktiv-System aufsetzen.
+Und ich stehe auf einmal wieder vor offenen Fragen. Das ist nicht schön!
+Wenn mir jemand beschrieben kann, was da abläuft, wäre ich sehr
+dankbar.<br />
+<br />
+Mein Ziel ist, ein sicher funktionierendes System für einen bestimmten
+(gesellschaftlich relevanten, nicht kommerziellen) Zweck zum Laufen zu
+bringen. Aus den bisherigen Erfahrungen mit YaCy habe ich mich
+entschieden, es folgendermaßen zusammenzusetzen:<br />
+<br />
+* die solr-Datenbank läuft auf einem eigenen System, dass
+leistungsmäßig darauf angepasst ist (RAM, Prozessorkerne)<br />
+* die Datenbankinhalte kommen aus Crawls von vielen Domains, dort
+jedoch aus speziellen Bereichen (Unterverzeichnissen, untergeordneten
+Blogs)<br />
+* aus dem Grund verwende ich ein YaCy dazu, diese Inhalte einmalig in
+der vollständigen Tiefe zu ercrawlen<br />
+* ein zweites YaCy-System beobachtet den obersten Leven (meist eigent
+sich das rss-xml-File dazu) und ercrawlt alles Neues, um die Datenbank
+dauerhaft up-to-date zu halten<br />
+* ein drittes YaCy-System dient ausschließlich der Such in der
+solr-Datenbank<br />
+* nur dieses letzte YaCy-System wird in ein Frontend für den Nutzer
+integriert.<br />
+* für die Crawlings, wird ein Privoxy-System zwischengeschaltet, um
+indizierung von Werbung zu vermeiden (Das funktioniert prinzipiell
+ausgezeichnet, wie ich die letzten Tage sehen konnte.)<br />
+<br />
+Mit dieser Anordnung kann ich die einzelnen Aufgaben sinnvoll und
+kostenspaarend auf passende Systeme verteilen. Wo aus Gründen der
+permanenten Verfügbarkeit notwendig bei einem Hoster, sonst sogar zu
+Hause bei glücklicherweise hoher Bandbreite. Ich denke, nach all den
+langen Tests und Versuchen mit YaCy, dass so eine Anordnung für ein
+öffentliches Produktivsystem vorteilhafter ist, alls sämtliche
+Funktionen in eine einzige YaCy-Installation zu konzentrieren.<br />
+<br />
+Und trotzdem komme ich, jetzt, vor der tatsächlichen Implementierung
+eines Produktivsystems wieder an die Grenzen. Wer kann helfen? Ich weiß,
+es ist gerade Urlaubszeit. Und auch in meinem Arbeitszimmer herrschen
+trotz Lüften nachts endlich mal Temperaturen unter 35 Grad.<br />
+<br />
+Beste Grüße<br />
+Frank<br />
+<br />
+Beste Grüße, Frank.</p>
+
+<p>Statistik: Verfasst von
+<a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9031">fherb</a>
+&mdash; Fr Aug 14, 2015 11:47 pm</p>
+
+<hr />
+
+</div>
+
+</div>
+</div>
+<script src="js/ui.js"></script>
+
+
+
+
+
+
+</body>
+</html>
+
