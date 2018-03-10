@@ -1,7 +1,7 @@
 baseURL = ""
 languageCode = "de-de"
 title = "Yacy Old Forum Archiv"
-theme = "blackburn"
+theme = "docapi"
 canonifyurls = true
 paginate = 10
 [menu]
