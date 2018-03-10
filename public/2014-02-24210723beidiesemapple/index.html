@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="bei-diesem-apple-bug-hat-sich-vielleicht-der-eine-oder">Bei diesem Apple-Bug hat sich vielleicht der eine oder ...</h1>
-
 <p>Date: 2014-02-24 21:07:23</p>
-
 <p>Bei diesem Apple-Bug hat sich vielleicht der eine oder andere gefragt,
 wieso da eigentlich nicht der Compiler gemeckert hat. Unreachable Code
 ist eigentlich eine der einfacheren nützlichen Warnungen, die man so
@@ -198,40 +130,26 @@ raushauen kann als Compiler. gcc hat das auch immer getan, man musste
 nur den Optimizer mit anwerfen, weil die Information, welcher Code
 reachable ist, erst aus den Optimizer-Passes rausfällt. Aber hey, kann
 man ja mit leben, mit der Einschränkung.</p>
-
 <p>Nun benutzt Apple aber nicht gcc sondern clang. Und da gibt es die
 Warnung zwar, aber sie muss manuell angeschaltet werden und ist nicht
 Teil von <code>-W -Wall -Wextra</code>. Das ist meiner Ansicht nach ein grober
 Fehler, den clang korrigieren sollte.</p>
-
 <p>Aber wie ist denn das bei gcc? Wäre Apple sicher gewesen, wenn sie gcc
 eingesetzt hätten?</p>
-
 <p>Wie sich rausstellt: Nein. <a href="http://gcc.gnu.org/ml/gcc-help/2011-05/msg00360.html">gcc hat die Option vor ein paar Jahren
 deaktiviert</a>. Ja,
 ganz weg. Die Kommandozeilen-Option gibt es noch, aber sie tut nichts
 mehr. Was für ein epischer Knieschuss, liebe gcc-Maintainer! Da habt ihr
 ja mal wieder mit Anlauf einen Kopfsprung ins Klo gemacht!</p>
-
 <p>Man kann also im Moment Softwareentwicklern unter Linux nur empfehlen,
 clang mindestens als Zweitcompiler zu verwenden, um diese Warnung
 überhaupt kriegen zu können. Oder man steigt gleich ganz auf clang um,
 weil man keinen Bock mehr auf die Andrew Pinskis bei gcc hat.</p>
-
 <p>Ich bleibe erstmal noch bei gcc, weil da immer noch geringfügig besserer
 Code rausfällt in meinen Tests.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

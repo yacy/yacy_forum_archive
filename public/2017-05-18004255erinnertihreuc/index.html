@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,27 +113,18 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="erinnert-ihr-euch-an-den-blogpost-über-das-c-memory-leak-problem-da">Erinnert ihr euch an den Blogpost über das C++-Memory-Leak-Problem?Da ...</h1>
-
 <p>Date: 2017-05-18 00:42:55</p>
-
 <p>Erinnert ihr euch an <a href="http://blog.fefe.de/?ts=a7f35bac">den Blogpost über das
 C++-Memory-Leak-Problem</a>?</p>
-
 <p>Da hat sich der Plot nochmal weiterentwickelt. Erstens habe ich eine
 Mail von einem Redhat-Ingenieur gekriegt, der anscheinend an der Stelle
 zuständig ist. Der hat sich erstmal über mein
@@ -201,7 +132,6 @@ zuständig ist. Der hat sich erstmal über mein
 wohlgemerkt), und dann gemeint, dieser Allokator sei ja seit vielen
 Jahre gar nicht mehr standardmäßig aktiv, und im Übrigen gebe der den
 Speicher ja schon frei, aber halt nicht ans Betriebssystem.</p>
-
 <p>OK, also das mit dem Betriebssystem hatte ich auch so verstanden, und
 ich glaube auch ihr hattet das so verstanden, aber wenn der nicht
 standardmäßig aktiv ist, wie kann dann dieser ursprüngliche Blogpost
@@ -210,11 +140,9 @@ Problem dann weg geht? Und ich hatte auch ein-zwei Leserzuschriften
 gekriegt, die bei ihren länger laufenden C++-Projekten die
 Environment-Variable gesetzt hatten, und der Speicherbedarf ging runter.
 Wat?</p>
-
 <p>Ich klicke also nochmal <a href="https://www.zerotier.com/blog/2017-05-05-theleak.shtml">auf den ursprünglichen
 Link</a> und finde
 da ein Update vor, am Ende.</p>
-
 <blockquote>
 <p>The plot thickens. I\&rsquo;ve received several messages from people
 claiming the likely problematic C++ allocator, known as mt_alloc,
@@ -222,31 +150,18 @@ hasn\&rsquo;t been the default for a very long time and isn\&rsquo;t in CentOS 7
 To investigate I tried doing a string search of all binaries in /lib,
 /usr/lib, /lib64, etc., for \&ldquo;GLIBCPP_FORCE_NEW\&rdquo; and
 \&ldquo;GLIBCXX_FORCE_NEW\&rdquo; and variations thereof and&hellip; came up empty.</p>
-
 <p>Yet setting this environment variable makes the problem go away. I
 repeated the test and confirmed. Then I tried stupid things like
 setting \&ldquo;GLIBCXX_FARCE_NOO\&rdquo; and no, the problem remains.</p>
 </blockquote>
-
 <p>Hahaha, lolwut?! Welcome to the Twilight Zone!</p>
-
 <p>Da sieht man mal wieder: Software Engineering is hard.</p>
-
 <p>Aber auf jeden Fall ist es mir natürlich eine besondere Freude, dass
 auch der Typ sich explizit über
 \&ldquo;Hipster-Bullshitbingo-Startup-Klitsche\&rdquo; amüsiert hat. :-)</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

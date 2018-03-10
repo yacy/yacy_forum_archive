@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,502 +113,271 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="dev-api">Dev:API</h1>
-
 <p>Date: 2012-10-11 11:51:24</p>
-
 <p>[Understanding YaCy crawl profiles: ]{.autocomment} default values are
 all \&lsquo;off\&rsquo;</p>
-
 <p>← Nächstältere Version</p>
-
 <p>Version vom 11. Oktober 2012, 09:51 Uhr</p>
-
 <p>(Eine dazwischenliegende Version von einem Benutzer wird nicht
 angezeigt)</p>
-
 <p>Zeile 641:</p>
-
 <p>Zeile 641:</p>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'mustnotmatch\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'mustnotmatch\'\'\' =  
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \|This filter must not match to allow that the page is accepted for
 crawling. The empty string is a never-match filter which should do well
 for most cases.  
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \|This filter must not match [with the URL to allow that the page is
 accepted for crawling. The empty string is a never-match filter which
 should do well for most cases.]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|-]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|\'\'\'ipMustmatch\'\'\' =]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|The filter is a
 \[http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html
 regular expression\] that must match with the IP of the host to be
 crawled; default is \'catch all\'.]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|-]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|\'\'\'ipMustnotmatch\'\'\' =]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|This filter must not match with the IP of the host]{.underline} to
 allow that the page is accepted for crawling. The empty string is a
 never-match filter which should do well for most cases.  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'indexmustmatch\'\'\' =
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'indexmustmatch\'\'\' =
-
 </div>
-
 <p>Zeile 666:</p>
-
 <p>Zeile 672:</p>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingQ\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingQ\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|value is either \'on\' or \'off\'; default is \'off\'. A questionmark
 is usually a hint for a dynamic page. URLs pointing to dynamic content
 should usually not be crawled. However, there are sometimes web pages
 with static content that is accessed with URLs containing question
 marks.  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|value is either \'on\' or \'off\'; default is \'off\'. A questionmark
 is usually a hint for a dynamic page. URLs pointing to dynamic content
 should usually not be crawled. However, there are sometimes web pages
 with static content that is accessed with URLs containing question
 marks.  
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|-]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|\'\'\'directDocByURL\'\'\' =]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\|value is either \'on\' or \'off\'; default is \'off\'. If this is
 \'on\', then all documents which are linked from loaded pages are
 indexed with their URL only and without any metadata. This applies also
 if these documents are outside of the crawl depth or do not match with
 regular expressions.]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'storeHTCache\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'storeHTCache\'\'\' =  
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \|value is either \'on\' or \'off\'; default is \'~~on~~\'. If \'on\',
 all downloaded content is stored in a built-in cache, the HTCache.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \|value is either \'on\' or \'off\'; default is \'[off]{.underline}\'.
 If \'on\', all downloaded content is stored in a built-in cache, the
 HTCache.
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'cachePolicy\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'cachePolicy\'\'\' =  
-
 </div>
-
 <p>Zeile 678:</p>
-
 <p>Zeile 687:</p>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'indexText\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'indexText\'\'\' =  
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \|value is either \'on\' or \'off\'; default is \'~~on~~\'. If this is
 \'on\' then the fulltext is indexed. If \'off\', only the metadata of
 the pages or media according to \'indexMedia\' is recorded and indexed.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \|value is either \'on\' or \'off\'; default is \'[off]{.underline}\'.
 If this is \'on\' then the fulltext is indexed. If \'off\', only the
 metadata of the pages or media according to \'indexMedia\' is recorded
 and indexed.
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'indexMedia\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'indexMedia\'\'\' =  
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \|value is either \'on\' or \'off\'; default is \'~~on~~\'.  If this is
 \'on\' then the metadta (if available) of media content. If \'off\',
 only the metadata of the pages or fulltext according to \'indexText\' is
 recorded and indexed.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \|value is either \'on\' or \'off\'; default is \'[off]{.underline}\'. 
 If this is \'on\' then the metadta (if available) of media content. If
 \'off\', only the metadata of the pages or fulltext according to
 \'indexText\' is recorded and indexed.
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlOrder\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlOrder\'\'\' =  
-
 </div>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

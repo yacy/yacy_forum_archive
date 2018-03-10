@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="mitmachen-re-raspberry-pi">Mitmachen • Re: Raspberry Pi</h1>
-
 <p>Date: 2013-01-22 10:56:20</p>
-
 <p>Ich hab jetzt noch zwei Karten durchgetestet und Benchmarks gemacht, mit
 überraschendem Ergebnis! sysbench lief auf drei SD Karten und als
 Vergleich auch auf einer normalen normalschnellen Festplatte in einem
@@ -218,17 +150,13 @@ Tatsächlich \&lsquo;fühlt\&rsquo; sich die Extreme Pro auch schnell an im RPi.
 Preis für die Extreme Pro ist auch nicht so gewaltig, die 8GB haben 16
 Euro gekostet.<br />
 </p>
-
 <blockquote>
 <div>
-
 Copro hat geschrieben:\
 Ich habe also das Original raspbian auf die SD Karte kopiert und die
 Pre-Release jdk1.8.0 von Oracle geholt.\
-
 </div>
 </blockquote>
-
 <p><br />
 wäre interessant zu sehen wie die 1.6er-1.8er Versionen gegeneinander
 abschneiden, ich hab die 1.6er genommen um ein möglichst kleines und von
@@ -236,67 +164,49 @@ Overhead freies Java zu testen. Mein Installationsvorgang steht im Wiki:
 <a href="http://www.yacy-websearch.net/wiki/index.php/En:Raspberry_Pi">http://www.yacy-websearch.net/wiki/inde ...
 spberry_Pi</a>{.postlink}<br />
 </p>
-
 <blockquote>
 <div>
-
 Copro hat geschrieben:\
 Habe die startYaCy.sh JAVA\_ARGS Konfiguration etwas geändert damit
 ich mit dem hartcodierten java binary aus dem Paket starten kann:\
-
 -   \"-server\" entfernt, um die Anwendung zu starten: (\"Error
     occurred during initialization of VM Server VM is only supported
     on ARMv7+ VFP\")
 -   \"-XX:MaxPermSize=256m\" entfernt, um die Warnung abzustellen:
     (\"Java HotSpot(TM) Server VM warning: ignoring option
     MaxPermSize=256m; support was removed in 8.0\")
-
 \
-
 </div>
 </blockquote>
-
 <p><br />
 Diese Fehlermeldungen habe ich nicht bekommen! Beide Optionen müsste man
 mal generell hinterfragen; ein MaxPermSize=256m macht auch wenig Sinn
 wenn sowieso nur 120mb freigegeben sind.<br />
 </p>
-
 <blockquote>
 <div>
-
 Copro hat geschrieben:\
 Übrig blieb:\
-
 Code: 
 :   `JAVA_ARGS="-Xss256k -XX:ReservedCodeCacheSize=124m -XX:-UseGCOverheadLimit -XX:+UseAdaptiveSizePolicy -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -Dfile.encoding=UTF-8";`
-
 \
-
 </div>
 </blockquote>
-
 <p><br />
 Und er ReservedCodeCacheSize in der Größe macht auch keinen Sinn. Ich
 denke diese Optionen müssten generell alle nochmal auf den Prüfstand.</p>
-
 <blockquote>
 <div>
-
 Copro hat geschrieben:\
 Dann noch die schon geänderten Bilder in htroot/env/grafics und ein
 paar Änderungen zum aktuell doch limitierten Speicher gemacht.\
-
 </div>
 </blockquote>
-
 <p><br />
 welche geänderten Bilder?<br />
 </p>
-
 <blockquote>
 <div>
-
 Copro hat geschrieben:\
 Wäre es zum Bereitstellen nicht sinnvoller ein extra raspbian
 repository wie das schon existierende [debian
@@ -306,34 +216,21 @@ als Abhängigkeiten auflisten.\
 Zumindest das Early Access darf aktuell noch nicht weiterverbreitet
 werden und ob es dazu dann auch eine Lizenz gibt ist auch noch
 fraglich.\
-
 </div>
 </blockquote>
-
 <p><br />
 naja es gibt ja auch die 1.6er Version die man verwenden kann. Ein
 eigenes repository wäre sicherlich auch nicht schlecht, aber der Java
 Installationsprozess kannst du im Package Manager so nicht abbilden!
 Oder? Wenn du ein Package zusammenbekommst verlinke ich das gerne unter
 rpi.yacy.net.</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
 &mdash; Di Jan 22, 2013 10:56 am</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

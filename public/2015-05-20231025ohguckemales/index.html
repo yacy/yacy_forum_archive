@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="oh-gucke-mal-es-gibt-mal-wieder-eine-verheerende-kryptokalypse">Oh gucke mal, es gibt mal wieder eine verheerende Kryptokalypse! ...</h1>
-
 <p>Date: 2015-05-20 23:10:25</p>
-
 <p>Oh gucke mal, es gibt mal wieder eine verheerende Kryptokalypse!
 <a href="https://weakdh.org/">Diesmal geht es um Diffie Hellman</a>, das ist ein
 <a href="http://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">brilliantes Verfahren zum
@@ -199,7 +131,6 @@ Schlüsselaustausch</a>.
 schwieriges Problem ist</del>. <em>Äh, Bullshit, DH basiert auf dem Diskreten
 Logarithmusproblem. Vor dem Frühstück sollte ich vorsichtiger bloggen
 :-)</em></p>
-
 <p>Das Problem ist, dass Diffie Hellman praktisch die Basis von allen
 Online-Public-Key-Kryptographiesystemen da draußen ist &mdash; SSH, TLS,
 IPsec, ... Schlimmer noch: Wir haben das bei TLS massiv forciert, weil
@@ -207,9 +138,7 @@ Diffie Hellman erst für Perfect Forward Secrecy sorgt. Das ist die
 Eigenschaft eines Protokolls, dass wenn die Cops kommen und den Server
 mit dem Schlüssel drauf beschlagnahmen, sie damit trotzdem nicht
 vorherige verschlüsselte Verbindungen entschlüsseln können.</p>
-
 <p>Was ist jetzt genau das Problem?</p>
-
 <p>Erstens gibt es eine Downgrade Attack. Downgrade Attack heißt, dass
 jemand von außen die Pakete im Netz manipuliert. Nehmen wir an, ich
 verbinde mich zu <a href="https://blog.fefe.de/">https://blog.fefe.de/</a>, und die NSA sieht die Pakete und
@@ -226,7 +155,6 @@ Diffie-Hellman-Schlüssel mehr zulassen würden. Dann käme keine abhörbare
 Verbindung zustande. Die NSA kann dann zwar immer noch verhindern, dass
 ich eine Verbindung aufnehme, aber das kann sie eh, unabhängig von
 Krypto.</p>
-
 <p>Das zweite Problem ist noch gruseliger. Und zwar galten die
 Diffie-Hellman-Parameter immer als öffentlich. Das ist sowas wie ein
 Zahlenraum, auf den man sich einigt, in dem man dann seine
@@ -237,7 +165,6 @@ Hellman nur auf diesen Parametern basiert, nur auf einer Primzahl. Und
 wenn da alle die selbe verwenden, dann muss ein Angreifer diesen ersten
 Teil auch nur einmal machen. Das ist eine ganz doll gruselige
 Erkenntnis!</p>
-
 <p>Was kann man denn jetzt tun? Zwei Dinge. Erstens müssen wir jetzt dafür
 sorgen, dass unsere Server \&ldquo;Export-Verschlüsselung\&rdquo; (also absichtlich
 geschwächte Krypto) auch bei Diffie Hellman nicht mehr akzeptieren. Ich
@@ -245,20 +172,15 @@ glaube im Moment, dass man dafür die SSL-Libraries patchen muss, weil es
 kein API gibt. Aber ich kann mich da auch irren, vielleicht gibt es ein
 API. In dem Fall müsste man die ganzen Server patchen, damit sie das API
 benutzen.</p>
-
 <p>Und der zweite Schritt ist, dass man dem Server schlicht
 Diffie-Hellman-Parameter vorgibt. Das tut man unter Unix mit</p>
-
 <pre><code>$ openssl dhparam -out dhparams.pem 2048
 </code></pre>
-
 <p>Man kann auch noch größere Parameter machen, aber das sollte man dann
 über die Mittagspause laufen lassen, das dauert ewig und drei Tage. Und
 dann muss man der Serversoftware sagen, dass sie diese DH-Parameter
 verwenden soll. Lest die Dokumentation. Das ist wichtig!</p>
-
 <p>Klingt alles schon apokalyptisch genug? Wartet, kommt noch krasser!</p>
-
 <blockquote>
 <p>Breaking the single, most common 1024-bit prime used by web servers
 would allow passive eavesdropping on connections to 18% of the Top 1
@@ -267,32 +189,20 @@ of connections to 66% of VPN servers and 26% of SSH servers. <strong>A close
 reading of published NSA leaks shows that the agency\&rsquo;s attacks on
 VPNs are consistent with having achieved such a break.</strong></p>
 </blockquote>
-
 <p><strong>Update</strong>: Ich hatte vor nem Jahr mal bei <a href="https://blog.fefe.de/">https://blog.fefe.de/</a>
 2048-Bit-Diffie-Hellman-Parameter generiert und das hat mir jetzt wohl
 den Arsch gerettet an der Stelle. Ein bisschen Paranoia schadet halt
 nicht :-)</p>
-
 <p><strong>Update</strong>: Wer in Firefox die rote Box auf der Logjam-Seite weghaben
 will, muss in about:config <a href="http://ptrace.fefe.de/firefox-dhe.png">die dhe (nicht die ecdhe!)-Ciphersuiten
 wegkonfigurieren</a>.</p>
-
 <p><strong>Update</strong>: Und natürlich will man auch die ganzen RC4-Ciphersuites
 wegkonfigurieren, das hatte ich in dem Screenshot jetzt nicht drin, weil
 ich nur die Einstellungen fett haben wollte, die für Logjam relevant
 sind.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

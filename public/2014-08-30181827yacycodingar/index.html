@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,59 +113,38 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="yacy-coding-architektur-gelöst-speicherort-für-die-logdateien-ändern">YaCy Coding &amp; Architektur • [gelöst] Speicherort für die Logdateien ändern</h1>
-
 <p>Date: 2014-08-30 18:18:27</p>
-
 <p>Hallo,<br />
 <br />
 ich habe YaCy auf einem Netzlaufwerk gestartet. Die Instanz läuft zwar,
 aber YaCy meckert, dass die Logdateien nicht geschrieben werden können.
 Ich habe zwar einiges im Debug-Modus mitverfolgt, aber ohne Logs ist
 eine vernünftige Arbeit nicht möglich. Hier die Ausgabe</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>STARTUP: Trying to load logging configuration from file T:\0_Tools\YaCy\yacy_en\DATA\LOG\yacy.loggingCan't load log handler &quot;java.util.logging.FileHandler&quot;java.nio.channels.OverlappingFileLockExceptionjava.nio.channels.OverlappingFileLockException        at sun.nio.ch.SharedFileLockTable.checkList(Unknown Source)        at sun.nio.ch.SharedFileLockTable.add(Unknown Source)        at sun.nio.ch.FileChannelImpl.tryLock(Unknown Source)        at java.nio.channels.FileChannel.tryLock(Unknown Source)        at java.util.logging.FileHandler.openFiles(Unknown Source)        at java.util.logging.FileHandler.&lt;init&gt;(Unknown Source)        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)        at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)        at java.lang.reflect.Constructor.newInstance(Unknown Source)        at java.lang.Class.newInstance(Unknown Source)        at java.util.logging.LogManager$4.run(Unknown Source)        at java.security.AccessController.doPrivileged(Native Method)        at java.util.logging.LogManager.loadLoggerHandlers(Unknown Source)        at java.util.logging.LogManager.initializeGlobalHandlers(Unknown Source)        at java.util.logging.LogManager.access$1500(Unknown Source)        at java.util.logging.LogManager$RootLogger.accessCheckedHandlers(Unknown Source)        at java.util.logging.Logger.getHandlers(Unknown Source)        at java.util.logging.Logger.log(Unknown Source)        at java.util.logging.Logger.doLog(Unknown Source)        at java.util.logging.Logger.log(Unknown Source)        at net.yacy.cora.util.ConcurrentLog$Worker.run(ConcurrentLog.java:361)S 2014/08/30 10:07:24 STARTUP YaCy version: 1.72/9000S 2014/08/30 10:07:34 STARTUP Java version: 1.7.0_67S 2014/08/30 10:07:34 STARTUP Operation system: Windows 7S 2014/08/30 10:07:34 STARTUP Application root-path: T:\0_Tools\YaCy\yacy_enS 2014/08/30 10:07:34 STARTUP Data root-path: T:\0_Tools\YaCy\yacy_enS 2014/08/30 10:07:34 STARTUP Time zone: UTC+0200; UTC+0000 is 1409386045404S 2014/08/30 10:07:34 STARTUP Maximum file system path length: 255</code></dd>
 </dl>
-
 <p><br />
 Es ist bestimmt ein Rechte-Problem. [Wo kann ich YaCy anweisen als
 Speicherort für die Logdateien bspw.
 [C:\Users\Username\]{style=&ldquo;font-style: italic&rdquo;} zu
 wählen?]{style=&ldquo;font-weight: bold&rdquo;}</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9475">flegno</a>
 &mdash; Sa Aug 30, 2014 10:52 am</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,52 +113,36 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="english-re-how-to-get-yacy-working-as-a-proxy">English • Re: How to get YACY working as a proxy</h1>
-
 <p>Date: 2014-12-17 16:40:53</p>
-
 <p>Hello,<br />
 </p>
-
 <blockquote>
 <div>
-
 Orbiter hat geschrieben:\
 But here is the solution: \[\....\] submit a fix\
-
 </div>
 </blockquote>
-
 <p>Okay, i think the problem can be provisional solved in File
 \&rdquo;<a href="https://gitorious.org/yacy/rc1/source/6c3f36def1397a1235ea2b0432640fe21fff919f:source/net/yacy/search/Switchboard.java">source/net/yacy/search/Switchboard.java</a>{.postlink}\&rdquo;:<br />
 Change Lines 924 / 1443 from</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>Domains.setNoLocalCheck(isAllIPMode());</code></dd>
 </dl>
-
 <p>to</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>Domains.setNoLocalCheck(isAllIPMode() | !(this.getConfigBool(&quot;isTransparentProxy&quot;,false)));</code></dd>
 </dl>
-
 <p>I hope this will disable the Local-IP-Check if the internal Proxy is
 disabled by the Peer-Configuration. That means that all incoming
 Connections are always handled by the HTTP-Server because the Check is
@@ -230,17 +154,13 @@ Your Peer is still reliable responding with a 403-Error for accesses
 with the Link (i have sent you with a PM), i think there is a really
 good chance for removing this problem.<br />
 </p>
-
 <blockquote>
 <div>
-
 Orbiter hat geschrieben:\
 From a moderators point of view \....\
 As a forum moderator \....\
-
 </div>
 </blockquote>
-
 <p>Okay, i think your suggestion is right, from a moderators point of
 view.<br />
 But one question is open: what could be the correct answer from a
@@ -249,24 +169,13 @@ I mean the answer for my (hard) criticism.<br />
 <br />
 Greetings<br />
 Erik</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
 &mdash; Mi Dez 17, 2014 4:40 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

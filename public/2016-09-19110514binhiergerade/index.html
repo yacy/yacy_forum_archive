@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,28 +113,19 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="bin-hier-gerade-beim-reverse-engineering-von-einem">Bin hier gerade beim Reverse Engineering von einem ...</h1>
-
 <p>Date: 2016-09-19 11:05:14</p>
-
 <p>Bin hier gerade beim Reverse Engineering von einem Stück Code, und dabei
 fiel mir eine Sache auf, die ich euch mal zeigen will. Nehmt mal diese
 Funktion hier:</p>
-
 <pre><code>0000003d &lt;y&gt;:
   3d:   55                      push   %ebp
   3e:   89 e5                   mov    %esp,%ebp
@@ -213,55 +144,42 @@ Funktion hier:</p>
   5f:   5d                      pop    %ebp
   60:   c3                      ret
 </code></pre>
-
 <p>Was tut diese Funktion? Hmm, eine Multiplikation mit einer Konstanten,
 dann ein paar Shifts. Komisch.</p>
-
 <p>Nun, mir fiel auf, dass die Konstante merkwürdig aussah. Das ist die Art
 von Konstante, die auftaucht, wenn man eine Division als Multiplikation
 zu optimieren versucht.</p>
-
 <p>Nehmen wir mal an, man will durch 3 teilen. Das ist äquivalent mit einer
 Multiplikation mit einem Drittel, aber Integer können keine Werte
 zwischen 0 und 1 abbilden, als geht <sup>1</sup>&frasl;<sub>3</sub> nicht.</p>
-
 <p>Allerdings ist die Multiplikation auf Intel-Prozessoren so, dass man
 zwei 32-bit-Register multipliziert, und es kommt ein 64-bit-Wert raus.</p>
-
 <p>Jetzt folgt mir mal unauffällig bei dem Gedankengang. Was ist denn ein
 Drittel, wenn man das Ergebnis mal 0x100000000 nimmt? Probieren wir doch
 mal aus:</p>
-
 <pre><code>$ gdb
 (gdb) p/x 0x100000000/3
 $1 = 0x55555555
 </code></pre>
-
 <p>0x100000000 ist, wenn man es als 64-bit-Wert nimmt und die untere Hälfte
 wegschmeißt, 1. Seht ihr, wo ich hinwill? Um also einen Integer durch
 drei zu teilen, multipliziert man ihn mit 0x55555555 und schmeißt vom
 64-bit-Ergebnis die untere Hälfte weg. Probieren wir mal aus:</p>
-
 <pre><code>(gdb) p (0x55555555*16)&gt;&gt;32
 $2 = 0
 </code></pre>
-
 <p>Das hat nicht geklappt, weil 0x55555555 ohne Typ-Dazusagen ein int ist,
 und der ist 32-bit (auch auf 64-bit Plattformen). Also ist auch das
 Ergebnis in C ein 32-bit Wert. Wenn ich den dann 32 Bit nach rechts
 shifte, bleibt nichts übrig. Wir müssen also dazusagen, dass wir einen
 64-bit-Wert meinen.</p>
-
 <pre><code>(gdb) p (0x55555555ull*16)&gt;&gt;32
 $3 = 5
 </code></pre>
-
 <p>Und in der Tat, ein Drittel von 16 ist 5. Erfolg!</p>
-
 <p>OK, also ein Drittel ist das hier schon mal nicht. Wenn man nach
 0xcccccccd googelt, findet man heraus, dass das für Division mit 10
 genommen wird. Probieren wir doch mal aus:</p>
-
 <pre><code>$ cat &gt; t.c
 unsigned int div10(unsigned int x) {
   return x/10;
@@ -280,50 +198,34 @@ $ objdump -dr t.o
   12:   5d                      pop    %ebp
   13:   c3                      ret
 </code></pre>
-
 <p>A-Ha! In unserem Code oben war aber ein shr 6 und hier ist nur ein shr
 3. Jedes zusätzlich nach Rechts geshiftete Bit ist eine Verdoppelung des
 Divisors, wir haben es hier also nicht Durch 10 sondern mit Durch 80 zu
 tun.</p>
-
 <p>OK. Haben wir den Teil geklärt. Aber wieso shiftet der danach wieder
 zurück nach links? Und gucken wir mal genau hin. Der nimmt
 <code>(x + (x &lt;&lt; 2)) &lt;&lt; 4</code>. Das sieht irgendwie redundant aus, oder? Schauen
 wir doch mal, was das tut. Zwei nach links shiften ist Mal 4.
 <code>x + x * 4</code> ist <code>x * 5</code>. Das ganze viermal nach Links geshiftet ist
 <code>x * 5 * 16</code> oder &hellip; <code>x * 80</code>!</p>
-
 <p>Wenn wir das mit obiger Erkenntnis zusammenführen, haben wir also ein
 <code>x = x - (x / 80) * 80</code>. Wer in Mathe aufgepasst hat, dem fällt auf,
 dass das äquivalent ist zu <code>x % 80</code>. Und jetzt die Auflösung:</p>
-
 <pre><code>unsigned int y(unsigned int x) {
   return x%80;
 }
 </code></pre>
-
 <p>Diesen ganzen Obskuro-Code hat gcc für ein Modulo 80 erzeugt. Ohne Zutun
 des Users, und im Übrigen auch ohne Anschalten des Optimizers!</p>
-
 <p>Wie kommt das, werdet ihr euch jetzt fragen? x86 hat doch eine prima
 Divisions-Instruktion, und die liefert auch den Rest zurück? Stimmt,
 aber die div-Instruktion kann schon mal 100 Taktzyklen verbraten,
 während obige Instruktionskette je nach Ziel-CPU deutlich unter 20
 braucht.</p>
-
 <p>Krass, wa?</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

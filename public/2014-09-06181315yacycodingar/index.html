@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,39 +113,27 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="yacy-coding-architektur-re-mentor-und-mentee-peers-für-junior-upgrades-zum-serv">YaCy Coding &amp; Architektur • Re: \&ldquo;Mentor\&rdquo; und \&ldquo;Mentee\&rdquo; Peers für Junior Upgrades zum Serv</h1>
-
 <p>Date: 2014-09-06 18:13:15</p>
-
 <p>Hallo,<br />
 </p>
-
 <blockquote>
 <div>
-
 Orbiter hat geschrieben:\
 (a) Ein Senior Peer muss einem Junior Peer einen Server Port
 \'durchreichen\'. Ist dies erfolgreich, erlangt der Senior Peer einen
 neuen Peer-Status, er darf sich dann \'Mentor\' nennen. Der Junior
 Peer bekommt auch einen Upgrade und heisst dannn \'Mentee\'.\
-
 </div>
 </blockquote>
-
 <p>Das \&ldquo;durchreichen\&rdquo; ist das Problem, wenn Junior nicht von außen
 erreichbar ist kann er eben auch nicht vom Mentor bei ankommenden
 TCP-Verbindungen auf den (vermutlich) zusätzlichen TCP-Server-Port am
@@ -224,27 +152,21 @@ figure.png</a>{.postlink}
 , das soll auch keine Schleichwerbung sein sondern war nur das erst
 beste was die Bildsuche ergab)<br />
 </p>
-
 <blockquote>
 <div>
-
 Orbiter hat geschrieben:\
 - (b / 1) entweder per http und dem Host-Namen, der in http/1.1
 obligatorisch ist damit ein Server multi-Hosting machen kann. Als
 Hostnamen würde dann die yacyh-domäne in Betracht kommen, also
 \<peer-hash\>.yacyh. Das wäre eine ziemlich transparente Sache.
 Nachteil: der Mentor kann theoretisch \'mitlauschen\'.\
-
 </div>
 </blockquote>
-
 <p>Aber über eine HTTP-Verbindung vom Mentee zum Mentor können eben keine
 neuen Verbindungen vom Mentor zum Mentee aufgebaut/getunnelt werden.<br />
 </p>
-
 <blockquote>
 <div>
-
 Orbiter hat geschrieben:\
 - (b / 2) der Mentor operiert als https-Proxy, routet also über das
 http:CONNECT Kommando transparent zum Mentee. Das erfordert aber, dass
@@ -252,10 +174,8 @@ der Mentee seinen Server mit einem ssl Key ausgestattet hat und den
 https Server Port an den Mentor übergibt. Das erfordert aber, dass der
 Mentee einen default ssl Schlüssel hat, das habe ich gestern
 eingecheckt.\
-
 </div>
 </blockquote>
-
 <p>Auch eine Verschlüsselung zwischen Mentee und Mentor ändert an den
 Grenzen des HTTP:CONNECT nichts. Nebst dessen das wenn die Daten den
 Mentor nach Außen (ins öffentliche Internet) verlassen sind sie
@@ -265,20 +185,16 @@ Mentee (Client) benutzt echte Ende-zu-Ende-Verschlüsselung, aber dann
 kennt der Mentor immer noch die IP-Adresse des Kommunikationspartners.
 Aus diesem Grund ist das Tor-Netz ja so komplex.<br />
 </p>
-
 <blockquote>
 <div>
-
 Orbiter hat geschrieben:\
 - (c) Wenn der Mentor nun also nun ein transparenter https Proxy ist,
 dann muss man sicherstellen, dass das nicht jeder missbrauchen kann.
 Es muss also eine Anmeldephase geben, bei der ein Client des Mentors
 zeigt, dass er ein YaCy Peer ist und auch einen Suchindex hat, den der
 Mentor testen kann bevor er dem Junior den Mentee-Status gibt.\
-
 </div>
 </blockquote>
-
 <p>Egal wie toll der Anmeldevorgang auch sein mag er ist definitiv umgehbar
 und damit ist der Mentor ein öffentlicher transparenter Proxy und das
 wäre für jeden Betreiber eines Root-Servers der perfekte Albtraum.<br />
@@ -297,10 +213,8 @@ bräuchte dieses Client-Programm nur noch ein weiteres Proxy-Interface
 (beliebigen Typs) über das dann \&ldquo;böse\&rdquo; Dinge über den Mentor geleitet
 werden können.<br />
 </p>
-
 <blockquote>
 <div>
-
 Orbiter hat geschrieben:\
 - (h) Default-Einstellungen: ein Senior Peer sollte per default
 Mentees akzeptieren, jedoch sollte es eine Funktion geben, dies
@@ -309,10 +223,8 @@ Sicherheitsmechanismen zu gering sind, damit getestet werden kann dass
 ein Mentee auch ein YaCy Peer ist, der kann das ja ausschalten. Wir
 müssen also sehr stark an (c) arbeiten, damit das mehr oder weniger
 sicher ist.\
-
 </div>
 </blockquote>
-
 <p>Wenn das wirklich Default würde wäre das ein sehr gutes Argument YaCy zu
 deinstallieren. Die meisten Leute die ich kenne mögen es nicht wenn
 Sicherheitslecks (und ein transparender Proxy ist ein enormes
@@ -363,17 +275,13 @@ Grüße<br />
 Erik<br />
 <br />
 edit:</p>
-
 <blockquote>
 <div>
-
 Orbiter hat geschrieben:\
 - (b / 2) der Mentor operiert als https-Proxy, routet also über das
 http:CONNECT Kommando transparent zum Mentee.\
-
 </div>
 </blockquote>
-
 <p>Ah, Du meinst der Mentee soll einen Server-Port anbieten an den der
 Mentor sich wendet um bei ihm ankommende Verbindungen die für den Mentee
 bestimmt sind weiterzureichen. Aber gerade der Umstand das ein
@@ -381,24 +289,13 @@ Junior-Peer nicht von außen erreichbar ist (weil er z.B. hinter einem
 nicht managbaren NAT steckt) macht ihn doch erst zum Junior und damit
 ist es eben auch unmöglich das der Mentor (der aus Sicht des
 Junior-Peers ja \&ldquo;Außen\&rdquo; ist) ihn erreichen kann.</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9480">Erik_S</a>
 &mdash; Sa Sep 06, 2014 5:13 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

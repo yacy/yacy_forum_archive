@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,31 +113,22 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="hilfe-für-einsteiger-und-anwender-keine-verbindung-in-die-freeworld">Hilfe für Einsteiger und Anwender • Keine Verbindung in die Freeworld</h1>
-
 <p>Date: 2013-10-01 18:23:43</p>
-
 <p>Ich bin gerade mit meinem Latein am Ende..<br />
 Nach ein wenig experimentieren habe ich mich entschlossen, meinen Peer
 neu aufzusetzten. Bislang lief alles ohne Probleme. Nun habe ich den
 frischen Peer (out of the box install), aber bekomme keine Verbindung
 mehr in das Freeworld Netz.<br />
 Mittlerweile habe ich alle offensichtlichen Fehlerquellen abgeklopft:</p>
-
 <ul>
 <li>netstat zeigt, das YaCy am korrekten Port lauscht (IPv4)</li>
 <li>Router Port-forwarding ist an (bzw. unverändert)</li>
@@ -207,7 +138,6 @@ Mittlerweile habe ich alle offensichtlichen Fehlerquellen abgeklopft:</p>
 <li>getestet mit YaCy 1.62 und dem latest Snapshots (zuletzt
 yacy_v1.63_20130930_9188)</li>
 </ul>
-
 <p><br />
 Das ganze läuft auf einem aktuellen 64bit Arch Linux. In den letzten
 Tagen gab es ein Java-Update, aber auch ein Downgrade brachte keine
@@ -218,34 +148,21 @@ ganz klar bei mir, jedoch weiß ich nicht mehr, wo ich suchen soll.<br />
 Hier sind relevante Teile aus dem Logfile. Klare Fehlermeldungen gibt es
 keine. Aus irgendeinem Grund erhölt YaCy keine Seeds, obwohl die URLs
 manuell aufgerufen Peer-Adressen enthalten.</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>I 2013/10/01 19:12:53 YACY BOOTSTRAP: 0 seeds known from previous run, concurrently starting seedlist loader..S 2013/10/01 19:12:53 BusyThread thread 'net.yacy.search.Switchboard.loadSeedLists' terminated...I 2013/10/01 19:12:59 SERVER Trying to bind server to port 8090I 2013/10/01 19:12:59 Browser please start your browser and open the following location: http://localhost:8090/index.html..I 2013/10/01 19:13:09 YACY BOOTSTRAP: 0 seeds known from previous run, concurrently starting seedlist loaderI 2013/10/01 19:13:09 YACY re-initialized seed list. received 0 new peer(s)I 2013/10/01 19:13:09 HeapReader generating index for /usr/share/yacy/DATA/WORK/api.bheap, 0 MB. Please wait.I 2013/10/01 19:13:09 HeapReader finished index generation for /usr/share/yacy/DATA/WORK/api.bheap, 0 entries, 0 gaps.I 2013/10/01 19:13:09 Heap initializing heap /usr/share/yacy/DATA/WORK/api.bheapI 2013/10/01 19:13:09 YACY BOOTSTRAP: seed-list URL http://mary.dyndns.biz/yacy/seed.txt too old (41 days)I 2013/10/01 19:13:09 YACY BOOTSTRAP: 0 seeds from seed-list URL http://home.arcor.de/hermens/yacy/seed.txt, AGE=0hI 2013/10/01 19:13:09 YACY BOOTSTRAP: 0 seeds from seed-list URL http://yacy.seed.mylookr.com/seed.txt, AGE=0hI 2013/10/01 19:13:09 YACY BOOTSTRAP: 0 seeds from seed-list URL http://www.yacy.net/seed.txt, AGE=2216hI 2013/10/01 19:13:09 YACY BOOTSTRAP: 0 seeds from seed-list URL http://img.homepage.bluewin.ch/352348/seed.txt, AGE=0hI 2013/10/01 19:13:10 YACY BOOTSTRAP: 0 seeds from seed-list URL https://esbek.iv.net.pl/yacy/seed.txt, AGE=0hI 2013/10/01 19:13:10 YACY BOOTSTRAP: 0 seeds from seed-list URL http://sixcooler.de/yacy/seed.txt, AGE=0hI 2013/10/01 19:13:14 YACY BOOTSTRAP: 0 seeds from seed-list URL http://www.lulabad.de/seed.txt, AGE=0h..S 2013/10/01 19:16:51 BusyThread thread 'net.yacy.peers.Network.peerPing' deployed, starting job.I 2013/10/01 19:16:51 YACY BOOTSTRAP: 0 seeds known from previous run, concurrently starting seedlist loaderI 2013/10/01 19:16:51 YACY re-initialized seed list. received 0 new peer(s)I 2013/10/01 19:16:51 YACY BOOTSTRAP: seed-list URL http://www.yacy.net/seed.txt too old (92 days)I 2013/10/01 19:16:51 YACY BOOTSTRAP: seed-list URL http://mary.dyndns.biz/yacy/seed.txt too old (41 days)I 2013/10/01 19:16:51 YACY BOOTSTRAP: 0 seeds from seed-list URL http://yacy.seed.mylookr.com/seed.txt, AGE=0hI 2013/10/01 19:16:51 YACY BOOTSTRAP: 0 seeds from seed-list URL http://home.arcor.de/hermens/yacy/seed.txt, AGE=0hI 2013/10/01 19:16:51 YACY BOOTSTRAP: 0 seeds from seed-list URL http://img.homepage.bluewin.ch/352348/seed.txt, AGE=0hI 2013/10/01 19:16:51 YACY BOOTSTRAP: 0 seeds from seed-list URL http://www.lulabad.de/seed.txt, AGE=0hI 2013/10/01 19:16:52 YACY BOOTSTRAP: 0 seeds from seed-list URL https://esbek.iv.net.pl/yacy/seed.txt, AGE=0hI 2013/10/01 19:16:52 YACY BOOTSTRAP: 0 seeds from seed-list URL http://sixcooler.de/yacy/seed.txt, AGE=0h</code></dd>
 </dl>
-
 <p><br />
 <br />
 Wäre super, wenn irgendwer einen heißen Tip hätte
 <img src="http://forum.yacy-websuche.de/images/smilies/icon_e_biggrin.gif" alt=":D" title="Very Happy" /></p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8791">surfvive</a>
 &mdash; Di Okt 01, 2013 5:23 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

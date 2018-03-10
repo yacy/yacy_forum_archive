@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,325 +113,177 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="en-debian-high-availability">En:Debian High Availability</h1>
-
 <p>Date: 2013-03-06 12:02:45</p>
-
 <p>fixed the downtime replication: do not copy the api.bheap file to
 prevent that the second peer crawls</p>
-
 <p>← Nächstältere Version</p>
-
 <p>Version vom 6. März 2013, 11:02 Uhr</p>
-
 <p>(2 dazwischenliegende Versionen von einem Benutzer werden nicht
 angezeigt)</p>
-
 <p>Zeile 53:</p>
-
 <p>Zeile 53:</p>
-
 <p> </p>
-
 <div>
-
   \~/yacy0/stopYACY.sh  
-
 </div>
-
 <p> </p>
-
 <div>
-
   \~/yacy0/stopYACY.sh  
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p>−</p>
-
 <div>
-
 Now the DATA directory in \~/yacy0 was ceated and we can clone this to
 yacy1
-
 </div>
-
 <p>+</p>
-
 <div>
-
 Now the DATA directory in \~/yacy0 was ceated and we can clone this to
 yacy1[, run]{.underline}
-
 </div>
-
 <p>−</p>
-
 <div>
-
   cp -R \~/yacy0/DATA \~/yacy1/DATA && sed \"s/port=8090/port=8091/\" -i
 \~/yacy1/DATA/SETTINGS/yacy.conf
-
 </div>
-
 <p>+</p>
-
 <div>
-
 []{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
   cp -R \~/yacy0/DATA \~/yacy1/DATA && sed \"s/port=8090/port=8091/\" -i
 \~/yacy1/DATA/SETTINGS/yacy.conf [&& rm -f
 \~/yacy1/DATA/WORK/api.bheap]{.underline}
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 The second peer needs a different port. Therefore the sed command
 replaces the port 8090 by 8091.
-
 </div>
-
 <p> </p>
-
 <div>
-
 The second peer needs a different port. Therefore the sed command
 replaces the port 8090 by 8091.
-
 </div>
-
 <p>−</p>
-
 <div>
-
 ~~Please write~~ this command ~~line to~~ a file \~/replicate\_all.sh
 ~~so you can easily run this again~~.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 [We also do not want that the second peer does the same crawling as
 configured in yacy0, therefore we also delete the api file.]{.underline}
-
 </div>
-
 <p>−</p>
-
 <div>
-
 This is of course only a tool for a downtime replication. We will see
 how to ~~to~~ an uptime replication later.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 [We need]{.underline} this command [later, therefore we
 create]{.underline} a file \~/replicate\_all.sh [with the following
 content:]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\~/yacy0/stopYACY]{.underline}.[sh && \~/yacy1/stopYACY.sh]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cp -R \~/yacy0/DATA \~/yacy1/DATA && sed \"s/port=8090/port=8091/\" -i
 \~/yacy1/DATA/SETTINGS/yacy.conf && rm -f
 \~/yacy1/DATA/WORK/api.bheap]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\~/yacy0/startYACY.sh && \~/yacy1/startYACY.sh]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 This is of course only a tool for a downtime replication. We will see
 how to [do]{.underline} an uptime replication later.
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 We can now start both peers
-
 </div>
-
 <p> </p>
-
 <div>
-
 We can now start both peers
-
 </div>
-
 <p> </p>
-
 <div>
-
   \~/yacy0/startYACY.sh && \~/yacy1/startYACY.sh
-
 </div>
-
 <p> </p>
-
 <div>
-
   \~/yacy0/startYACY.sh && \~/yacy1/startYACY.sh
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 []{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [===Adding a https Gateway in Front of the Administration
 Interface===]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Security is part of an availability strategy and therefore all
 production modifications should be made through a secure interface. To
 apply a ssl encryption in front of the primary peer, follow the
 instructions in \[\[En:YaCyOverHTTPS\]\]]{.underline}
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 ===Auto-Start for YaCy===
-
 </div>
-
 <p> </p>
-
 <div>
-
 ===Auto-Start for YaCy===
-
 </div>
-
 <p>Zeile 182:</p>
-
 <p>Zeile 190:</p>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 ===Usage of this High Availability Configuration===
-
 </div>
-
 <p> </p>
-
 <div>
-
 ===Usage of this High Availability Configuration===
-
 </div>
-
 <p>−</p>
-
 <div>
-
 The public search interface is at http://{yourhost}:8100 (or
 http://{yourhost} if you set the reverse proxy port to 80). Thats the
 URL you propagate as the search interface. To administrate the search
@@ -505,60 +297,36 @@ yacy1, start up yacy1). There is no need to do this for index updates
 after you started a web crawl, because the index replication process
 does that once a day automatically. You might want to do this more often
 by adjusting the line in crontab.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 The public search interface is at http://{yourhost}:8100 (or
 http://{yourhost} if you set the reverse proxy port to 80). Thats the
 URL you propagate as the search interface. To administrate the search
 interface, use the address http://{yourhost}:8090[, or better:
 https://{yourhost} if you followed the instructions in
 \[\[En:YaCyOverHTTPS\]\]]{.underline}.
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
  
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Please note that http://{yourhost} is the gateway for the load balancer
 while https://{yourhost} is only the access point for the yacy0-peer and
 administration tasks.]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
  
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 Every time you changed the search interface configuration (like a new
 skin or different ranking), you must do a full (downtime) replication
 using the script \~/replicate\_all.sh (shut down both peers before this)
@@ -568,20 +336,10 @@ DATA to yacy1, start up yacy1). There is no need to do this for index
 updates after you started a web crawl, because the index replication
 process does that once a day automatically. You might want to do this
 more often by adjusting the line in crontab.
-
 </div>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

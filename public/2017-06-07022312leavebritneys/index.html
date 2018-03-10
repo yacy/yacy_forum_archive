@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,28 +113,19 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="leave-britney-s-command-and-control-server-alone">Leave Britney\&rsquo;s Command and Control Server Alone!</h1>
-
 <p>Date: 2017-06-07 02:23:12</p>
-
 <p><a href="https://www.welivesecurity.com/2017/06/06/turlas-watering-hole-campaign-updated-firefox-extension-abusing-instagram/"><img src="https://www.jwz.org/images/britney-spears-instagram.png" alt="" />Turla\&rsquo;s
 watering hole campaign: An updated Firefox extension abusing
 Instagram</a></p>
-
 <blockquote>
 <p>The extension uses a bit.ly URL to reach its C&amp;C, but the URL path is
 nowhere to be found in the extension code. In fact, it will obtain
@@ -202,46 +133,30 @@ this path by using comments posted on a specific Instagram post. The
 one that was used in the analyzed sample was a comment about <a href="https://www.instagram.com/p/BO8gU41A45g/">a
 photo</a> posted to the Britney
 Spears official Instagram account.</p>
-
 <p>The extension will look at each photo\&rsquo;s comment and will compute a
 custom hash value. If the hash matches 183, it will then run this
 regular expression on the comment in order to obtain the path of the
 bit.ly URL:</p>
-
 <p><code>(?:\\u200d(?:#|@)(\\w)</code></p>
-
 <p>Looking at the photo\&rsquo;s comments, there was only one for which the
 hash matches 183. This comment was posted on February 6, while the
 original photo was posted in early January. Taking the comment and
 running it through the regex, you get the following bit.ly URL:</p>
-
 <p><code>http://bit.ly/2kdhuHX</code></p>
-
 <p>Looking a bit more closely at the regular expression, we see it is
 looking for either <code>@|#</code> or the Unicode character <code>\200d</code>. This
 character is actually a non-printable character called \&lsquo;Zero Width
 Joiner\&lsquo;, normally used to separate emojis. Pasting the actual comment
 or looking at its source, you can see that this character precedes
 each character that makes the path of the bit.ly URL:</p>
-
 <p><code>smith2155&lt;200d&gt;#2hot ma&lt;200d&gt;ke lovei&lt;200d&gt;d to &lt;200d&gt;her, &lt;200d&gt;uupss &lt;200d&gt;#Hot &lt;200d&gt;#X</code></p>
 </blockquote>
-
 <p><a href="https://www.jwz.org/blog/2006/03/the-demonic-spirit-of-jeff-koons-has-not-yet-been-chased-from-the-land/">Previously</a>,
 <a href="https://www.jwz.org/blog/2006/04/bottom-of-barrel-dangerously-overscraped-experts-warn/">previously</a>,
 <a href="https://www.jwz.org/blog/2007/10/steganography/">previously</a>.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

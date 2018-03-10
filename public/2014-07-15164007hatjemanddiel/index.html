@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,37 +113,26 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="hat-jemand-die-libressl-leute-gefragt-wieso-sie-eigentlich">Hat jemand die LibreSSL-Leute gefragt, wieso sie eigentlich ...</h1>
-
 <p>Date: 2014-07-15 16:40:07</p>
-
 <p>Hat jemand die LibreSSL-Leute gefragt, wieso sie eigentlich ihre
 Software nicht ordentlich signieren, mit GnuPG oder so.
 <a href="http://marc.info/?l=openbsd-tech&amp;m=140536359803627&amp;w=2">Antwort</a>:</p>
-
 <blockquote>
 <p>I do not have enough energy in my life to clean up two poorly written
 crypto code bases.</p>
 </blockquote>
-
 <p>Immerhin signieren sie jetzt überhaupt, und zwar mit &hellip; signify. Nie
 gehört? Ich auch nicht. Das scheint was ad-hoc schnell selbst gehacktes
 zu sein. Hier ist das Argument dafür:</p>
-
 <pre><code>$ wc -l *.c
       29 crypto_api.c
      143 mod_ed25519.c
@@ -214,35 +143,23 @@ platform. It is not that difficult to install, and
 if you can't install it, you could always run OpenBSD in a vm to verify a
 signature, it comes with openbsd.
 </code></pre>
-
 <p>Nun werdet ihr vielleicht sagen: hey, klingt gut, will ich haben. Wo ist
 der tarball?</p>
-
 <p>Die Antwort: Es gibt keinen. Ich habe mir mal im Schweiße meines
 Angesichts die nötigen Teile aus dem OpenBSD-CVS herausgepopelt und in
 <a href="http://www.fefe.de/signify/">einen unter Linux bauenden Tarball getan</a>.
 Mit dem ganzen Glue-Code sieht die Statistik schon mal gleich ganz
 anders aus, da sind wir dann plötzlich bei knapp 8000 Codezeilen (plus
 libc, natürlich).</p>
-
 <p>Das baut bei mir, und ich kann damit die LibreSSL-Distribution
 verifizieren. Immerhin. Das ist aber natürlich immer noch voll für den
 Fuß, weil der public key von deren Signatur auf dem selben FTP-Server
 liegt wie die Daten. Wenn jemand den Tarball manipulieren kann, kann er
 also auch einen anderen pubkey daneben legen und keiner merkt was. Bei
 GnuPG gibt es ja wenigstens das Web of Trust.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

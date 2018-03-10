@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,29 +113,19 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="yacy-coding-architektur-re-ipv6">YaCy Coding &amp; Architektur • Re: IPv6</h1>
-
 <p>Date: 2014-09-26 15:12:41</p>
-
 <blockquote>
 <div>
-
 Erik\_S hat geschrieben:\
-
 > <div>
 >
 > Orbiter hat geschrieben:Bei mir kommen auch noch Bonding-Adressen
@@ -203,7 +133,6 @@ Erik\_S hat geschrieben:\
 > aktiven Switch hängen. Ich muss mal rausfinden wie man die erkennt.\
 >
 > </div>
-
 <p>Ich hab zwar keine Ahnung was Du mit Bonding-Adressen meinst, ich
 vermute mal Du hast mehrere Ethernet-Verbindungen zu einem logischen
 Link zusammengeschaltet um die Bandbreite/Ausfallsicherheit zu
@@ -215,22 +144,17 @@ haben dann sollten das meiner Meinung nach reine private IP-Adressen
 sein. Bevor Du versuchst die IP-Adressen zu ordnen solltest Du erstmal
 alle IP-Adressen ausfiltern die nicht \&ldquo;global routable Unicast\&rdquo;
 sind.</p>
-
 <p></div></p>
 </blockquote>
-
 <p><br />
 die sind aber merkwürdigerweise auch public, ich weiss noch nicht wie
 man in Java das abfragen kann. Wenn ich von Java aus nach den eigenen
 IP-Adressen frage, bekomme ich drei: die beiden Netzwerkadressen die per
 Bonding zu einer virtuellen gebündelt werden.<br />
 </p>
-
 <blockquote>
 <div>
-
 Erik\_S hat geschrieben:\
-
 > <div>
 >
 > Orbiter hat geschrieben:Bei meinen ersten Tests bin ich aber noch in
@@ -239,14 +163,11 @@ Erik\_S hat geschrieben:\
 > ganz schön Schlaglöcher..\
 >
 > </div>
-
 <p>Das kann ich mir gar nicht erklären,
 <a href="http://docs.oracle.com/javase/7/docs/api/java/net/InetAddress.html#isLoopbackAddress()">http://docs.oracle.com/javase/7/docs/api/java/net/InetAddress.html#isLoopbackAddress()</a>
 sollte doch auch für IPv6-Adressen Out-of-the-Box korrekt arbeiten.</p>
-
 <p></div></p>
 </blockquote>
-
 <p><br />
 ja.. theoretisch. Wir haben früher einfach Java die Eigenschaft
 isLocalIP testen lassen, da gab es dann aber merkwürdigerweise von Java
@@ -257,18 +178,14 @@ Kaffeesatzleserei in der ich jetzt wahrscheinlich ganz gut aufgeräumt
 habe. Die Pattern für localhost-Erkennung waren m.E. nach auch
 unvollständig. Du kannst ja dann mal in den Code schauen...<br />
 </p>
-
 <blockquote>
 <div>
-
 Erik\_S hat geschrieben:\
-
 > <div>
 >
 > Orbiter hat geschrieben:der YaCy httpd hat geantwortet.\
 >
 > </div>
-
 <p>Sehr gut, der nächste Schritt müsste sein einen IPv6-Back-Ping von
 einem anderen YaCy-Peer zu erreichen von dem Du sicher weißt das er
 IPv6-Konektivität hat, ich geb Dir da gerne eine passende IP-Adresse.
@@ -278,10 +195,8 @@ Host-Namen) zu verwalten, nur so können Peers die über IPv4 und IPv6
 verfügen auch für beide Welten ansprechbar bleiben. Eine Teilung des
 YaCy-Kontinuums in IPv4-only und IPv6-only ist doch hoffentlich nicht
 angestrebt, oder?</p>
-
 <p></div></p>
 </blockquote>
-
 <p><br />
 nein eine Teilung mache ich nicht. Ich erweitere gerade das Protokoll
 und da wird es dann möglich sein mehrere IP-Adressen an einem Peer zu
@@ -304,28 +219,22 @@ p2p-Protokoll muss sich dann aus den Varianten die IP raussuchen, die
 geeignet scheinen: Peers die keine eigene IPv6 Adresse haben, sollten
 auch nicht die IPv6 probieren.<br />
 </p>
-
 <blockquote>
 <div>
-
 Erik\_S hat geschrieben:\
-
 > <div>
 >
 > Orbiter hat geschrieben:Immerhin habe ich es geschafft wieder einen
 > Port im Router aufzumachen\
 >
 > </div>
-
 <p>Aha, ich dachte bei IPv6 wäre sowas nicht mehr notwendig weil doch
 damit wieder eine echte Ende-zu-Ende-Kommunikation zwischen Deinem PC
 und dem Server im Internet stattfindet. Oder beinhaltet Dein Router
 für IPv6 eine statefull Firewall? NAT oder sowas gibt es bei IPv6
 eigentlich nicht mehr.</p>
-
 <p></div></p>
 </blockquote>
-
 <p><br />
 Das macht ja Hoffnung dass mit IPv6 wir weniger junior Peers haben die
 dann Senior werden aber meine neue Fritzbox hat per default eine
@@ -334,24 +243,13 @@ Firewall auf IPv6 drauf wo ich wieder Ports freischalten darf oder ein
 Das neue UPnP scheint sich auch mit meiner Fritzbox zu vertragen, da
 kommen ganz anständige Logmeldungen raus. Ich muss auch mal probieren
 das UPnP zuzulassen, mal schauen was dann passiert.</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
 &mdash; Fr Sep 26, 2014 2:12 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

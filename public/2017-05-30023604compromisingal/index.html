@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,53 +113,40 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="compromising-a-linux-desktop-using-6502-opcodes-on-the-nes">Compromising a Linux desktop using 6502 opcodes on the NES</h1>
-
 <p>Date: 2017-05-30 02:36:04</p>
-
 <p><a href="https://scarybeastsecurity.blogspot.com/2016/11/0day-exploit-compromising-linux-desktop.html"><img src="https://www.jwz.org/images/q9hbsr_7bhupfozjlecfstucmeaakxzaifxa.jpg" alt="" />Typical
 music files are based on compressed samples and are decoded with a bunch
 of math. NSF music files, on the other hand, are played by actually
 emulating the NES CPU and sound hardware in real
 time.</a></p>
-
 <blockquote>
 <p>Is that cool or what? The gstreamer plug-in creates a virtual 6502 CPU
 hardware environment and then plays the music by running a bit of 6502
 code for a little while and then looking at the resulting values in
 the virtualized sound hardware registers and then rendering some sound
 samples based on that. [...]</p>
-
 <p>There is a near total lack of bounds checking on proposed ROM
 mappings. This applies to be the initial ROM load, as well as
 subsequent ROM bank switching. [...]</p>
-
 <p>However, a second logic quirk of this particular emulator makes things
 more serious: 2. Ability to load or bank switch ROM to writable memory
 locations. [...] As can be appreciated, we now have a lot of read
 and write control over the host emulator heap and the more experienced
 exploit writers will realize that successful exploitation is already
 all but assured. [...]</p>
-
 <p>There\&rsquo;s a critical reason that decent, reliable exploitation was
 possible with this bug: the presence of some form of \&ldquo;scripting\&rdquo;
 language. In this case, that script happens to be 6502 opcodes.</p>
 </blockquote>
-
 <dl>
 <dt>everyone knows that bank switching is what made the T-800 possible.</dt>
 <dt>::: {style=&ldquo;text-align: center; width: 100%; margin: 0 auto;&ldquo;}
@@ -231,29 +158,18 @@ language. In this case, that script happens to be 6502 opcodes.</p>
 :::
 :::</dt>
 </dl>
-
 <p>ttps://www.jwz.org/images/01-23-22.jpg)](<a href="http://mentalfloss.com/article/15832/terminator-do-robots-think-apple-ii-source-code">http://mentalfloss.com/article/15832/terminator-do-robots-think-apple-ii-source-code</a>)
 :::
 :::</p>
-
 <p><a href="https://www.jwz.org/blog/2011/12/the-turing-police-say-you-have-more-than-two-problems/">Previously</a>,
 <a href="https://www.jwz.org/blog/2016/01/1982-burgertime-drm-was-hard-core/">previously</a>,
 <a href="https://www.jwz.org/blog/2016/01/piet-mondrian-is-turing-complete/">previously</a>,
 <a href="https://www.jwz.org/blog/2015/02/now-you-have-two-problems-and-one-of-them-is-flash/">previously</a>,
 <a href="https://www.jwz.org/blog/2014/08/greets-to-crash-override-and-also-joey/">previously</a>,
 <a href="https://www.jwz.org/blog/2015/12/the-emularity-2/">previously</a>.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

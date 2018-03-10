@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,64 +113,43 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="glibc-2-19-ist-draußen-und-fixt-lauter-echt-peinliche">glibc 2.19 ist draußen und fixt lauter echt peinliche ...</h1>
-
 <p>Date: 2014-02-10 12:26:36</p>
-
 <p><a href="http://sourceware.org/ml/libc-alpha/2014-02/msg00224.html">glibc 2.19 ist draußen und fixt lauter <em>echt</em> peinliche
 Bugs</a>. Der
 gruseligste ist der hier:</p>
-
 <blockquote>
 <p>CVE-2013-4458 Stack overflow in getaddrinfo with large number of
 results for AF_INET6 has been fixed</p>
 </blockquote>
-
 <p>Das ist remote code execution via unvertrauenswürdiger,
 unverschlüsselter Daten aus dem Internet. GANZ gruselig. Man würde
 denken, die libc ist der stabilste, sicherste Teil des Codes. Der
 ordentlich auditierte Code. Aber offensichtlich nicht. Auch die anderen
 Bugs sind gruselig, aber für die muss man schon auf dem System sein, um
 die ausnutzen zu können. Mein Lieblingsbug ist der hier:</p>
-
 <blockquote>
 <p>CVE-2013-4788 The pointer guard used for pointer mangling was not
 initialized for static applications resulting in the security feature
 being disabled.</p>
 </blockquote>
-
 <p>Das ist ein typischer Ulrich Drepper. Als der noch glibc-Maintainer war,
 fand er, dass statisches Linken alt und scheiße ist und nicht mehr
 unterstützt gehört. Als er dann \&ldquo;Pointer mangling\&rdquo;
 <a href="http://udrepper.livejournal.com/13393.html">einbaute</a>, hat er es daher
 nur für dynamische Programme getan. Denn hey, wer linkt heutzutage noch
 statisch!1!!</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

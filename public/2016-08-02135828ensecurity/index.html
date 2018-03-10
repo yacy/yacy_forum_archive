@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,298 +113,163 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="en-security">En:Security</h1>
-
 <p>Date: 2016-08-02 13:58:28</p>
-
 <p>Fixed small syntax errors</p>
-
 <p>← Nächstältere Version</p>
-
 <p>Version vom 2. August 2016, 11:58 Uhr</p>
-
 <p>(Eine dazwischenliegende Version von einem Benutzer wird nicht
 angezeigt)</p>
-
 <p>Zeile 2:</p>
-
 <p>Zeile 2:</p>
-
 <p> </p>
-
 <div>
-
 If you administrate your YaCy peer remotely you have to assign a
 administrator username and password via the web interface (menu: Use
 case & account -\> Accounts).
-
 </div>
-
 <p> </p>
-
 <div>
-
 If you administrate your YaCy peer remotely you have to assign a
 administrator username and password via the web interface (menu: Use
 case & account -\> Accounts).
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p>−</p>
-
 <div>
-
 === ~~Consideration~~ ===
-
 </div>
-
 <p>+</p>
-
 <div>
-
 === [Considerations]{.underline} ===
-
 </div>
-
 <p>−</p>
-
 <div>
-
 By default YaCy uses HTTP BASIC authentication which means that username
 and password are transmitted unencrypted between the remote system and
 you peer. You can setup YaCy to encrypt transmitted passwords ~~(~~using
 DIGEST authentication method, more secure).
-
 </div>
-
 <p>+</p>
-
 <div>
-
 By default YaCy uses HTTP BASIC authentication which means that username
 and password are transmitted unencrypted between the remote system and
 you peer. You can setup YaCy to encrypt transmitted
 passwords[,]{.underline} using DIGEST authentication method, more
 secure[.]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
  
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [But even if Digest authentication is a better choice than Basic HTTP
 authentication, it \"does not provide a strong authentication
 mechanism\" as explained in the latest protocol standard documentation
 (RFC]{.underline}).
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Both Basic an Digest authentication RFCs recommand to enhance these
 methods with HTTPS : see
 \[https://tools.ietf.org/html/rfc7617\#section-4 RFC 7617\] and
 \[https://tools.ietf.org/html/rfc7616\#section-5.3 RFC
 7616\].]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
  
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
  
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 ==== Configure YaCy to use DIGEST ====
-
 </div>
-
 <p> </p>
-
 <div>
-
 ==== Configure YaCy to use DIGEST ====
-
 </div>
-
 <p>Zeile 10:</p>
-
 <p>Zeile 15:</p>
-
 <p> </p>
-
 <div>
-
 \# modify the line to \'\'\'\<auth-method\>DIGEST\</auth-method\>\'\'\'
 and save it
-
 </div>
-
 <p> </p>
-
 <div>
-
 \# modify the line to \'\'\'\<auth-method\>DIGEST\</auth-method\>\'\'\'
 and save it
-
 </div>
-
 <p> </p>
-
 <div>
-
 \# restart YaCy and assign a admin user password
-
 </div>
-
 <p> </p>
-
 <div>
-
 \# restart YaCy and assign a admin user password
-
 </div>
-
 <p>−</p>
-
 <div>
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 Hint: step 1. (copy of web.xml) is recommended as a modification of the
 \'\'defaults/web.xml\'\' might be overwritten by a update to a newer
 release.
-
 </div>
-
 <p> </p>
-
 <div>
-
 Hint: step 1. (copy of web.xml) is recommended as a modification of the
 \'\'defaults/web.xml\'\' might be overwritten by a update to a newer
 release.
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 []{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [==== Configure YaCy to use HTTPS ====]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 []{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\# See details in \[\[De:InterfaceÜberHTTPS\]\]]{.underline}
-
 </div>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,65 +113,42 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="fragen-und-antworten-crash">Fragen und Antworten • crash</h1>
-
 <p>Date: 2015-06-06 00:38:29</p>
-
 <p>Mein yacy startet nicht mehr. Der VM stehen aktuell 16GB RAM, 500GB HDD
 und 4 Kerne zur Verfügung.<br />
 Ich habe mal probiert Xms auf 1000 und Xmx auf 4000 zu setzen, hilft
 aber nichts.<br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND 2310 yacy      30  10 2724128 1,057g  18880 S 321,0  6,7  10:41.67 java</code></dd>
 </dl>
-
 <p><br />
 Im Log finde ich diese Zeilen,<br />
 yacy geht anscheinend der Speicher aus.</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>W 2015/06/06 00:05:45 ConcurrentLog net.yacy.cora.util.SpaceExceededException: 99290900 bytes needed for RowCollection grow after OutOfMemoryError Java heap space: 257335856 free at Sat Jun 06 00:05:45 CEST 2015net.yacy.cora.util.SpaceExceededException: 99290900 bytes needed for RowCollection grow after OutOfMemoryError Java heap space: 257335856 free at Sat Jun 06 00:05:45 CEST 2015        at net.yacy.kelondro.index.RowCollection.ensureSize(RowCollection.java:276)        at net.yacy.kelondro.index.RowCollection.addUnique(RowCollection.java:425)        at net.yacy.kelondro.index.RowCollection.addUnique(RowCollection.java:403)        at net.yacy.kelondro.index.RAMIndex.addUnique(RAMIndex.java:216)        at net.yacy.kelondro.index.RAMIndexCluster.addUnique(RAMIndexCluster.java:133)        at net.yacy.kelondro.index.RowHandleMap.&lt;init&gt;(RowHandleMap.java:103)        at net.yacy.kelondro.blob.HeapReader.initIndexReadDump(HeapReader.java:179)        at net.yacy.kelondro.blob.HeapReader.&lt;init&gt;(HeapReader.java:91)        at net.yacy.kelondro.blob.HeapModifier.&lt;init&gt;(HeapModifier.java:58)        at net.yacy.kelondro.blob.ArrayStack.&lt;init&gt;(ArrayStack.java:209)        at net.yacy.kelondro.rwi.ReferenceContainerArray.&lt;init&gt;(ReferenceContainerArray.java:68)        at net.yacy.kelondro.rwi.IndexCell.&lt;init&gt;(IndexCell.java:99)        at net.yacy.search.index.Segment.connectCitation(Segment.java:188)        at net.yacy.search.Switchboard.&lt;init&gt;(Switchboard.java:541)        at net.yacy.yacy.startup(yacy.java:206)        at net.yacy.yacy.main(yacy.java:701)I 2015/06/06 00:05:45 HeapReader generating index for /usr/share/yacy/DATA/INDEX/freeworld/SEGMENTS/default/citation.index.20150525201439348.blob, 1389 MB. Please wait.W 2015/06/06 00:05:53 ConcurrentLog net.yacy.cora.util.SpaceExceededException: 36184700 bytes needed for RowCollection grow after OutOfMemoryError Java heap space: 144999320 free at Sat Jun 06 00:05:53 CEST 2015net.yacy.cora.util.SpaceExceededException: 36184700 bytes needed for RowCollection grow after OutOfMemoryError Java heap space: 144999320 free at Sat Jun 06 00:05:53 CEST 2015        at net.yacy.kelondro.index.RowCollection.ensureSize(RowCollection.java:276)        at net.yacy.kelondro.index.RowCollection.addUnique(RowCollection.java:425)        at net.yacy.kelondro.index.RowCollection.addUnique(RowCollection.java:403)        at net.yacy.kelondro.index.RAMIndex.addUnique(RAMIndex.java:216)        at net.yacy.kelondro.index.RAMIndexCluster.addUnique(RAMIndexCluster.java:133)        at net.yacy.kelondro.index.RowHandleMap.putUnique(RowHandleMap.java:267)        at net.yacy.kelondro.index.RowHandleMap$initDataConsumer.call(RowHandleMap.java:471)        at net.yacy.kelondro.index.RowHandleMap$initDataConsumer.call(RowHandleMap.java:410)        at java.util.concurrent.FutureTask.run(FutureTask.java:262)        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)        at java.lang.Thread.run(Thread.java:745)I 2015/06/06 00:07:16 MEMORY performed explicit GC, freed 3 KB (requested/available/average: 127444 / 112645 / 0 KB)I 2015/06/06 00:09:00 MEMORY performed explicit GC, freed 3 KB (requested/available/average: 127444 / 111015 / 3 KB)I 2015/06/06 00:10:20 MEMORY performed explicit GC, freed 6 KB (requested/available/average: 127444 / 109970 / 3 KB)I 2015/06/06 00:11:31 MEMORY performed explicit GC, freed 6 KB (requested/available/average: 127444 / 108808 / 4 KB)I 2015/06/06 00:13:16 MEMORY performed explicit GC, freed -1 KB (requested/available/average: 127444 / 107343 / 5 KB)I 2015/06/06 00:14:23 MEMORY performed explicit GC, freed 11 KB (requested/available/average: 127444 / 106426 / 4 KB)</code></dd>
 </dl>
-
 <p><br />
 <br />
 Irgendeine Idee?</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9578">ilikeu</a>
 &mdash; Fr Jun 05, 2015 11:38 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

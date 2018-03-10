@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,70 +113,45 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="fragen-und-antworten-installation-unter-debian-funktioniert-nicht">Fragen und Antworten • Installation unter Debian funktioniert nicht</h1>
-
 <p>Date: 2012-11-19 11:32:14</p>
-
 <p>Unter <a href="http://www.yacy-websuche.de/wiki/index.php/En:DebianInstall">http://www.yacy-websuche.de/wiki/index. ...
 ianInstall</a>{.postlink}
 kann man nachlesen, wie man yacy unter Debian installiert - leider endet
 das mit Fehlermeldung:</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>root# apt-get install yacyPaketlisten werden gelesen... FertigAbhängigkeitsbaum wird aufgebaut       Statusinformationen werden eingelesen... FertigDie folgenden NEUEN Pakete werden installiert:  yacy0 aktualisiert, 1 neu installiert, 0 zu entfernen und 0 nicht aktualisiert.Es müssen 36,6 MB an Archiven heruntergeladen werden.Nach dieser Operation werden 50,9 MB Plattenplatz zusätzlich benutzt.WARNUNG: Die folgenden Pakete können nicht authentifiziert werden!  yacyDiese Pakete ohne Überprüfung installieren [j/N]? JHole:1 http://debian.yacy.net/ ./ yacy 1.2.9008 [36,6 MB]Es wurden 36,6 MB in 9 s geholt (3.854 kB/s)                                   Vorkonfiguration der Pakete ...Vormals nicht ausgewähltes Paket yacy wird gewählt.(Lese Datenbank ... 201822 Dateien und Verzeichnisse sind derzeit installiert.)Entpacken von yacy (aus .../archives/yacy_1.2.9008_all.deb) ...Trigger für ureadahead werden verarbeitet ...ureadahead will be reprofiled on next rebootyacy (1.2.9008) wird eingerichtet ...Adding group `yacy' (GID 265) ...Done.Adding system user `yacy' (UID 264) ...Adding new user `yacy' (UID 264) with group `yacy' ...Not creating home directory `/var/lib/yacy'.Starting YaCy P2P Web Search: failed.invoke-rc.d: initscript yacy, action &quot;start&quot; failed.dpkg: Fehler beim Bearbeiten von yacy (--configure): Unterprozess installiertes post-installation-Skript gab den Fehlerwert 1 zurückFehler traten auf beim Bearbeiten von: yacyE: Sub-process /usr/bin/dpkg returned an error code (1)root#</code></dd>
 </dl>
-
 <p><br />
 Es scheitert ja offenbar an dieser Stelle:</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>Not creating home directory `/var/lib/yacy'</code></dd>
 </dl>
-
 <p><br />
 In der /etc/passwd steht für yacy auch ein merkwürdiger Eintrag:</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>yacy:x:264:265::/var/lib/yacy:/bin/false</code></dd>
 </dl>
-
 <p><br />
 Wieso ist als Shell da \&ldquo;false\&rdquo; eingetragen??</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=66">wsb</a>
 &mdash; Mo Nov 19, 2012 11:32 am</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="ich-spiele-gerade-ein-bisschen-mit-perf-herum-das">Ich spiele gerade ein bisschen mit perf herum. Das ...</h1>
-
 <p>Date: 2015-12-03 19:23:00</p>
-
 <p>Ich spiele gerade ein bisschen mit perf herum. Das ist ein
 Performance-Mess-Tool, das dem Linux-Kernel beiliegt. Damit kann man auf
 der einen Seite ganz tolle Kernel-Analysen fahren, z.B. sowas wie \&ldquo;wer
@@ -200,19 +132,16 @@ ist ja grundsätzlich eine recht schwierige Sache, denn wenn man es zu
 oberflächlich macht, sind die Ergebnisse wahrscheinlich nutzlos, und
 wenn man es gründlich macht, dann verfälscht man das Laufzeitverhalten
 so stark, dass die Ergebnisse wahrscheinlich auch nutzlos sind.</p>
-
 <p>Ich habe daher eine Weile lang gar nicht Profiling mit Profiling-Tools
 gemacht, sondern mit Coverage-Tools, speziell gcov. Damit kann man sich
 am Ende zeigen lassen, welche Codezeile wie häufig ausgeführt wurde. Das
 ist zwar nicht identisch mit der Frage, wo die Zeit verbraucht wurde,
 aber es hilft trotzdem beim Finden von Hotspots.</p>
-
 <p>perf kann jetzt Sampling-basiertes Profiling machen, mit einstellbarer
 Samplingrate, und kann einem dann den Code disassemblieren und die
 heißen Instruktionen zeigen. Ich bin noch nicht sehr weit mit dem Tool,
 aber mein Eindruck ist, dass das recht viel kann. Mehr jedenfalls als
 ich gerade benutze :-)</p>
-
 <p>Das Testobjekt für mein Rumspielen war ein Tool, das ich für einen
 Kunden geschrieben habe. Der nimmt per syslog oder stdin Logdaten
 entgegen und pseudonymisiert die dann. Der Schlüssel für die
@@ -221,7 +150,6 @@ und neu gemacht, damit man das auch einfach mitlaufen lassen kann. Ein
 Teil der Aufgabe des Tools ist, per Regex Usernamen zu erkennen. Dabei
 ruft das Tool dann regexec auf den String ab dem potentiellen Usernamen
 auf (und das ist in der Praxis jeder Wortanfang).</p>
-
 <p>Ich erzähle das, weil mir dann auffiel, dass das Tool vergleichsweise
 viel Zeit im Regex-Matching verbracht hat. Nun muss man über regexec
 wissen, dass der nicht nur am Anfang des Strings matcht, sondern
@@ -237,24 +165,14 @@ Matches (obwohl die schon jeweils direkt abgebrochen wurden) ca. <sup>3</sup>&fr
 seiner Laufzeit. Ich habe dann eine Ein-Zeilen-Änderung in regexec
 getan, dass der das Matchen im Rest der Zeile nicht versucht, wenn die
 Regex mit \^ anfängt, und der Durchsatz des Tools hat sich vervierfacht.</p>
-
 <p>Die Lektion an der Sache ist aber eine Andere. perf zeigte mir vorher
 an, dass regexec 12% ausmachte. Es zeigte mir das zwar als teuerste
 Funktion an, aber die Zahlen haben bei weitem nicht die Vermutung
 gerechtfertigt, dass diese Änderung so viel Einsparen würde.
 Profiling-Tools sind eben schwierig :-)</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

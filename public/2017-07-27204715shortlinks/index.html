@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,54 +113,39 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="shortlinks">Shortlinks</h1>
-
 <p>Date: 2017-07-27 20:47:15</p>
-
 <p><img src="https://www.jwz.org/images/3341898848_2f78cf1851.jpg" alt="" />Shortlinks are
 terrible for all kinds of reasons, but this post isn\&rsquo;t about that. But
 let me get that part out of the way first:</p>
-
 <ul>
 <li>They obscure the destination you\&rsquo;re about to click on, making them
 a primary tool for phishing attacks.</li>
-
 <li><p>They train people that not looking at their link destinations is a
 reasonable thing to do.</p></li>
-
 <li><p>Each shortening \&ldquo;service\&rdquo; introduces a new point of failure: when,
 not if, they go out of business, they will have broken a vast swath
 of the web equivalent to their market share.</p></li>
-
 <li><p>The real reason that link shorteners exist is not actually to save
 typing, or reading, but as a tool of surveillance: the shortening
 \&ldquo;service\&rdquo; wants to interject itself between your mouse and the
 destination site to sell those hit statistics to other people.</p></li>
-
 <li><p>Twitter, who inflicted this blight upon the world in the first
 place, won\&rsquo;t even respect the shortlinks that sites provide on
 their own, but instead double-encode them using their own shortener.
 They say this is for \&ldquo;security\&rdquo; reasons but that\&rsquo;s a bald-faced
 lie that I\&rsquo;m sure I don\&rsquo;t have to... unpack... for you.</p></li>
 </ul>
-
 <p>So, all that aside -- it\&rsquo;s still an interesting numerical /
 bit-twiddling problem, on a purely technical level.</p>
-
 <p>Back when I switched to WordPress, I noticed that the \&ldquo;shortlinks\&rdquo; it
 generated for every post were terrible. They really weren\&rsquo;t that short
 at all, just appending the base 10 numeric post ID to the blog\&rsquo;s base
@@ -228,13 +153,9 @@ URL. They were barely shorter than the long URL that includes the
 post\&rsquo;s whole subject. So I wrote <a href="https://www.jwz.org/base64-shortlinks/">a
 plugin</a> to do better. For
 example, the blog post:</p>
-
 <p>has this default shortlink:</p>
-
 <p>Other services give us:</p>
-
 <p>My code gives us:</p>
-
 <p>I did that by just encoding the post\&rsquo;s ID number in base64, which is
 the same thing those other shorteners do, except that the ID in question
 is intrinsic to the post. Other shorteners either just increment a
@@ -242,7 +163,6 @@ global variable, or pick a random non-conflicting number. Of course the
 smaller that number is, the more traversable the space is, which <a href="https://freedom-to-tinker.com/2016/04/14/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services/">can be
 a
 problem</a>.</p>
-
 <p>But since the post\&rsquo;s ID number isn\&rsquo;t a secret maybe it could be
 shorter? Could it be fewer than 4 bytes? Sure, if your post IDs were
 smaller. By default, a brand new WordPress blog gives its first post the
@@ -251,7 +171,6 @@ that would have still been way down in the three-byte space, <code>&quot;JP0&quo
 The post IDs don\&rsquo;t increase quite monotonically (the number increases
 every time you do a preview, among other things), but it still would
 have fit in three.</p>
-
 <p>Unfortunately, I used to host my blog on Livejournal, and only migrated
 it here in 2010. The tool I used to import the blog preserved
 Livejournal\&rsquo;s post ID numbers in the WordPress database. Those were
@@ -263,7 +182,6 @@ to pull that number back down, but since then there have been almost
 5,000 more posts, and I suspect that WordPress might lose its mind if
 post IDs are non-increasing. It doesn\&rsquo;t matter, though, because these
 IDs will still fit in 4 bytes for the next 3.5 million posts.</p>
-
 <p>Anyway, a few weeks ago I decided to waste some time making shortlinks
 for the <a href="https://www.dnalounge.com/">DNA</a> web site. Since there was no
 Livejournal fuckery, the WP blog <a href="https://www.dnalounge.com/backstage/log/">over
@@ -275,7 +193,6 @@ those pages are date-based, so that suggests a way to generate unique
 IDs that are predictable and do not require a global counter: just use
 the date! But a <code>time_t</code> is a big number that takes six bytes to encode,
 so that won\&rsquo;t do.</p>
-
 <p>So I computed the number of <em>days</em> since the Epoch instead of the number
 of <em>seconds</em> (no, you can\&rsquo;t just divide, because of leap years and
 daylight savings). Then there\&rsquo;s the matter of the directory (is this a
@@ -283,35 +200,22 @@ blog post, a calendar page, a flyer page, a gallery page?) and the room
 suffix (is this a daytime event in the main room, a nighttime event in
 Above DNA, etc?) So I use 3 bits for each of those, adding 6 bits to the
 15-bit day number, and a 21-bit number still handily encodes as 4 bytes.</p>
-
 <p>So here\&rsquo;s a gallery: <code>http://dnalounge.com/b/G0O6</code> and its calendar
 page: <code>http://dnalounge.com/b/C0O6</code> and flyer:
 <code>http://dnalounge.com/b/E0O6</code> and a blog post from around the same time:
 <code>http://dnalounge.com/b/AUPC</code>. That they start with low capital letters
 means there\&rsquo;s plenty of space left.</p>
-
 <p>Of course those aren\&rsquo;t actually all that short, since unsurprisingly,
 whoever was squatting <code>&quot;DNA.com&quot;</code> back in 1998 never answered my email
 when I tried to find out what their price for it would be. But if
 someone wanted to buy me <code>&quot;dnaloun.ge&quot;</code> from the Registrar of the Great
 Nation of Georgia, I wouldn\&rsquo;t say no.</p>
-
 <p>BTW, autocomplete keeps changing \&ldquo;shortlink\&rdquo; to \&ldquo;chortling\&ldquo;, which
 is what I think we should call them now.</p>
-
 <p><a href="https://www.jwz.org/blog/2011/08/base64-shortlinks/">Previously</a>.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

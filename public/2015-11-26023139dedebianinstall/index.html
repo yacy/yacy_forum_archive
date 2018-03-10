@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,756 +113,397 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="de-debianinstall">De:DebianInstall</h1>
-
 <p>Date: 2015-11-26 02:31:39</p>
-
 <p>← Nächstältere Version</p>
-
 <p>Version vom 26. November 2015, 01:31 Uhr</p>
-
 <p>Zeile 3:</p>
-
 <p>Zeile 3:</p>
-
 <p> </p>
-
 <div>
-
 Eine Anleitung zum Selberbauen des Debianpaketes
 \[\[DebianPaketBauen\|hier\]\].
-
 </div>
-
 <p> </p>
-
 <div>
-
 Eine Anleitung zum Selberbauen des Debianpaketes
 \[\[DebianPaketBauen\|hier\]\].
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p>−</p>
-
 <div>
-
 Man kann die Packages über den apt-get install Prozess laden, dazu gibt
 es einen ~~Update-Server:~~ http://debian.yacy.net
-
 </div>
-
 <p>+</p>
-
 <div>
-
 [==Source-Datei einrichten==]{.underline}
-
 </div>
-
 <p>−</p>
-
 <div>
-
  
-
 </div>
-
 <p>+</p>
-
 <div>
-
 Man kann die Packages über den apt-get install Prozess laden, dazu gibt
 es einen [\[\[]{.underline}http://debian.yacy.net [Update-Server\]\],
 den man am besten in]{.underline} eine [neu zu erstellende]{.underline}
 source-Datei [einträgt]{.underline}:
-
 </div>
-
 <p>−</p>
-
 <div>
-
 ~~Als User root~~ eine ~~neue~~ source-Datei ~~erstellen, in die die
 Adresse für das YaCy-Package eingefügt wird~~:
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p> </p>
-
 <div>
-
   echo \'deb http://debian.yacy.net ./\' \>\>
 /etc/apt/sources.list.d/yacy.list
-
 </div>
-
 <p> </p>
-
 <div>
-
   echo \'deb http://debian.yacy.net ./\' \>\>
 /etc/apt/sources.list.d/yacy.list
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<br /\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [==Entwicklerschlüssel importieren==]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 Um sicherzustellen, dass ein unverfälschtes YaCy-Package heruntergeladen
 wird, ist das Package mit einem Entwicklerschlüssel signiert. Diesen
 muss man zum Abgleich installieren über eine der beiden Möglichkeiten:
-
 </div>
-
 <p> </p>
-
 <div>
-
 Um sicherzustellen, dass ein unverfälschtes YaCy-Package heruntergeladen
 wird, ist das Package mit einem Entwicklerschlüssel signiert. Diesen
 muss man zum Abgleich installieren über eine der beiden Möglichkeiten:
-
 </div>
-
 <p> </p>
-
 <div>
-
   wget http://debian.yacy.net/yacy\_orbiter\_key.asc -O- \| apt-key add
 -
-
 </div>
-
 <p> </p>
-
 <div>
-
   wget http://debian.yacy.net/yacy\_orbiter\_key.asc -O- \| apt-key add
 -
-
 </div>
-
 <p> </p>
-
 <div>
-
   apt-key advanced \--keyserver pgp.net.nz \--recv-keys 03D886E7
-
 </div>
-
 <p> </p>
-
 <div>
-
   apt-key advanced \--keyserver pgp.net.nz \--recv-keys 03D886E7
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<br /\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [==YaCy installieren==]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 Danach kann man YaCy auf Debian installieren mit
-
 </div>
-
 <p> </p>
-
 <div>
-
 Danach kann man YaCy auf Debian installieren mit
-
 </div>
-
 <p> </p>
-
 <div>
-
   apt-get update
-
 </div>
-
 <p> </p>
-
 <div>
-
   apt-get update
-
 </div>
-
 <p> </p>
-
 <div>
-
   apt-get install openjdk-7-jre-headless \# die headless Java Version
 reicht aus
-
 </div>
-
 <p> </p>
-
 <div>
-
   apt-get install openjdk-7-jre-headless \# die headless Java Version
 reicht aus
-
 </div>
-
 <p> </p>
-
 <div>
-
   apt-get install yacy
-
 </div>
-
 <p> </p>
-
 <div>
-
   apt-get install yacy
-
 </div>
-
 <p>−</p>
-
 <div>
-
  
-
 </div>
-
 <p>+</p>
-
 <div>
-
 YaCy [wird bei der Installation als Dienst in]{.underline}
 /[etc]{.underline}/[init]{.underline}.[d eingetragen, so
 dass]{.underline} YaCy bei einem Debian-Startup automatisch gestartet,
 und bei einem Shutdown auch beendet [wird]{.underline}.[\<br
 /\>]{.underline}
-
 </div>
-
 <p>−</p>
-
 <div>
-
 ~~Das~~ YaCy~~-HOME-Verzeichnis ist dann~~
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p>−</p>
-
 <div>
-
  /~~usr~~/~~share/yacy~~
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p>−</p>
-
 <div>
-
  
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p>−</p>
-
 <div>
-
 ~~Das Datenverzeichnis DATA befindet sich im YaCy-Home-Verzeichnis~~.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p>−</p>
-
 <div>
-
  
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p>−</p>
-
 <div>
-
  
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p>−</p>
-
 <div>
-
 YaCy ~~wird dann~~ bei einem Debian-Startup automatisch gestartet, und
 bei einem Shutdown auch beendet.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p>−</p>
-
 <div>
-
  
-
 </div>
-
 <p>+</p>
-
 <div>
-
 </div>
-
 <p> </p>
-
 <div>
-
 Man kann YaCy auch manuell starten, stoppen und neustarten:
-
 </div>
-
 <p> </p>
-
 <div>
-
 Man kann YaCy auch manuell starten, stoppen und neustarten:
-
 </div>
-
 <p> </p>
-
 <div>
-
   /etc/init.d/yacy stop
-
 </div>
-
 <p> </p>
-
 <div>
-
   /etc/init.d/yacy stop
-
 </div>
-
 <p> </p>
-
 <div>
-
   /etc/init.d/yacy start
-
 </div>
-
 <p> </p>
-
 <div>
-
   /etc/init.d/yacy start
-
 </div>
-
 <p> </p>
-
 <div>
-
   /etc/init.d/yacy restart
-
 </div>
-
 <p> </p>
-
 <div>
-
   /etc/init.d/yacy restart
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<br /\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 []{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [==YaCy-Web-Interface aufrufen==]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 YaCy läuft per default auf Port 8090, die Adresse für die Administration
 ist dann
-
 </div>
-
 <p> </p>
-
 <div>
-
 YaCy läuft per default auf Port 8090, die Adresse für die Administration
 ist dann
-
 </div>
-
 <p> </p>
-
 <div>
-
   http://localhost:8090/
-
 </div>
-
 <p> </p>
-
 <div>
-
   http://localhost:8090/
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<br /\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Das YaCy-HOME-Verzeichnis ist dann /usr/share/yacy]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Das Datenverzeichnis DATA befindet sich im
 YaCy-Home-Verzeichnis.]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<br /\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 []{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [==YaCy updaten==]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 Wenn YaCy als Debian-Package installiert wurde, funktioniert der
 YaCy-interne auto-updater nicht. Ein Update muss aus der debian
 Systemumgebung heraus erfolgen, beispielsweise mit einem cronjob. Dazu
 in /etc/crontab folgende Zeile ergänzen:
-
 </div>
-
 <p> </p>
-
 <div>
-
 Wenn YaCy als Debian-Package installiert wurde, funktioniert der
 YaCy-interne auto-updater nicht. Ein Update muss aus der debian
 Systemumgebung heraus erfolgen, beispielsweise mit einem cronjob. Dazu
 in /etc/crontab folgende Zeile ergänzen:
-
 </div>
-
 <p> </p>
-
 <div>
-
   0 6 \* \* \* root apt-get update && apt-get -y \--force-yes install
 yacy
-
 </div>
-
 <p> </p>
-
 <div>
-
   0 6 \* \* \* root apt-get update && apt-get -y \--force-yes install
 yacy
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<br /\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 []{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [==YaCy deintstallieren==]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Wenn bei der Deinstallion auch der Eintrag des YaCy-Dienstes in 
 /etc/init.d entfernt werden soll, ist folgende Vorgehensweise zu
 empfehlen:]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [apt-get purge yacy]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 \<br /\>
-
 </div>
-
 <p> </p>
-
 <div>
-
 \<br /\>
-
 </div>
-
 <p> </p>
-
 <div>
-
 {{interwikiDE\|De:DebianInstall}}
-
 </div>
-
 <p> </p>
-
 <div>
-
 {{interwikiDE\|De:DebianInstall}}
-
 </div>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

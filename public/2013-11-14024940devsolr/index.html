@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,471 +113,250 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="dev-solr">Dev:Solr</h1>
-
 <p>Date: 2013-11-14 02:49:40</p>
-
 <p>[Deploy Solr in Tomcat: ]{.autocomment}</p>
-
 <p>← Nächstältere Version</p>
-
 <p>Version vom 14. November 2013, 01:49 Uhr</p>
-
 <p>Zeile 38:</p>
-
 <p>Zeile 38:</p>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 == Deploy Solr in Tomcat ==
-
 </div>
-
 <p> </p>
-
 <div>
-
 == Deploy Solr in Tomcat ==
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [First you must download and decompress tomcat 6. In this example you
 install tomcat to your home directory at \~/tomcat/]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [wget http
 ://archive.apache.org/dist/tomcat/tomcat-6/v6.0.37/bin/apache-tomcat-6.0.37.tar.gz]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [tar xfz apache-tomcat-6.0.37.tar.gz]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [mv apache-tomcat-6.0.37 tomcat]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Now you have a tomcat which you can start with]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cd \~/tomcat/bin/]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [./startup.sh]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [After this, tomcat is running at port 8080. You can open the example
 page at http ://localhost:8080]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [To deploy a solr container, download a solr package and copy the
 relevant files to the correct tomcat subdirectory:]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cd \~]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [wget http
 ://www.eu.apache.org/dist/lucene/solr/4.5.1/solr-4.5.1.tgz]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [tar xfz solr-4.5.1.tgz]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cp solr-4.5.1/dist/solr-4.5.1.war .]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cp -R solr-4.5.1/example/solr yacy\_index]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Now create a Tomcat Context fragment. You need the absolute path to the
 tomcat installation directory which we consider as
 /home/administrator/tomcat in this example. Now create a file in
 /home/administrator/tomcat/conf/Catalina/localhost/solr4yacy.xml with
 the following content:]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<?xml version=\"1.0\" encoding=\"utf-8\"?\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<Context docBase=\"/home/administrator/tomcat/solr-4.5.1.war\"
 debug=\"0\" crossContext=\"true\"\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [  \<Environment name=\"solr/home\" type=\"java.lang.String\"
 value=\"/home/administrator/tomcat/yacy\_index\"
 override=\"true\"/\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\</Context\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Almost finished, you also must copythe solr logging libraries to the
 tomcat library folder because Solr uses a different logging in jetty as
 implemented in solr. In the \~/tomcat directory, do]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cp solr-4.5.1/example/lib/ext/\* lib/]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [followed by a restart of tomcat. You have now access to the solr
 servlet at http ://localhost:8080/solr4yacy/\#/]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [To get access to the tomcat manager, write the new role \"manager\" to
 the file conf/tomcat-users.xml and set a password, i.e.]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<?xml version=\'1.0\' encoding=\'utf-8\'?\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\<tomcat-users\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [  \<role rolename=\"manager\"/\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [  \<user username=\"admin\" password=\"tomcat\"
 roles=\"manager\"/\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [\</tomcat-users\>]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [Then you can open http ://localhost:8080/manager/html and manage solr
 applications there. You need a tomcat re-start to get new users
 active.]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [At this point we have a running solr inside of tomcat, but the solr is
 not configured for YaCy. We still need to copy the YaCy schema and the
 second core definition. Consider that at \~/yacy you have installed a
 YaCy peer, then you can simply copy the generic schema file for
 collection1 to solr:]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cp \~/yacy/defaults/solr/schema.xml
 \~/tomcat/yacyindex/collection1/conf/]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [and the solr.xml definition for two cores:]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cp \~/yacy/defaults/solr/solr.xml \~/tomcat/yacyindex/]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [But we need still two solr cores which we create by cloning the
 collection1:]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [mkdir \~/tomcat/yacyindex/webgraph]{.underline}
-
 </div>
-
 <p> </p>
-
 <p>+</p>
-
 <div>
-
 [cp -R \~/tomcat/yacyindex/collection1/conf
 \~/tomcat/yacyindex/webgraph/conf]{.underline}
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 = Use the deep-embedded Solr in YaCy and an external Solr concurrently =
-
 </div>
-
 <p> </p>
-
 <div>
-
 = Use the deep-embedded Solr in YaCy and an external Solr concurrently =
-
 </div>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

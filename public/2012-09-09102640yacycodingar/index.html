@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,67 +113,48 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="yacy-coding-architektur-re-bewertungen-ranking">YaCy Coding &amp; Architektur • Re: Bewertungen / Ranking</h1>
-
 <p>Date: 2012-09-09 10:26:40</p>
-
 <blockquote>
 <div>
-
 \
 Das Thema Mehrbenutzerbetrieb wird ja kaum betrachtet, so weit ich das
 sehe. Eine Anwendung sehe ich nur im Zusammenhang mit dem Crawlen von
 zu-authentifizierenden Seiten.\
-
 </div>
 </blockquote>
-
 <p><br />
 Naja, ich sehe auch eine Anwendung beim Aufbau eines kontrollierten
 Index. Oder eben zum Sammeln von Metadaten, die durch User entstehen -
 Stichwort Browser-Integration. LDAP oder Active Directory wäre natürlich
 richtig cool...<br />
 </p>
-
 <blockquote>
 <div>
-
 \
 Ich empfehle für die Suche auch den integrierten Solr zu benutzen. Das
 ist nicht schwer zu machen.\
-
 </div>
 </blockquote>
-
 <p><br />
 Schau ich mir an, versprochen! Mit Solr habe ich mich eh noch nicht
 genug befasst.<br />
 </p>
-
 <blockquote>
 <div>
-
 \
 Alerts auf Bookmark-Content-Changes deutet auf eine ganz neue
 Anwendung im Bereich Monitoring an.\
-
 </div>
 </blockquote>
-
 <p><br />
 Ich glaube, dass Bedarf besteht, YaCy CrawlStarts konfortabler zu
 verwalten. Außerdem habe ich immer noch den Anwendungsfall
@@ -242,16 +163,12 @@ man mit der Ähnlichkeits- bzw. Abstandsfunktion statt nach Suchworten
 gleich mit einer Beispielseite oder einem Referenztext nach ähnlichen
 Seiten crawlen bzw. suchen lassen.<br />
 </p>
-
 <blockquote>
 <div>
-
 \
 bei RDF wirds spannend\
-
 </div>
 </blockquote>
-
 <p><br />
 Öffentliche Bookmarks stehen jetzt via
 <a href="http://yacy-peer:8090/YMarks.rdf">http://yacy-peer:8090/YMarks.rdf</a> zur Verfügung!<br />
@@ -259,17 +176,13 @@ Intern kann man mit der Klasse YMarkRDF einen SnapShot der Bookmarks als
 Jena RDF Model bekommen, falls man hier YaCy-intern mit weiter arbeiten
 wollen würde. Bei Bedarf gebe ich gerne weitere Infos...<br />
 </p>
-
 <blockquote>
 <div>
-
 \
 die RDF Tripel als \'Beilage\' zu den Solr Daten in die neuen
 Metadaten zu legen.\
-
 </div>
 </blockquote>
-
 <p><br />
 Ich persönlich würde auf eine \&lsquo;Beilage\&rsquo; verzichten und entweder auf
 TDB gehen, oder auf Basis des BEncodedHeap einen eigenen persistenten
@@ -277,24 +190,13 @@ TripleStore bauen. Wenn wir die Jena-Schnittstelle bedienen müssen wir
 nicht das Rad neu erfinden.<br />
 <br />
 apfelmaennchen</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=130">apfelmaennchen</a>
 &mdash; So Sep 09, 2012 9:26 am</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

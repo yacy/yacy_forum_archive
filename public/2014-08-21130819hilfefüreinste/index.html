@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,55 +113,34 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="hilfe-für-einsteiger-und-anwender-re-yacy-startet-nicht">Hilfe für Einsteiger und Anwender • Re: Yacy startet nicht</h1>
-
 <p>Date: 2014-08-21 13:08:19</p>
-
 <p>Ich hab mal Yacy versucht händisch zu starten - es scheint so als hätte
 Yacy einige wichtige Dateien nicht anlegen können aber möglicherweise
 kann mir jemand genaueres anhand der Ausgabe sagen:<br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>C:\Users\user\YaCy\lib&gt;java -jar lib\yacycore.jarError: Unable to access jarfile lib\yacycore.jarC:\Users\user\YaCy\lib&gt;java -jar yacycore.jar[ YaCy v1.7, build 20140404 by Michael Christen / www.yacy.net ]-------------------------------------------------------------------------------could not copy yacy.loggingSTARTUP: Trying to load logging configuration from file C:\Users\user\YaCy\lib\DATA\LOG\yacy.loggingcould not find logging properties in homePath=C:\Users\user\YaCy\libAug 21, 2014 12:52:07 PM net.yacy.cora.util.ConcurrentLog$Worker runWARNUNG: C:\Users\user\YaCy\lib\DATA\LOG\yacy.logging (Das System kann die angegebene Datei nicht finden)java.io.FileNotFoundException: C:\Users\user\YaCy\lib\DATA\LOG\yacy.logging(Das System kann die angegebene Datei nicht finden)        at java.io.FileInputStream.open(Native Method)        at java.io.FileInputStream.&lt;init&gt;(Unknown Source)        at net.yacy.cora.util.ConcurrentLog.configureLogging(ConcurrentLog.java:385)        at net.yacy.yacy.startup(yacy.java:166)        at net.yacy.yacy.main(yacy.java:684)Aug 21, 2014 12:52:14 PM net.yacy.cora.util.ConcurrentLog$Worker runINFORMATION: loaded globalHosts cache of hostnames, size = 0Aug 21, 2014 12:52:14 PM net.yacy.cora.util.ConcurrentLog$Worker runWARNUNG: C:\Users\user\YaCy\lib\defaults\yacy.network.freeworld.unitjava.io.FileNotFoundException: C:\Users\user\YaCy\lib\defaults\yacy.network.freeworld.unit        at net.yacy.server.serverSwitch.getConfigFileFromWebOrLocally(serverSwitch.java:578)        at net.yacy.search.Switchboard.overwriteNetworkDefinition(Switchboard.java:1201)        at net.yacy.search.Switchboard.&lt;init&gt;(Switchboard.java:401)        at net.yacy.yacy.startup(yacy.java:192)        at net.yacy.yacy.main(yacy.java:684)Aug 21, 2014 12:52:14 PM net.yacy.cora.util.ConcurrentLog$Worker runWARNUNG: C:\Users\user\YaCy\lib\defaults\solr.collection.schema (Das Systemkann den angegebenen Pfad nicht finden)java.io.FileNotFoundException: C:\Users\user\YaCy\lib\defaults\solr.collection.schema (Das System kann den angegebenen Pfad nicht finden)        at java.io.FileInputStream.open(Native Method)        at java.io.FileInputStream.&lt;init&gt;(Unknown Source)        at com.google.common.io.Files$FileByteSource.openStream(Files.java:126)        at com.google.common.io.Files$FileByteSource.openStream(Files.java:116)        at com.google.common.io.ByteSource.copyTo(ByteSource.java:253)        at com.google.common.io.Files.copy(Files.java:442)        at net.yacy.search.Switchboard.&lt;init&gt;(Switchboard.java:433)        at net.yacy.yacy.startup(yacy.java:192)        at net.yacy.yacy.main(yacy.java:684)Aug 21, 2014 12:52:14 PM net.yacy.cora.util.ConcurrentLog$Worker runWARNUNG: C:\Users\user\YaCy\lib\defaults\solr.collection.schema (Das Systemkann den angegebenen Pfad nicht finden)java.io.FileNotFoundException: C:\Users\user\YaCy\lib\defaults\solr.collection.schema (Das System kann den angegebenen Pfad nicht finden)        at java.io.FileInputStream.open(Native Method)        at java.io.FileInputStream.&lt;init&gt;(Unknown Source)        at java.io.FileReader.&lt;init&gt;(Unknown Source)        at net.yacy.cora.storage.Configuration.&lt;init&gt;(Configuration.java:67)        at net.yacy.cora.federate.solr.SchemaConfiguration.&lt;init&gt;(SchemaConfiguration.java:60)        at net.yacy.search.schema.CollectionConfiguration.&lt;init&gt;(CollectionConfiguration.java:109)        at net.yacy.search.Switchboard.&lt;init&gt;(Switchboard.java:441)        at net.yacy.yacy.startup(yacy.java:192)        at net.yacy.yacy.main(yacy.java:684)Aug 21, 2014 12:52:14 PM net.yacy.cora.util.ConcurrentLog$Worker runWARNUNG: C:\Users\user\YaCy\lib\defaults\solr.webgraph.schema (Das System kann den angegebenen Pfad nicht finden)java.io.FileNotFoundException: C:\Users\user\YaCy\lib\defaults\solr.webgraph.schema (Das System kann den angegebenen Pfad nicht finden)        at java.io.FileInputStream.open(Native Method)        at java.io.FileInputStream.&lt;init&gt;(Unknown Source)        at com.google.common.io.Files$FileByteSource.openStream(Files.java:126)        at com.google.common.io.Files$FileByteSource.openStream(Files.java:116)        at com.google.common.io.ByteSource.copyTo(ByteSource.java:253)        at com.google.common.io.Files.copy(Files.java:442)        at net.yacy.search.Switchboard.&lt;init&gt;(Switchboard.java:465)        at net.yacy.yacy.startup(yacy.java:192)        at net.yacy.yacy.main(yacy.java:684)Aug 21, 2014 12:52:14 PM net.yacy.cora.util.ConcurrentLog$Worker runWARNUNG: C:\Users\user\YaCy\lib\defaults\solr.webgraph.schema (Das System kann den angegebenen Pfad nicht finden)java.io.FileNotFoundException: C:\Users\user\YaCy\lib\defaults\solr.webgraph.schema (Das System kann den angegebenen Pfad nicht finden)        at java.io.FileInputStream.open(Native Method)        at java.io.FileInputStream.&lt;init&gt;(Unknown Source)        at java.io.FileReader.&lt;init&gt;(Unknown Source)        at net.yacy.cora.storage.Configuration.&lt;init&gt;(Configuration.java:67)        at net.yacy.cora.federate.solr.SchemaConfiguration.&lt;init&gt;(SchemaConfiguration.java:60)        at net.yacy.search.schema.WebgraphConfiguration.&lt;init&gt;(WebgraphConfiguration.java:77)        at net.yacy.search.Switchboard.&lt;init&gt;(Switchboard.java:470)        at net.yacy.yacy.startup(yacy.java:192)        at net.yacy.yacy.main(yacy.java:684)Aug 21, 2014 12:52:14 PM net.yacy.cora.util.ConcurrentLog$Worker runSCHWERWIEGEND: YaCy cannot start: nulljava.lang.NullPointerException        at net.yacy.search.Switchboard.&lt;init&gt;(Switchboard.java:481)        at net.yacy.yacy.startup(yacy.java:192)        at net.yacy.yacy.main(yacy.java:684)</code></dd>
 </dl>
-
 <p><br />
 <br />
 Vielen Dank für eure Hilfe</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9478">lupus</a>
 &mdash; Do Aug 21, 2014 12:08 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

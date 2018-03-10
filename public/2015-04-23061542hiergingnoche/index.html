@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,28 +113,19 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="hier-ging-noch-eine-mail-von-meinem-kollegen-klaus">Hier ging noch eine Mail von meinem Kollegen Klaus ...</h1>
-
 <p>Date: 2015-04-23 06:15:42</p>
-
 <p>Hier ging noch eine Mail von meinem Kollegen Klaus Rodewig ein, die ich
 mal in Gänze zitieren möchte, denn er erinnert mich zu Recht an meinen
 Bildungsauftrag.</p>
-
 <blockquote>
 <p>zu Deinem Post <a href="http://blog.fefe.de/?ts=abc8718c">http://blog.fefe.de/?ts=abc8718c</a> wäre es total super
 gewesen, wenn Du in dem Zug auf das eigentlich, viel gravierendere
@@ -209,18 +140,14 @@ solche Libs einzubauen, weil &hellip; hey &hellip; ich benutze viele Libs mit
 wohlklingenden Namen &hellip; meine App <strong>muss</strong> gut und ich wichtig sein!
 AFNetwork wird häufig nur dazu benutzt, Certificate Pinning zu machen.
 Nativ sind das knapp 10 Zeilen Code:</p>
-
 <pre><code>-(BOOL)checkCertificate:(NSURLAuthenticationChallenge *)challenge{
     if ([[[challenge protectionSpace] authenticationMethod] isEqualToString: NSURLAuthenticationMethodServerTrust]) {
 SecTrustRef serverTrust = [[challenge protectionSpace] serverTrust];
-
         BOOL trustedCert = NO;
         NSData *theData;
         NSArray *theHashes = [NSArray arrayWithArray:[EAPConfig eapCloudHashes]];
-
         if(serverTrust != NULL) {
             CFIndex theCertCount = SecTrustGetCertificateCount(serverTrust);
-
             for(CFIndex theCertIndex = 0; theCertIndex &lt; theCertCount; theCertIndex++) {
                 SecCertificateRef theCert = SecTrustGetCertificateAtIndex(serverTrust, theCertIndex);
                 theData = (__bridge_transfer NSData *)SecCertificateCopyData(theCert);
@@ -236,39 +163,25 @@ SecTrustRef serverTrust = [[challenge protectionSpace] serverTrust];
         }
 }
 </code></pre>
-
 <p>Das müsste man sich aber entweder googeln oder selbst aus der Doku
 zusammensuchen. Und dafür braucht man <strong>Hintergrundwissen</strong> über X509.
 Viel zu anstrengend. Da klebe ich mir lieber eine Lib mit tausenden
 Zeilen von Code in meine App und habe keinen blassen Schimmer, was die
 tut. Und schlauer werde ich damit auch nicht.</p>
-
 <p>Ich habe schon viele Apps auditiert. Die Anzahl der Apps, bei denen
 <strong>keine</strong> externen Libs für Trivialaufgaben verwendet werden, kann ich
 an <strong>einem Finger</strong> abzählen. SDL &hellip; my ass!</p>
 </blockquote>
-
 <p>(Hervorhebungen aus dem Original zitiert)</p>
-
 <p>Von mir sei als zusätzlicher Hinweis noch erlaubt, dass in meiner
 Berufserfahrung fast alle Apps für mobile Endgeräte keine ordentliche
 Zertifikatsprüfung machen.</p>
-
 <p><strong>Update</strong>: <a href="https://op-co.de/blog/posts/java_sslsocket_mitm/">Hier gibt es eine Übersicht der ganzen grottigen Java-APIs
 an der Stelle</a>. Wenn
 wir schon dabei sind, in der Kanalisation herumzurühren &hellip;</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

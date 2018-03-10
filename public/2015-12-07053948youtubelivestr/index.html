@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,31 +113,20 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="youtube-live-streaming-help-needed">Youtube live streaming help needed</h1>
-
 <p>Date: 2015-12-07 05:39:48</p>
-
 <p>Currently our video webcast is down and I can\&rsquo;t tell why.</p>
-
 <p>The youtube status page says everything is good, and it has been happily
 ingesting my uploaded data, but the video doesn\&rsquo;t update.</p>
-
 <p>So my questions are:</p>
-
 <ol>
 <li>Given that things are currently broken, how do I un-break it?</li>
 <li>How do I determine that it is in this broken state? Given that the
@@ -210,9 +139,7 @@ B.  How do I make that new stream key stream to the old video ID?
 C.  Or if I can\&rsquo;t do that, how do I determine what the new video ID
     is?</li>
 </ol>
-
 <p>Here\&rsquo;s what I know:</p>
-
 <ol>
 <li><a href="https://www.youtube.com/watch?v=Z_OQ9X3V-Ko"><code>Z_OQ9X3V-Ko</code></a> says it
 is live, but the video never updates.</li>
@@ -230,70 +157,53 @@ using.</li>
 <li>The video embedded on the dashboard is
 <a href="https://www.youtube.com/watch?v=Z_OQ9X3V-Ko"><code>Z_OQ9X3V-Ko</code></a>, as it
 should be.</li>
-
 <li><p>Using the API,<br />
 <code>&quot;/youtube/v3/videos?id=Z_OQ9X3V-Ko&amp;part=id,snippet,contentDetails,liveStreamingDetails,status&quot;</code><br />
 says:</p>
-
 <p><code>&quot;publishedAt&quot;: &quot;2015-10-23T04:00:29.000Z&quot;, &quot;liveBroadcastContent&quot;: &quot;live&quot;,</code></p>
-
 <p>and no <code>liveStreamingDetails</code> are returned.</p></li>
-
 <li><p><code>&quot;/youtube/v3/liveStreams?part=id,snippet,contentDetails,status&amp;mine=true&quot;</code><br />
 returns one item:</p>
-
 <p><code>&quot;id&quot;: &quot;BKC3Bi_ckdOm3HxPRB98LQ1417763778482615&quot;, &quot;publishedAt&quot;: &quot;2014-12-05T07:16:18.000Z&quot;, &quot;streamStatus&quot;: &quot;inactive&quot;, &quot;isDefaultStream&quot;: false</code></p></li>
-
 <li><p><code>&quot;/youtube/v3/liveBroadcasts?part=id,snippet,contentDetails,status&amp;mine=true&amp;maxResults=50</code><br />
 returns 10 entries, none of which are <code>&quot;Z_OQ9X3V-Ko&quot;</code>:</p>
-
 <p><code>&quot;id&quot;: &quot;jbCKnscEbmE&quot;, &quot;actualStartTime&quot;: &quot;2015-11-26T08:33:48.628Z&quot;, &quot;actualEndTime&quot;:   &quot;2015-11-26T20:25:21.000Z&quot;, &quot;lifeCycleStatus&quot;: &quot;complete&quot;,</code></p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;i8QWCaRAP7E\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2015-11-18T11:04:34.542Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-11-18T22:56:51.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;UjeRjaQ0-KU\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2015-11-11T13:24:08.278Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-11-12T01:15:37.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;RKPuRpAcSfs\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2015-11-10T23:53:45.665Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-11-11T11:48:31.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;Gg7DV3XeY08\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2015-10-30T23:44:08.467Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-10-31T11:35:45.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;Jgq1-qKryx4\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2015-10-29T15:00:10.001Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-10-30T04:54:12.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;kUbm7mRzucw\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2015-10-23T16:18:52.824Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-10-24T04:10:39.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;lgVXFThZP5Y\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2015-10-23T04:05:56.033Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-10-23T15:57:59.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;gTIK2XawLDA\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2015-01-07T20:15:54.541Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-10-21T21:02:16.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>\&ldquo;id\&rdquo;: \&ldquo;8RyXumjr-rA\&ldquo;,<br />
 \&ldquo;actualStartTime\&rdquo;: \&ldquo;2014-12-06T00:40:25.882Z\&ldquo;,<br />
 \&ldquo;actualEndTime\&rdquo;:   \&ldquo;2015-01-07T20:03:35.000Z\&ldquo;,<br />
 \&ldquo;lifeCycleStatus\&rdquo;: \&ldquo;complete\&ldquo;,</p>
-
 <p>If you go to the
 <a href="https://www.youtube.com/user/DNALounge/videos">dnalounge/videos</a>
 page, all of those videos are listed there, with the title \&ldquo;DNA
@@ -301,45 +211,29 @@ Lounge Live Stream\&ldquo;. I don\&rsquo;t even know where those came from, or
 how there got to be ten of them. Except for the last two, they all
 have durations of less than 12 hours, and are not consecutive,
 so... WTF are they?</p></li>
-
 <li><p>But!<br />
 <code>&quot;/youtube/v3/liveBroadcasts?part=id,snippet,contentDetails,status&amp;id=Z_OQ9X3V-Ko&quot;</code><br />
 returns:</p>
-
 <p><code>&quot;id&quot;: &quot;Z_OQ9X3V-Ko&quot;, &quot;publishedAt&quot;: &quot;2015-10-23T04:00:29.000Z&quot;, &quot;isDefaultBroadcast&quot;: true &quot;lifeCycleStatus&quot;: &quot;live&quot;, &quot;recordingStatus&quot;: &quot;notRecording&quot; &quot;boundStreamId&quot;: &quot;BKC3Bi_ckdOm3HxPRB98LQ1445572830053739&quot;,</code></p>
-
 <p>So it seems to know that the thing exists, and seems to think it\&rsquo;s
 current. So why doesn\&rsquo;t it appear in the <code>liveBroadcasts</code> list?</p>
-
 <p>You\&rsquo;d think there would be a way to take
 <code>&quot;BKC3Bi_ckdOm3HxPRB98LQ1417763778482615&quot;</code> (the thing returned by
 <code>/liveStreams</code>) and turn that into the video ID to which it is
 feeding bits, but I don\&rsquo;t see a way.</p></li>
 </ol>
-
 <p><br />
 <strong>Update:</strong> Today at around 9:42pm, the stream magically began working
 again, through no action of my own. Now that it is in the working state,
 all of the above URLs are returning exactly the same thing as when it
 was stuck. Hooray.</p>
-
 <p><strong>Update 2:</strong> And at 1am it went down again, and has been since. Hooray.</p>
-
 <p><br />
 <a href="https://www.dnalounge.com/backstage/log/2014/12/05.html">Previously</a>,
 <a href="https://www.jwz.org/blog/2014/12/aaaaaaaahhhhhh-everything-is-terrible/">previously</a>.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

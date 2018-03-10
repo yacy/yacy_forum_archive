@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="mitmachen-re-raspberry-pi">Mitmachen • Re: Raspberry Pi</h1>
-
 <p>Date: 2014-02-10 01:24:50</p>
-
 <p>New Image. This one is based on Arch-Arm. We may make a puppy version of
 Arch Arm... but we are debating if there\&rsquo;s really any purpose. Arch is
 designed from the ground up to be minimal, so making a puppy version
@@ -239,12 +171,10 @@ interview.<br />
 3) I\&rsquo;ve noticed the following in my logs and I dont know if its
 something you\&rsquo;ve ever seen before. When it happens, which is rare; it
 continues to happen every 5 minutes in the logs until a shutdown.</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>E 2014/02/04 15:31:39 org.apache.solr.util.ConcurrentLRUCache ConcurrentLRUCache was not destroyed prior to finalize(), indicates a bug -- POSSIBLE RESOURCE LEAK!!!E 2014/02/04 15:31:39 org.apache.solr.util.ConcurrentLRUCache ConcurrentLRUCache was not destroyed prior to finalize(), indicates a bug -- POSSIBLE RESOURCE LEAK!!!E 2014/02/04 15:31:39 org.apache.solr.util.ConcurrentLRUCache ConcurrentLRUCache was not destroyed prior to finalize(), indicates a bug -- POSSIBLE RESOURCE LEAK!!!E 2014/02/04 15:31:39 org.apache.solr.util.ConcurrentLRUCache ConcurrentLRUCache was not destroyed prior to finalize(), indicates a bug -- POSSIBLE RESOURCE LEAK!!!D 2014/02/04 15:31:39 net.yacy.upnp.messages.ActionMessage POST prepared for URL http://192.168.0.1:65535/ctl/IPConnI 2014/02/04 15:31:39 YACY rulebasedUpdateInfo: not an automatic update selectedI 2014/02/04 15:31:39 RESOURCE OBSERVER resources okE 2014/02/04 15:31:39 org.apache.solr.core.SolrCore java.lang.IllegalStateException: this writer hit an OutOfMemoryError; cannot commit   at org.apache.lucene.index.IndexWriter.prepareCommitInternal(IndexWriter.java:2793)   at org.apache.lucene.index.IndexWriter.commitInternal(IndexWriter.java:2970)   at org.apache.lucene.index.IndexWriter.commit(IndexWriter.java:2940)   at org.apache.solr.update.DirectUpdateHandler2.commit(DirectUpdateHandler2.java:559)   at org.apache.solr.update.processor.RunUpdateProcessor.processCommit(RunUpdateProcessorFactory.java:95)   at org.apache.solr.update.processor.UpdateRequestProcessor.processCommit(UpdateRequestProcessor.java:64)   at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalCommit(DistributedUpdateProcessor.java:1274)   at org.apache.solr.update.processor.DistributedUpdateProcessor.processCommit(DistributedUpdateProcessor.java:1253)   at org.apache.solr.handler.RequestHandlerUtils.handleCommit(RequestHandlerUtils.java:69)   at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:68)   at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)   at org.apache.solr.core.SolrCore.execute(SolrCore.java:1859)   at org.apache.solr.client.solrj.embedded.EmbeddedSolrServer.request(EmbeddedSolrServer.java:150)   at org.apache.solr.client.solrj.request.AbstractUpdateRequest.process(AbstractUpdateRequest.java:117)   at org.apache.solr.client.solrj.SolrServer.commit(SolrServer.java:179)</code></dd>
 </dl>
-
 <p><br />
 <br />
 I have not seen that before in tests. I did some searching and found:
@@ -261,24 +191,13 @@ vm.min_free_kbytes=8192<br />
 vm.vfs_cache_pressure = 300<br />
 vm.swappiness=60<br />
 vm.overcommit_memory=295</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9339">q5sys</a>
 &mdash; Mo Feb 10, 2014 1:24 am</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

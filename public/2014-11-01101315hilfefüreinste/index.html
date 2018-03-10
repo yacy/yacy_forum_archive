@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,40 +113,28 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="hilfe-für-einsteiger-und-anwender-yacydns-1-503-fehler-2-die-htmlform-wert-weiche">Hilfe für Einsteiger und Anwender • yacyDNS: 1) 503-Fehler 2)die htmlform=Wert-Weiche</h1>
-
 <p>Date: 2014-11-01 10:13:15</p>
-
 <p>Hallo,<br />
 <br />
 [1) 503-Fehler]{style=&ldquo;font-weight: bold&rdquo;}</p>
-
 <blockquote>
 <div>
-
 Erik\_S hat geschrieben:\
-
 > <div>
 >
 > flegno hat geschrieben:\"sollte\" - naja, wie die YaCy-Software sich
 > Idealerweise verhält \....\
 >
 > </div>
-
 <p>Ich habe den Eindruck wir reden an einander vorbei. Der Fehler 503
 soll dem Anwender/Browser signalisieren das der Web-Server überlastet
 ist, da der Web-Server aber eben schon überlastet ist muss diese
@@ -230,58 +158,43 @@ gedacht. In meinem yacyDNS gibt es diesen Fehler gar nicht, weil es in
 yacyDNS keine [externen]{style=&ldquo;font-style: italic&rdquo;} Ressourcen gibt,
 entweder der interne HTTP-Server ist fähig einen Request zu
 beantworten (mit einer richtigen Antwort) oder eben nicht.</p>
-
 <p></div></p>
 </blockquote>
-
 <p><br />
 Mein Lösungsansatz basiert auf der Möglichkeit</p>
-
 <blockquote>
 <div>
-
 [Internet: HTTP-Fehler 503 -- Ursache und
 Problemlösung](http://www.giga.de/extra/internet/tipps/internet-http-fehler-503-ursache-und-problemloesung/%22:2n9d16fl){.postlink}
 hat geschrieben:\
 man kann diese Meldung anpassen.\
-
 </div>
 </blockquote>
-
 <p><br />
 Die Idee ist, dass - wenn der YaCy-Server noch soweit funktionsfähig
 ist, diese Webseite YaCy\htroot\proxymsg\error.html mit
 503-Fehlermeldung auszuliefern, dass man:</p>
-
 <ol>
 <li>im einfachsten Fall im statischen Text dieser 503-Fehlermeldung, die
 ja sowieso ausgeliefert wird, bspw. unabhängig von der Ursache der
 Fehlermeldung einen 503-Hinweis und einen Verweis auf die
 [yacyDNS]{style=&ldquo;font-style: italic&rdquo;}-Seite platziert</li>
-
 <li><p>benutzerfreundlicher ist, wenn man im Verweis gleich den aktuellen
 Suchbegriff mitgibt, so sieht es dann aus:</p>
-
 <blockquote>
 <div>
-
 \
 <http://130.255.73.69:5353/forward?random&query=Suchbegriff>\
-
 </div>
 </blockquote></li>
-
 <li><p>Premium-Leistung ist, wenn der YaCy-Server diese Leistung noch
 erbringen kann und wenn der YaCy-Peer dies wünscht - automatisch
 Redirect/Weiterleitung auf die yacyDNS-Seite - mit dem query-Wert
 -s.oben</p></li>
 </ol>
-
 <blockquote>
 <div>
-
 Erik\_S hat geschrieben:\
-
 > <div>
 >
 > flegno hat geschrieben:Spricht was dagegen \[\.....\] wenn du im
@@ -289,41 +202,33 @@ Erik\_S hat geschrieben:\
 > <http://130.255.73.69:5353/forward?htmlform=Wert> definierst\
 >
 > </div>
-
 <p>Hm, zu welchem Zweck? Ich verstehe nicht was Du damit meinst.<br />
 Ich habe auch hier den Eindruck wir reden aneinander vorbei. Der
 HTML-Code von heute Früh kommt nicht in mein Tool sondern soll eine
 simple Variante darstellen wie irgendjemand, z.B. Du, ein Suchformular
 in [seine]{style=&ldquo;font-weight: bold&rdquo;} Web-Seite einbauen kann.</p>
-
 <p></div></p>
 </blockquote>
-
 <p><br />
 [2)Die
 [htmlform]{style=&ldquo;font-style: italic&rdquo;}=Wert-Weiche]{style=&ldquo;font-weight: bold&rdquo;}<br />
 <br />
 Die htmlform=Wert-Weiche:</p>
-
 <ol>
 <li>bedeutet nicht, dass die yacyDNS-Seite ein Formular wie
 <a href="http://sprechrun.de/tools/yacyDNS/">http://sprechrun.de/tools/yacyDNS/</a> ausliefert/anbietet/hostet.</li>
 <li>die Idee ist, dass du den yacyDNS-Servet befähigst, mit den beiden
 Formularen umgehen:
-
 <ul>
 <li>ohne Dropdown-Liste <a href="http://sprechrun.de/tools/yacyDNS/">http://sprechrun.de/tools/yacyDNS/</a></li>
 <li>mit der Dropdown-Liste
 <a href="http://sprechrun.de/tools/yacyDNS/index1.html">http://sprechrun.de/tools/yacyDNS/index1.html</a></li>
 </ul></li>
-
 <li><p>aus technischer Sicht ist es genauso genauso wie bereits jetzt mit</p>
-
 <ul>
 <li><a href="http://130.255.73.69:5353/forward?random">http://130.255.73.69:5353/forward?random</a><br /></li>
 <li><a href="http://130.255.73.69:5353/forward?random&amp;searchoptions=1">http://130.255.73.69:5353/forward?random&amp;searchoptions=1</a></li>
 </ul>
-
 <p>dein Servlet stupide im Anwender-Browser für unterschiedliche
 Leistungen/Formulare sorgt ohne dass die
 [yacyDNS]{style=&ldquo;font-style: italic&rdquo;}-Seite selbst weiss, was in
@@ -345,7 +250,6 @@ b.  beim Wert
     yacyDNS-Tools</a>{.postlink}
     beschrieben\&rdquo;</p></li>
 </ol>
-
 <p>Die htmlform=Wert-Weiche bietet m.E. eine Möglichkeit, beide Szenarien
 [FormMitDropdownWert/ FormOhneDropdownWert]{style=&ldquo;font-style: italic&rdquo;}
 in der Praxis durchtesten, also eine robuste Qualitätssilcherung. Man
@@ -358,24 +262,13 @@ Gruss, flegno<br />
 <br />
 [Edit 01.11.2014: Punkt 3b
 geändert.]{style=&ldquo;font-size: 85%; line-height: 116%;&ldquo;}</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9475">flegno</a>
 &mdash; Sa Nov 01, 2014 10:13 am</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

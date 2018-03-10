@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,67 +113,44 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="ich-habe-in-gatling-ja-einen-gammeligen-smb-server">Ich habe in gatling ja einen gammeligen SMB-Server ...</h1>
-
 <p>Date: 2015-05-25 20:30:08</p>
-
 <p>Ich habe in gatling ja einen gammeligen SMB-Server implementiert, der
 gerade genug SMB spricht, um den Download von Dateien zu ermöglichen.
 Nun probiert Windows aber seit geraumer Zeit bei UNC-Pfaden
 (\\server\share\datei.zip) erst webdav über http aus. Also habe ich
 mich mal hingesetzt und ein Minimal-Webdav implementiert. Gerade genug,
 damit Windows mit mir sprechen mag.</p>
-
 <p>Dann wollte ich damit mal eine 33 GB-Datei kopieren (denn wir reden hier
 vom Jahr 2015, da will man große Dateien kopieren können!). Was
 passierte? <a href="https://support.microsoft.com/en-us/kb/2668751/">Wie sich rausstellt, hat der Webdav-Client in Windows ein
 implizites
 50-MB-Dateigrößenlimit</a>.
 Nein, wirklich! 50 MB!</p>
-
 <p>Wie das bei Windows so ist, kann man das in der Registry hochsetzen. Ich
 geh also zur Registry, und was sehe ich da? Das ist ein DWORD. Ein
 32-bit-Wert. Die größte Zahl, die in ein DWORD reinpasst, ist? Richtig!
 4 GB!</p>
-
 <p>Mit anderen Worten: Eine 33 GB-Datei über Webdav übertragen geht nicht
 mit Windows.</p>
-
 <p>Naja, denkt man sich, mit SMB geht das. Und wenn Windows sieht, dass die
 Datei zu groß ist für Webdav, dann probiert er sicherlich danach SMB,
 oder?</p>
-
 <p>Nein, tut er nicht. Nicht nur das: Er hat sich dann gemerkt, dass dieser
 Server Webdav spricht, und probiert SMB bis zum nächsten Reboot oder so
 gar nicht mehr.</p>
-
 <p>Es ist echt nicht zu fassen. Was zur Hölle!?</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

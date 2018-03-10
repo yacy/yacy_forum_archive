@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,36 +113,26 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="solr-support-feature-restart-solr">Solr Support • Feature \&lsquo;Restart Solr\&rsquo;</h1>
-
 <p>Date: 2017-04-11 16:18:32</p>
-
 <p>Hi,<br />
 <br />
 wollte heute das builtin Solr neustarten und habe dafür auf \&lsquo;Restart
 Solr\&rsquo; gedrückt. Danach wurden zahlreiche NPEs geworfen und das
 Webinterface war nicht mehr erreichbar.<br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>W 2017/04/11 16:05:19 ConcurrentLog java.lang.reflect.InvocationTargetExceptionjava.lang.reflect.InvocationTargetException        at sun.reflect.GeneratedMethodAccessor267.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.kelondro.workflow.InstantBusyThread.job(InstantBusyThread.java:105)        at net.yacy.kelondro.workflow.AbstractBusyThread.run(AbstractBusyThread.java:215)Caused by: java.lang.NullPointerException        at net.yacy.search.schema.CollectionConfiguration$CRHost.&lt;init&gt;(CollectionConfiguration.java:1913)        at net.yacy.search.schema.CollectionConfiguration.createRankingMap(CollectionConfiguration.java:1641)        at net.yacy.search.schema.CollectionConfiguration.postprocessing(CollectionConfiguration.java:1227)        at net.yacy.search.Switchboard.cleanupJob(Switchboard.java:2579)        ... 5 moreW 2017/04/11 16:05:19 ConcurrentLog java.lang.NullPointerExceptionjava.lang.NullPointerException        at net.yacy.search.schema.CollectionConfiguration$CRHost.&lt;init&gt;(CollectionConfiguration.java:1913)        at net.yacy.search.schema.CollectionConfiguration.createRankingMap(CollectionConfiguration.java:1641)        at net.yacy.search.schema.CollectionConfiguration.postprocessing(CollectionConfiguration.java:1227)        at net.yacy.search.Switchboard.cleanupJob(Switchboard.java:2579)        at sun.reflect.GeneratedMethodAccessor267.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.kelondro.workflow.InstantBusyThread.job(InstantBusyThread.java:105)        at net.yacy.kelondro.workflow.AbstractBusyThread.run(AbstractBusyThread.java:215)W 2017/04/11 16:05:19 ConcurrentLog java.lang.NullPointerExceptionjava.lang.NullPointerException        at net.yacy.search.schema.CollectionConfiguration$CRHost.&lt;init&gt;(CollectionConfiguration.java:1913)        at net.yacy.search.schema.CollectionConfiguration.createRankingMap(CollectionConfiguration.java:1641)        at net.yacy.search.schema.CollectionConfiguration.postprocessing(CollectionConfiguration.java:1227)        at net.yacy.search.Switchboard.cleanupJob(Switchboard.java:2579)        at sun.reflect.GeneratedMethodAccessor267.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.kelondro.workflow.InstantBusyThread.job(InstantBusyThread.java:105)        at net.yacy.kelondro.workflow.AbstractBusyThread.run(AbstractBusyThread.java:215)E 2017/04/11 16:05:19 BUSYTHREAD Runtime Error in serverInstantThread.job, thread 'BusyThread net.yacy.search.Switchboard.cleanupJob': null; target exception: nulljava.lang.NullPointerException        at net.yacy.search.schema.CollectionConfiguration$CRHost.&lt;init&gt;(CollectionConfiguration.java:1913)        at net.yacy.search.schema.CollectionConfiguration.createRankingMap(CollectionConfiguration.java:1641)        at net.yacy.search.schema.CollectionConfiguration.postprocessing(CollectionConfiguration.java:1227)        at net.yacy.search.Switchboard.cleanupJob(Switchboard.java:2579)        at sun.reflect.GeneratedMethodAccessor267.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.kelondro.workflow.InstantBusyThread.job(InstantBusyThread.java:105)        at net.yacy.kelondro.workflow.AbstractBusyThread.run(AbstractBusyThread.java:215)E 2017/04/11 16:05:19 BLOCKINGTHREAD Internal Error in serverInstantThread.job: nullE 2017/04/11 16:05:19 BLOCKINGTHREAD shutting down thread 'java.lang.reflect.Method.transferDocumentIndex.7'W 2017/04/11 16:05:19 ConcurrentLog java.lang.reflect.InvocationTargetExceptionjava.lang.reflect.InvocationTargetException        at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)        at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)        at java.util.concurrent.FutureTask.run(FutureTask.java:266)        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)        at java.lang.Thread.run(Thread.java:745)Caused by: java.lang.NullPointerException        at net.yacy.search.index.Fulltext.getMetadata(Fulltext.java:319)        at net.yacy.search.index.Fulltext.getMetadata(Fulltext.java:311)        at net.yacy.peers.Protocol.transferURL(Protocol.java:1649)        at net.yacy.peers.Protocol.transferIndex(Protocol.java:1518)        at net.yacy.peers.Transmission$Chunk.transmit(Transmission.java:220)        at net.yacy.peers.Dispatcher.transferDocumentIndex(Dispatcher.java:372)        ... 10 moreW 2017/04/11 16:05:19 ConcurrentLog java.lang.NullPointerExceptionjava.lang.NullPointerException        at net.yacy.search.index.Fulltext.getMetadata(Fulltext.java:319)        at net.yacy.search.index.Fulltext.getMetadata(Fulltext.java:311)        at net.yacy.peers.Protocol.transferURL(Protocol.java:1649)        at net.yacy.peers.Protocol.transferIndex(Protocol.java:1518)        at net.yacy.peers.Transmission$Chunk.transmit(Transmission.java:220)        at net.yacy.peers.Dispatcher.transferDocumentIndex(Dispatcher.java:372)        at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)        at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)        at java.util.concurrent.FutureTask.run(FutureTask.java:266)        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)        at java.lang.Thread.run(Thread.java:745)W 2017/04/11 16:05:19 ConcurrentLog java.lang.NullPointerExceptionjava.lang.NullPointerException        at net.yacy.search.index.Fulltext.getMetadata(Fulltext.java:319)        at net.yacy.search.index.Fulltext.getMetadata(Fulltext.java:311)        at net.yacy.peers.Protocol.transferURL(Protocol.java:1649)        at net.yacy.peers.Protocol.transferIndex(Protocol.java:1518)        at net.yacy.peers.Transmission$Chunk.transmit(Transmission.java:220)        at net.yacy.peers.Dispatcher.transferDocumentIndex(Dispatcher.java:372)        at sun.reflect.GeneratedMethodAccessor45.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:101)        at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:82)        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)        at java.util.concurrent.FutureTask.run(FutureTask.java:266)        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)        at java.lang.Thread.run(Thread.java:745)E 2017/04/11 16:05:19 BLOCKINGTHREAD Runtime Error in serverInstantThread.job, thread 'java.lang.reflect.Method.transferDocumentIndex.7': nullE 2017/04/11 16:05:19 org.apache.solr.handler.RequestHandlerBase org.apache.solr.common.SolrException: Exception during facet.field: host_s        at org.apache.solr.request.SimpleFacets$3.call(SimpleFacets.java:721)        at org.apache.solr.request.SimpleFacets$3.call(SimpleFacets.java:706)        at java.util.concurrent.FutureTask.run(FutureTask.java:266)        at org.apache.solr.request.SimpleFacets$2.execute(SimpleFacets.java:660)        at org.apache.solr.request.SimpleFacets.getFacetFieldCounts(SimpleFacets.java:731)        at org.apache.solr.handler.component.FacetComponent.getFacetCounts(FacetComponent.java:294)        at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:256)        at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:272)        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:155)        at org.apache.solr.core.SolrCore.execute(SolrCore.java:2102)        at org.apache.solr.client.solrj.embedded.EmbeddedSolrServer.request(EmbeddedSolrServer.java:178)        at org.apache.solr.client.solrj.SolrRequest.process(SolrRequest.java:149)        at org.apache.solr.client.solrj.SolrClient.query(SolrClient.java:942)        at org.apache.solr.client.solrj.SolrClient.query(SolrClient.java:957)        at net.yacy.cora.federate.solr.connector.EmbeddedSolrConnector.getResponseByParams(EmbeddedSolrConnector.java:339)        at net.yacy.cora.federate.solr.connector.MirrorSolrConnector.getResponseByParams(MirrorSolrConnector.java:272)        at net.yacy.cora.federate.solr.connector.ConcurrentUpdateSolrConnector.getResponseByParams(ConcurrentUpdateSolrConnector.java:317)        at net.yacy.peers.Protocol.solrQuery(Protocol.java:1054)        at net.yacy.peers.RemoteSearch$2.run(RemoteSearch.java:349)Caused by: org.apache.lucene.index.ExitableDirectoryReader$ExitingReaderException: Interrupted while iterating over terms. TermsEnum=org.apache.lucene.codecs.blocktree.SegmentTermsEnum@e640ffc        at org.apache.lucene.index.ExitableDirectoryReader$ExitableTermsEnum.checkAndThrow(ExitableDirectoryReader.java:171)        at org.apache.lucene.index.ExitableDirectoryReader$ExitableTermsEnum.next(ExitableDirectoryReader.java:178)        at org.apache.lucene.index.MultiTermsEnum.pushTop(MultiTermsEnum.java:275)        at org.apache.lucene.index.MultiTermsEnum.next(MultiTermsEnum.java:301)        at org.apache.solr.request.SimpleFacets.getFacetTermEnumCounts(SimpleFacets.java:935)        at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:442)        at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:382)        at org.apache.solr.request.SimpleFacets$3.call(SimpleFacets.java:715)        ... 18 moreI 2017/04/11 16:05:19 org.apache.solr.update.DirectUpdateHandler2 closing DirectUpdateHandler2{commits=12308,autocommit maxTime=15000ms,autocommits=11919,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=6239691,cumulative_deletesById=3942,cumulative_deletesByQuery=3,cumulative_errors=0,transaction_logs_total_size=77548,transaction_logs_total_number=5}W 2017/04/11 16:07:35 ConcurrentLog java.lang.reflect.InvocationTargetExceptionjava.lang.reflect.InvocationTargetException        at sun.reflect.GeneratedMethodAccessor450.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.http.servlets.YaCyDefaultServlet.invokeServlet(YaCyDefaultServlet.java:670)        at net.yacy.http.servlets.YaCyDefaultServlet.handleTemplate(YaCyDefaultServlet.java:881)        at net.yacy.http.servlets.YaCyDefaultServlet.doGet(YaCyDefaultServlet.java:312)        at net.yacy.http.servlets.YaCyDefaultServlet.doPost(YaCyDefaultServlet.java:374)        at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)        at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)        at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)        at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)        at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:553)        at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)        at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)        at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)        at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)        at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)        at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)        at net.yacy.http.CrashProtectionHandler.handle(CrashProtectionHandler.java:33)        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)        at org.eclipse.jetty.server.Server.handle(Server.java:499)        at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)        at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)        at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)        at java.lang.Thread.run(Thread.java:745)Caused by: java.lang.NullPointerException        at net.yacy.search.index.Fulltext.getLoadTime(Fulltext.java:533)        at transferRWI.respond(transferRWI.java:238)        ... 30 moreW 2017/04/11 16:07:35 org.eclipse.jetty.servlet.ServletHandlerjavax.servlet.ServletException: /mnt/3200gb/yacy2/htroot/yacy/transferRWI.html        at net.yacy.http.servlets.YaCyDefaultServlet.handleTemplate(YaCyDefaultServlet.java:895)        at net.yacy.http.servlets.YaCyDefaultServlet.doGet(YaCyDefaultServlet.java:312)        at net.yacy.http.servlets.YaCyDefaultServlet.doPost(YaCyDefaultServlet.java:374)        at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)        at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)        at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)        at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)        at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:553)        at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)        at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)        at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)        at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)        at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)        at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)        at net.yacy.http.CrashProtectionHandler.handle(CrashProtectionHandler.java:33)        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)        at org.eclipse.jetty.server.Server.handle(Server.java:499)        at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)        at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)        at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)        at java.lang.Thread.run(Thread.java:745)</code></dd>
 </dl>
-
 <p><br />
 <br />
 v1.<sup>92</sup>&frasl;<sub>9000</sub><br />
@@ -211,24 +141,13 @@ v1.<sup>92</sup>&frasl;<sub>9000</sub><br />
 Viele Grüße<br />
 <br />
 LA_FORGE</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=324">LA_FORGE</a>
 &mdash; Di Apr 11, 2017 3:18 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

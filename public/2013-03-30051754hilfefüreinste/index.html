@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="hilfe-für-einsteiger-und-anwender-re-new-usa-user-many-questions-interface-memory-crash">Hilfe für Einsteiger und Anwender • Re: New USA User, many questions: interface/memory/crash...</h1>
-
 <p>Date: 2013-03-30 05:17:54</p>
-
 <p>After reducing the logging verbosity, I was able to track down a recent
 queue pause event:<br />
 <br />
@@ -199,12 +131,10 @@ queue pause event:<br />
 <br />
 The log is full of this:<br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>W 2013/03/29 19:18:53 SOLR failed to send http://www.abc.net.au/local/sites/festivals/default.htm to solrorg.apache.solr.common.SolrException: com.spatial4j.core.exception.InvalidShapeExce$E 2013/03/29 19:18:54 org.apache.solr.core.SolrCore org.apache.solr.common.SolrException: com.spatial4j.core.exception.InvalidShapeException: Invalid latitude: latitudes are range -90 to 9$        at org.apache.solr.schema.LatLonType.createFields(LatLonType.java:70)        at org.apache.solr.update.DocumentBuilder.addField(DocumentBuilder.java:193)        at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:269)        at org.apache.solr.update.AddUpdateCommand.getLuceneDocument(AddUpdateCommand.java:73)        at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:201)        at org.apache.solr.update.processor.RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:69)        at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:51)        at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:481)        at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:350)        at org.apache.solr.handler.loader.XMLLoader.processUpdate(XMLLoader.java:246)        at org.apache.solr.handler.loader.XMLLoader.load(XMLLoader.java:173)        at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:92)        at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:74)        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)        at org.apache.solr.core.SolrCore.execute(SolrCore.java:1816)        at org.apache.solr.client.solrj.embedded.EmbeddedSolrServer.request(EmbeddedSolrServer.java:150)        at org.apache.solr.client.solrj.request.AbstractUpdateRequest.process(AbstractUpdateRequest.java:117)        at org.apache.solr.client.solrj.SolrServer.add(SolrServer.java:116)        at net.yacy.cora.federate.solr.connector.SolrServerConnector.add(SolrServerConnector.java:176)        at net.yacy.cora.federate.solr.connector.MirrorSolrConnector.add(MirrorSolrConnector.java:171)        at net.yacy.cora.federate.solr.connector.CachedSolrConnector.add(CachedSolrConnector.java:224)        at net.yacy.search.index.Fulltext.putDocument(Fulltext.java:418)        at net.yacy.search.index.Segment.storeDocument(Segment.java:556)        at net.yacy.search.Switchboard.storeDocumentIndex(Switchboard.java:2697)        at net.yacy.search.Switchboard.storeDocumentIndex(Switchboard.java:2640)        at sun.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:616)        at net.yacy.kelondro.workflow.InstantBlockingThread.job(InstantBlockingThread.java:96)        at net.yacy.kelondro.workflow.AbstractBlockingThread.run(AbstractBlockingThread.java:78)        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)        at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)        at java.util.concurrent.FutureTask.run(FutureTask.java:166)        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)        at java.lang.Thread.run(Thread.java:679)Caused by: com.spatial4j.core.exception.InvalidShapeException: Invalid latitude: latitudes are range -90 to 90: provided lat: [153.0205]        at com.spatial4j.core.io.ParseUtils.parseLatitudeLongitude(ParseUtils.java:139)        at org.apache.solr.schema.LatLonType.createFields(LatLonType.java:68)        ... 35 more</code></dd>
 </dl>
-
 <p><br />
 <br />
 The URL is not identical, but it is from the same domain around the same
@@ -213,21 +143,17 @@ Latitude error with the digit 153.0205.<br />
 <br />
 Other commonly recurring errors have to do with embedded \&ldquo;referer\&rdquo;
 URL\&rsquo;s which seem to break the crawler:</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>W 2013/03/29 20:14:15 StackTrace nulljava.lang.IllegalArgumentException        at java.net.URI.create(URI.java:859)        at org.apache.http.client.methods.HttpGet.&lt;init&gt;(HttpGet.java:69)        at net.yacy.cora.protocol.http.HTTPClient.GETbytes(HTTPClient.java:344)        at net.yacy.crawler.retrieval.HTTPLoader.load(HTTPLoader.java:136)        at net.yacy.crawler.retrieval.HTTPLoader.load(HTTPLoader.java:182)        at net.yacy.crawler.retrieval.HTTPLoader.load(HTTPLoader.java:182)        at net.yacy.crawler.retrieval.HTTPLoader.load(HTTPLoader.java:182)        at net.yacy.crawler.retrieval.HTTPLoader.load(HTTPLoader.java:76)        at net.yacy.repository.LoaderDispatcher.loadInternal(LoaderDispatcher.java:279)        at net.yacy.repository.LoaderDispatcher.load(LoaderDispatcher.java:162)        at net.yacy.repository.LoaderDispatcher.load(LoaderDispatcher.java:148)        at net.yacy.crawler.data.CrawlQueues$Loader.run(CrawlQueues.java:660)Caused by: java.net.URISyntaxException: Illegal character in query at index 297: https://twitter.com/intent/session?original_referer=http://pesn.com/2012/08/31/9602173_Keshe_Foundation_Pro$        at java.net.URI$Parser.fail(URI.java:2825)        at java.net.URI$Parser.checkChars(URI.java:2998)        at java.net.URI$Parser.parseHierarchical(URI.java:3088)        at java.net.URI$Parser.parse(URI.java:3030)        at java.net.URI.&lt;init&gt;(URI.java:595)        at java.net.URI.create(URI.java:857)        ... 11 more</code></dd>
 </dl>
-
 <p><br />
 <br />
 Another earlier pause was caused here:</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>W 2013/03/29 20:15:23 SOLR failed to send http://www.abc.net.au/adelaide/ to solrorg.apache.solr.common.SolrException: com.spatial4j.core.exception.InvalidShapeException: Invalid latitude:$W 2013/03/29 20:15:24 SOLR failed to send http://www.abc.net.au/adelaide/ to solr, pausing Crawler!W 2013/03/29 20:15:24 SWITCHBOARD Crawl job '50_localcrawl' is paused: failed to send http://www.abc.net.au/adelaide/ to solrW 2013/03/29 20:15:24 SWITCHBOARD Crawl job '62_remotetriggeredcrawl' is paused: failed to send http://www.abc.net.au/adelaide/ to solr</code></dd>
 </dl>
-
 <p><br />
 <br />
 This happened after the same repetitive \&ldquo;Invalid Latitude\&rdquo; errors as
@@ -237,12 +163,10 @@ crawler.<br />
 <br />
 The only other repetitive errors I get are minor I believe and of no
 concern:</p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>W 2013/03/29 23:52:20 YACY yacyClient.queryRemoteCrawlURLs error asking peer 'proteo':java.io.IOException: Client can't execute: Read timed outW 2013/03/29 23:52:21 YACY yacyClient.crawlReceipt error:Client can't execute: Timeout waiting for connection from pool...W 2013/03/29 23:52:28 YACY Received 1/1 double URLs from peer QeBVdlzNGU-q:_anonufe-28333482-243/1.00008136</code></dd>
 </dl>
-
 <p><br />
 <br />
 Assume the top two are just hitting timeout values set, no problem, and
@@ -254,24 +178,13 @@ error on URL parsing that might be fixable!<br />
 be reported as actual bugs - I do not know enough about the intended
 behavior of YaCy yet to figure out what is a bug and what is supposed to
 be happening!</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8892">killswitch</a>
 &mdash; Sa Mär 30, 2013 5:17 am</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,83 +113,60 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="dali-clock-2-42-android">Dali Clock 2.42: Android!</h1>
-
 <p>Date: 2015-04-11 05:37:05</p>
-
 <p><a href="http://www.jwz.org/xdaliclock/"><img src="http://www.jwz.org/xdaliclock/icon.png" alt="" /></a>Robin
 Müller-Cajar and I have ported <a href="http://www.jwz.org/xdaliclock/">Dali
 Clock</a> to Android! Finally!</p>
-
 <p>It\&rsquo;s not in an app store or anything, because I don\&rsquo;t know anything
 about that crap, so you have to manually install the <code>.apk</code> file. I
 assume everyone reading this knows how to do that.</p>
-
 <p>It runs as both a normal application and as a \&ldquo;Daydream\&rdquo; service.
 Select <em>Settings / Display / Daydream / Dali Clock,</em> and it will run
 automatically as a kind of screen saver when the device is docked or
 charging. Android 4.2 or newer is required.</p>
-
 <p>Like the iOS version, there is no preferences panel. Swipe left or down
 to decrease the number of digits; swipe right or up to increase. Tap to
 momentarily display the date. Double-tap to toggle 12- and 24-hour mode.</p>
-
 <p>Let me know what performance is like on your various devices.</p>
-
 <p>The emulator doesn\&rsquo;t seem to be able to emulate more than one Android
 device, so I haven\&rsquo;t witnessed it doing its thing on a tablet or a
 Google TV or anything like that.</p>
-
 <p>Hopefully it will track your locale\&rsquo;s rules about the order in which
 day, month and year appear, and whether 24-hour time is the default.</p>
-
 <p>I\&rsquo;d sure appreciate some advice from experienced Android developers
 about what we did wrong, since this is my first trip down this road. In
 particular, the <code>android/Makefile</code> is a horror show. Do I really need to
 type in a password every time I want to build the <code>.apk</code> file?</p>
-
 <p>I\&rsquo;m also suffering PTSD at just how many useless subdirectories this
 effort resulted in. I\&rsquo;m sure that some of this is unavoidable Java
 insanity, plus a layer of Android insanity on top, but seriously? It
 goes <em>fourteen</em> levels deep!</p>
-
 <p>I would like to make pinching do the same as swiping, but I couldn\&rsquo;t
 figure out how one does pinch gestures on Android.</p>
-
 <p>When changing the device\&rsquo;s orientation, it takes a long time to react.
 I don\&rsquo;t know if that\&rsquo;s because I\&rsquo;m doing something wrong, or if
 that\&rsquo;s just how Android is. (I\&rsquo;ve only seen this thing running in the
 emulator, not on a real device.)</p>
-
 <p>So far, I have not discovered any way to get Android Studio on OSX to
 show me the output of <code>Log.d()</code> or <code>Log.i()</code>, which makes all of this
 <em>incredibly</em> difficult to debug! Even when I do <code>&quot;adb -e log cat&quot;</code>,
 nothing shows up. Well, a lot of crap shows up, just nothing <em>I</em>
 printed. Does this happen to everyone, or am I just lucky?</p>
-
 <p>Oh, also, Joshua Wise ported it to the Pebble Smart Watch. The source
 for that is in this release too.</p>
-
 <p>That\&rsquo;s probably not the watch you were wondering about, right?</p>
-
 <p>So it turns out that an Apple Watch port of Dali Clock would be kind of
 pointless, because the Apple does not allow you to build custom watch
 faces at all. No, really.</p>
-
 <p>And as far as I can tell, the only way to get custom graphics onto the
 watch is to basically package up and hand it the equivalent of an
 anim-GIF. So the way that would work is, you\&rsquo;d launch an app on your
@@ -257,18 +174,9 @@ watch, which would launch an app on your phone, which would then start
 spraying image frames at the watch over bluetooth as quickly as possible
 -- which they say is something like 10 FPS when they are looping. In
 the case where every frame is different forever, who knows.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

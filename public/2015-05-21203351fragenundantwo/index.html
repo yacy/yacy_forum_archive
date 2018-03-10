@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="fragen-und-antworten-postprocessing-limitieren">Fragen und Antworten • Postprocessing limitieren?</h1>
-
 <p>Date: 2015-05-21 20:33:51</p>
-
 <p>Hallo zusammen,<br />
 <br />
 dass das Postprocessing sehr viele Ressourcen benötigt ist mir klar,
@@ -198,52 +130,35 @@ aber kann man das irgendwie einschränken?<br />
 Wenn das Prostprocessing läuft, ist die Last auf der Platte relativ
 hoch, im Duschschnitt immer so 60-70MB/s:<br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>[root@yaci ~]# iotop -oaTotal DISK READ :      68.12 M/s | Total DISK WRITE :       3.11 K/sActual DISK READ:      68.12 M/s | Actual DISK WRITE:       4.08 K/s  TID  PRIO  USER     DISK READ  DISK WRITE  SWAPIN     IO&gt;    COMMAND  677 be/6 root        803.94 M     64.00 K  0.00 % 96.40 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  680 be/6 root        604.03 M     60.00 K  0.02 % 96.31 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  681 be/6 root        703.51 M     76.00 K  0.00 % 96.14 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  683 be/6 root        894.52 M     44.00 K  0.00 % 95.99 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  682 be/6 root       1327.94 M     40.00 K  0.00 % 95.91 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  679 be/6 root       1220.15 M    228.00 K  0.00 % 95.90 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  678 be/6 root        610.57 M     56.00 K  0.00 % 95.82 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  676 be/6 root       1199.41 M    236.00 K  0.00 % 95.74 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy 5136 be/6 root        475.80 M     12.00 K  0.00 % 41.28 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy 5154 be/6 root        528.79 M      8.00 K  0.00 % 35.96 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy 5153 be/6 root        259.07 M      8.00 K  0.00 % 14.87 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  661 be/6 root         20.34 M   1060.00 K  0.00 %  6.80 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy 5151 be/6 root         70.36 M     20.00 K  0.00 %  2.61 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy28454 be/6 root       1964.00 K     36.00 K  0.00 %  1.75 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy 7583 be/6 root         12.05 M      4.00 K  0.00 %  1.92 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  586 be/6 root        396.00 K      0.00 B  0.00 %  0.85 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy 2745 be/6 root       1552.00 K     24.00 K  0.00 %  0.84 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy 7577 be/6 root       1328.00 K      0.00 B  0.00 %  0.69 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  674 be/6 root          6.00 M      0.00 B  0.00 %  0.39 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  487 be/6 root         88.00 K     52.00 K  0.00 %  0.36 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  668 be/6 root          5.87 M      0.00 B  0.00 %  0.29 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  669 be/6 root          4.00 M      0.00 B  0.00 %  0.25 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  672 be/6 root          6.93 M      0.00 B  0.00 %  0.25 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  671 be/6 root          5.92 M      0.00 B  0.00 %  0.24 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  670 be/6 root          4.00 M      0.00 B  0.00 %  0.15 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  479 be/6 root         11.22 M     24.00 K  0.00 %  0.12 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  673 be/6 root          3.99 M      0.00 B  0.00 %  0.09 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  675 be/6 root          2.00 M      0.00 B  0.00 %  0.08 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  568 be/6 root        692.00 K      0.00 B  0.00 %  0.07 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy  486 be/6 root          0.00 B     32.00 K  0.00 %  0.00 % java -Xms7000m -Xmx7000m -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dsolr.d~l-apis.jar:lib/xmpcore-5.1.2.jar:lib/yacycore.jar:lib/zookeeper-3.4.6.jar: net.yacy.yacy</code></dd>
 </dl>
-
 <p><br />
 <br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>[root@yaci ~]# toptop - 20:25:47 up 2 days, 21:13,  1 user,  load average: 9.24, 9.62, 10.15Tasks: 150 total,   2 running, 148 sleeping,   0 stopped,   0 zombie%Cpu(s):  0.0 us,  1.0 sy,  1.7 ni, 19.7 id, 77.6 wa,  0.0 hi,  0.0 si,  0.0 stKiB Mem :  8011104 total,   146216 free,  7559552 used,   305336 buff/cacheKiB Swap:  4095996 total,  3768508 free,   327488 used.   210424 avail Mem  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND  469 root      30  10 16.522g 6.959g   2884 S  20.6 91.1 256:43.41 java   75 root      20   0       0      0      0 S   1.7  0.0  96:09.48 kswapd0 7589 root      20   0  130024   1748   1124 R   0.3  0.0   0:00.06 top</code></dd>
 </dl>
-
 <p><br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>[root@yaci ~]# cat /proc/cpuinfoprocessor       : 0vendor_id       : GenuineIntelcpu family      : 6model           : 62model name      : Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHzstepping        : 4microcode       : 0x427cpu MHz         : 2500.000cache size      : 10240 KBphysical id     : 0siblings        : 2core id         : 0cpu cores       : 2apicid          : 0initial apicid  : 0fpu             : yesfpu_exception   : yescpuid level     : 13wp              : yesflags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm arat epb pln pts dthermbogomips        : 5000.00clflush size    : 64cache_alignment : 64address sizes   : 40 bits physical, 48 bits virtualpower management:processor       : 1vendor_id       : GenuineIntelcpu family      : 6model           : 62model name      : Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHzstepping        : 4microcode       : 0x427cpu MHz         : 2500.000cache size      : 10240 KBphysical id     : 0siblings        : 2core id         : 1cpu cores       : 2apicid          : 1initial apicid  : 1fpu             : yesfpu_exception   : yescpuid level     : 13wp              : yesflags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm arat epb pln pts dthermbogomips        : 5000.00clflush size    : 64cache_alignment : 64address sizes   : 40 bits physical, 48 bits virtualpower management:processor       : 2vendor_id       : GenuineIntelcpu family      : 6model           : 62model name      : Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHzstepping        : 4microcode       : 0x427cpu MHz         : 2500.000cache size      : 10240 KBphysical id     : 1siblings        : 2core id         : 0cpu cores       : 2apicid          : 2initial apicid  : 2fpu             : yesfpu_exception   : yescpuid level     : 13wp              : yesflags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm arat epb pln pts dthermbogomips        : 5000.00clflush size    : 64cache_alignment : 64address sizes   : 40 bits physical, 48 bits virtualpower management:processor       : 3vendor_id       : GenuineIntelcpu family      : 6model           : 62model name      : Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHzstepping        : 4microcode       : 0x427cpu MHz         : 2500.000cache size      : 10240 KBphysical id     : 1siblings        : 2core id         : 1cpu cores       : 2apicid          : 3initial apicid  : 3fpu             : yesfpu_exception   : yescpuid level     : 13wp              : yesflags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm arat epb pln pts dthermbogomips        : 5000.00clflush size    : 64cache_alignment : 64address sizes   : 40 bits physical, 48 bits virtualpower management:processor       : 4vendor_id       : GenuineIntelcpu family      : 6model           : 62model name      : Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHzstepping        : 4microcode       : 0x427cpu MHz         : 2500.000cache size      : 10240 KBphysical id     : 2siblings        : 2core id         : 0cpu cores       : 2apicid          : 4initial apicid  : 4fpu             : yesfpu_exception   : yescpuid level     : 13wp              : yesflags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm arat epb pln pts dthermbogomips        : 5000.00clflush size    : 64cache_alignment : 64address sizes   : 40 bits physical, 48 bits virtualpower management:processor       : 5vendor_id       : GenuineIntelcpu family      : 6model           : 62model name      : Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHzstepping        : 4microcode       : 0x427cpu MHz         : 2500.000cache size      : 10240 KBphysical id     : 2siblings        : 2core id         : 1cpu cores       : 2apicid          : 5initial apicid  : 5fpu             : yesfpu_exception   : yescpuid level     : 13wp              : yesflags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm arat epb pln pts dthermbogomips        : 5000.00clflush size    : 64cache_alignment : 64address sizes   : 40 bits physical, 48 bits virtualpower management:processor       : 6vendor_id       : GenuineIntelcpu family      : 6model           : 62model name      : Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHzstepping        : 4microcode       : 0x427cpu MHz         : 2500.000cache size      : 10240 KBphysical id     : 3siblings        : 2core id         : 0cpu cores       : 2apicid          : 6initial apicid  : 6fpu             : yesfpu_exception   : yescpuid level     : 13wp              : yesflags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm arat epb pln pts dthermbogomips        : 5000.00clflush size    : 64cache_alignment : 64address sizes   : 40 bits physical, 48 bits virtualpower management:processor       : 7vendor_id       : GenuineIntelcpu family      : 6model           : 62model name      : Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHzstepping        : 4microcode       : 0x427cpu MHz         : 2500.000cache size      : 10240 KBphysical id     : 3siblings        : 2core id         : 1cpu cores       : 2apicid          : 7initial apicid  : 7fpu             : yesfpu_exception   : yescpuid level     : 13wp              : yesflags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts mmx fxsr sse sse2 ss ht syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology tsc_reliable nonstop_tsc aperfmperf pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm arat epb pln pts dthermbogomips        : 5000.00clflush size    : 64cache_alignment : 64address sizes   : 40 bits physical, 48 bits virtualpower management:</code></dd>
 </dl>
-
 <p><br />
 <br />
 Jemand ne Idee, wie man das etwas \&ldquo;drosseln\&rdquo; kann?<br />
 Der Server läuft zwar stabil, aber durch die hohe Last, verzögern sich
 die Suchanfragen teils um 5-10 Sekunden.</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=9585">ScRe</a>
 &mdash; Do Mai 21, 2015 7:33 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,132 +113,73 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="dev-api">Dev:API</h1>
-
 <p>Date: 2012-09-07 15:29:55</p>
-
 <p>[Understanding YaCy crawl profiles: ]{.autocomment} update</p>
-
 <p>← Nächstältere Version</p>
-
 <p>Version vom 7. September 2012, 13:29 Uhr</p>
-
 <p>Zeile 612:</p>
-
 <p>Zeile 612:</p>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingMode\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingMode\'\'\' =  
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \|
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \| [The crawler can be started with different modes.]{.underline}
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \*url:
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \*url: [start from a given url which is the root of a crawl tree. The
 url is given in \'crawlingURL\'. If this url is a http-link, then the
 Crawl will subsequently load all linked documents from http until a
 given depth is reached. If this url is a smb- or ftp-link, then the
 given resource will be listed completely using a special listing
 process.]{.underline}
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \*sitemap:
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \*sitemap: [use a sitemap to retrieve all files that are listed in the
 sitemap. The sitemap-URL is given in \'sitemapURL\']{.underline}
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \*sitelist:
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \*sitelist: [use a list of crawl start URLs. This is like starting with
 one url, but using several of them. The list of urls is retrieved by
 loading the url given in \'crawlingURL\'. Each of the urls in that file
@@ -306,396 +187,208 @@ is then used to start it\'s individual crawl. This makes sense if the
 \'range\' attribute contains the value \'domain\' or \'subpath\' which
 creates an individual must-match pattern for each of the urls in the
 sitelist.]{.underline}
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \*file:
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \*file: [use a file in the local file system to provide a start
 document. The crawl will then start like with a root url but the file
 itself will not be placed to the index, only the documents which are
 linked in that document.]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingURL\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingURL\'\'\' =  
-
 </div>
-
 <p>Zeile 622:</p>
-
 <p>Zeile 622:</p>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'sitemapURL\'\'\' =
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'sitemapURL\'\'\' =
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \|
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \|[A url that is typically linked within a robots.txt file. The
 sitemapURL must point to a resource which is formed as described in
 http://www.sitemaps.org]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingFile\'\'\' =
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingFile\'\'\' =
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \|
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \|[A path to the local file system.]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingDepth\'\'\' =
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingDepth\'\'\' =
-
 </div>
-
 <p>−</p>
-
 <div>
-
 \|This defines how often the Crawler will follow links embedded in
 websites.~~\<br /\>~~
-
 </div>
-
 <p>+</p>
-
 <div>
-
 \|This defines how often the Crawler will follow links embedded in
 websites.
-
 </div>
-
 <p> </p>
-
 <div>
-
 A minimum of 0 is recommended and means that the page set as crawling
 URL, sitemap orfile will be added to the index, but no linked content is
 indexed. 2-4 is good for normal indexing. Be careful with the depth,
 consider a branching factor of average 20; A prefetch-depth of 8 would
 index 25.600.000.000 pages, maybe this is the whole WWW.
-
 </div>
-
 <p> </p>
-
 <div>
-
 A minimum of 0 is recommended and means that the page set as crawling
 URL, sitemap orfile will be added to the index, but no linked content is
 indexed. 2-4 is good for normal indexing. Be careful with the depth,
 consider a branching factor of average 20; A prefetch-depth of 8 would
 index 25.600.000.000 pages, maybe this is the whole WWW.
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p>Zeile 647:</p>
-
 <p>Zeile 647:</p>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingIfOlderUnit\'\'\' =  
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|\'\'\'crawlingIfOlderUnit\'\'\' =  
-
 </div>
-
 <p>−</p>
-
 <div>
-
 ~~\|~~
-
 </div>
-
 <p> </p>
-
 <p>−</p>
-
 <div>
-
 ~~\|-~~
-
 </div>
-
 <p> </p>
-
 <p>−</p>
-
 <div>
-
 ~~\|\'\'\'crawlingDomFilterCheck\'\'\' =~~
-
 </div>
-
 <p> </p>
-
 <p>−</p>
-
 <div>
-
 ~~\|This option will automatically create a domain-filter which limits
 the crawl on domains the crawler will find on the given depth. You can
 use this option i.e. to crawl a page with bookmarks while restricting
 the crawl on only those domains that appear on the bookmark-page. The
 adequate depth for this example would be 1. The default value 0 gives no
 restrictions.~~
-
 </div>
-
 <p> </p>
-
 <p>−</p>
-
 <div>
-
 ~~\|-~~
-
 </div>
-
 <p> </p>
-
 <p>−</p>
-
 <div>
-
 ~~\|\'\'\'crawlingDomFilterDepth\'\'\' =~~
-
 </div>
-
 <p> </p>
-
 <p> </p>
-
 <div>
-
 \|
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 <p> </p>
-
 <div>
-
 \|-
-
 </div>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

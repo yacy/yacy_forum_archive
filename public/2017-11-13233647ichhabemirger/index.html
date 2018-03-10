@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,42 +113,31 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="ich-habe-mir-gerade-den-neuen-zerocopy-modus-von-linux">Ich habe mir gerade den neuen Zerocopy-Modus von Linux ...</h1>
-
 <p>Date: 2017-11-13 23:36:47</p>
-
 <p>Ich habe mir gerade den neuen Zerocopy-Modus von Linux 4.14 angeguckt,
 um das in libowfat und gatling zu implementieren, aber habe mich dann
 entschieden, es doch nicht zu tun. <a href="https://github.com/torvalds/linux/blob/master/Documentation/networking/msg_zerocopy.rst">Hier ist die Dokumentation
 dazu</a>.
 Money Quote:</p>
-
 <blockquote>
 <p>Copy avoidance is not a free lunch. As implemented, with page pinning,
 it replaces per byte copy cost with page accounting and completion
 notification overhead. As a result, MSG_ZEROCOPY is generally only
 effective at writes over around 10 KB.</p>
 </blockquote>
-
 <p>Dieser Fall kommt nicht vor. gatling sendet einen kleinen Header, unter
 1KB, und dann die Datei. Die Datei ist häufig größer als 10 KB, aber das
 Senden der Datei findet nicht per write oder sendmsg statt, sondern per
 sendfile, und das ist bereits zero-copy.</p>
-
 <p>Ich könnte das für den Proxy-Modus implementieren, aber ehrlich gesagt
 sehe ich den Payoff nicht. Die Latenz kommt da nicht vom Kopieren
 sondern vom gzip der Daten, und dem https (im https-Modus geht zero-copy
@@ -216,20 +145,10 @@ eh nicht, außer man macht Kernel-TLS, und das unterstützt im Moment noch
 niemand). In der Praxis halte ich die Auswirkungen von diesem Code daher
 für Null. Die Entwickler davon mussten auch einen synthetischen
 Benchmark bemühen, um einen Vorteil nachweisen zu können.</p>
-
 <p>Ich ignoriere das jetzt mal, bis mir jemand zeigt, dass das was bringt.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

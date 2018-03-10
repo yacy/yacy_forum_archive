@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,27 +113,18 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="english-re-improving-ranking-using-neural-networks-and-genetic-algo">English • Re: Improving ranking using neural networks and genetic algo</h1>
-
 <p>Date: 2014-03-01 13:09:26</p>
-
 <blockquote>
 <div>
-
 biolizard89 hat geschrieben:\
 I have one question about the ranking. I see there are two ranking
 mechanisms, SOLR and RWI. The documentation states that some items in
@@ -202,10 +133,8 @@ circumstances that occurs under. Is that just because some network
 nodes are on old YaCy versions that don\'t use SOLR internally? Or is
 there some other circumstance under which a search result will only
 have RWI data?\
-
 </div>
 </blockquote>
-
 <p><br />
 The RWIs are the data structure which is used to distribute the index.
 Its not \&lsquo;old\&rsquo; becuase it was there first before Solr came into the
@@ -224,38 +153,30 @@ Maybe I should do an explanation video for that. Because it\&rsquo;s even a
 bit more complex, the index verification process (realtime loading of
 remote search result documents) is not shown in there.<br />
 </p>
-
 <blockquote>
 <div>
-
 biolizard89 hat geschrieben:\
 Regarding Seeks, there are a few reasons why I chose not to include it
 in my proposal (I\'m familiar with it). It doesn\'t seem to be
 actively maintained and installation on current OS versions is
 extremely difficult (or at least completely undocumented).\
-
 </div>
 </blockquote>
-
 <p><br />
 I\&rsquo;m afraid that this is true. But nevertheless Seeks should be
 mentioned since they made an interesting approach to the problem of
 distributed voting of search results.<br />
 </p>
-
 <blockquote>
 <div>
-
 biolizard89 hat geschrieben:\
 I noticed that there are \"bookmark\"/\"recommend\"/\"delete\" icons
 next to each search result; is this the upvote/downvote mechanism
 you\'re talking about or is there something else I\'ve missed? I
 haven\'t found any documentation on what those three icons currently
 do, is there documentation available for them that I\'ve missed?\
-
 </div>
 </blockquote>
-
 <p><br />
 Yes. A click on the bookmark icon makes (obviously) a bookmark. A click
 on \&lsquo;recommend\&rsquo; creates an upvote message, a click on delete deletes
@@ -268,24 +189,13 @@ and home pages of the online peers as entered in /ConfigProfile_p.html<br />
 <br />
 If you want to do some experiements then these functions may be a good
 playground and open to changes if you like.</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
 &mdash; Sa Mär 01, 2014 1:09 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

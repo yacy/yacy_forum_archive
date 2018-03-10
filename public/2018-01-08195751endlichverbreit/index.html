@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,26 +113,17 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="endlich-verbreitet-auch-mal-ein-einsender-hoffnung">Endlich verbreitet auch mal ein Einsender Hoffnung ...</h1>
-
 <p>Date: 2018-01-08 19:57:51</p>
-
 <p>Endlich verbreitet auch mal ein Einsender Hoffnung bezüglich Meltdown:</p>
-
 <blockquote>
 <p>Meltdown scheint ja am Gefährlichsten zu sein, da es Kernelmemory
 dumpen und auf andere Prozesse zugreifen kann, und ist sogar mit
@@ -201,37 +132,28 @@ derzeit irgendwie keiner auf dem Schirm hat und die meiner Ansicht
 nach im Meltdown-Paper mindestens unvollständig oder gar falsch steht.
 Dort steht man könnte \&ldquo;simple\&rdquo; (über 0xffff8800xxx) den gesamten RAM
 auslesen:</p>
-
 <p><a href="https://meltdownattack.com/meltdown.pdf">https://meltdownattack.com/meltdown.pdf</a></p>
-
 <p>Seite 11: \&ldquo;On such systems, an attacker can use Meltdown to dump the
 entire physical memory, simply by reading from virtual addresses
 starting at 0xffff 8800 0000 0000.\&rdquo;</p>
-
 <p>Alle existierenden PoCs, sowie meine Tests und auch Google kommen
 allerdings zu einem anderen Ergebnis:</p>
-
 <p><a href="https://googleprojectzero.blogspot.de/2018/01/reading-privileged-memory-with-side.html">https://googleprojectzero.blogspot.de/2018/01/reading-privileged-memory-with-side.html</a></p>
-
 <p>\&ldquo;PoC for variant 3 that, when running with normal user privileges,
 can read kernel memory on the Intel Haswell Xeon CPU under some
 precondition. We believe that this precondition is that the targeted
 kernel memory is present in the L1D cache.\&rdquo;</p>
-
 <p>Man kann das - offensichtlich - nur ausnutzen, wenn man das
 auszulesende \&ldquo;Geheimnis\&rdquo; im Speicher bereits im L1 Cache der
 gleichen CPU hat, was kein triviales Problem ist, wenn man es selbst
 nicht lesen darf und auch (von mir getestet) Befehle wie prefetch oder
 simpler Zugriff über MOVen vom unberechtigten Prozess kein L1 Caching
 bewirken.</p>
-
 <p>Schön kann man diese Anhängigkeit an allen so funktionierenden und
 verfügbaren Meltdown-Code sehen, die im Kernel \&ldquo;linux_proc_banner\&rdquo;
 ausgeben: Das geht erst, wenn man \&ldquo;/proc/version\&rdquo; öfters ausliest,
 und es damit in den L1 Cache gelangt:</p>
-
 <p><a href="https://github.com/paboldin/meltdown-exploit">https://github.com/paboldin/meltdown-exploit</a></p>
-
 <pre><code>    fd = open(&quot;/proc/version&quot;, O_RDONLY);
 …
         ret = pread(fd, buf, sizeof(buf), 0);
@@ -240,25 +162,19 @@ und es damit in den L1 Cache gelangt:</p>
             break;
         }
 </code></pre>
-
 <p><a href="https://github.com/Frichetten/meltdown-poc">https://github.com/Frichetten/meltdown-poc</a></p>
-
 <pre><code> +      int fd = open(&quot;/proc/version&quot;, O_RDONLY);
  +      int ret = 0;
  +      char thing[256];
  +      ret = pread(fd, thing, sizeof(thing), 0);
 </code></pre>
-
 <p>\&ldquo;Added the ability to dump the linux_proc_banner\&rdquo;</p>
-
 <p>Also wer KVM betreibt, der wird von Spectre 2 nicht so begeistert
 sein. Browserhersteller finden Spectre 1 und 2 nicht so toll. Auch ist
 Meltdown natürlich nicht schön, allerdings doch auch nicht so krass
 wie bisher geschrieben: Memoryauslesen geht nur wesentlich
 eingeschränkter als bislang behauptet.</p>
-
 <p>&hellip; Darum gibts wohl auch keine wirklichen Exploits?</p>
-
 <p>Es ist mir übrigends bislang allgemein auch noch nicht gelungen auch
 nur ein Byte über 0xffff bb00&hellip; den Speicher eines anderen Prozesses
 auszulesen, auch über verschiedenste Prozessoren hinweg
@@ -270,20 +186,10 @@ bb00, das sich ja mit der Kerneldoku deckt, allgemein falsch ist - so
 wie es der Googlepost ja nahelegt - oder was da noch falsch sein
 könnte&hellip;</p>
 </blockquote>
-
 <p>Sehr erfreulich! Vielleicht geht die Welt ja doch noch nicht unter.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

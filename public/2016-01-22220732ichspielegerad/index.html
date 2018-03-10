@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,29 +113,20 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="ich-spiele-gerade-ein-bisschen-mit-linux-user-namespaces">Ich spiele gerade ein bisschen mit Linux User Namespaces ...</h1>
-
 <p>Date: 2016-01-22 22:07:32</p>
-
 <p>Ich spiele gerade ein bisschen mit Linux User Namespaces herum. Das ist
 eigentlich für die Implementation von Containern gedacht, aber man kann
 das auch zum Sandboxing verwenden und in Unterstützung einer
 Broker-Architektur.</p>
-
 <p>Unter Linux gibt es neben fork() auch noch clone(), das ein paar Flags
 und optional zusätzliche Argument kriegt. Damit kann man dann den neuen
 Prozess zu einem Thread machen, und sagen, ob der Speicher geshared
@@ -206,15 +137,12 @@ Der Kniff bei den User Namespaces ist jetzt, dass man innerhalb der
 neuen Namespaces root-Capabilities hat, also so Dinge darf wie chroot
 aufrufen oder sein virtuelles Netzwerkinterface konfigurieren. Diese
 Änderungen gelten dann nur relativ zu dem neuen Namespace.</p>
-
 <p>Durch diesen Mechanismus hat man jetzt also plötzlich auch als
 Nicht-Root-Prozess die Möglichkeit, sich per chroot wegzusperren, und
 kann sich per PID-Namespace die Möglichkeit nehmen, per ptrace() oder
 kill() andere Prozesse zu manipulieren.</p>
-
 <p>Wer auch mal damit herumspielen möchte: Hier ist ein bisschen Code zum
 Herumspielen:</p>
-
 <pre><code>#define _GNU_SOURCE
 #include &lt;sys/mman.h&gt;
 #include &lt;sched.h&gt;
@@ -241,27 +169,16 @@ Herumspielen:</p>
     perror(&quot;mmap failed&quot;);
 }
 </code></pre>
-
 <p>Da gehört jetzt natürlich noch ordentlich Fehlerbehandlung und so rein,
 klar. Ein bisschen fummelig ist, dass man dann natürlich seine
 Capabilities ablegen sollte, bevor man irgendwas tut, und das API könnte
 schöner sein. Das ist das capset hier in dem Spielcode. Da könnte man
 auch libcap für nehmen, aber ich habe bei sowas gerne so wenig unnötige
 Abhängigkeiten wie möglich.</p>
-
 <p>Viel Spaß beim Ausprobieren!</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

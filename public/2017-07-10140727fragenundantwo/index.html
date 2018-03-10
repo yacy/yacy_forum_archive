@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,35 +113,25 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="fragen-und-antworten-indexgröße-zu-extrem">Fragen und Antworten • Indexgröße zu extrem?</h1>
-
 <p>Date: 2017-07-10 14:07:27</p>
-
 <p>Hi,<br />
 <br />
 seit einiger Zeit tauchen bei mir im Log \&ldquo;komische\&rdquo;
 Fehlermeldungen/Exceptions auf:<br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>W 2017/07/06 18:02:12 ConcurrentLog java.io.IOException: org.apache.solr.common.SolrException: Exception writing document id QeCbK3o3g_15 to the index; possible analysis error.java.io.IOException: org.apache.solr.common.SolrException: Exception writing document id QeCbK3o3g_15 to the index; possible analysis error.        at net.yacy.cora.federate.solr.connector.SolrServerConnector.add(SolrServerConnector.java:285)        at net.yacy.cora.federate.solr.connector.MirrorSolrConnector.add(MirrorSolrConnector.java:210)        at net.yacy.cora.federate.solr.connector.ConcurrentUpdateSolrConnector.commitDocBuffer(ConcurrentUpdateSolrConnector.java:106)        at net.yacy.cora.federate.solr.connector.ConcurrentUpdateSolrConnector.access$100(ConcurrentUpdateSolrConnector.java:52)        at net.yacy.cora.federate.solr.connector.ConcurrentUpdateSolrConnector$CommitHandler.run(ConcurrentUpdateSolrConnector.java:61)Caused by: org.apache.solr.common.SolrException: Exception writing document id QeCbK3o3g_15 to the index; possible analysis error.        at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:180)        at org.apache.solr.update.processor.RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:68)        at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:48)        at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalAdd(DistributedUpdateProcessor.java:934)        at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:1089)        at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:712)        at org.apache.solr.update.processor.LogUpdateProcessorFactory$LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:103)        at org.apache.solr.handler.loader.XMLLoader.processUpdate(XMLLoader.java:250)        at org.apache.solr.handler.loader.XMLLoader.load(XMLLoader.java:177)        at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:94)        at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:69)        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:155)        at org.apache.solr.core.SolrCore.execute(SolrCore.java:2102)        at org.apache.solr.client.solrj.embedded.EmbeddedSolrServer.request(EmbeddedSolrServer.java:178)        at org.apache.solr.client.solrj.SolrRequest.process(SolrRequest.java:149)        at org.apache.solr.client.solrj.SolrClient.add(SolrClient.java:106)        at org.apache.solr.client.solrj.SolrClient.add(SolrClient.java:123)        at net.yacy.cora.federate.solr.connector.SolrServerConnector.add(SolrServerConnector.java:279)        ... 4 moreCaused by: org.apache.lucene.store.AlreadyClosedException: this IndexWriter is closed        at org.apache.lucene.index.IndexWriter.ensureOpen(IndexWriter.java:720)        at org.apache.lucene.index.IndexWriter.ensureOpen(IndexWriter.java:734)        at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1473)        at org.apache.solr.update.DirectUpdateHandler2.doNormalUpdate(DirectUpdateHandler2.java:282)        at org.apache.solr.update.DirectUpdateHandler2.addDoc0(DirectUpdateHandler2.java:214)        at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:169)        ... 21 moreCaused by: org.apache.lucene.store.AlreadyClosedException: FileLock invalidated by an external force: NativeFSLock(path=/mnt/3200gb/yacy2/DATA/INDEX/freeworld/SEGMENTS/solr_5_5/collection1/data/index/write.lock,impl=sun.nio.ch.FileLockImpl[0:9223372036854775807 exclusive invalid],ctime=2014-12-25T02:18:55Z)        at org.apache.lucene.store.NativeFSLockFactory$NativeFSLock.ensureValid(NativeFSLockFactory.java:166)        at org.apache.lucene.store.LockValidatingDirectoryWrapper.createOutput(LockValidatingDirectoryWrapper.java:43)        at org.apache.lucene.store.TrackingDirectoryWrapper.createOutput(TrackingDirectoryWrapper.java:43)        at org.apache.lucene.codecs.compressing.CompressingStoredFieldsWriter.&lt;init&gt;(CompressingStoredFieldsWriter.java:108)        at org.apache.lucene.codecs.compressing.CompressingStoredFieldsFormat.fieldsWriter(CompressingStoredFieldsFormat.java:128)        at org.apache.lucene.codecs.lucene50.Lucene50StoredFieldsFormat.fieldsWriter(Lucene50StoredFieldsFormat.java:183)        at org.apache.lucene.index.DefaultIndexingChain.initStoredFieldsWriter(DefaultIndexingChain.java:81)        at org.apache.lucene.index.DefaultIndexingChain.startStoredFields(DefaultIndexingChain.java:279)        at org.apache.lucene.index.DefaultIndexingChain.processDocument(DefaultIndexingChain.java:316)        at org.apache.lucene.index.DocumentsWriterPerThread.updateDocument(DocumentsWriterPerThread.java:234)        at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:450)        at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1477)        at org.apache.solr.update.DirectUpdateHandler2.doNormalUpdate(DirectUpdateHandler2.java:282)        at org.apache.solr.update.DirectUpdateHandler2.addDoc0(DirectUpdateHandler2.java:214)        at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:169)        at org.apache.solr.update.processor.RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:68)        at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:48)        at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalAdd(DistributedUpdateProcessor.java:934)        at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:1089)        at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:712)        at org.apache.solr.update.processor.LogUpdateProcessorFactory$LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:103)        at org.apache.solr.handler.loader.XMLLoader.processUpdate(XMLLoader.java:250)        at org.apache.solr.handler.loader.XMLLoader.load(XMLLoader.java:177)        at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:94)        at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:69)        at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:155)        at org.apache.solr.core.SolrCore.execute(SolrCore.java:2102)        at org.apache.solr.client.solrj.embedded.EmbeddedSolrServer.request(EmbeddedSolrServer.java:178)        at org.apache.solr.client.solrj.SolrRequest.process(SolrRequest.java:149)        at org.apache.solr.client.solrj.SolrClient.add(SolrClient.java:106)        at org.apache.solr.client.solrj.SolrClient.add(SolrClient.java:123)        at net.yacy.cora.federate.solr.connector.SolrServerConnector.add(SolrServerConnector.java:256)        at net.yacy.cora.federate.solr.connector.MirrorSolrConnector.add(MirrorSolrConnector.java:210)        at net.yacy.cora.federate.solr.connector.ConcurrentUpdateSolrConnector.commitDocBuffer(ConcurrentUpdateSolrConnector.java:106)        at net.yacy.cora.federate.solr.connector.ConcurrentUpdateSolrConnector.concurrentIDsByQuery(ConcurrentUpdateSolrConnector.java:376)        at net.yacy.search.schema.CollectionConfiguration$CRHost.&lt;init&gt;(CollectionConfiguration.java:1963)        at net.yacy.search.schema.CollectionConfiguration.createRankingMap(CollectionConfiguration.java:1691)        at net.yacy.search.schema.CollectionConfiguration.postprocessing(CollectionConfiguration.java:1277)        at net.yacy.search.Switchboard.cleanupJob(Switchboard.java:2580)        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)        at java.lang.reflect.Method.invoke(Method.java:497)        at net.yacy.kelondro.workflow.InstantBusyThread.job(InstantBusyThread.java:105)        at net.yacy.kelondro.workflow.AbstractBusyThread.run(AbstractBusyThread.java:215)</code></dd>
 </dl>
-
 <p><br />
 <br />
 Besonders das FileLock invalidated by an external force:
@@ -215,24 +145,13 @@ da wohl auch nicht mehr hinterher
 Viele Grüße<br />
 <br />
 LA_FORGE</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=324">LA_FORGE</a>
 &mdash; Mo Jul 10, 2017 1:07 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

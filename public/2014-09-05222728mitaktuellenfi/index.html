@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,59 +113,44 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="mit-aktuellen-firefox-beta-versionen-kommt-man-nicht">Mit aktuellen Firefox Beta-Versionen kommt man nicht ...</h1>
-
 <p>Date: 2014-09-05 22:27:28</p>
-
 <p>Mit aktuellen Firefox Beta-Versionen kommt man nicht mehr per SSL auf
 blog.fefe.de. Da kommt eine Terrorpanikwarnung, das Zertifikat sei
 ungültig, selbst wenn man das cacert-Cert bei sich lokal als
 vertrauenswürdig eingepflegt hat. Grund:</p>
-
 <blockquote>
 <p>The certificate is not trusted because it was signed using a signature
 algorithm that was disabled because that algorithm is not secure.</p>
-
 <p>(Error code: sec_error_cert_signature_algorithm_disabled)</p>
 </blockquote>
-
 <p>Das bezieht sich vermutlich auf das MD5, das cacert verwendet, um ihren
 Root-Key damit zu hashen. Es gibt auch nichts, was ich dagegen tun
 könnte, das ist ein Problem von cacert.</p>
-
 <p>Ich finde es gelinde gesagt überraschend, dass Firefox, die seit gefühlt
 vorgestern überhaupt erst TLS 1.2 sprechen, jetzt solche Dinger bringen.
 Aber inhaltlich haben sie Recht. Zertifikate, bei denen in der Kette
 irgendwo MD5 auftaucht, darf man nicht mehr akzeptieren. Eigentlich
 schon länger nicht mehr.</p>
-
 <p>Die gute Nachricht ist: Das Problem ist lösbar. Mozilla hat das vor ein
 paar Jahren angesagt, und cacert hat eine neue Signatur unter ihrem
 Root-Zertifikat gemacht. Ob ihr betroffen seid, hängt also davon ab,
 wann ihr die Zertifikate bei euch lokal eingepflegt habt. Und ihr könnt
 das Problem jetzt lösen, indem ihr die cacert-Zertifikate rausschmeißt
 und neu installiert.</p>
-
 <p><strong>Update</strong>: Hmm, nee, so einfach ist das nicht. Einige cacert-Sites sind
 mit dem einen Key signiert, der sich so reparieren lässt, einige (zu
 denen auch blog.fefe.de gehört) sind mit dem anderen Key signiert und
 gehen auch nach Neueinspielen der Zertifikate noch nicht. Ich guck mal,
 ob ich da was tun kann.</p>
-
 <p><strong>Update</strong>: Ich habe den Unterschied zwischen meinem Blog und der
 anderen Site, bei der es nach Zertifikatsupdate geht, identifiziert.
 Mein Blog ist mit dem Class1-Key signiert, die andere Site mit dem
@@ -236,18 +161,9 @@ politisches Problem zu sein, kein technisches, denn man kann das nicht
 auswählen, ob man Class1 oder Class3 haben will. Für Class3 muss man
 \&ldquo;Assured Member\&rdquo; sein. Bin ich nicht. Will ich auch nicht werden.
 Damit ist cacert dann wohl zukünftig ungeeignet.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

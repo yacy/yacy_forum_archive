@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="noch-ein-paar-worte-zu-heartbleed-ich-suche-hauptberuflich">Noch ein paar Worte zu Heartbleed. Ich suche hauptberuflich ...</h1>
-
 <p>Date: 2014-04-09 17:45:15</p>
-
 <p>Noch ein paar Worte zu Heartbleed. Ich suche hauptberuflich Bugs. Wenn
 ich einen Bug finde, kategorisiere ich ihn und weise ein Risiko zu. Das
 Risiko kommt im Allgemeinen nicht aus meiner Einschätzung, sondern der
@@ -207,7 +139,6 @@ vorschlage, dass sie einen Fall prüfen und abfangen, den sie in dem
 konkret betrachteten Codestück aber schon woanders prüfen. Und
 \&ldquo;Informational\&rdquo; ist für sowas wie \&ldquo;ist eigentlich kein Security-Bug,
 aber der Code hier ist falsch\&rdquo; oder so.</p>
-
 <p>Ich erwähne das, weil das aus meiner Sicht der Grund ist, wieso dieser
 Code es bis in OpenSSL geschafft hat. Wenn jemand da den reinkommenden
 Code auditiert, guckt der nach den hochriskanten Bugs. Und nach der
@@ -217,7 +148,6 @@ kann mir gut vorstellen, dass der Auditor einfach nicht nach der Art von
 Bug geguckt hat. Der hat memcpy gesehen, und hat dann kurz geprüft, dass
 vorher genug alloziert wurde und das keinen Buffer Overflow gibt, und
 dann hat der das durchgewunken.</p>
-
 <p>Normalerweise ist es nur meine Aufgabe, Bugs zu finden. Ich bin nicht
 dafür zuständig, dass die auch gefixt werden. Aber trotzdem kriege ich
 natürlich regelmäßig mit, wenn die Entwickler dann Bugs schließen, weil
@@ -226,7 +156,6 @@ gibt, dass Bugs gefixt werden müssen, beziehen die sich normalerweise
 nur auf \&ldquo;wichtige\&rdquo; Bugs wie Buffer Overflows. Und auch da kommt es
 häufiger vor, dass Entwickler sich weigern, sowas zu fixen, wenn man
 ihnen keinen Exploit zeigt.</p>
-
 <p>Wenn ich meine Zeit damit verbringe, einen Exploit zu schreiben, finde
 ich aber keine Bugs in der Zeit. Daher wird das im Normalfall nicht
 passieren. Wenn Entwickler einen Exploit sehen wollen, geht es nicht um
@@ -235,7 +164,6 @@ fixen zu müssen, indem der Gegenseite eine massive Bringschuld
 aufgebürdet wird. Schon der Einspruch des Entwicklers kostet ihn (mich
 sowieso) im Allgemeinen deutlich mehr Aufwand, als das Fixen des Bugs
 gekostet hätte.</p>
-
 <p>Warum schreibe ich das hier alles? Weil ich darauf hinweisen möchte,
 dass das System im Moment kaputt ist. Die Perspektive von Entwicklern
 auf Bugs müsste sein: You file it, we fix it. Und zwar sofort. Keine
@@ -245,17 +173,14 @@ Geld dafür, ordentlichen Code zu schreiben. Wenn es da einen Defekt
 gibt, wird der sofort gefixt. Fertig. Und zwar unabhängig davon, ob das
 jetzt ein Security-Problem ist oder \&ldquo;nur\&rdquo; Defense in Depth. Egal ob
 man das Szenario für realistisch hält oder nicht.</p>
-
 <p>Einige Firmen haben das mit Incentive-Programmen herbeizuführen
 versucht. Sowas wie \&ldquo;es gibt Bonus, wenn man höchstens soundsoviele
 Bugs hat\&ldquo;. Das führt leider dazu, dass einige Entwickler einfach alle
 einkommenden Bugs sofort als ungültig schließen, damit sie nicht in die
 Statistik gelangen. So einfach ist es halt nicht.</p>
-
 <p>Und bei Open Source ist das natürlich noch mal schwieriger,
 Qualitätsstandards einzuhalten, wenn du niemandem damit drohen kannst,
 dass er gefeuert wird, wenn er sich nicht zusammenreißt.</p>
-
 <p>Ein technisches Detail habe ich noch. OpenSSL hat seinen eigenen
 Allokator gebaut. <a href="http://article.gmane.org/gmane.os.openbsd.misc/211963">Theo de Raadt (der Mann hinter OpenBSD) regt sich
 schön darüber
@@ -271,7 +196,6 @@ entkernen können, damit der nicht so viel malloc und free aufruft. Das
 wäre die gute Variante gewesen. OpenSSL hat aber lieber getrickst und
 sich einen eigenen Allokator gebaut und damit, wie Theo kritisiert, die
 Sicherheitsvorteile des OpenBSD-Allokators aufgegeben.</p>
-
 <p>Die andere Hälfte der Medaille ist, dass der OpenSSL-Allokator vom
 System größere Blöcke Speicher anfordert, und dann innerhalb von denen
 selber fummelt. Das heißt aber, wenn ich jetzt 64k Speicher leaken kann,
@@ -281,7 +205,6 @@ Das ist es, was diesen Bug so tödlich macht. Ihr habt vielleicht die
 Speicherdumps gesehen, die gerade so rumfliegen. Das ist der Grund,
 wieso da immer gleich so saftige Daten drinstehen wie unverschlüsselte
 HTTP-Dumps mit den Cookies und Passwörtern.</p>
-
 <p><strong>Update</strong>: Einen noch. Ich kriege hier gerade von einigen Leuten Flak,
 weil ich den Namen des Entwicklers gebloggt habe. Als ob der vorher
 nicht dran gestanden hätte an dem git-Checkout. Ist das legitim, den als
@@ -292,7 +215,6 @@ arbeite. Es geht hier nicht um Shaming, sondern darum, dass alle sehen:
 Das hat ein Typ wie du und ich geschrieben, und hier hat ein anderer Typ
 wie du und ich das durchgewunken. Wenn die das falsch machen, muss ich
 vielleicht auch mein Verhalten ändern? Ja, müssen wir. Alle von uns.</p>
-
 <p>Wir reden hier von einer der zentralen Sicherheits-Komponenten auf der
 Welt. Es ist völlig unakzeptabel, dass so ein Ranz-Code bei OpenSSL
 submitted wird. Es ist auch völlig unakzeptabel, dass OpenSSL das dann
@@ -305,21 +227,11 @@ Da checkt man nicht mal eben kurz was ein, wird schon gutgehen. Die
 Wartung von OpenSSL sollte mit einer ähnlichen Verantwortung verbunden
 sein wie das Warten von Flugzeugen oder Atomkraftwerken. Wir haben
 schlicht keine Entschuldigungen dafür, dass es soweit kommen konnte.</p>
-
 <p>Natürlich konnte ich auch an dem T-Systems-Joke nicht vorbeigehen, das
 seht ihr sicher ein. :-)</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

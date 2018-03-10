@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,31 +113,22 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="ich-hatte-diese-tage-einen-heureka-moment-den-ich">Ich hatte diese Tage einen Heureka-Moment, den ich ...</h1>
-
 <p>Date: 2016-02-01 13:24:49</p>
-
 <p>Ich hatte diese Tage einen Heureka-Moment, den ich mal mit euch teilen
 will. Ich hatte ja auf dem 32c3 einen Vortrag gehalten, in dem ich ein
 Broker-Modell vorschlug. Die Idee ist, dass du einen Prozess hast, bei
 dem du dir nicht sicher bist, ob er nicht doch noch hackbare
 Sicherheitslücken hat, und du möchtest verhindern, dass der Prozess dann
 wild im Dateisystem herumschreiben kann.</p>
-
 <p>Ein Ansatz dazu wäre, dass man dem Prozess per LD_PRELOAD eine Shared
 Library reindrückt, die dann open() überschreibt mit einer Version, die
 über einen vorher etablierten Unix Domain Socket einen Broker-Prozess
@@ -207,7 +138,6 @@ einer Konfigurationsdatei), und wenn das OK ist, dann macht er die Datei
 auf und schiebt den Deskriptor über den Unix Domain Socket zurück. Daher
 auch ein Unix Domain Socket als Kommunikationsweg, denn da kann man
 Deskriptoren rüberschieben.</p>
-
 <p>Das offensichtliche Problem mit diesem Ansatz war immer, dass man mit
 LD_PRELOAD zwar verhindern kann, dass jemand versehentlich open()
 aufruft, aber nicht dass jemand von Hand den Syscall absetzt. Da gab es
@@ -219,33 +149,20 @@ aber mit Seccomp kann man in einem Initialisierer in der Shared Library
 open-Syscall verbietet. Der sollte dann natürlich auch andere Dinge
 verbieten (ich persönlich bin an der Stelle immer ein Freund von
 whitelisting statt blacklisting).</p>
-
 <p>Aber mein Punkt ist: Man kann jetzt mit LD_PRELOAD dank Seccomp
 tatsächlich einen fremden Prozess dazu bringen, dass er (sogar halbwegs
 transparent) keine bösen Dateisystemzugriffe macht.</p>
-
 <p>Gut, der Teufel liegt natürlich wie immer im Detail. Dann muss man auch
 schauen, dass man chdir und fchdir und so folgt, und wenn man
 Lesezugriffe auch verhindern will, dann muss man auch stat und co
 abfangen.</p>
-
 <p>Aber hey, wenn es einfach wäre, wäre es nicht interessant :-)</p>
-
 <p>Man kann das jetzt machen. Ich habe mal einen kleinen Proof of Concept
 gehackt, die das für open() tut. Mal gucken, ob ich den in einen
 verwendbaren Zustand kriege und dann veröffentlichen kann.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,75 +113,48 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="hey-wisst-ihr-was-wir-schon-lange-nicht-mehr-hatten">Hey, wisst ihr, was wir schon lange nicht mehr hatten? ...</h1>
-
 <p>Date: 2015-01-09 10:29:19</p>
-
 <p>Hey, wisst ihr, was wir schon lange nicht mehr hatten?
 <a href="http://www.openssl.org/news/secadv_20150108.txt">OpenSSL-Sicherheitslücken</a>!
 In <a href="http://marc.info/?l=openssl-announce&amp;m=142046772204265">der Ankündigung
 dazu</a> hieß es
 noch: alles belanglose Nebensächlichkeiten, kein Problem, kein Grund zur
 Aufregung. Aber die Liste beinhaltet dann so Kracher wie</p>
-
 <pre><code>ECDHE silently downgrades to ECDH [Client] (CVE-2014-3572)
 ==========================================================
-
 Severity: Low
 </code></pre>
-
 <p>Wait, what?</p>
-
 <pre><code>RSA silently downgrades to EXPORT_RSA [Client] (CVE-2015-0204)
 ==============================================================
-
 Severity: Low
 </code></pre>
-
 <p>Surely some mistake?</p>
-
 <pre><code>DH client certificates accepted without verification [Server] (CVE-2015-0205)
 =============================================================================
-
 Severity: Low
 </code></pre>
-
 <p>Und zu guter letzt kann auch noch der Fingerprint modifiziert werden und
 ihre Quadrier-Routine verrechnet sich gelegentlich. Ihr seht schon:
 Alles totale Randgruppenprobleme, kein Grund zur Beunruhigung.</p>
-
 <p><strong>Update</strong>: Falls jemandem die Signifikanz nicht klar war: Der
 Unterschied zwischen ECDHE und ECDH ist Perfect Forward Secrecy. Das
 heißt, dass wenn die Polizei den Serverschlüssel beschlagnahmt, sie
 trotzdem nicht damit die alten NSA-Mitschnitte entschlüsseln kann. TLS
 ohne Perfect Forward Secrecy auszurollen kann man sich meiner Meinung
 nach auch gleich sparen.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

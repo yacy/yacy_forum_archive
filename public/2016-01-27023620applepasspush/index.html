@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,41 +113,29 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="apple-pass-push-notifications">Apple Pass push notifications</h1>
-
 <p>Date: 2016-01-27 02:36:20</p>
-
 <p><a href="https://www.dnalounge.com/calendar/2016/01-29.html"><img src="https://www.jwz.org/images/passbook.png" alt="" /></a>Dear
 lazyweb, how do I send Apple Pass push notifications?</p>
-
 <p>Yesterday I added Apple Wallet passes to the <a href="https://www.dnalounge.com/">DNA
 Lounge</a> ticketing system: now when you buy a
 ticket, the confirmation email comes with an attachment that will dump
 the ticket into your phone such that it will automatically pop up on
 your lock screen when you are in physical proximity of the club on the
 day of the event. It\&rsquo;s kinda neat.</p>
-
 <p>What I haven\&rsquo;t figured out is how to send push notifications.</p>
-
 <p>When someone adds the pass to their phone, their phone registers with my
 server, sending it the device ID, the serial number of the pass, and a
 \&ldquo;pushToken\&ldquo;. I should be able to take this info and tell Apple, \&ldquo;tell
 the device to re-download the pass from my server\&ldquo;.</p>
-
 <p>The <a href="https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Appendixes/BinaryProviderAPI.html">Binary Provider API
 document</a>
 explains how to pack up a request to ship off to Apple. The \&ldquo;device
@@ -215,26 +143,14 @@ ID\&rdquo; is a 32-digit hex number, meaning a 16-byte value; and the
 \&ldquo;pushToken\&rdquo; is a 64-digit hex number, meaning a 32-byte value, so I
 assume that when that doc says \&ldquo;32 byte device token\&rdquo; it means the
 \&ldquo;pushToken\&rdquo; and not the \&ldquo;device ID\&ldquo;.</p>
-
 <p>So I\&rsquo;m packing it up like this, and getting neither an error message
 back, nor a return connection from the phone. What am I missing?</p>
-
 <p>Please do not answer with \&ldquo;pay some third-party web service to do this
 for you\&rdquo; or \&ldquo;install this multi-gigabyte black-box framework\&ldquo;.</p>
-
 <p><strong>Update:</strong> Got it working, woo...</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

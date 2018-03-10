@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,43 +113,30 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="yacy-coding-architektur-re-bewertungen-ranking">YaCy Coding &amp; Architektur • Re: Bewertungen / Ranking</h1>
-
 <p>Date: 2012-09-06 23:07:45</p>
-
 <blockquote>
 <div>
-
 apfelmaennchen hat geschrieben:\
 Auch wenn ich mich nicht so regelmäßig hier melde, arbeite ich
 \"heimlich\" an den YaCy Bookmarks weiter.\
-
 </div>
 </blockquote>
-
 <p><br />
 <br />
 oh das ist toll, sorry hab noch nicht die Zeit für die Antwort
 gefunden...<br />
 </p>
-
 <blockquote>
 <div>
-
 apfelmaennchen hat geschrieben:\
 Konkret sind die Bookmarks intern momentan so ausgelegt, dass sie
 recht effizient jede User-Annotation zu einer URL aufnehmen können und
@@ -220,10 +147,8 @@ Annotations ablegen und verwalten, der Peer könnte aber sehr wohl über
 alle User konsolidieren. Sprich spezifische User-Annotationen
 aufzunehmen und als RDF (Bibo) auszuspucken wäre durch eine einfache
 Ergänzung des API (zwei Servelets) umzusetzen.\
-
 </div>
 </blockquote>
-
 <p><br />
 <br />
 Das Thema Mehrbenutzerbetrieb wird ja kaum betrachtet, so weit ich das
@@ -238,10 +163,8 @@ Directory</a>{.postlink}
 würde wäre ich sehr froh! Einen LDAP-Client in Java gibts ja, fehlt nur
 noch ein Verständnis für die Authentifizierungsprotokolle.<br />
 </p>
-
 <blockquote>
 <div>
-
 apfelmaennchen hat geschrieben:\
 Um nach diesen \"Kriterien\" einfacher suchen/sortieren zu können,
 habe ich die Bookmarks (noch lokal bei mir im Test) mit einem Index
@@ -249,19 +172,15 @@ ausgestattet. Dies war insb. im Zuge des jüngst fertiggestellten
 DMOZ-Importers (ebenfalls noch lokal bei mir im Test) notwendig, da
 die bisherige Folder/Tag Implementierung bei \> 500.000 Bookmarks an
 ihre Grenzen stößt.\
-
 </div>
 </blockquote>
-
 <p><br />
 <br />
 Ich empfehle für die Suche auch den integrierten Solr zu benutzen. Das
 ist nicht schwer zu machen.<br />
 </p>
-
 <blockquote>
 <div>
-
 apfelmaennchen hat geschrieben:\
 Die Kategorisierung durch DMOZ ist recht umfassend. Zusätzlich hätte
 ich gedacht, dass man über eine Abstands- bzw. Ähnlichkeitsfunktion
@@ -275,10 +194,8 @@ Anwenders wären. Außerdem ließe sich mit einer solchen
 Alerts bei Veränderung einer Seite entsprechend elegant lösen. Hier
 sprechen wir also von einer Mischung aus manuellen Annotations und
 statistischen Ableitungen daraus.\
-
 </div>
 </blockquote>
-
 <p><br />
 <br />
 hm, hört sich irgendwie spannend an, weiss aber nicht was wir da machen
@@ -286,12 +203,9 @@ sollen. Alerts auf Bookmark-Content-Changes deutet auf eine ganz neue
 Anwendung im Bereich Monitoring an. Die Bookmarks sind dazu sicherlich
 die richtige Wahl um die zu beobachtenden URLs abzulegen.<br />
 </p>
-
 <blockquote>
 <div>
-
 apfelmaennchen hat geschrieben:\
-
 > <div>
 >
 > Aber XBEL (bisheriges Bookmark-Format) lässt sich notfalls per XSLT
@@ -299,7 +213,6 @@ apfelmaennchen hat geschrieben:\
 > sollten\...\
 >
 > </div>
-
 <p><br />
 Intern arbeiten die Bookmarks mit dem YaCy Tables Interface. XBEL ist
 eines von mehreren Ausgabeformaten (XML, HTML, JSON), die von YaCy
@@ -307,18 +220,14 @@ Bookmarks unterstützt werden. Grundsätzlich wäre es recht einfach, ein
 weiteres Format, z.B. RDF mit Annotations anzubieten. Bisher hatte ich
 in diesem Zusammenhang <a href="http://www.w3.org/2001/Annotea/">http://www.w3.org/2001/Annotea/</a> als
 anvisiertes und wohl beschriebenes Ziel im Auge.</p>
-
 <p></div></p>
 </blockquote>
-
 <p><br />
 <br />
 bei RDF wirds spannend. du sprichst es an:<br />
 </p>
-
 <blockquote>
 <div>
-
 apfelmaennchen hat geschrieben:\
 Die derzeitige Lösung des TripleStores als RDF-File, welches durch
 Jena ins RAM geladen wird, dürfte schon durch einen einfachen Import
@@ -326,10 +235,8 @@ des DMOZ Dumps (2 GB RDF-XML) an seine Grenzen stoßen. Daher ist dies
 (für mich) so noch keine Alternative zu den Bookmarks. Vielleicht
 brauchen wir einen Jena-DB-Connector für YaCy-Tables? Oder wir setzten
 TDB ein?\
-
 </div>
 </blockquote>
-
 <p><br />
 sehr richtig beobachtet, hier sollte eine offene Baustelle sein. Die mit
 Jena ins RAM geladenen RDF Tripel sind leider nur ein Quick-Hack und
@@ -339,24 +246,13 @@ als \&lsquo;Beilage\&rsquo; zu den Solr Daten in die neuen Metadaten zu legen. D
 ist ja nun massig Platz. Die Ablage der Tripel muss so sein, dass man
 daraus die gleichen Facetten machen kann wie so wie es momentan ist.
 Dazu muss ich nochmal nachdenken wie es richtig geht.</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=2">Orbiter</a>
 &mdash; Do Sep 06, 2012 10:07 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

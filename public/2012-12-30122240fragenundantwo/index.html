@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,55 +113,34 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="fragen-und-antworten-re-yacy-daemon-beendet-sich-immer-nach-kurzer-zeit">Fragen und Antworten • Re: Yacy Daemon beendet sich immer nach kurzer Zeit</h1>
-
 <p>Date: 2012-12-30 12:22:40</p>
-
 <p>Jetzt habe ich das Startscript mal mit -d aufgerufen, dann läuft der
 Daemon anscheinend im Vordergrund.<br />
 Das letzte was er ausgespuckt hat:<br />
 </p>
-
 <dl>
 <dt>Code:</dt>
 <dd><code>INFO [job_pool-15-thread-13] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;Rw9uJY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22g5ymVY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=1  INFO [job_pool-15-thread-11] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;g5ymVY_oz9zS&quot;D 2012/12/30 11:57:35 org.apache.solr.handler.UpdateRequestHandler bodyW 2012/12/30 11:57:35 STACKCRAWL CrawlStacker.stackCrawl of URL http://www.lauschangriff.to/user/4137/mietzestrule/ - not pushed: double occurrence in double_push_checkI 2012/12/30 11:57:35 STACKCRAWL URL 'http://www.lauschangriff.to/media/20-h%C3%B6rb%C3%BCcher/' is double registered in 'ERRORS'. Stack processing time:W 2012/12/30 11:57:35 STACKCRAWL CrawlStacker.stackCrawl of URL http://www.lauschangriff.to/9-media/ - not pushed: double occurrence in double_push_check INFO [job_pool-15-thread-12] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;jMa2_Y_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22-UxaZY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0  INFO [job_pool-15-thread-11] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;-UxaZY_oz9zS&quot;W 2012/12/30 11:57:35 STACKCRAWL CrawlStacker.stackCrawl of URL http://www.lauschangriff.to/user/8487/aysena/ - not pushed: double occurrence in double_push_checkI 2012/12/30 11:57:35 STACKCRAWL URL 'http://www.lauschangriff.to/user/17880/yavanna/' is double registered in 'ERRORS'. Stack processing time:D 2012/12/30 11:57:35 org.apache.solr.handler.loader.XMLLoader SolrCore.update(add)I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22Jll8bY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0 D 2012/12/30 11:57:35 org.apache.solr.handler.loader.XMLLoader adding doc... INFO [job_pool-15-thread-12] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;Jll8bY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22u-9OoY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0  INFO [job_pool-15-thread-13] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;u-9OoY_oz9zS&quot;W 2012/12/30 11:57:35 STACKCRAWL CrawlStacker.stackCrawl of URL http://www.lauschangriff.to/user/33426/herodes/ - not pushed: double occurrence in double_push_checkI 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22EFcxUY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0  INFO [job_pool-15-thread-13] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;EFcxUY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22uK8EiY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0  INFO [job_pool-15-thread-11] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;uK8EiY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22ShjWfY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0  INFO [job_pool-15-thread-12] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;ShjWfY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22lfxovQ_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=1 I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22JHHRuQ_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=1  INFO [job_pool-15-thread-13] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;lfxovQ_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22pxZzFY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0  INFO [job_pool-15-thread-11] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;JHHRuQ_oz9zS&quot; INFO [job_pool-15-thread-12] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;pxZzFY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22WcwluY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0  INFO [job_pool-15-thread-11] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;WcwluY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.update.processor.LogUpdateProcessor [collection1] webapp=null path=/update params={} {add=[RKY1mQ_oz9zS (1422776132811358208)]} 0 7I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22MO0_aY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=20  INFO [job_pool-15-thread-14] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;MO0_aY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22j-4mIY_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=1  INFO [job_pool-15-thread-13] (EmbeddedSolrConnector.java:201) - 0 results for q=id:&quot;j-4mIY_oz9zS&quot;I 2012/12/30 11:57:35 org.apache.solr.core.SolrCore [collection1] webapp=null path=/select params={q=id%3A%22hfC9kQ_oz9zS%22&amp;rows=1&amp;start=0&amp;fl=load_date_dt} hits=0 status=0 QTime=0 Killed</code></dd>
 </dl>
-
 <p><br />
 <br />
 Das \&ldquo;Killed\&rdquo; am Schluss wundert mich ein bisschen.</p>
-
 <p>Statistik: Verfasst von
 <a href="http://forum.yacy-websuche.de/memberlist.php?mode=viewprofile&amp;u=8857">Bergschreck</a>
 &mdash; So Dez 30, 2012 12:22 pm</p>
-
 <hr />
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

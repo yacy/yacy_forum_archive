@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,69 +113,43 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="seeking-facebook-s-iphone-app-key">Seeking Facebook\&rsquo;s iPhone app key</h1>
-
 <p>Date: 2016-09-20 01:00:49</p>
-
 <p><img src="https://www.jwz.org/images/under_attack_pleas_stand_by_by_heder.png" alt="" />Dear
 Lazyweb, how do I get an OAuth token that impersonates Facebook\&rsquo;s
 official app?</p>
-
 <p>Why? Because I desire to post videos to my business\&rsquo;s \&ldquo;page\&ldquo;, and
 apparently \&ldquo;normal\&rdquo; apps can\&rsquo;t do that. The official Facebook app has
 permissions that you apparently cannot give to yourself.</p>
-
 <p>It used to be possible to impersonate the Facebook iPhone app when
 accessing it via the graph API by generating an OAuth token using that
 app\&rsquo;s ID (<code>6628568379</code>) and secret
 (<code>c1e620fa708a1d5696fb991c1bde5662</code>).</p>
-
 <p>After working for years, that token stopped working last week: now those
 sessions say \&ldquo;the user has changed the password\&ldquo;, which is... a weird
 error. So I tried to regenerate it the way I had in the past, by loading
 this in a logged-in browser:</p>
-
 <p><code>https://graph.facebook.com/oauth/authorize?type=user_agent&amp;client_id=6628568379&amp;redirect_uri=http://www.facebook.com/connect/login_success.html&amp;scope=read_stream</code></p>
-
 <p>That ought to redirect to a URL with an <code>access_token=</code> on it, but now
 it says \&ldquo;does not look like a valid app ID.\&rdquo;</p>
-
 <p>So maybe the app ID of the current iPhone app is different? But
 <code>&quot;https://graph.facebook.com/iphone?access_token=...&quot;</code> suggests not.</p>
-
 <p>And if I run the FB iPhone app through mitmproxy, I can\&rsquo;t log in, so I
 can\&rsquo;t sniff it. Maybe it\&rsquo;s doing cert pinning. Who knows.</p>
-
 <p>Any suggestions on how to re-crack this bastard?</p>
-
 <p><a href="https://www.jwz.org/blog/2016/03/reverse-engineering-tools/">Previously</a>,
 <a href="https://www.jwz.org/blog/2013/08/oauth-of-fealty/">previously</a>.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,24 +113,16 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="gifs-as-mp4s">GIFs as MP4s</h1>
-
 <p>Date: 2017-10-13 13:58:56</p>
-
 <p>Trying something new here on Ye Olde Blogge: animated GIFs are now
 served as MP4s in a <code>VIDEO</code> tag. That saves a vast of bandwidth since
 GIF is literally the worst of all possible video formats. Like, 830MB of
@@ -198,7 +130,6 @@ images drops to 72MB. Twitter and Giphy and whatnot have been doing this
 for a while now (though Twitter, since they are dicks, make it
 impossible to download the original unconverted GIF data, even via the
 API).</p>
-
 <p>It\&rsquo;s actually pretty tricky to convert a GIF to an MP4 in the general
 case, since GIFs have variable frame rate (really, an arbitrary delay
 after each frame, which can be different for each one), plus they can be
@@ -210,19 +141,15 @@ wrote, <a href="https://www.jwz.org/hacks/#resize">resize.pl</a>, which uses
 ImageMagick to extract each frame as a PNG then constructs an incredibly
 hairy <code>ffmpeg</code> command to put it all back together with the proper frame
 timing.</p>
-
 <p>(Seriously, it\&rsquo;s insane, it looks like this, and this is for just 6
 frames:
 <code>-vf zoompan=d=0+'24*eq(in,0)'+'24*eq(in,1)'+'24*eq(in,2)'+'24*eq(in,3)'+'24*eq(in,4)'+'24*eq(in,5)',scale=600:92</code>)</p>
-
 <p>Then after that, part of my WordPress theme sees <code>IMG</code> tags with GIFs in
 them and converts those to <code>VIDEO</code> tags. (I had to go through and
 indicate the old GIFs that are <em>not</em> animations to make that work. Did
 you know that people used to use GIFs for things that were not
 animations? I <em>know!</em> So weird!)</p>
-
 <p>People say that you should be able to do</p>
-
 <p>and that should degrade kind of like <code>&lt;NOSCRIPT&gt;</code> does, using the
 <code>SOURCE</code> in browsers that understand <code>VIDEO</code> and falling back to the
 <code>IMG</code> in older browsers... but from watching the network, I could see
@@ -231,76 +158,54 @@ that kind of defeats the entire purpose, so I\&rsquo;m omitting the <code>IMG</c
 your browser doesn\&rsquo;t support <code>VIDEO</code> I guess it sucks to be you. That
 does make it harder to copy images, though, and that\&rsquo;s annoying and
 dumb.</p>
-
 <p>Let me know if you see any problems.</p>
-
 <p>If things are escaping their boxes or otherwise the wrong size, try
 emptying your cache and shift-reloading. I ticked the cachebuster number
 on my CSS but browser caches have been an incomprehensible disaster
 since 1994, so who the hell knows what they are doing.</p>
-
 <p>I\&rsquo;ve noticed a couple of weird things. In Chrome, I had to add
 <code>overflow:hidden</code> to <code>&quot;.widget_jwz_previously a&quot;</code>. This wasn\&rsquo;t
 necessary in Safari, but in Chrome it also has the effect of clipping
 off the border on the left and right sides, which sucks.</p>
-
 <p>I\&rsquo;ve also noticed that sometimes the <code>AUTOPLAY</code> does not autoplay. Or
 maybe it\&rsquo;s that <code>LOOP</code> stops? No idea why that is. It\&rsquo;s doing
 something inexplicable on desktop Safari and something doubly and
 differently inexplicable on iOS.</p>
-
 <p>Actually I\&rsquo;m finding that \&ldquo;no autoplay\&rdquo; thing <em>super</em> annoying, and
 if I can\&rsquo;t figure out what\&rsquo;s going on there I may just go back to
 GIFs, even though they are more than 10× larger. Sigh.</p>
-
 <p><br />
 <strong>Update:</strong></p>
-
 <p>I think I see what\&rsquo;s going on with Safari: if a <code>VIDEO</code> tag is either
 above or below the fold at the time that you <em>load the page</em>, it will
 never autoplay, even after it scrolls into view. I can make videos in
 the comments here and in the \&ldquo;Previously\&rdquo; sidebar either play or not
 depending on where the scrollbar happened to be when I hit reload.
 That\&rsquo;s fucked up.</p>
-
 <p><br />
 <strong>Update 2:</strong></p>
-
 <p>Since Safari (both desktop and iOS) like to ignore <code>AUTOPLAY</code>, it looks
 like one way to work around that is to put this Javascript in the
 document footer:</p>
-
 <p>(I thought that merely being after all of the <code>VIDEO</code> tags would be
 sufficient, but no, being after <code>DOMContentLoaded</code> seems to also be
 required.)</p>
-
 <p>This hack still means that most videos won\&rsquo;t autoplay in browsers that
 have Javascript turned off, and videos won\&rsquo;t show up <em>at all</em> in old
 browsers that don\&rsquo;t support the <code>VIDEO</code> tag. Those might at first sound
 like weird cases you can ignore, except one or both of those cases
 probably includes \&ldquo;every RSS reader\&ldquo;.</p>
-
 <p>So <code>VIDEO</code> is not <em>at all</em> a drop-in replacement for <code>IMG</code> with animated
 GIFs. However, the bandwidth savings is so significant that it might be
 worth doing anyway.</p>
-
 <p><br />
 <a href="https://www.jwz.org/blog/2017/09/compressing-jpegs/">Previously</a>,
 <a href="https://www.jwz.org/blog/2015/05/gif-keyboard/">previously</a>,
 <a href="https://www.jwz.org/blog/2013/12/its-leaking-again-3/">previously</a>,
 <a href="https://www.jwz.org/blog/2014/09/i-have-ported-xscreensaver-to-youtube/">previously</a>.</p>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-

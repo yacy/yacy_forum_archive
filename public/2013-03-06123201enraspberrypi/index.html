@@ -1,68 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.37.1" />
-
   <title> &middot; Yacy Old Forum Archiv</title>
-
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
-
   <!--[if lte IE 8]>
   <link rel="stylesheet" href="/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
   <link rel="stylesheet" href="/css/side-menu.css">
   <!--<![endif]-->
-
   <link rel="stylesheet" href="/css/blackburn.css">
-
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
  
   
-
   
-
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
   
   
-
 </head>
-
-
 <body>
 <div id="layout">
-
   
 <a href="#menu" id="menuLink" class="menu-link">
   
   <span></span>
 </a>
 <div id="menu">
-
   
-
   <div class="pure-menu">
     <ul class="pure-menu-list">
       
@@ -74,96 +55,55 @@
       
     </ul>
   </div>
-
   <div class="pure-menu social">
   <ul class="pure-menu-list">
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/http://twitter.com/yacy_search" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://github.com/yacy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
     </li>
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
     
-
   </ul>
 </div>
-
-
   <div>
   <div class="small-print">
     <small></small>
@@ -173,148 +113,87 @@
     <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
   </div>
 </div>
-
 </div>
-
-
   <div id="main">
-
-
 <div class="header">
   <h1></h1>
   <h2></h2>
 </div>
 <div class="content">
   
-
 <h1 id="en-raspberry-pi">En:Raspberry Pi</h1>
-
 <p>Date: 2013-03-06 12:32:01</p>
-
 <p>[Preparation of Raspbian: ]{.autocomment} swappiness</p>
-
 <p>← Nächstältere Version</p>
-
 <p>Version vom 6. März 2013, 11:32 Uhr</p>
-
 <p>Zeile 18:</p>
-
 <p>Zeile 18:</p>
-
 <p> </p>
-
 <div>
-
 \* Englarge swap space. It is not recommended to use a swap space on SD
 cards but java crashes if for any reason more memory is needed than we
 thought that is necessary. We will configure YaCy to take up only as
 much space so that swapping does not happen. But to protect YaCy from
 crashing, we enlarge the swap space:
-
 </div>
-
 <p> </p>
-
 <div>
-
 \* Englarge swap space. It is not recommended to use a swap space on SD
 cards but java crashes if for any reason more memory is needed than we
 thought that is necessary. We will configure YaCy to take up only as
 much space so that swapping does not happen. But to protect YaCy from
 crashing, we enlarge the swap space:
-
 </div>
-
 <p> </p>
-
 <div>
-
 :\*open the file /etc/dphys-swapfile and replace the \'100\' by i.e.
 \'1024\'. This will give you 1GB of swap space. This is available after
 a \'sudo dphys-swapfile setup\' or a re-start.
-
 </div>
-
 <p> </p>
-
 <div>
-
 :\*open the file /etc/dphys-swapfile and replace the \'100\' by i.e.
 \'1024\'. This will give you 1GB of swap space. This is available after
 a \'sudo dphys-swapfile setup\' or a re-start.
-
 </div>
-
 <p>−</p>
-
 <div>
-
 :\*to protect Raspbian from swapping (while still having the option) we
 need a low swappiness value. ~~Open~~ the file /proc/sys/vm/swappiness
 and check that this is low. By default, there is a 1, you can replace it
 ~~by~~ 0.
-
 </div>
-
 <p>+</p>
-
 <div>
-
 :\*to protect Raspbian from swapping (while still having the option) we
 need a low swappiness value. [View]{.underline} the file
 /proc/sys/vm/swappiness and check that this is low. By default, there is
 a 1, you can replace it [with a]{.underline} 0 [with \"sysctl -w
 vm]{.underline}.[swappiness=0\"]{.underline}
-
 </div>
-
 <p> </p>
-
 <div>
-
 \* Optional/recommended: shrink Raspian with the \[\[En:DebianHeadless
 \| Headless Debian\]\] tutorial by removing X11 and all dependencies.
 After this, you can also remove the Python Games on the RPi
-
 </div>
-
 <p> </p>
-
 <div>
-
 \* Optional/recommended: shrink Raspian with the \[\[En:DebianHeadless
 \| Headless Debian\]\] tutorial by removing X11 and all dependencies.
 After this, you can also remove the Python Games on the RPi
-
 </div>
-
 <p> </p>
-
 <div>
-
   rm -Rf \~/python\_games
-
 </div>
-
 <p> </p>
-
 <div>
-
   rm -Rf \~/python\_games
-
 </div>
-
 </div>
-
 </div>
 </div>
 <script src="js/ui.js"></script>
-
-
-
-
-
-
 </body>
 </html>
-
